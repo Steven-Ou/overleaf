@@ -1,0 +1,189 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 245 Spring \the\year~ Homework \#1}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace 11:59PM, February 20, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{Menu} and select \textit{Copy Project}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME:  \line(1,0){380}
+\clearpage
+}
+
+\problem{In this exercise, we will review some general ideas about modeling. }
+
+\begin{enumerate}
+
+\easysubproblem{ What is a \textit{model}?
+}
+\newline \newline  A model 
+\vspace{30mm}
+
+\intermediatesubproblem{Give an example of a model (preferably one that was not discussed in class) and explain why this is a model.}
+
+
+\vspace{30mm}
+
+\intermediatesubproblem{George Box stated that \qu{All models are wrong \ldots}. If all models are wrong, then why do we study models?}
+
+\vspace{30mm}
+
+\easysubproblem{ What are the two goals of modeling? }
+
+\vspace{30mm}
+
+\easysubproblem{Suppose there is some phenomenon that we wish to model. Do we usually know all of the inputs or drivers of this phenomenon? }
+
+\vspace{30mm}
+
+\easysubproblem{In class, we stated that finding a function or a model can be difficult and that recent advancements in artificial intelligence, particularly machine learning, can help us. What is artificial intelligence? }
+
+\vspace{40mm}
+
+
+\easysubproblem{In class, we stated that finding a function or a model can be difficult and that recent advancements in artificial intelligence, particularly machine learning, can help us. What is machine learning? (Use the most recent definition we discussed in class). }
+
+\vspace{50mm}
+
+\easysubproblem{Read the section called \textit{History} on this page: \url{https://en.wikipedia.org/wiki/Machine_learning}. What was one of the first machine learning models?}
+
+\vspace{40mm}
+
+\easysubproblem{Read the section called \textit{History} on this page: \url{https://en.wikipedia.org/wiki/Machine_learning}. How did Tom Mitchell define machine learning?}
+
+\vspace{50mm}
+
+\easysubproblem{True or False? All of artificial intelligence falls under machine learning.}
+
+\vspace{10mm}
+
+
+\easysubproblem{True or False? All of machine learning falls under artificial intelligence.}
+\vspace{10mm}
+\end{enumerate}
+
+
+\problem{These exercises will review the need for gradient descent.}
+
+
+\begin{enumerate}
+
+\easysubproblem{Suppose we have a bunch of data points $(x_1, y_1), (x_2, y_2), \ldots (x_n, y_n),$ and we wish to use a linear model to predict the value of $y$. What parameters (or values) are we looking to find?}
+
+\vspace{30mm}
+
+\easysubproblem{In order to find these parameters, we have to define a cost function. How many dimensions would be required to graph the cost function?}
+
+
+\vspace{30mm}
+
+
+\easysubproblem{Once we have our cost function, what exactly are we looking to do with this function? What is our primary objective?}
+
+\newpage
+
+
+\easysubproblem{Explain how a machine can use the cost function to learn better values for our parameters. A full answer would outline the algorithm being used for the computer/machine to learn.}
+
+
+\vspace{140mm}
+
+
+\intermediatesubproblem{Using your answer above, explain what it means when we say the machine is learning?}
+
+
+\vspace{60mm}
+
+
+\intermediatesubproblem{Now suppose we have a bunch of data points $(x_1, y_1), (x_2, y_2), \ldots (x_n, y_n),$ and we wish to use a quadratic model to predict the value of $y$. That is, we wish to find real numbers $a$, $b$, and $c$ such that $\hat{y_i} = a{x_i}^2 + b{x_i} + c.$ How many dimensions would be required to plot the cost function? Can we actually graph this function? If not, then is there a particular technique we can use?}
+
+
+\vspace{50mm}
+
+
+\end{enumerate}
+
+\problem{In class, we performed the gradient descent algorithm on $f(x) = (x-5)^2$ by starting at $x=0$ and using the learning rate, $\alpha = 0.1$.}
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{This time, perform the next three iterations on $f(x) = (x-5)^2$ by starting at $x=0$ and using the learning rate, $\alpha = 4$. Describe what happens.}
+
+\newpage
+
+\end{enumerate}
+
+\problem{In this exercise, we will practice a one dimensional gradient descent. For all of the parts below, let $f(x) = x^4 + x^3 - 2x^2$.}
+
+
+\begin{enumerate}
+
+\easysubproblem{Sketch a graph of $f(x)$.}
+
+\vspace{60mm}
+
+
+\intermediatesubproblem{Graphically, where is the global minimum of the function? If needed, round your answer to two decimal places.}
+
+
+\vspace{30mm}
+
+
+\intermediatesubproblem{Now suppose we wish to find the minimum by using gradient descent. Starting at $x=1$, compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
+
+\newpage 
+
+\extracreditsubproblem{This optional question is marked extra credit since we have yet to implement this in class. Compute what happens after 500 iterations. You may use a calculator, Excel, or a programming language. Please explain what you did to get your answer. }
+
+
+\vspace{50mm}
+
+
+\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(c)$ will converge to?}
+
+
+\vspace{30mm}
+
+
+\intermediatesubproblem{Now suppose we change our starting point to  $x= -1$. Compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
+
+\newpage
+\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(f)$ will converge to?}
+
+\vspace{30mm}
+
+\intermediatesubproblem{Do you think that in using gradient descent the starting point matters?}
+
+\end{enumerate}
+
+
+\end{document}
