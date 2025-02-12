@@ -120,18 +120,20 @@ What we want to do with the cost function is find the values of m and b that yie
 
 \easysubproblem{Explain how a machine can use the cost function to learn better values for our parameters. A full answer would outline the algorithm being used for the computer/machine to learn.}
 \newline \newline 
-A machine can 
+A machine can use the cost function to learn better values for the parameters by repeatedly modifying m and b using an algorithm called gradient descent. It calculates the gradient of the cost function with the parameters and updates it in the direction that shows the cost decreasing until it converges to an acceptable solution. 
 
 \vspace{5mm}
 
 
 \intermediatesubproblem{Using your answer above, explain what it means when we say the machine is learning?}
+\newline \newline
+When we say the machine is learning, we mean that it is repeatedly testing the model parameters based on the cost function to minimize error. The machine would learn as it updates its understanding of the data through gradient descent and it will improve its predictions over time. 
 
-
-\vspace{60mm}
+\vspace{20mm}
 
 
 \intermediatesubproblem{Now suppose we have a bunch of data points $(x_1, y_1), (x_2, y_2), \ldots (x_n, y_n),$ and we wish to use a quadratic model to predict the value of $y$. That is, we wish to find real numbers $a$, $b$, and $c$ such that $\hat{y_i} = a{x_i}^2 + b{x_i} + c.$ How many dimensions would be required to plot the cost function? Can we actually graph this function? If not, then is there a particular technique we can use?}
+\newline \newline 
 
 
 \vspace{50mm}
