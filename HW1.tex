@@ -134,9 +134,9 @@ When we say the machine is learning, we mean that it is repeatedly testing the m
 
 \intermediatesubproblem{Now suppose we have a bunch of data points $(x_1, y_1), (x_2, y_2), \ldots (x_n, y_n),$ and we wish to use a quadratic model to predict the value of $y$. That is, we wish to find real numbers $a$, $b$, and $c$ such that $\hat{y_i} = a{x_i}^2 + b{x_i} + c.$ How many dimensions would be required to plot the cost function? Can we actually graph this function? If not, then is there a particular technique we can use?}
 \newline \newline 
+It would take 4 dimensions to plot the cost function because the cost function would depend on the three parameters (a,b, and c). We can't directly graph this, but we can use gradient descent to graph this function. 
 
-
-\vspace{50mm}
+\vspace{5mm}
 
 
 \end{enumerate}
@@ -147,6 +147,32 @@ When we say the machine is learning, we mean that it is repeatedly testing the m
 \begin{enumerate}
 
 \intermediatesubproblem{This time, perform the next three iterations on $f(x) = (x-5)^2$ by starting at $x=0$ and using the learning rate, $\alpha = 4$. Describe what happens.}
+\newline \newline
+\textcolor{blue}{\underline{STEP 1:}}
+\newline
+x = 5, assigning a random value to x
+\newline 
+f(5) = $(5-5)^2$ = 0, calculate f of x
+\newline
+f'(5) = 2(5-5)(1) = 0 , calculating f prime 
+\newline
+$\alpha = 4$, defining $\alpha$
+\newline \newline
+\textcolor{blue}{\underline{STEP 2: Iteration 1, 2, 3}}
+\newline
+Using the formula $x_{new} = x_{old}- \alpha f'(x_{old})$
+\newline \newline
+Starting with $x_{0} = 0$
+\newline
+f'(0) = 2(0-5) = -10
+\newline 
+$x_{1}$= 0-4(-10)= 40
+\newline \newline  
+Starting with $x_{1} = 40$
+\newline
+f'(40) = 2(40-5) = 70
+\newline 
+$x_{2}$= 40-4(70)= -240
 
 \newpage
 
