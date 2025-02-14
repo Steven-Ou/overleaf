@@ -104,23 +104,23 @@ True!
 
 \easysubproblem{Suppose we have a bunch of data points $(x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n),$ and we wish to use a linear model to predict the value of $y$. What parameters (or values) are we looking to find?}
 \newline \newline 
-The parameters that we're looking to find are the slope (m) and the intercept (b) in the equation $\hat{y}=mx+b.$
+The parameters that we're looking to find are the slope $(m)$ and the intercept $(b)$ in the equation $\hat{y}=mx+b.$
 \vspace{5mm}
 
 \easysubproblem{In order to find these parameters, we have to define a cost function. How many dimensions would be required to graph the cost function?}
 \newline \newline 
-Graphing the cost function would require at least three dimensions because it depends on m and b and the cost value (c). 
+Graphing the cost function would require at least three dimensions because it depends on $m$ and $b$ and the cost value (c). 
 
 \vspace{5mm}
 
 \easysubproblem{Once we have our cost function, what exactly are we looking to do with this function? What is our primary objective?}
 \newline \newline
-What we want to do with the cost function is find the values of m and b that yield the lowest cost. Our primary objective is to obtain the best-fitting model. 
+What we want to do with the cost function is find the values of $m$ and $b$ that yield the lowest cost. Our primary objective is to obtain the best-fitting model. 
 \vspace{5mm}
 
 \easysubproblem{Explain how a machine can use the cost function to learn better values for our parameters. A full answer would outline the algorithm being used for the computer/machine to learn.}
 \newline \newline 
-A machine can use the cost function to learn better values for the parameters by repeatedly modifying m and b using an algorithm called gradient descent. It calculates the gradient of the cost function with the parameters and updates it in the direction that shows the cost decreasing until it converges to an acceptable solution. 
+A machine can use the cost function to learn better values for the parameters by repeatedly modifying $m$ and $b$ using an algorithm called gradient descent. It calculates the gradient of the cost function with the parameters and updates it in the direction that shows the cost decreasing until it converges to an acceptable solution. 
 
 \vspace{5mm}
 
@@ -150,11 +150,11 @@ It would take 4 dimensions to plot the cost function because the cost function w
 \newline \newline
 \textcolor{blue}{\underline{STEP 1:}}
 \newline
-x = 5, assigning a random value to x
+$x = 5$, assigning a random value to $x$
 \newline 
-f(5) = $(5-5)^2$ = 0, calculate f of x
+$f(5) = (5-5)^2 = 0$, calculate $f(x)$
 \newline
-f'(5) = 2(5-5)(1) = 0 , calculating f prime 
+$f'(5) = 2(5-5)(1) = 0$, calculating $f'(x)$
 \newline
 $\alpha = 4$, defining $\alpha$
 \newline \newline
@@ -164,16 +164,23 @@ Using the formula $x_{new} = x_{old}- \alpha f'(x_{old})$
 \newline \newline
 Starting with $x_{0} = 0$
 \newline
-f'(0) = 2(0-5) = -10
+$f'(0) = 2(0-5) = -10$
 \newline 
-$x_{1}$= 0-4(-10)= 40
+$x_{1} = 0-4(-10)= 40$
 \newline \newline  
 Starting with $x_{1} = 40$
 \newline
-f'(40) = 2(40-5) = 70
+$f'(40) = 2(40-5) = 70$
 \newline 
-$x_{2}$= 40-4(70)= -240
-
+$x_{2} = 40-4(70)= -240$
+\newline \newline  
+Starting with $x_{2} = -240$
+\newline
+$f'(-240) = 2(-240-5) = -490$
+\newline 
+$x_{3} = -240-4(-490) = 1720$
+\newline \newline
+Based on the three iterations on $f(x) = (x-5)^2$  with $x = 0$ and the learning rate as $\alpha =4$ it is too large, causing the updates to overshoot or undershoot the minimum rather than steadily converging to it. This shows that the learning rate needs to be carefully chosen, for the success gradient descent. 
 \newpage
 
 \end{enumerate}
@@ -185,37 +192,103 @@ $x_{2}$= 40-4(70)= -240
 
 \easysubproblem{Sketch a graph of $f(x)$.}
 
-\vspace{60mm}
+\begin{center}
+\includegraphics[width=0.40\linewidth]{image1.png}
+\end{center}
 
+\vspace{5mm}
 
 \intermediatesubproblem{Graphically, where is the global minimum of the function? If needed, round your answer to two decimal places.}
+\newline
+Step 1: Take the derivative of $f(x)$: \\
+\\
+$f'(x) = 4x^3 + 3x^2 - 4x$ \\
+\\
+Step 2: Solve for all values of $x$ such that $f'(x) = 0$: \\
+\\
+$4x^3 + 3x^2 - 4x = 0$ \\
+\\
+$x(4x^2 + 3x -4) = 0$ \\
+\\
+$x = \{0, \frac{-3 - \sqrt{73}}{8}, \frac{-3 + \sqrt{73}}{8}\}$ \\
+\\
+Step 3: Determine which value of $x$ corresponds to the minimum of $f(x)$: \\
+\\
+$f(0) = 0 $ \\
+\\
+$f(\frac{-3 - \sqrt{73}}{8}) \approx -2.83$ \\
+\\
+$f(\frac{-3 + \sqrt{73}}{8}) \approx -0.4$ \\
+Since $-2.83$ is the smallest of the three values, we conclude that $x = \frac{-3 - \sqrt{73}}{8} \approx -1.44$ is the $x$ value that corresponds to the global minimum value of $f(x)$.
 
-
-\vspace{30mm}
+\newpage
 
 
 \intermediatesubproblem{Now suppose we wish to find the minimum by using gradient descent. Starting at $x=1$, compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
+\\
+\textcolor{blue}{\underline{STEP 1:}}
+\\
+$f(x) = x^4+x^3 -2x^2$
+\newline
+$x = 1$ assigning a random value to $x$
+\newline 
+$f(1) = (1)+(1)-2= 0$, calculate $f(x)$
+\newline
+$f'(x) = 4x^3+3x^2-4x$
+\\ 
+$f'(5) = 4(5)^3+3(5)^2-4(5) = 555$, calculating $f'(x)$
+\newline
+$\alpha = 0.1$, defining $\alpha$
+\newline \newline
+\textcolor{blue}{\underline{STEP 2: Iteration 1, 2, 3}}
+\newline
+Using the formula $x_{new} = x_{old}- \alpha f'(x_{old})$
+\newline \newline
+Starting with $x_{0} = 1$
+\newline
+$f'(1) =4(1)+3(1)-4= 3$
+\newline 
+$x_{1} =1-(0.1 \cdot 3)= 0.7$
+\newline \newline  
+Starting with $x_{1} = 0.7$
+\newline
+$f'(0.7) = 4(0.7)^3+3(0.7)^2-4(0.7)= 0.042$
+\newline 
+$x_{2} = 0.7 - (0.1 \cdot 0.042) = 0.6958$
+\newline \newline  
+Starting with $x_{2} = 0.6958$
+\newline
+$f'(0.6958) = 4(0.6958)^3+3(0.6958)^2-4(0.6958) \approx 0.0167$
+\newline 
+$x_{3} = 0.6958 - 0.0167 = 0.6791$
+\newline \newline
 
-\newpage 
-
-\extracreditsubproblem{This optional question is marked extra credit since we have yet to implement this in class. Compute what happens after 500 iterations. You may use a calculator, Excel, or a programming language. Please explain what you did to get your answer. }
-
-
-\vspace{50mm}
-
-
-\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(c)$ will converge to?}
-
-
-\vspace{30mm}
-
-
-\intermediatesubproblem{Now suppose we change our starting point to  $x= -1$. Compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
+Using gradient descent with the starting value of $x = 1$ and a learning rate of $0.1$, the minimum is $x \approx 0.6791$. 
 
 \newpage
-\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(f)$ will converge to?}
+\extracreditsubproblem{This optional question is marked extra credit since we have yet to implement this in class. Compute what happens after 500 iterations. You may use a calculator, Excel, or a programming language. Please explain what you did to get your answer. }
+\\\\
 
-\vspace{30mm}
+\begin{center}
+\includegraphics[width=1\linewidth]{image2.png}
+\end{center}
+
+I used a Python program to calculate what happens after 500 iterations. The program is based on a gradient descent formula. And I got $x \approx 0.693$. 
+\vspace{5mm}
+
+\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(c)$ will converge to?}
+\\\\
+I would've guessed the value would've been 0.680 because that is around the graph I sketched above.
+\vspace{5mm}
+
+\intermediatesubproblem{Now suppose we change our starting point to  $x= -1$. Compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
+\\\\
+As the iterations continue, the learning rate starts to decrease and decrease and become even smaller. 
+\vspace{5mm}
+\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(f)$ will converge to?}
+\\\\
+It would've converged to a number that is smaller than -1. 
+\vspace{5mm}
 
 \intermediatesubproblem{Do you think that in using gradient descent the starting point matters?}
 
