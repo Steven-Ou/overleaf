@@ -156,7 +156,7 @@ $f(5) = (5-5)^2 = 0$, calculate $f(x)$
 \newline
 $f'(5) = 2(5-5)(1) = 0$, calculating $f'(x)$
 \newline
-$\alpha = 4$, defining $\alpha$
+$\alpha = 4$, defining the learning rate
 \newline \newline
 \textcolor{blue}{\underline{STEP 2: Iteration 1, 2, 3}}
 \newline
@@ -273,25 +273,54 @@ Using gradient descent with the starting value of $x = 1$ and a learning rate of
 \includegraphics[width=1\linewidth]{image2.png}
 \end{center}
 
-I used a Python program to calculate what happens after 500 iterations. The program is based on a gradient descent formula. And I got $x \approx 0.693$. 
+This program takes the gradient of the function and tries to find the minimum of the function with a starting point, a learning rate, and the maximum number of iterations, and get the convergence. In the for loop, gradient descent was applied, and the for loop calculated the change in x. Then, we check if the change in x is similar to the last change in x. If it is, we can assume that the function has looped to the point where it's close enough to a minimum and the loop would break. The function g(x) is the derivative of the original function $x^4+x^3-2x^2$. The code finally runs the last function which is gradientDescentAlgorithm() and should have some parameters in it like the g(x), the starting point, the learning rate, and the iteration. This is how I used the program to find the minimum of the function. 
 \vspace{5mm}
 
 \intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(c)$ will converge to?}
 \\\\
-I would've guessed the value would've been 0.680 because that is around the graph I sketched above.
+I would've guessed the value would've been 0.680 because that is around the minimum in the graph that I sketched above.
 \vspace{5mm}
 
 \intermediatesubproblem{Now suppose we change our starting point to  $x= -1$. Compute what happens over the next three iterations. You may take the learning rate to be $\alpha = 0.1$. }
 \\\\
-As the iterations continue, the learning rate starts to decrease and decrease and become even smaller. 
-\vspace{5mm}
-\intermediatesubproblem{If you had to guess, what value do you think our algorithm in Problem 4 Part $(f)$ will converge to?}
+\textcolor{blue}{\underline{STEP 1:}}
+\\ $
+f(x) = x^4+x^3 -2x^2 $ //the 
+ function
+ \\
+ $x=-1$ //starting with -1
+ \\
+ $\alpha = 0.1$\\
+$f'(x) = 4x^3+3x^2-4x$ //finding the  derivative
+\\
+$x_{new} = x_{old} - \alpha f'(x_{old})$ //gradient descent formula: \\
+\textcolor{blue}{\underline{STEP 2:}}
 \\\\
-It would've converged to a number that is smaller than -1. 
+{\underline{Iteration 1:}
+\\
+$x_0 = -1$ \\
+$f'(-1) = 4(-1)^3 + 3(-1)^2 - 4(-1) = 3$ \\ 
+$x_1 = -1 - 0.1(3)= -1.3$\\
+{\underline{Iteration 2:}\\
+$x_1 = -1.3$ \\ 
+$f'(-1.3) = 4(-1.3)^3 + 3(-1.3)^2 - 4(-1.3)= 1.482$ \\ 
+$x_2 = -1.3 - 0.1(1.482) = -1.4482$\\ 
+{\underline{Iteration 3:}\\
+$x_2 = -1.4482$ \\ 
+$f'(-1.4482) = 4(-1.4482)^3 + 3(-1.4482)^2 - 4(-1.4482) \approx  -0.046$ \\
+$x_3 = -1.4482 - 0.1(-0.046) = -1.4436$\\
+
+As the iterations continue, the change of x of each iteration would start to become closer and closer to the minimum. 
+
+\vspace{5mm}
+\intermediatesubproblem{*If you had to guess, what value do you think our algorithm in Problem 4 Part $(f)$ will converge to?}
+\\\\
+I would have guessed that the value of our algorithm would've converged to approximately -1.44. 
 \vspace{5mm}
 
-\intermediatesubproblem{Do you think that in using gradient descent the starting point matters?}
-Yes, when using gradient descent the starting point matters because if you use 0 it will go nowhere and will remain at 0. 
+\intermediatesubproblem{*Do you think that in using gradient descent the starting point matters?}
+\\\\
+Yes, the starting point in gradient descent matters a lot. As shown in the previous parts of the problem, different starting points can lead to convergence to different local minima. In part c, starting at x =1, the algorithm converted to a local min around 0.693. In part f, starting with x = -1, the algorithm converged to a different local min of about -1.44. This is because gradient descent is a local optimization algorithm. The graph shows its direction would lead to the steepest descent from the current point. If the function has multiple local minima, the algorithm will converge to the minimum that is "closest" to the starting point. It will not necessarily find the global minimum. Therefore, the starting point is really important since it determines which local minimum the algorithm will converge to. 
 \end{enumerate}
 
 
