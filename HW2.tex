@@ -1,0 +1,240 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+
+\title{MATH 245 Spring \the\year~ Homework \#2}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace 11:59PM, March 6, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}
+
+\problem{Thus far, we discussed two main ideas which have a lot in common. One idea was modeling with linear regression which we used to illustrate the concepts of cost functions and gradient descent. The other main idea was neural networks which also requires a cost function and gradient descent. Before we review neural networks, allow us to take a step back and analyze the big picture. These next few questions are similar/related to Homework 01 Problem 02.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{ Why do we need training data? How has training data been used in the linear regression case and neural network case that we discussed in class?
+}
+\vspace{5mm}
+\\
+\intermediatesubproblem{Suppose given our training data, we selected a model that requires parameters. For instance, in the linear regression case, we required parameters $m$ and $b$ while in the neural network case, we required hundreds of parameters for our weights and biases. Why do we think of these parameters as ``controlling knobs''?}
+
+\vspace{5mm}
+
+\intermediatesubproblem{How do we determine which direction to turn these knobs?}
+\vspace{5mm}
+\end{enumerate}
+
+\problem{In this question we will review the perceptron.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Explain what is meant by the perceptron? A good answer would discuss what the inputs and outputs are.}
+
+\vspace{30mm}
+
+\intermediatesubproblem{In the perceptron, what function do we use to compute the output?}
+
+\vspace{30mm}
+
+\intermediatesubproblem{Consider the single layer perceptron below.
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=0.75\linewidth]{Neural_Network_1.png}
+\end{figure}
+
+
+
+Suppose $x_1 = 1, x_2 = 0, x_3 = 1$. Also suppose that $b_{1}^{[1]} = -0.89 $. Compute the perceptron's output. Hint: remember that a perceptron's output is either 0 or 1.
+
+}
+
+\newpage 
+
+\intermediatesubproblem{In class, we stated that for the perceptron, small changes in the input can produce large changes in the output. Suppose we have the same perceptron as outlined above where $x_1 = 1, x_2 = 0, x_3 = 1$ and this time, $b_{1}^{[1]} = -0.9 $. What is the perceptron's output now?}
+
+\vspace{30mm}
+
+\intermediatesubproblem{In class, we stated that there were two fundamental restrictions with the perceptron. What are these restrictions/problems?}
+
+\vspace{50mm}
+
+
+\intermediatesubproblem{Read the article found here: \url{https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon}. According to the article, what was one of the problems with Roseblatt's perceptron?}
+
+\end{enumerate}
+
+\vspace{30mm}
+
+
+\problem{In the previous question we identified the shortcomings of the perceptron. We now aim to review its upgrade -- the sigmoid neuron.}
+
+\begin{enumerate}
+\intermediatesubproblem{How is the sigmoid neuron different from the perceptron? Phrased differently, why is the sigmoid neuron more flexible than the perceptron?}
+
+\newpage 
+
+\intermediatesubproblem{Allow us to reconsider the neural network above:
+
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=0.75\linewidth]{Neural_Network_1.png}
+\end{figure}
+
+Suppose the activation function is now the sigmoid function. Compute the output of the sigmoid neuron
+when $x_1 = 1, x_2 = 0, x_3 = 1$. (This is the same input as before in Problem 2 part $(c)$).}
+
+\vspace{30mm}
+
+\intermediatesubproblem{Allow us to now show that a small change in the weights/bias produces small changes in the output. Suppose we have the same sigmoid neuron as outlined above where $x_1 = 1, x_2 = 0, x_3 = 1$ and this time, $b_{1}^{[1]} = -0.9 $. What is the sigmoid neuron's output now?}
+
+\vspace{30mm}
+
+
+\intermediatesubproblem{What conclusion can you draw regarding small changes in the weights/bias with the perceptron versus the sigmoid neuron?}
+
+\newpage
+
+\intermediatesubproblem{Compute $a_{1}^{[1]}$ in the neural network below. Assume that $x_1 = 1.2, x_2 = 0.05$, $x_3 = 0.6530$ and use the sigmoid function for the activation function. }
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\linewidth]{NN2.png}
+\end{figure}
+
+\vspace{30mm}
+
+\intermediatesubproblem{Compute $a_{2}^{[1]}$. Assume that $x_1 = 1.2, x_2 = 0.05$, $x_3 = 0.6530$ and use the sigmoid function for the activation function.}
+
+\vspace{30mm}
+
+\intermediatesubproblem{Compute the output of the above network, $y$. Assume that $x_1 = 1.2, x_2 = 0.05$, $x_3 = 0.6530$ and use the sigmoid function for the activation function.}
+\end{enumerate}
+
+
+\newpage 
+
+\problem{In this question we will review greyscaling.}
+
+\begin{enumerate}
+\easysubproblem{What is a pixel?}
+
+\vspace{20mm}
+
+\easysubproblem{True or False? The RGB color model states that red, green and blue can be combined in different ways to produce a wide range of colors.}
+
+\vspace{10mm}
+
+
+\easysubproblem{What is your favorite color?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{Using this site, \url{http://www.cknuckles.com/rgbsliders.html}, find out the RGB values for the color you picked above. Note: that site is not exactly secure but it's the one I used in class. You're welcome to use any other website that has a RGB slider such as this one: \url{https://tuneform.com/tools/color/rgb-color-creator}. }
+
+\vspace{10mm}
+
+\easysubproblem{What formula did we use to convert a color to grayscale? Hint: \url{https://en.wikipedia.org/wiki/Luma_(video)\#Rec._601_luma_versus_Rec._709_luma_coefficients}.}
+
+\vspace{20mm}
+
+\easysubproblem{Using the formula above, convert the RGB value of your favorite color in part $(c)$ to grayscale. Write down what value of red, green and blue you get.}
+
+\vspace{10mm}
+
+\easysubproblem{For the color you get above, what is the grayscale intensity? (Hint: just divide by 255).}
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this question we will review the final product -- our neural network.}
+
+\begin{enumerate}
+
+\easysubproblem{Write down the four steps in creating a neural network.}
+
+\vspace{50mm}
+
+\easysubproblem{For the neural network example we considered in class, what was our task?}
+
+\vspace{10mm}
+
+\easysubproblem{We stated that the inputs were pictures but to be more precise, we needed these inputs to be numerical. How did we get the images to be numerical?}
+
+\vspace{30mm}
+
+\intermediatesubproblem{How many layers did our neural network have?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{Within each layer, how many neurons did we have?}
+
+\vspace{20mm}
+
+\intermediatesubproblem{What do we hope the hidden layer is doing?}
+
+\newpage
+
+\intermediatesubproblem{What activation function did we use?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{How did we find the weights and biases?}
+
+
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this question we will run an image through the neural network we saw in class. Please note that you do not have to enter any code; instead, you're just running code that I will provide.}
+
+\begin{enumerate}
+
+\easysubproblem{Download the image on Brightspace called "homework\_image".}
+
+\easysubproblem{Click this link: \\ \url{https://colab.research.google.com/drive/12trE_j0jaPpy92WiGEG5jVV0B6fqPE0x?usp=sharing}. You wouldn't be able to edit this code since this is located in my Google Drive. You'll need to save a copy of this in your own Drive. To do so, click "File" followed by "Save a Copy in Drive". }
+
+\easysubproblem{Execute the first three cells. It should take about 8 minutes. Upon executing the third cell, you will be prompted to upload an image. Upload the image you downloaded from Brightspace called "homework\_image".}
+
+\easysubproblem{Execute the remaining cell blocks and make a note of the probabilities you obtain in the last code block. What does the neural network predict the digit is?}
+
+\vspace{30mm}
+
+\easysubproblem{Redo parts $(c)$ and $ (d)$ again. Did you get a different result or different probabilities? }
+
+\vspace{30mm}
+
+
+\extracreditsubproblem{Above, you should get slightly different results each time. Can you perhaps explain why? }
+
+\end{enumerate}
+
+\newpage 
+
+\problem{Here are two unrelated questions.}
+
+\begin{enumerate}
+
+\easysubproblem{Consider this link: \\ \url{https://machinelearning.apple.com/research/learning-neural-network-subspaces}. What kind of neural network does Apple use for features such as face recognition?}
+
+\vspace{30mm}
+
+\easysubproblem{Is there a particular topic in modeling that you are interested in or would like to learn more about? Examples: Spotify recommendation algorithms, sports betting, transformers like ChatGPT. If no, then you may leave this question blank.}
+
+\end{enumerate}
+
+
+\end{document}
