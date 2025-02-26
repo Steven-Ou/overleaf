@@ -20,34 +20,37 @@
 
 \iftoggle{professormode}
 
-\problem{Thus far, we discussed two main ideas which have a lot in common. One idea was modeling with linear regression which we used to illustrate the concepts of cost functions and gradient descent. The other main idea was neural networks which also requires a cost function and gradient descent. Before we review neural networks, allow us to take a step back and analyze the big picture. These next few questions are similar/related to Homework 01 Problem 02.}
+\problem{Thus far, we discussed two main ideas which have a lot in common. One idea was modeling with linear regression which we used to illustrate the concepts of cost functions and gradient descent. The other main idea was neural networks which also requires a cost function and gradient descent. Before we review neural networks, let us take a step back and analyze the big picture. These next few questions are similar/related to Homework 01 Problem 02.}
 
 \begin{enumerate}
 
 \intermediatesubproblem{ Why do we need training data? How has training data been used in the linear regression case and neural network case that we discussed in class?
 }
-\vspace{5mm}
 \\
-We need training data 
+\\
+We need training data because it provides examples from which a model can learn patterns and relationships. Without training data, a model cannot generalize to new inputs. In linear regression, Training data minimizes the cost function by adjusting the parameters m (slope) and b (intercept) to best fit the given data points. Training data is also used to optimize the weights and biases of the network layers in neural networks. The goal is to minimize a loss function that allows the network to make accurate predictions on unpredictable data.
 \intermediatesubproblem{Suppose given our training data, we selected a model that requires parameters. For instance, in the linear regression case, we required parameters $m$ and $b$ while in the neural network case, we required hundreds of parameters for our weights and biases. Why do we think of these parameters as ``controlling knobs''?}
+\\ \\ 
+These parameters could be known as "controlling knobs" because they determine how the model transforms input into outputs. Adjusting these parameters changes the behavior of the model. In linear regression, the parameters m and b control the slope and position of the line, affecting how well it fits the training data. In neural networks, the weights and biases in a neural network determine the strength of connections between neurons, determining how features in the input data contribute to the final prediction. By tuning these parameters, we could control the model's ability to capture patterns in data, making them comparable to knobs that adjust performance.   
+\vspace{10mm}
 
-\vspace{5mm}
-
-\intermediatesubproblem{How do we determine which direction to turn these knobs?}
-\vspace{5mm}
+\intermediatesubproblem{How do we determine which direction to turn these knobs?}\\
+\\
+We can determine which direction to turn these knobs so we can adjust parameters using gradient descent, an algorithm that minimizes the cost function by following the negative gradient of the function. We have to compute the gradient by finding the derivative of the cost function concerning each parameter. Then, we update the parameters, adjusting the parameters in the direction that decreases the cost function. And we continued to repeat the progress iteratively until the model converged to a set of best-fit parameters.  \\
 \end{enumerate}
 
 \problem{In this question we will review the perceptron.}
 
 \begin{enumerate}
 
-\intermediatesubproblem{Explain what is meant by the perceptron? A good answer would discuss what the inputs and outputs are.}
-
-\vspace{30mm}
+\intermediatesubproblem{Explain what is meant by the perceptron. A good answer would discuss what the inputs and outputs are.}
+\\ \\ 
+Perceptron is a neural network model, it also produces binary numbers based on the inputs, meaning it would show the result with 0 if the inputs are not something/choices you wanted to make or to do, and 1 if the inputs are something/choices you wanted to make or to do. It also takes in multiple inputs like data that you want the model to calculate for you, applies weights to them, adds a bias term (b), and then passes the sum through an activation function to produce binary outputs(0 or 1). 
+\vspace{5mm}
 
 \intermediatesubproblem{In the perceptron, what function do we use to compute the output?}
 
-\vspace{30mm}
+\vspace{5mm}
 
 \intermediatesubproblem{Consider the single layer perceptron below.
 
@@ -62,22 +65,22 @@ Suppose $x_1 = 1, x_2 = 0, x_3 = 1$. Also suppose that $b_{1}^{[1]} = -0.89 $. C
 
 }
 
-\newpage 
+\vspace{5mm} 
 
 \intermediatesubproblem{In class, we stated that for the perceptron, small changes in the input can produce large changes in the output. Suppose we have the same perceptron as outlined above where $x_1 = 1, x_2 = 0, x_3 = 1$ and this time, $b_{1}^{[1]} = -0.9 $. What is the perceptron's output now?}
 
-\vspace{30mm}
+\vspace{5mm}
 
 \intermediatesubproblem{In class, we stated that there were two fundamental restrictions with the perceptron. What are these restrictions/problems?}
 
-\vspace{50mm}
+\vspace{5mm}
 
 
 \intermediatesubproblem{Read the article found here: \url{https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon}. According to the article, what was one of the problems with Roseblatt's perceptron?}
 
 \end{enumerate}
 
-\vspace{30mm}
+\vspace{5mm}
 
 
 \problem{In the previous question we identified the shortcomings of the perceptron. We now aim to review its upgrade -- the sigmoid neuron.}
@@ -133,7 +136,7 @@ when $x_1 = 1, x_2 = 0, x_3 = 1$. (This is the same input as before in Problem 2
 
 \vspace{20mm}
 
-\easysubproblem{True or False? The RGB color model states that red, green and blue can be combined in different ways to produce a wide range of colors.}
+\easysubproblem{True or False? The RGB color model states that red, green, and blue can be combined in different ways to produce a wide range of colors.}
 
 \vspace{10mm}
 
