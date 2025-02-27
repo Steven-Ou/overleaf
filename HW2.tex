@@ -95,7 +95,7 @@ Since S is greater than and equal to 0, the perceptron output is still 1.
 
 
 \intermediatesubproblem{Read the article found here: \url{https://news.cornell.edu/stories/2019/09/professors-perceptron-paved-way-ai-60-years-too-soon}. According to the article, what was one of the problems with Roseblatt's perceptron?}
-\\\\The problems with Roseblatt's perceptron is that it only have 1 neurons.
+\\\\The problem with Roseblatt's perceptron is that it only has 1 neuron, while modern neural networks have millions of neurons. Since the perceptron only has 1 neuron it was limited to only doing one decision. If it were to have millions of neurons it would be able to model complex decisions. But, as Minsky says "the functions are just too simple". This shows the problem with Roseblatt's perceptron because it only has 1 neuron, and it's just too simple and not like today, where a neural network would have millions and millions of neurons. 
 \end{enumerate}
 
 \vspace{5mm}
@@ -105,7 +105,10 @@ Since S is greater than and equal to 0, the perceptron output is still 1.
 
 \begin{enumerate}
 \intermediatesubproblem{How is the sigmoid neuron different from the perceptron? Phrased differently, why is the sigmoid neuron more flexible than the perceptron?}
-
+\\\\ 
+Sigmoid neuron is different from perceptron because the sigmoid neuron outputs a value between 0 and 1 using the sigmoid activation function: \\
+\centerline{$\sigma(x) = \frac{1}{1+e^-x}$}\\
+Sigmoid neuron is more flexible than the perceptron because it makes smooth changes instead of sudden jumps, which helps in learning complex patterns better!
 \newpage 
 
 \intermediatesubproblem{Allow us to reconsider the neural network above:
