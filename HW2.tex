@@ -28,7 +28,7 @@
 }
 \\
 \\
-We need training data because it provides examples from which a model can learn patterns and relationships. Without training data, a model cannot generalize to new inputs. In linear regression, Training data minimizes the cost function by adjusting the parameters m (slope) and b (intercept) to best fit the given data points. Training data is also used to optimize the weights and biases of the network layers in neural networks. The goal is to minimize a loss function that allows the network to make accurate predictions on unpredictable data.
+We need training data because it provides examples from which a model can learn patterns and relationships. Without training data, a model cannot generalize to new inputs. Training data minimizes the cost function in linear regression by adjusting the parameters m (slope) and b (intercept) to best fit the given data points. Training data is also used to optimize the weights and biases of the network layers in neural networks. The goal is to minimize a loss function that allows the network to make accurate predictions on unpredictable data.
 \intermediatesubproblem{Suppose given our training data, we selected a model that requires parameters. For instance, in the linear regression case, we required parameters $m$ and $b$ while in the neural network case, we required hundreds of parameters for our weights and biases. Why do we think of these parameters as ``controlling knobs''?}
 \\ \\ 
 These parameters could be known as "controlling knobs" because they determine how the model transforms input into outputs. Adjusting these parameters changes the behavior of the model. In linear regression, the parameters m and b control the slope and position of the line, affecting how well it fits the training data. In neural networks, the weights and biases in a neural network determine the strength of connections between neurons, determining how features in the input data contribute to the final prediction. By tuning these parameters, we could control the model's ability to capture patterns in data, making them comparable to knobs that adjust performance.   
@@ -45,10 +45,11 @@ We can determine which direction to turn these knobs so we can adjust parameters
 
 \intermediatesubproblem{Explain what is meant by the perceptron. A good answer would discuss what the inputs and outputs are.}
 \\\\ 
-Perceptron is a neural network model, it also produces binary numbers based on the inputs, meaning it would show the result with 0 if the inputs are not something/choices you wanted to make or to do, and 1 if the inputs are something/choices you wanted to make or to do. It also takes in multiple inputs like data that you want the model to calculate for you, applies weights to them, adds a bias term (b), and then passes the sum through an activation function to produce binary outputs(0 or 1). 
+Perceptron is a neural network model that takes multiple inputs, it also produces binary numbers based on the inputs. The input could be represented as a vector $x=x_1,x_2,...,x_n$. These inputs correspond to a characteristic of the result data with 0 if the inputs are not something/choices you wanted to make or do, and 1 if the inputs are something/choices you wanted to make or to do. 
 \vspace{5mm}
 
 \intermediatesubproblem{In the perceptron, what function do we use to compute the output?}
+\\\\
 
 \vspace{5mm}
 
