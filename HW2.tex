@@ -45,12 +45,15 @@ We can determine which direction to turn these knobs so we can adjust parameters
 
 \intermediatesubproblem{Explain what is meant by the perceptron. A good answer would discuss what the inputs and outputs are.}
 \\\\ 
-Perceptron is a neural network model that takes multiple inputs, it also produces outputs that are binary numbers based on the inputs. \\The input could be represented as a vector $x=x_1,x_2,...,x_n$. The weights of each input $x_i$ are associated with a weight $w_i$. The weight determines the importance of each input. The perceptron also has a bias $b$, which is a threshold for the model to shift the condition of the final choice.\\ The perceptron computes a weighted summation of the inputs, including the bias using the formula: $z = \sum_{i=1}^{n}{w_ix_i +b}$. \\Then using z we would pass it into an activation function, this function would output(0 or 1): if z $\geq$ 0 is not something/choices you wanted to make or do, and z $\geq$1 if the inputs are something/choices you wanted to make or to do. \\This decision-making process is what allows the machine using perceptron to differentiate the difference between a good choice and a bad choice. \vspace{5mm}
+Perceptron is a neural network model that takes multiple inputs, it also produces outputs that are binary numbers based on the inputs. \\The input could be represented as a vector $x=x_1,x_2,...,x_n$. The weights of each input $x_i$ are associated with a weight $w_i$. The weight determines the importance of each input. The perceptron also has a bias $b$, which is a threshold for the model to shift the condition of the final choice.\\ The perceptron computes a weighted summation of the inputs, including the bias using the formula: $z = \sum_{i=1}^{n}{w_ix_i +b}$. \\Then using z we would pass it into an activation function, this function would output(0 or 1): if z $\geq$ 0 is not something/choices you wanted to make or do, and z $\leq$1 if the inputs are something/choices you wanted to make or to do. \\This decision-making process is what allows the machine using perceptron to differentiate the difference between a good choice and a bad choice. \vspace{5mm}
 
 \intermediatesubproblem{In the perceptron, what function do we use to compute the output?}
 \\\\
-We use the activation function
-\vspace{5mm}
+We use the activation function to compute the output. The function output is either 0 or 1, depends on the weighted sum is positive or negative. Like this function: \[
+f(x) =\begin{cases}1 & \text{if } x \geq 0 \\0 & \text{if } x < 0
+\end{cases}
+\]
+\vspace{20mm}
 
 \intermediatesubproblem{Consider the single layer perceptron below.
 
@@ -62,9 +65,9 @@ We use the activation function
 
 
 Suppose $x_1 = 1, x_2 = 0, x_3 = 1$. Also suppose that $b_{1}^{[1]} = -0.89 $. Compute the perceptron's output. Hint: remember that a perceptron's output is either 0 or 1.
-
 }
-
+\\\\
+\underline{Weights:}  
 \vspace{5mm} 
 
 \intermediatesubproblem{In class, we stated that for the perceptron, small changes in the input can produce large changes in the output. Suppose we have the same perceptron as outlined above where $x_1 = 1, x_2 = 0, x_3 = 1$ and this time, $b_{1}^{[1]} = -0.9 $. What is the perceptron's output now?}
