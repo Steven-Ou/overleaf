@@ -20,7 +20,7 @@
 
 \iftoggle{professormode}
 
-\problem{Thus far, we discussed two main ideas which have a lot in common. One idea was modeling with linear regression which we used to illustrate the concepts of cost functions and gradient descent. The other main idea was neural networks which also requires a cost function and gradient descent. Before we review neural networks, let us take a step back and analyze the big picture. These next few questions are similar/related to Homework 01 Problem 02.}
+\problem{Thus far, we discussed two main ideas which have a lot in common. One idea was modeling with linear regression which we used to illustrate the concepts of cost functions and gradient descent. The other main idea was neural networks which also require a cost function and gradient descent. Before we review neural networks, let us take a step back and analyze the big picture. These next few questions are similar/related to Homework 01 Problem 02.}
 
 \begin{enumerate}
 
@@ -152,79 +152,95 @@ The small change in the weights/bias with the perception versus the sigmoid neur
 \centerline{\underline{Weights (Hidden Layer to Output Layer):}}\\
 \centerline{$w_{11}^{[2]} =0.2 , w_{12}^{[2]} =0.6$}\\
 \centerline{\underline{Bias (Output Layer):}}\\
-\centerline{$b_{1}^{[2]}=-1.447$} \\
-\centerline{\underline{Formula:} $z_{2}^{[1]}=x_1w_{21}^{1}+x_1w_{22}^{1}+x_1w_{23}^{1}+b_{2}^{[1]}$}
-
+\centerline{$b_{1}^{[2]}=-1.447$} 
+\centerline{\underline{Formula:} $z_{2}^{[1]}=x_1w_{21}^{1}+x_1w_{22}^{1}+x_1w_{23}^{1}+b_{2}^{[1]}$} 
+\centerline{$z_{2}^{[1]}=(1.2*0.2)+(0.05*0.6)+(0.6530*0.15)+(-1.4)$}
+\centerline{$= 0.24+0.03+0.09795-1.14$}
+\centerline{$=-1.03205$}
+\centerline{$a_{2}^{[1]} = \sigma(-1.03205)= \frac{1}{1+e^{-1.03205}} \approx 0.2625$}
+\centerline{The output of the $a_{2}^{[1]} = 0.2625.$} 
 \vspace{5mm}
 
 \intermediatesubproblem{Compute the output of the above network, $y$. Assume that $x_1 = 1.2, x_2 = 0.05$, $x_3 = 0.6530$ and use the sigmoid function for the activation function.}
+\\\\
+\centerline{$z_{1}^{[1]} = h_1 w_{11}^{[2]} + h_2 w_{12}^{[2]} + b^{[2]}$}
+\centerline{$z_{1}^{[1]}=(1.2*0.3)+(0.05*0.1)+(0.6530*0.5)+0.8$}
+\centerline{$= 0.36 + 0.005 + 0.3265 + 0.8 = 1.4915$}
+\centerline{$a_{1}^{[1]} = \frac{1}{1+e^{-1.4915}} \approx 0.8163$}
+\centerline{$z^{[2]}=(0.8163*0.2)+(0.2625*0.6)+(-1.447) = -1.1262$}
+\centerline{$y=\frac{1}{1+e^{1.1262}} \approx 0.2448$}
+\centerline{ The output of the above network, y is 0.2448.}
 \end{enumerate}
-
 \problem{In this question we will review greyscaling.}
 
 \begin{enumerate}
 \easysubproblem{What is a pixel?}
-
+\\\\A pixel is the smallest unit of an image, and it represents a single color. 
 \vspace{5mm}
 
 \easysubproblem{True or False? The RGB color model states that red, green, and blue can be combined in different ways to produce a wide range of colors.}
-
+\\True. The RGB model mixes red, green, and blue to produce many colors.
 \vspace{10mm}
 
 
 \easysubproblem{What is your favorite color?}
+My favorite color is light blue!
+\vspace{5mm}
 
-\vspace{10mm}
-
-\intermediatesubproblem{Using this site, \url{http://www.cknuckles.com/rgbsliders.html}, find out the RGB values for the color you picked above. Note: that site is not exactly secure but it's the one I used in class. You're welcome to use any other website that has a RGB slider such as this one: \url{https://tuneform.com/tools/color/rgb-color-creator}. }
-
-\vspace{10mm}
+\intermediatesubproblem{Using this site, \url{http://www.cknuckles.com/rgbsliders.html}, find out the RGB values for the color you picked above. Note: that site is not exactly secure but it's the one I used in class. You're welcome to use any other website that has an RGB slider such as this one: \url{https://tuneform.com/tools/color/rgb-color-creator}. }
+The RGB values for the color that I picked above are: Red = 0, Green = 226, and Blue = 242.
+\vspace{5mm}
 
 \easysubproblem{What formula did we use to convert a color to grayscale? Hint: \url{https://en.wikipedia.org/wiki/Luma_(video)\#Rec._601_luma_versus_Rec._709_luma_coefficients}.}
-
-\vspace{20mm}
+The formula is called the luminosity method. Y = 0.2989R + 0.5870G+0.1140B.  
+\vspace{5mm}
 
 \easysubproblem{Using the formula above, convert the RGB value of your favorite color in part $(c)$ to grayscale. Write down what value of red, green and blue you get.}
-
-\vspace{10mm}
-
-\easysubproblem{For the color you get above, what is the grayscale intensity? (Hint: just divide by 255).}
-
+\centerline{Red = 0, Green = 226, and Blue = 242.}
+\centerline{$Y = 0.2989(0) + 0.5870(226)+.1140(242)= 160.25 $}
+\centerline{The value is 160.25.}
+\vspace{5mm}
+\easysubproblem{For the color you get above, what is the grayscale intensity? (Hint: just divide by 255).}\\
+\centerline{$\frac{160.25}{255} \approx 0.628$}
+The grayscale intensity is approximately 0.628.
 \end{enumerate}
-
-\newpage 
 
 \problem{In this question we will review the final product -- our neural network.}
 
 \begin{enumerate}
 
-\easysubproblem{Write down the four steps in creating a neural network.}
+\easysubproblem{Write down the four steps in creating a neural network.}\\\\
+\centerline{1st: Convert input data like images into numbers and organize them for training datasets.}
+\\\\
+\centerline{2nd: Decide the number of layers, neurons per layer, and activation function.}
+\\\\
+\centerline{3rd: Use gradient descent to update weights and biases so the network gets better at making predictions. }
+\\\\
+\centerline{4th: Test the model on validation data. Make changes if needed.}
+\easysubproblem{For the neural network example we considered in class, what was our task?}\\
+The network example we considered in class, was used to classify images of the handwriting of the number and recognize patterns within them using a neural network. 
+\vspace{5mm}
 
-\vspace{50mm}
-
-\easysubproblem{For the neural network example we considered in class, what was our task?}
-
-\vspace{10mm}
-
-\easysubproblem{We stated that the inputs were pictures but to be more precise, we needed these inputs to be numerical. How did we get the images to be numerical?}
-
-\vspace{30mm}
+\easysubproblem{We stated that the inputs were pictures but to be more precise, we needed these inputs to be numerical. How did we get the images to be numerical?}\\\\
+We get the images to be numerical by representing them as pixel intensity values. Then normalizing pixel values by dividing by 255 to get values between 0 and 1. Then flatting the image into a 1D array to feed into the neural network.
+\vspace{5mm}
 
 \intermediatesubproblem{How many layers did our neural network have?}
+\\\\
+Our neural network had 3 layers: an input layer, one hidden layer, and an output layer.
+\vspace{5mm}
 
-\vspace{10mm}
-
-\intermediatesubproblem{Within each layer, how many neurons did we have?}
-
-\vspace{20mm}
+\intermediatesubproblem{Within each layer, how many neurons did we have?}\\\\
+ The input layer had 784 neurons for each pixel in the image, hidden layer had 30 neurons, and the output layer had 10 neurons from 0-9.
+\vspace{5mm}
 
 \intermediatesubproblem{What do we hope the hidden layer is doing?}
-
-\newpage
-
+\\\\
+The hidden layer helps the network learn important features from the input data to make better predictions.
 \intermediatesubproblem{What activation function did we use?}
+\\\\
 
-\vspace{10mm}
+\vspace{5mm}
 
 \intermediatesubproblem{How did we find the weights and biases?}
 
@@ -232,7 +248,7 @@ The small change in the weights/bias with the perception versus the sigmoid neur
 
 \end{enumerate}
 
-\newpage 
+
 
 \problem{In this question we will run an image through the neural network we saw in class. Please note that you do not have to enter any code; instead, you're just running code that I will provide.}
 
