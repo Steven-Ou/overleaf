@@ -195,7 +195,7 @@ The RGB values for the color that I picked above are: Red = 0, Green = 226, and 
 The formula is called the luminosity method. Y = 0.2989R + 0.5870G+0.1140B.  
 \vspace{5mm}
 
-\easysubproblem{Using the formula above, convert the RGB value of your favorite color in part $(c)$ to grayscale. Write down what value of red, green and blue you get.}
+\easysubproblem{Using the formula above, convert the RGB value of your favorite color in part $(c)$ to grayscale. Write down what value of red, green and blue you get.}\\
 \centerline{Red = 0, Green = 226, and Blue = 242.}
 \centerline{$Y = 0.2989(0) + 0.5870(226)+.1140(242)= 160.25 $}
 \centerline{The value is 160.25.}
@@ -210,13 +210,13 @@ The grayscale intensity is approximately 0.628.
 \begin{enumerate}
 
 \easysubproblem{Write down the four steps in creating a neural network.}\\\\
-\centerline{1st: Convert input data like images into numbers and organize them for training datasets.}
+1st: Convert input data like images into numbers and organize them for training datasets. Specifying the input and output layer.
 \\\\
 \centerline{2nd: Decide the number of layers, neurons per layer, and activation function.}
 \\\\
-\centerline{3rd: Use gradient descent to update weights and biases so the network gets better at making predictions. }
+\centerline{3rd: Select our activation and cost function. }
 \\\\
-\centerline{4th: Test the model on validation data. Make changes if needed.}
+4th: Feed in training data and use gradient descent to update weights and biases so the network gets better at making predictions and minimizing the cost function.
 \easysubproblem{For the neural network example we considered in class, what was our task?}\\
 The network example we considered in class, was used to classify images of the handwriting of the number and recognize patterns within them using a neural network. 
 \vspace{5mm}
@@ -239,16 +239,14 @@ Our neural network had 3 layers: an input layer, one hidden layer, and an output
 The hidden layer helps the network learn important features from the input data to make better predictions.
 \intermediatesubproblem{What activation function did we use?}
 \\\\
-
+The activation function that we use is the sigmoid function. 
 \vspace{5mm}
 
 \intermediatesubproblem{How did we find the weights and biases?}
-
-
+\\\\
+We found the weight and biases by training the network with 60,000 images of handwritten digits, using gradient descent to adjust the parameters. 
 
 \end{enumerate}
-
-
 
 \problem{In this question we will run an image through the neural network we saw in class. Please note that you do not have to enter any code; instead, you're just running code that I will provide.}
 
@@ -261,27 +259,25 @@ The hidden layer helps the network learn important features from the input data 
 \easysubproblem{Execute the first three cells. It should take about 8 minutes. Upon executing the third cell, you will be prompted to upload an image. Upload the image you downloaded from Brightspace called "homework\_image".}
 
 \easysubproblem{Execute the remaining cell blocks and make a note of the probabilities you obtain in the last code block. What does the neural network predict the digit is?}
-
-\vspace{30mm}
+The neural network predicted the digit to be a 6.
+\vspace{5mm}
 
 \easysubproblem{Redo parts $(c)$ and $ (d)$ again. Did you get a different result or different probabilities? }
+I got an eight after doing parts c and d again. The results were different, and the probabilities were also different.
+\vspace{5mm}
 
-\vspace{30mm}
-
-
-\extracreditsubproblem{Above, you should get slightly different results each time. Can you perhaps explain why? }
-
+\extracreditsubproblem{Above, you should get slightly different results each time. Can you perhaps explain why? }\\\\
+The results each time can get slightly different because the weights and biases are typically initialized randomly. The training could also use stochastic gradient descent or mini-batch gradient descent, and the updates to the weight and biases are made using random subsets of the training data. The neural network is also sensitive to small differences in input values. Which can lead to slightly different predictions. The computers store numbers with limited precision, which can cause the computer to mess up when running the same neural network multiple times.    
 \end{enumerate}
-
-\newpage 
 
 \problem{Here are two unrelated questions.}
 
 \begin{enumerate}
 
 \easysubproblem{Consider this link: \\ \url{https://machinelearning.apple.com/research/learning-neural-network-subspaces}. What kind of neural network does Apple use for features such as face recognition?}
-
-\vspace{30mm}
+\\\\
+Apple uses a deep convolutional neural network with deep feature learning and subspace learning techniques for Face ID and another recognition task.
+\vspace{5mm}
 
 \easysubproblem{Is there a particular topic in modeling that you are interested in or would like to learn more about? Examples: Spotify recommendation algorithms, sports betting, transformers like ChatGPT. If no, then you may leave this question blank.}
 
