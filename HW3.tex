@@ -1,0 +1,400 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+\usepackage{systeme}
+\usepackage{esvect}
+\usepackage{xurl} 
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+
+
+
+
+\title{MATH 245 Spring \the\year~ Homework \#3}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace Thursday, April $10^{th}$, \the\year ~ at 11:59PM\\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\problem{In this question, we are going to do some light reading.}
+
+\begin{enumerate}
+
+\easysubproblem{ Read the article found here: \\
+\url{https://www.quantamagazine.org/three-hundred-years-later-a-tool-from-isaac-newton-gets-an-update-20250324/.} What date was this article published?
+}
+\\\\ This article was published March 24th, 2025.
+\vspace{2mm}
+\easysubproblem{ True or False? Most problems that involve finding an optimal solution boil down to minimizing a function.
+}
+\\\\
+True, finding optimal solutions involves minimizing a function, such as reducing cost, distance, or energy. 
+\vspace{2mm}
+
+
+\easysubproblem{In the third paragraph, does the description of Newton's method in optimization sound like any topic we discussed? If so, what topic? (Note that Newton's method is sometimes called Newton-Raphson).
+}
+\\\\Yes, the description of Newton's method sounds like our discussion on iterative optimization algorithms, particularly those that use gradient information to find function minima or maxima. 
+\vspace{2mm}
+
+\easysubproblem{In using Newton's method in optimization, how many derivatives are required?
+}\\\\
+Just two derivatives.
+\vspace{2mm}
+\easysubproblem{What converges faster, Newton's method or gradient descent? Note that the article states this answer and Wikipedia also has a nice visual: \url{https://en.wikipedia.org/wiki/Newton\%27s_method_in_optimization}.
+}\\\\
+Newton's method converges faster because it uses second-order derivative information, allowing it to take more informed steps toward the minimum.
+\vspace{2mm}
+\easysubproblem{Given your answer above, why might someone opt to use gradient descent versus Newton's method?
+}\\\\
+Someone might opt to use gradient descent because it's cheaper.
+\vspace{2mm}
+
+
+\easysubproblem{True or False? Ahmadi, Chaudhry and Zhang's work ``piggybacks'' off previous work.
+}\\\\
+True!
+\vspace{2mm}
+
+\easysubproblem{What properties make an equation easy to minimize?
+}\\\\
+Equations are generally easier to minimize when convex, smooth, and well-conditioned. 
+\vspace{2mm}
+
+\easysubproblem{What did Ahmadi, Chaudhry and Zhang do to the Taylor expansion?
+}
+\\\\
+Ahmadi, Chaudhry, and Zhang extended the traditional use of Taylor expansion in Newton's method to accommodate a broader range of functions, enhancing the flexibility and applicability of the method in optimization problems.
+\vspace{2mm}
+
+\easysubproblem{As of 2025, which technique is our best bet for optimization? Is it Newton's, gradient descent or Ahmadi, Chaudhry and Zhang's technique?
+}
+\\\\
+As of 2025, Ahmadi, Chaudhry, and Zhang's technique has significantly advanced optimization methods. Their technique improved performance for a broader class of functions. However, the choice of techniques still depends on the specific context of the problem, computational resources, and the characteristics of the function. 
+\vspace{2mm}
+
+
+\easysubproblem{True or False? It is possible that Ahmadi, Chaudhry and Zhang's technique can replace gradient descent in the future.}\\\\
+True! 
+\end{enumerate}
+
+\vspace{2mm}
+
+\problem{In this exercise, we will review the concept of vectors. Understanding vectors will be critical in developing our next model -- the support vector machine.}
+
+\begin{enumerate}
+
+\easysubproblem{We first begin with our motivation. From the point of view of modeling, why are we interested in higher dimensional spaces?}
+\\\\
+We are interested in higher-dimensional spaces because they allow us to model complex relationships and patterns in data more effectively. 
+\vspace{2mm}
+
+%\easysubproblem{What does a coordinate system allow us to do?}
+
+\easysubproblem{Geometrically, what is a (column) vector? How do we denote a column vector?}
+
+\vspace{15mm}
+
+\easysubproblem{What two properties  completely characterize$^*$ a vector?}
+
+\vspace{15mm}
+
+\easysubproblem{What is the transpose of a column vector?}
+
+\vspace{15mm}
+
+\easysubproblem{What is the transpose of a row vector?}
+
+\newpage 
+
+\easysubproblem{On the graph below, plot the following vectors: $ \vect{v_1} = \begin{bmatrix}
+1 \\
+-4  
+\end{bmatrix} , \vect{v_2} =   \begin{bmatrix}
+-2 \\
+1
+\end{bmatrix} , \vect{v_3} =  \begin{bmatrix}
+-3 \\
+-4
+\end{bmatrix},  \vect{v_4} =  \begin{bmatrix}
+3 \\
+4
+\end{bmatrix} $. 
+
+\begin{center}
+\centering
+\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\end{center}
+}
+
+\newpage
+
+\easysubproblem{On the graph below, plot the following vectors: $ \vect{v_1} = \begin{bmatrix}
+1 \\
+5 \\
+0
+\end{bmatrix} , \vect{v_2} =   \begin{bmatrix}
+5 \\
+1 \\
+0
+\end{bmatrix} , \vect{v_3} =  \begin{bmatrix}
+0\\
+0 \\
+4
+\end{bmatrix},
+ \vect{v_4} =  \begin{bmatrix}
+5\\
+5 \\
+5
+\end{bmatrix} $. 
+
+\begin{center}
+\centering
+\includegraphics[width=0.8\textwidth]{xyz.jpg} 
+\end{center}
+}
+
+\newpage 
+\easysubproblem{Intuitively, when are two vectors equal to each other?}
+
+\vspace{25mm}
+
+\easysubproblem{On the graph below, plot the following vectors: $ \vect{v_1} = \begin{bmatrix}
+1 \\
+-4  
+\end{bmatrix} , \vect{v_2} =   \begin{bmatrix}
+-2 \\
+1
+\end{bmatrix} ,  \vect{v_1} + \vect{v_2}, \vect{v_1} - \vect{v_2} $. 
+
+\begin{center}
+\centering
+\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\end{center}
+}
+
+\newpage 
+
+\easysubproblem{On the graph below, plot the following vectors: $ \vect{v_2} =   \begin{bmatrix}
+-2 \\
+1
+\end{bmatrix} , 2\vect{v_2}, -2\vect{v_2}$. 
+
+\begin{center}
+\centering
+\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\end{center}
+}
+
+\newpage
+
+\easysubproblem{For each vector below, compute it's magnitude: $ \vect{v_1} = \begin{bmatrix}
+1 \\
+-4  
+\end{bmatrix} , \vect{v_2} =   \begin{bmatrix}
+-2 \\
+1
+\end{bmatrix} , \vect{v_3} =  \begin{bmatrix}
+0\\
+0 \\
+4
+\end{bmatrix},
+ \vect{v_4} =  \begin{bmatrix}
+5\\
+5 \\
+5
+\end{bmatrix} $.
+}
+
+\vspace{60mm}
+
+
+\easysubproblem{Normalize each of the following vectors: $ \vect{v_1} = \begin{bmatrix}
+1 \\
+-4  
+\end{bmatrix} , \vect{v_2} =   \begin{bmatrix}
+-2 \\
+1
+\end{bmatrix} , \vect{v_3} =  \begin{bmatrix}
+0\\
+0 \\
+4
+\end{bmatrix},
+ \vect{v_4} =  \begin{bmatrix}
+5\\
+5 \\
+5
+\end{bmatrix} $.
+}
+
+\newpage 
+
+\end{enumerate}
+
+\problem{In this exercise, we will review angles and the inner product.}
+
+\begin{enumerate}
+
+\easysubproblem{How did we define $\vect{u}^T \vect{v}?$ What name did we attach to this operation? }
+
+\vspace{25mm}
+
+\easysubproblem{Suppose  $\vect{u} = \begin{bmatrix}
+1 \\
+2 \\
+-1
+\end{bmatrix} , \vect{v} =   \begin{bmatrix}
+5 \\
+-2 \\
+1
+\end{bmatrix}$ Compute $\vect{u}^T \vect{v}$.}
+
+\vspace{25mm}
+
+\easysubproblem{If $\theta$ is the (smaller) angle between two nonzero vectors, $\vect{u}$ and $\vect{v}$, then what can we say about
+ $\cos\theta$?}
+
+\vspace{25mm}
+
+ 
+\easysubproblem{If $\vect{u}^T \vect{v} > 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
+
+\vspace{10mm}
+
+
+\easysubproblem{If $\vect{u}^T \vect{v} = 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
+
+\vspace{10mm}
+
+\easysubproblem{If $\vect{u}^T \vect{v} < 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{Prove that $\vect{u}^T \vect{v} = \vect{v}^T \vect{u}$}. 
+
+\newpage
+
+\easysubproblem{Suppose  $\vect{u_1} = \begin{bmatrix}
+1 \\
+2 \\
+-1
+\end{bmatrix} , \vect{u_2} =   \begin{bmatrix}
+5 \\
+-2 \\
+1
+\end{bmatrix} $. Show that $\vect{u_1}$ and $\vect{u_2} $ are orthogonal to each other.}
+
+
+
+\vspace{40mm}
+
+\easysubproblem{If $\vect{u}$ and $\vect{v}$ are vectors in $\mathbb{R}^n$ where $\vect{u} \neq \vect{0}$, then what is the formula for the projection of $\vect{v}$ onto $\vect{u}$?}
+
+\vspace{20mm}
+
+\easysubproblem{If $\vect{u} = \begin{bmatrix}
+10 \\
+1 
+\end{bmatrix}$ and $\vect{v} =  \begin{bmatrix}
+4 \\
+8
+\end{bmatrix}$, then find $\text{proj}_{\vect{u}}(\vect{v})$ and sketch a picture.}
+
+\vspace{60mm}
+
+\easysubproblem{Find the distance between $\text{proj}_{\vect{u}}(\vect{v})$ and  $\vect{v}$. }
+\end{enumerate}
+
+\newpage 
+
+\problem{In this question, we will review the vector form of lines and (hyper)planes. }
+
+\begin{enumerate}
+
+\easysubproblem{Explain how the general form of the equation of a line, $ax + by = c$ represents the same information as $y = mx + b$.}
+
+\vspace{35mm}
+
+\easysubproblem{In $\mathbb{R}^2$ explain how $ax + by = c$ is the same as $\vect{w}^T \vect{x} + b = 0$.}
+
+\vspace{35mm}
+
+\easysubproblem{In $\mathbb{R}^3$ what does the equation $\vect{w}^T \vect{x} + b = 0$ represent?}
+
+\vspace{10mm}
+
+\easysubproblem{In $\mathbb{R}^n$ what does the equation $\vect{w}^T \vect{x} + b = 0$ represent?}
+
+\vspace{10mm}
+
+
+\intermediatesubproblem{Show for any hyperplane  $\vect{w}^T \vect{x} + b = 0$, that $\vect{w}$ is always orthogonal to the hyperplane.}
+
+\newpage
+
+\easysubproblem{Given a hyperplane $\vect{w}^T \vect{x} + b = 0$ and a point $\vect{x_0}$, what is the distance between $\vect{x_0}$ and the hyperplane?}
+\end{enumerate}
+
+\vspace{25mm}
+
+\problem{There are two main questions we have answered when it comes to vectors. The first question we answered was finding the length between a vector and it's projection/shadow. The second question we answered was finding the length between a point and a hyperplane. In this last exercise, we are going to connect these two questions. For all parts below, let $\vect{v} = \begin{bmatrix}
+3\\
+7 
+\end{bmatrix}$ and  $\vect{u} = \begin{bmatrix}
+4\\
+1 
+\end{bmatrix}$. }
+\begin{enumerate}
+
+\easysubproblem{Find the projection of $\vect{v}$ onto $\vect{u}$.}
+
+\vspace{25mm}
+
+
+\easysubproblem{What is the distance between $\vect{v}$ and $\vect{\text{proj}_{\vect{u}} (\vect{v})}$? }
+
+\vspace{25mm}
+
+\easysubproblem{Draw a picture for your answer in parts $(a)$ and $(b)$.}
+
+\vspace{50mm}
+
+\easysubproblem{Now consider the hyperplane determined by $\vect{w}^T \vect{x} + b = 0$ where $\vect{w} = \begin{bmatrix}
+-25\\
+100 
+\end{bmatrix}$ and $b = 0$. Sketch the hyerplane (line) below. }
+
+\vspace{50mm}
+
+\easysubproblem{Argue that $\vect{u}$ is on the hyperplane.} 
+
+\vspace{50mm}
+
+\easysubproblem{Using the formula in Problem $4f$ what is the distance between $\vect{v}$ and the hyperplane? Does this agree with your answer in Problem $5b$?}
+
+\vspace{50mm}
+
+\easysubproblem{One last thing to note which will be important for us: consider the hyperplane determined by $\vect{w}^T \vect{x} + b = 0$ where $\vect{w} = \begin{bmatrix}
+1\\
+-4 
+\end{bmatrix}$ and $b = 0$. Sketch the hyperplane (line) below. What do you notice?}
+
+\vspace{50mm}
+
+\easysubproblem{Using the formula in Problem $4f$ what is the distance between $\vect{v}$ and the hyperplane determined by $\vect{w}^T \vect{x} + b = 0$ where $\vect{w} = \begin{bmatrix}
+1\\
+-4 
+\end{bmatrix}$ and $b = 0$? Does this agree with your answer in Problem $5b$ and Problem $5f$?}
+
+\end{enumerate}
+
+\end{document}
