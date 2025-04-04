@@ -100,22 +100,24 @@ We are interested in higher-dimensional spaces because they allow us to model co
 
 %\easysubproblem{What does a coordinate system allow us to do?}
 
-\easysubproblem{Geometrically, what is a (column) vector? How do we denote a column vector?}
+\easysubproblem{Geometrically, what is a (column) vector? How do we denote a column vector?} \\\\
+A column vector is a mathematical object that represents a point or direction in space. This is how we denote a column vector: v=$
+\begin{bmatrix}
+    v1\\v2\\.\\.\\.\\v_{n}
+\end{bmatrix}
+$.
+\vspace{2mm}
 
-\vspace{15mm}
+\easysubproblem{What two properties  completely characterize$^*$ a vector?}\\\\
+The length and the direction.
+\vspace{2mm}
 
-\easysubproblem{What two properties  completely characterize$^*$ a vector?}
+\easysubproblem{What is the transpose of a column vector?}\\\\
+The transpose of a column vector is a row vector. 
+\vspace{2mm}
 
-\vspace{15mm}
-
-\easysubproblem{What is the transpose of a column vector?}
-
-\vspace{15mm}
-
-\easysubproblem{What is the transpose of a row vector?}
-
-\newpage 
-
+\easysubproblem{What is the transpose of a row vector?}\\\\
+The transpose of a row vector is a column vector. 
 \easysubproblem{On the graph below, plot the following vectors: $ \vect{v_1} = \begin{bmatrix}
 1 \\
 -4  
@@ -132,7 +134,7 @@ We are interested in higher-dimensional spaces because they allow us to model co
 
 \begin{center}
 \centering
-\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\includegraphics[width=0.5\textwidth]{output.png} 
 \end{center}
 }
 
@@ -156,17 +158,14 @@ We are interested in higher-dimensional spaces because they allow us to model co
 5 \\
 5
 \end{bmatrix} $. 
-
 \begin{center}
 \centering
-\includegraphics[width=0.8\textwidth]{xyz.jpg} 
+\includegraphics[width=0.5\textwidth]{3d.png} 
 \end{center}
 }
-
-\newpage 
+ 
 \easysubproblem{Intuitively, when are two vectors equal to each other?}
-
-\vspace{25mm}
+\\\\Two vectors are equal to each other when they have the same magnitude and direction.
 
 \easysubproblem{On the graph below, plot the following vectors: $ \vect{v_1} = \begin{bmatrix}
 1 \\
@@ -175,10 +174,9 @@ We are interested in higher-dimensional spaces because they allow us to model co
 -2 \\
 1
 \end{bmatrix} ,  \vect{v_1} + \vect{v_2}, \vect{v_1} - \vect{v_2} $. 
-
 \begin{center}
 \centering
-\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\includegraphics[width=0.3\textwidth]{add.png} 
 \end{center}
 }
 
@@ -191,11 +189,9 @@ We are interested in higher-dimensional spaces because they allow us to model co
 
 \begin{center}
 \centering
-\includegraphics[width=0.8\textwidth]{xyplane.png} 
+\includegraphics[width=0.5\textwidth]{a.png} 
 \end{center}
 }
-
-\newpage
 
 \easysubproblem{For each vector below, compute it's magnitude: $ \vect{v_1} = \begin{bmatrix}
 1 \\
@@ -213,9 +209,20 @@ We are interested in higher-dimensional spaces because they allow us to model co
 5 \\
 5
 \end{bmatrix} $.
-}
-
-\vspace{60mm}
+}\\\\
+$\begin{Vmatrix}
+    v_1
+\end{Vmatrix} \approx 4.12 \\ \begin{Vmatrix}
+    v_2
+\end{Vmatrix} \approx 2.24\\
+\begin{Vmatrix}
+    v_3
+\end{Vmatrix} =4\\
+\begin{Vmatrix}
+    v_4
+\end{Vmatrix} \approx 8.66 
+$
+\vspace{2mm}
 
 
 \easysubproblem{Normalize each of the following vectors: $ \vect{v_1} = \begin{bmatrix}
@@ -235,18 +242,29 @@ We are interested in higher-dimensional spaces because they allow us to model co
 5
 \end{bmatrix} $.
 }
-
-\newpage 
+$\\v_1=
+\begin{bmatrix}
+    0.243\\-0.970
+\end{bmatrix},v_2=
+\begin{bmatrix}
+    -0.894\\0.446
+\end{bmatrix},v_3=
+\begin{bmatrix}
+    0\\0\\1
+\end{bmatrix},v_4=
+\begin{bmatrix}
+    0.577\\0.577\\0.577
+\end{bmatrix}
+ $
 
 \end{enumerate}
-
+\newpage
 \problem{In this exercise, we will review angles and the inner product.}
 
 \begin{enumerate}
 
 \easysubproblem{How did we define $\vect{u}^T \vect{v}?$ What name did we attach to this operation? }
-
-\vspace{25mm}
+\\\\ We define it as a dot product.
 
 \easysubproblem{Suppose  $\vect{u} = \begin{bmatrix}
 1 \\
@@ -256,24 +274,20 @@ We are interested in higher-dimensional spaces because they allow us to model co
 5 \\
 -2 \\
 1
-\end{bmatrix}$ Compute $\vect{u}^T \vect{v}$.}
-
-\vspace{25mm}
+\end{bmatrix}$ Compute $\vect{u}^T \vect{v}$.}\\\\
+$\vect{u}^T \vect{v} = 1(5) +2(-2)+(-1)(1)= 0 $
+\vspace{2mm}
 
 \easysubproblem{If $\theta$ is the (smaller) angle between two nonzero vectors, $\vect{u}$ and $\vect{v}$, then what can we say about
  $\cos\theta$?}
-
-\vspace{25mm}
-
- 
-\easysubproblem{If $\vect{u}^T \vect{v} > 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
-
-\vspace{10mm}
-
-
-\easysubproblem{If $\vect{u}^T \vect{v} = 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
-
-\vspace{10mm}
+\\\\ We can say that the cosine of the angle $\theta$ between two nonzero vectors $\vect{u}$and $\vect{v}$. 
+\vspace{2mm}
+\easysubproblem{If $\vect{u}^T \vect{v} > 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}\\\\
+The angle $\theta$ between the vectors is acute.
+\vspace{2mm}
+\easysubproblem{If $\vect{u}^T \vect{v} = 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}\\\\
+The vectors are orthogonal. 
+\vspace{2mm}
 
 \easysubproblem{If $\vect{u}^T \vect{v} < 0$ then what can we say about the angle between $\vect{u}$ and $\vect{v}$?}
 
