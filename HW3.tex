@@ -304,13 +304,14 @@ The angle $\theta$ between the vectors is obtuse.
 -2 \\
 1
 \end{bmatrix} $. Show that $\vect{u_1}$ and $\vect{u_2} $ are orthogonal to each other.}\\\\
-$\vect{u_1}$
+$\vect{u}^T \vect{v}$ = (1 * 5) + (2*-2) + (-1*1) = 0. Thus, they are orthogonal.  
 
 \vspace{40mm}
 
 \easysubproblem{If $\vect{u}$ and $\vect{v}$ are vectors in $\mathbb{R}^n$ where $\vect{u} \neq \vect{0}$, then what is the formula for the projection of $\vect{v}$ onto $\vect{u}$?}
-
-\vspace{20mm}
+\\\\$proj_u(v)=\frac{(\vect{u^T\vect{v}})}{\begin{Vmatrix}u
+\end{Vmatrix}^2}\vect{u}$
+\vspace{2mm}
 
 \easysubproblem{If $\vect{u} = \begin{bmatrix}
 10 \\
@@ -318,44 +319,58 @@ $\vect{u_1}$
 \end{bmatrix}$ and $\vect{v} =  \begin{bmatrix}
 4 \\
 8
-\end{bmatrix}$, then find $\text{proj}_{\vect{u}}(\vect{v})$ and sketch a picture.}
+\end{bmatrix}$, then find $\text{proj}_{\vect{u}}(\vect{v})$ and sketch a picture.}\\\\
+$proj_u(v) = \begin{bmatrix}
+    4.75,0.475
+\end{bmatrix}$
+\begin{center}
+\centering
+\includegraphics[width=0.5\textwidth]{sk.png} 
+\end{center}
 
-\vspace{60mm}
+\vspace{2mm}
 
 \easysubproblem{Find the distance between $\text{proj}_{\vect{u}}(\vect{v})$ and  $\vect{v}$. }
-\end{enumerate}
-
-\newpage 
-
+\\\\
+$\begin{Vmatrix}
+    \vect{v-proj_u(v)}
+\end{Vmatrix} \approx 7.56$ 
+\end{enumerate} 
 \problem{In this question, we will review the vector form of lines and (hyper)planes. }
 
 \begin{enumerate}
 
 \easysubproblem{Explain how the general form of the equation of a line, $ax + by = c$ represents the same information as $y = mx + b$.}
-
-\vspace{35mm}
+\\\\They represent the same line; ax+by =c can be rearranged into slope-intercept form. 
+\vspace{2mm}
 
 \easysubproblem{In $\mathbb{R}^2$ explain how $ax + by = c$ is the same as $\vect{w}^T \vect{x} + b = 0$.}
-
+\\\\Same idea  - W = [a,b] is a normal vector to the line, x =[x,y] this is any point on the plane, b = -c. 
 \vspace{35mm}
 
-\easysubproblem{In $\mathbb{R}^3$ what does the equation $\vect{w}^T \vect{x} + b = 0$ represent?}
-
-\vspace{10mm}
+\easysubproblem{In $\mathbb{R}^3$ what does the equation $\vect{w}^T \vect{x} + b = 0$ represent?}\\\\
+It represents a plane.
+\vspace{2mm}
 
 \easysubproblem{In $\mathbb{R}^n$ what does the equation $\vect{w}^T \vect{x} + b = 0$ represent?}
-
-\vspace{10mm}
+\\\\
+It's a hyperplane, a subspace of dimension n-1. 
+\vspace{2mm}
 
 
 \intermediatesubproblem{Show for any hyperplane  $\vect{w}^T \vect{x} + b = 0$, that $\vect{w}$ is always orthogonal to the hyperplane.}
-
-\newpage
-
+\\\\
+Any direction along the hyperplane keeps $\vect{w^T\vect{x}}$ constant, so w must be perpendicular to any vector in the plane. 
 \easysubproblem{Given a hyperplane $\vect{w}^T \vect{x} + b = 0$ and a point $\vect{x_0}$, what is the distance between $\vect{x_0}$ and the hyperplane?}
+\\\\ $\frac{\begin{bmatrix}
+    \vect{w^T\vect{x}}+b
+\end{bmatrix}}{\begin{Vmatrix}
+    w
+\end{Vmatrix}
+}$
 \end{enumerate}
 
-\vspace{25mm}
+\vspace{2mm}
 
 \problem{There are two main questions we have answered when it comes to vectors. The first question we answered was finding the length between a vector and it's projection/shadow. The second question we answered was finding the length between a point and a hyperplane. In this last exercise, we are going to connect these two questions. For all parts below, let $\vect{v} = \begin{bmatrix}
 3\\
@@ -366,25 +381,29 @@ $\vect{u_1}$
 \end{bmatrix}$. }
 \begin{enumerate}
 
-\easysubproblem{Find the projection of $\vect{v}$ onto $\vect{u}$.}
-
-\vspace{25mm}
-
-
+\easysubproblem{Find the projection of $\vect{v}$ onto $\vect{u}$.}\\\\
+$proj_u(v)= [4.47,1.12]$
+\vspace{2mm}
 \easysubproblem{What is the distance between $\vect{v}$ and $\vect{\text{proj}_{\vect{u}} (\vect{v})}$? }
-
-\vspace{25mm}
-
-\easysubproblem{Draw a picture for your answer in parts $(a)$ and $(b)$.}
-
+$\\\\
+\begin{Vmatrix}
+    v- proj_u(v)
+\end{Vmatrix} \approx 6.06
+$
 \vspace{50mm}
+\easysubproblem{Draw a picture for your answer in parts $(a)$ and $(b)$.}
+\begin{center}
+\centering
+\includegraphics[width=0.5\textwidth]{pu.png} 
+\end{center}
+
 
 \easysubproblem{Now consider the hyperplane determined by $\vect{w}^T \vect{x} + b = 0$ where $\vect{w} = \begin{bmatrix}
 -25\\
 100 
-\end{bmatrix}$ and $b = 0$. Sketch the hyerplane (line) below. }
+\end{bmatrix}$ and $b = 0$. Sketch the hyperplane (line) below. }
 
-\vspace{50mm}
+\vspace{2mm}
 
 \easysubproblem{Argue that $\vect{u}$ is on the hyperplane.} 
 
