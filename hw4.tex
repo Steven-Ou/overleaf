@@ -1,0 +1,300 @@
+\documentclass[12pt]{article}
+
+\include{preamble}
+\usepackage{systeme}
+\usepackage{ dsfont }
+\usepackage{esvect}
+\usepackage[most]{tcolorbox}
+\usepackage{xurl} 
+ \newcommand{\vect}[1]{\boldsymbol{#1}}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+
+
+
+\title{MATH 245 Spring \the\year~ Homework \4}
+
+\author{Steven Ou} 
+
+\iftoggle{professormode}{
+\date{Due via Brightspace Monday, May $19^{th}$, \the\year ~ at 11:59PM\\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{In this question, we are going to do some light reading. We will only read selected selections of the following article: \url{https://www.nature.com/articles/s41598-024-51600-y.pdf}. You do NOT have to read the entire article.}
+
+\begin{enumerate}
+
+\easysubproblem{What year was this paper published?}
+\\\\This paper was published in 2024.
+\easysubproblem{In the article, what task are the researchers attempting to accomplish? Hint: look at the title.}\\\\ Detecting Parkinson's disease through L1 regularized SVM and deep neural network.
+\easysubproblem{ Which two machine learning algorithms/models are being used to accomplish their task? Hint: again look at the title.}\\\\
+SVM and neural network
+\easysubproblem{True or False? In previous studies, the detection of Parkinson's disease had rather low accuracy.
+} \\\\ True!
+\easysubproblem{What is Parkinson's disease?
+} \\\\
+ Parkinson's disease is a progressive neurological disorder that affects movement. It is caused by the degeneration of dopamine-producing neurons in the brain and typically leads to tremors, stiffness, slowness of movement, and balance difficulties.
+\easysubproblem{What is the typical training data for the detection of Parkinson's disease? Hint: see the last paragraph of Page 01}. \\\\
+Voice recordings and speech signals are commonly used as training data because Parkinson’s can cause vocal impairments.
+\easysubproblem{What two stage diagnostic model are the researchers proposing? Hint: see the fourth paragraph on Page 02.
+}
+
+\vspace{10mm}
+
+
+\easysubproblem{How many datasets were used? Hint: see Page 03.
+}
+
+\vspace{5mm}
+
+
+\easysubproblem{With regards to dataset 1, how many hyperparameters were used? Hint: see page 07.
+}
+
+\vspace{5mm}
+
+
+\easysubproblem{With regards to dataset 2, how many hyperparameters were used? Hint: see page 07.
+}
+
+\vspace{5mm}
+
+
+\easysubproblem{With regards to dataset 01, what was the accuracy? Hint: see Table 10.
+}
+
+\vspace{10mm}
+
+
+\easysubproblem{With regards to dataset 02, what was the accuracy? Hint: see Table 11.
+}
+
+\vspace{10mm}
+
+
+\easysubproblem{Write down one limitation of this study. Hint: see page 10.
+}
+
+\vspace{30mm}
+
+
+\intermediatesubproblem{Explain why classifying a patient as either having PD or not having PD is a worthwhile goal. (The answer to this isn't necessarily found in the paper but rather based on your own reasoning).
+}
+
+\end{enumerate}
+
+\vspace{30mm}
+
+
+\problem{In this exercise, we will review the basics needed in developing the support vector machine.}
+
+\begin{enumerate}
+
+\easysubproblem{Suppose we are given a bunch of data points which belong to one of two classes and these points are labeled (meaning we see that each data point has a label of either $+1$ or $-1$). What is our goal/task?}
+
+\vspace{15mm}
+
+
+\easysubproblem{What does our training data $\mathds{D}$ typically look like?}
+
+\vspace{15mm}
+
+\easysubproblem{What does it mean when we say that data is linearly separable?}
+
+\vspace{15mm}
+
+\easysubproblem{If the data is linearly separable, then how many hyperplanes can we typically draw which separates the data and correctly classifies everything?}
+
+\newpage 
+
+\easysubproblem{In the space below, sketch out a linearly separable dataset.}
+
+\vspace{65mm}
+
+\easysubproblem{Again sketch out your linearly separable dataset above and this time draw a hyperplane which divides the space and ensures correct classification.}
+
+\vspace{65mm}
+
+\easysubproblem{Again, copy your linearly separable dataset from part $(e)$ and this time draw a hyperplane different from your answer in part $(f)$  which divides the space and ensures correct classification.
+}
+
+\vspace{65mm}
+
+\easysubproblem{Given your answer in the above two parts, we now have two hyperplanes which correctly separates and classifies. Between your two hyperplanes, which hyperplane do you think is better? Why?}
+
+\vspace{30mm}
+
+\easysubproblem{Intuitively explain what is meant by \textit{margin}.
+}
+
+\vspace{30mm}
+
+\easysubproblem{Mathematically, how do we define \textit{margin}?}
+
+\vspace{30mm}
+
+\easysubproblem{With regards to the margin, what is our goal?}
+
+\vspace{30mm}
+
+
+\easysubproblem{If our \textbf{only} goal is to maximize the margin, explain why our optimization fails.}
+
+\vspace{30mm}
+
+
+\easysubproblem{Explain why we need the constraint $\forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0$.}
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this exercise, we will now talk about the equivalent formulations of our hard margin SVM.}
+\begin{enumerate}
+
+\easysubproblem{Explain why 
+\begin{tcolorbox}
+    \begin{align*}
+     \underset{\vect{w}, b}{\text{arg max}} ~~ \gamma(\vect{w}, b) ~~ \text{subject to the condition} ~ \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0
+\end{align*}
+\end{tcolorbox}
+
+is equivalent to 
+\begin{tcolorbox}
+    \begin{align*}
+     \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~ \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ \underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w^T \vect{x_i} + b| = 1}
+\end{align*} 
+\end{tcolorbox}}
+
+\newpage 
+
+
+\easysubproblem{Explain if the following optimization 
+\begin{tcolorbox}
+\begin{align*}
+     \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~ \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ \underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w^T \vect{x_i} + b| = 1}.
+\end{align*}
+\end{tcolorbox}
+
+is equivalent to this optimization: 
+\begin{tcolorbox}
+\begin{align*}
+     \underset{\vect{w}, b}{\text{arg min}} ~~ \frac{1}{2} \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~ \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ \underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w^T \vect{x_i} + b| = 1}
+\end{align*}
+\end{tcolorbox} }
+
+\vspace{40mm}
+
+\easysubproblem{State the primal form (of the hard margin) SVM.}
+
+\newpage 
+
+\intermediatesubproblem{Explain why
+\begin{tcolorbox}
+\begin{align*}
+     \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~ \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ \underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w^T \vect{x_i} + b| = 1}.
+\end{align*}
+\end{tcolorbox}
+implies the primal form (of the hard margin) SVM. (You do NOT have to show the primal form implies the boxed in optimization which is slightly harder).}
+
+\vspace{60mm}
+
+\easysubproblem{Interpret what the primal form (of the hard margin) SVM is asking us to do graphically.}
+
+\vspace{60mm}
+
+\easysubproblem{What technique do we use to solve the optimization problem posed in the primal form?}
+
+\newpage 
+
+
+\intermediatesubproblem{Suppose we are given
+$\vect{x_1} = [1 ~~ 0]^T$ with label $-1$,
+$\vect{x_2} = [2 ~~ 0]^T$ with label $-1$, and
+$\vect{x_3} = [5 ~~ 5]^T$ with label 1. Perform the first two iterations of the subgradient approach where we initialized at $\vect{w} = [1 ~~~ 1]^T$, $b = 0$ and $\alpha = 0.001$.}
+
+\newpage 
+
+
+\easysubproblem{Suppose the optimal hyperplane for a  dataset $\mathds{D}$ is given by $\frac{3}{17}x_1 + \frac{5}{17} x_2 - \frac{23}{17} = 0$. Predict the label for the new datapoint $\vect{x}_{new} = [4 ~~  
+ 2.5]$}
+
+\end{enumerate}
+
+\vspace{30mm}
+\problem{In this exercise, we will now talk about the soft margin SVM.}
+\begin{enumerate}
+
+\easysubproblem{Explain why in the case of non-linearly separable data the primal form of the hard margin SVM is impossible to satisfy.}
+
+\vspace{30mm}
+
+\easysubproblem{In the case of the soft margin SVM, what is the optimization problem we aim to solve?}
+
+\vspace{50mm}
+
+
+\easysubproblem{In the case of the soft margin SVM, what does $\xi_i$ represent?}
+
+\newpage 
+\intermediatesubproblem{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=1\linewidth]{svm_1.png}
+\end{figure}
+
+
+
+\newpage 
+\intermediatesubproblem{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=1\linewidth]{svm_2.png}
+\end{figure}
+
+\newpage 
+
+\intermediatesubproblem{In both graphs below, the soft margin SVM has been implemented. One of these graphs correspond to when $C = 0.01$ and the other graph corresponds to when $C = 100$. Which graph is which? How do you know?
+\begin{figure}[h!]
+    \centering
+\includegraphics[width=0.75\linewidth]{svm_4.png}
+\end{figure}
+}
+\end{enumerate}
+
+\newpage 
+
+\problem{Here are some additional questions that we discussed during our derivation of the SVM.}
+\begin{enumerate}
+
+\easysubproblem{What is the Blessing of Dimensionality? Give an example.}
+
+\vspace{75mm}
+
+\easysubproblem{What is the Blessing of Non-Uniformity?}
+
+\vspace{75mm}
+
+\intermediatesubproblem{Suppose the $x$-axis represents tumor size and the $y$-axis represents the cell density like the example discussed in class. If getting cancer was indeed random, then what would the graph look like?}
+
+
+
+\end{enumerate}
+
+\end{document}
