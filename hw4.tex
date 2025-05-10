@@ -53,117 +53,89 @@ SVM and neural network
 \easysubproblem{What is the typical training data for the detection of Parkinson's disease? Hint: see the last paragraph of Page 01}. \\\\
 Voice recordings and speech signals are commonly used as training data because Parkinson’s can cause vocal impairments.
 \easysubproblem{What two stage diagnostic model are the researchers proposing? Hint: see the fourth paragraph on Page 02.
-}
-
-\vspace{10mm}
+} \\\\
+The first diagnostic model is $l_1$, which regularizes SVM and selects important features. The next model is DNN, which performs a classification based on the selected features.
 
 
 \easysubproblem{How many datasets were used? Hint: see Page 03.
-}
-
-\vspace{5mm}
-
-
+}\\\\
+Two datasets were used.
 \easysubproblem{With regards to dataset 1, how many hyperparameters were used? Hint: see page 07.
-}
-
-\vspace{5mm}
-
-
+}\\\\
+4 hyperparameters were tuned for dataset 1. 
 \easysubproblem{With regards to dataset 2, how many hyperparameters were used? Hint: see page 07.
-}
-
-\vspace{5mm}
-
-
+}\\\\ 
+3 hyperparameters were tuned for dataset 2. 
 \easysubproblem{With regards to dataset 01, what was the accuracy? Hint: see Table 10.
-}
-
-\vspace{10mm}
-
-
+}\\\\
+From table 10, the accuracy for dataset 01 was $95.56\%$. 
 \easysubproblem{With regards to dataset 02, what was the accuracy? Hint: see Table 11.
-}
-
-\vspace{10mm}
-
-
+}\\\\
+From table 11, the accuracy for dataset 02 was 99.17$\%$.
 \easysubproblem{Write down one limitation of this study. Hint: see page 10.
 }
-
-\vspace{30mm}
-
-
+\\\\ One limitation is that the data sets used were relatively small, which can limit the generalizability of the results to larger populations. 
 \intermediatesubproblem{Explain why classifying a patient as either having PD or not having PD is a worthwhile goal. (The answer to this isn't necessarily found in the paper but rather based on your own reasoning).
-}
-
+} \\\\
+The earlier you find out that you have PD, you can receive prompt treatment, improve your quality of life, and slow the progression of symptoms. It can also help reduce the burden on healthcare systems by enabling earlier intervention. \\\\
 \end{enumerate}
-
-\vspace{30mm}
-
-
+\newpage
 \problem{In this exercise, we will review the basics needed in developing the support vector machine.}
 
 \begin{enumerate}
 
 \easysubproblem{Suppose we are given a bunch of data points which belong to one of two classes and these points are labeled (meaning we see that each data point has a label of either $+1$ or $-1$). What is our goal/task?}
 
-\vspace{15mm}
+
 
 
 \easysubproblem{What does our training data $\mathds{D}$ typically look like?}
 
-\vspace{15mm}
+
 
 \easysubproblem{What does it mean when we say that data is linearly separable?}
 
-\vspace{15mm}
+
 
 \easysubproblem{If the data is linearly separable, then how many hyperplanes can we typically draw which separates the data and correctly classifies everything?}
 
-\newpage 
+
 
 \easysubproblem{In the space below, sketch out a linearly separable dataset.}
 
-\vspace{65mm}
 
 \easysubproblem{Again sketch out your linearly separable dataset above and this time draw a hyperplane which divides the space and ensures correct classification.}
 
-\vspace{65mm}
 
 \easysubproblem{Again, copy your linearly separable dataset from part $(e)$ and this time draw a hyperplane different from your answer in part $(f)$  which divides the space and ensures correct classification.
 }
 
-\vspace{65mm}
 
 \easysubproblem{Given your answer in the above two parts, we now have two hyperplanes which correctly separates and classifies. Between your two hyperplanes, which hyperplane do you think is better? Why?}
 
-\vspace{30mm}
 
 \easysubproblem{Intuitively explain what is meant by \textit{margin}.
 }
 
-\vspace{30mm}
 
 \easysubproblem{Mathematically, how do we define \textit{margin}?}
 
-\vspace{30mm}
+
 
 \easysubproblem{With regards to the margin, what is our goal?}
 
-\vspace{30mm}
+
 
 
 \easysubproblem{If our \textbf{only} goal is to maximize the margin, explain why our optimization fails.}
 
-\vspace{30mm}
+
 
 
 \easysubproblem{Explain why we need the constraint $\forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0$.}
 
 \end{enumerate}
 
-\newpage 
 
 \problem{In this exercise, we will now talk about the equivalent formulations of our hard margin SVM.}
 \begin{enumerate}
