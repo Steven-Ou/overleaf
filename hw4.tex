@@ -160,30 +160,28 @@ $\mathds{D} = \{(\vect{x_1},y_1),(\vect{x_2},y_2),...,(\vect{x_n},y_n)\}$ ,where
 % Students would draw on the image or provide a new one. (Assumed 3.png)
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\linewidth]{3.png} % Assuming you name the third image 3.png
-    % \caption{A linearly separable dataset with a different hyperplane.}
+    \includegraphics[width=0.6\linewidth]{3.png}
 \end{figure}
 
 
 \easyquestion{Given your answer in the above two parts, we now have two hyperplanes which correctly separates and classifies. Between your two hyperplanes, which hyperplane do you think is better? Why?}
-% Student answer space
+\\\\The second graph, which is the graph from part f, is the best, because it has the most spaces between the 1 and -1. (Maximum Margin)
 
 \easyquestion{Intuitively explain what is meant by \textit{margin}.}
-% Student answer space
+\\\\Margin means the shortest distance from the hyperplane to the closest data points of any class. 
 
 \easyquestion{Mathematically, how do we define \textit{margin}?}
-% Student answer space
+\\\\Margin is mathematically defined as the separating hyperplane $w*x+b=0$. %For a linearly separable dataset, we can scale w and b such that the points closest to the hyperplane satisfy $\lvert w*x_i+b \rvert =$1. The distance from a point $x_i$ to the hyperplane $w*x_i+b=0$ is given by $\frac{\lvert w*x_i+b \rvert}{\lvert\lvert w \rvert\rvert}$. For the support vectors, this distance is $\frac{1}{\lvert\lvert w \rvert\rvert}$.%
 
-\easyquestion{With regards to the margin, what is our goal?}
-% Student answer space
+\easyquestion{With regards to the margin, what is our goal?} \\\\
+Our goal is to maximize the margin. 
 
 \easyquestion{If our \textbf{only} goal is to maximize the margin, explain why our optimization fails.}
-% Student answer space
+\\\\ We could achieve an infinitely large margin by simply scaling the weight vector w to be infinitesimally small.
 
 \easyquestion{Explain why we need the constraint $\forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0$.}
-% Student answer space
+\\\\We need the constraint $\forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0$ because it a way of stating that all data points in the training set must be correctly classified by the hyperplane defined by $\vect{w}$ and b.
 \end{enumerate}
-
 \section*{Problem 3}
 In this exercise, we will now talk about the equivalent formulations of our hard margin SVM.
 \begin{enumerate} % Sub-problems will now be a), b), c)...
@@ -201,7 +199,6 @@ is equivalent to
 \end{align*}
 \end{tcolorbox}}
 
-\newpage
 
 \easyquestion{Explain if the following optimization
 \begin{tcolorbox}
@@ -216,11 +213,10 @@ is equivalent to this optimization:
 \end{align*}
 \end{tcolorbox} }
 
-\vspace{40mm}
+
 
 \easyquestion{State the primal form (of the hard margin) SVM.}
 
-\newpage
 
 \intermediatequestion{Explain why
 \begin{tcolorbox}
@@ -230,58 +226,53 @@ is equivalent to this optimization:
 \end{tcolorbox}
 implies the primal form (of the hard margin) SVM. (You do NOT have to show the primal form implies the boxed in optimization which is slightly harder).}
 
-\vspace{60mm}
+
 
 \easyquestion{Interpret what the primal form (of the hard margin) SVM is asking us to do graphically.}
 
-\vspace{60mm}
+
 
 \easyquestion{What technique do we use to solve the optimization problem posed in the primal form?}
 
-\newpage
+
 
 \intermediatequestion{Suppose we are given
 $\vect{x_1} = [1 ~~ 0]^T$ with label $-1$,
 $\vect{x_2} = [2 ~~ 0]^T$ with label $-1$, and
 $\vect{x_3} = [5 ~~ 5]^T$ with label 1. Perform the first two iterations of the subgradient approach where we initialized at $\vect{w} = [1 ~~~ 1]^T$, $b = 0$ and $\alpha = 0.001$.}
 
-\newpage
-
 \easyquestion{Suppose the optimal hyperplane for a  dataset $\mathds{D}$ is given by $\frac{3}{17}x_1 + \frac{5}{17} x_2 - \frac{23}{17} = 0$. Predict the label for the new datapoint $\vect{x}_{\text{new}} = [4 ~~
  2.5]^T$}
 
 \end{enumerate}
 
-\vspace{30mm}
 \section*{Problem 4}
 In this exercise, we will now talk about the soft margin SVM.
 \begin{enumerate} % Sub-problems will now be a), b), c)...
 
 \easyquestion{Explain why in the case of non-linearly separable data the primal form of the hard margin SVM is impossible to satisfy.}
 
-\vspace{30mm}
+
 
 \easyquestion{In the case of the soft margin SVM, what is the optimization problem we aim to solve?}
 
-\vspace{50mm}
 
 \easyquestion{In the case of the soft margin SVM, what does $\xi_i$ represent?}
 
-\newpage
+
 \intermediatequestion{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
 \begin{figure}[H]
     \centering
 \includegraphics[width=1\linewidth]{svm_1.png}
 \end{figure}
 
-\newpage
 \intermediatequestion{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\linewidth]{svm_2.png}
 \end{figure}
 
-\newpage
+
 
 \intermediatequestion{In both graphs below, the soft margin SVM has been implemented. One of these graphs correspond to when $C = 0.01$ and the other graph corresponds to when $C = 100$. Which graph is which? How do you know?
 \begin{figure}[H]
@@ -291,7 +282,7 @@ In this exercise, we will now talk about the soft margin SVM.
 }
 \end{enumerate}
 
-\newpage
+
 
 \section*{Problem 5}
 Here are some additional questions that we discussed during our derivation of the SVM.
@@ -299,11 +290,9 @@ Here are some additional questions that we discussed during our derivation of th
 
 \easyquestion{What is the Blessing of Dimensionality? Give an example.}
 
-\vspace{75mm}
 
 \easyquestion{What is the Blessing of Non-Uniformity?}
 
-\vspace{75mm}
 
 \intermediatequestion{Suppose the $x$-axis represents tumor size and the $y-axis$ represents the cell density like the example discussed in class. If getting cancer was indeed random, then what would the graph look like?}
 % Student answer space
