@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linearly Separable Dataset with Separating Line</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .plot-container {
+            width: 100%;
+            max-width: 600px; /* Max width for larger screens */
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        svg text {
+            font-size: 12px;
+            fill: #333;
+        }
+        .axis-line {
+            stroke: #888;
+            stroke-width: 1.5px;
+        }
+        .tick-line {
+            stroke: #aaa;
+            stroke-width: 1px;
+        }
+        .data-point-1 {
+            fill: #3B82F6; /* Blue-500 */
+            font-size: 20px;
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+        .data-point-neg-1 {
+            fill: #EF4444; /* Red-500 */
+            font-size: 20px;
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+        .separator-line {
+            stroke: #10B981; /* Emerald-500 (Green) */
+            stroke-width: 2px;
+            stroke-dasharray: 5,5; /* Optional: makes the line dashed */
+        }
+        .graph-title {
+            font-size: 16px;
+            font-weight: 500;
+            text-anchor: middle;
+            fill: #111;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="plot-container bg-white rounded-lg shadow-xl p-6">
+        <svg id="separableDatasetPlot" width="100%" viewBox="0 0 500 500"></svg>
+        <p class="text-center text-gray-700 mt-4 text-lg">A linearly separable dataset with a separating line</p>
+    </div>
+
+    <script>
+        // Data points for the plot
+        // Class 1 (Blue '1's)
+        const pointsClass1 = [
+            { x: 2.5, y: 3.0 },
+            { x: 1.8, y: 2.2 },
+            { x: 2.8, y: 2.1 },
+            { x: 2.5, y: 1.3 },
+            { x: 3.0, y: 0.8 } // This point is now very close to the new line
+        ];
+
+        // Class -1 (Red '-1's)
+        const pointsClassNeg1 = [
+            { x: 0.5, y: 0.2 },
+            { x: 1.0, y: -0.5 },
+            { x: 1.5, y: 0.5 },
+            { x: 2.0, y: -0.2 },
+            { x: 0.8, y: 1.0 }
+        ];
+
+        // SVG and chart dimensions
+        const svgWidth = 500;
+        const svgHeight = 500;
+        const padding = 60; // Increased padding for labels
+        const chartWidth = svgWidth - 2 * padding;
+        const chartHeight = svgHeight - 2 * padding;
+
+        // Data ranges
+        const xMin = 0;
+        const xMax = 4;
+        const yMin = -1;
+        const yMax = 4;
+        const xRange = xMax - xMin;
+        const yRange = yMax - yMin;
+
+        // Get SVG element
+        const svg = document.getElementById('separableDatasetPlot');
+
+        // --- Mapping functions to convert data coordinates to SVG coordinates ---
+        function mapX(xData) {
+            return padding + ((xData - xMin) / xRange) * chartWidth;
+        }
+
+        function mapY(yData) {
+            // SVG y-coordinate is inverted (0 is at the top)
+            return padding + chartHeight - ((yData - yMin) / yRange) * chartHeight;
+        }
+
+        // --- Draw Axes ---
+        const axesGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        axesGroup.setAttribute("class", "axes");
+
+        // Draw box around the chart area
+        const chartBox = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+        chartBox.setAttribute("x", padding);
+        chartBox.setAttribute("y", padding);
+        chartBox.setAttribute("width", chartWidth);
+        chartBox.setAttribute("height", chartHeight);
+        chartBox.setAttribute("fill", "none");
+        chartBox.setAttribute("class", "axis-line");
+        axesGroup.appendChild(chartBox);
+
+        // X-axis ticks and labels
+        const xTickValues = [0, 1, 2, 3, 4];
+        xTickValues.forEach(val => {
+            const xPos = mapX(val);
+            const tickBottom = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            tickBottom.setAttribute("x1", xPos);
+            tickBottom.setAttribute("y1", padding + chartHeight);
+            tickBottom.setAttribute("x2", xPos);
+            tickBottom.setAttribute("y2", padding + chartHeight + 5);
+            tickBottom.setAttribute("class", "tick-line");
+            axesGroup.appendChild(tickBottom);
+
+            const tickTop = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            tickTop.setAttribute("x1", xPos);
+            tickTop.setAttribute("y1", padding);
+            tickTop.setAttribute("x2", xPos);
+            tickTop.setAttribute("y2", padding - 5);
+            tickTop.setAttribute("class", "tick-line");
+            axesGroup.appendChild(tickTop);
+
+            const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            label.setAttribute("x", xPos);
+            label.setAttribute("y", padding + chartHeight + 20);
+            label.setAttribute("text-anchor", "middle");
+            label.textContent = val;
+            axesGroup.appendChild(label);
+        });
+
+        // Y-axis ticks and labels
+        const yTickValues = [-1, 0, 1, 2, 3, 4];
+        yTickValues.forEach(val => {
+            const yPos = mapY(val);
+            const tickLeft = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            tickLeft.setAttribute("x1", padding - 5);
+            tickLeft.setAttribute("y1", yPos);
+            tickLeft.setAttribute("x2", padding);
+            tickLeft.setAttribute("y2", yPos);
+            tickLeft.setAttribute("class", "tick-line");
+            axesGroup.appendChild(tickLeft);
+
+            const tickRight = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            tickRight.setAttribute("x1", padding + chartWidth);
+            tickRight.setAttribute("y1", yPos);
+            tickRight.setAttribute("x2", padding + chartWidth + 5);
+            tickRight.setAttribute("y2", yPos);
+            tickRight.setAttribute("class", "tick-line");
+            axesGroup.appendChild(tickRight);
+
+            const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            label.setAttribute("x", padding - 15);
+            label.setAttribute("y", yPos);
+            label.setAttribute("text-anchor", "end");
+            label.setAttribute("dominant-baseline", "middle");
+            label.textContent = val;
+            axesGroup.appendChild(label);
+        });
+        svg.appendChild(axesGroup);
+
+        // --- Draw Data Points ---
+        const dataGroup = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        dataGroup.setAttribute("class", "data-points");
+
+        pointsClass1.forEach(p => {
+            const pointText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            pointText.setAttribute("x", mapX(p.x));
+            pointText.setAttribute("y", mapY(p.y));
+            pointText.setAttribute("class", "data-point-1");
+            pointText.textContent = "1";
+            dataGroup.appendChild(pointText);
+        });
+
+        pointsClassNeg1.forEach(p => {
+            const pointText = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            pointText.setAttribute("x", mapX(p.x));
+            pointText.setAttribute("y", mapY(p.y));
+            pointText.setAttribute("class", "data-point-neg-1");
+            pointText.textContent = "-1";
+            dataGroup.appendChild(pointText);
+        });
+        svg.appendChild(dataGroup);
+
+        // --- Draw Separating Line ---
+        // Updated line coordinates as per user request
+        const lineStartData = { x: 0, y: 3 };
+        const lineEndData = { x: 3.5, y: 0 };
+
+        const separatorLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        separatorLine.setAttribute("x1", mapX(lineStartData.x));
+        separatorLine.setAttribute("y1", mapY(lineStartData.y));
+        separatorLine.setAttribute("x2", mapX(lineEndData.x));
+        separatorLine.setAttribute("y2", mapY(lineEndData.y));
+        separatorLine.setAttribute("class", "separator-line");
+        svg.appendChild(separatorLine); // Add line to SVG after data points
+
+    </script>
+</body>
+</html>
