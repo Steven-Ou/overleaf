@@ -56,10 +56,10 @@
 % If you have questions that are neither easy nor intermediate, you could use:
 % \newcommand{\regularquestion}[1]{\item \textcolor{PrimaryBlue}{#1}}
 
-% --- List Item Styling (for 1., 2., etc. within problems) ---
-% Label color will be DarkText due to global \color{DarkText}
-\setlist[enumerate,1]{label=\textbf{\arabic*.}, itemsep=0.5ex, topsep=0.5ex}
-\setlist[enumerate,2]{label=\textbf{\alph*).}, itemsep=0.5ex, topsep=0.5ex} % For potential sub-questions
+% --- List Item Styling (for sub-problems: a), b), c), etc.) ---
+% This now makes the first level of enumeration (sub-problems) a), b), c) in blue and bold.
+\setlist[enumerate,1]{label=\textcolor{PrimaryBlue}{\alph*).}, font=\bfseries, itemsep=0.5ex, topsep=0.5ex}
+\setlist[enumerate,2]{label=\textcolor{PrimaryBlue}{\roman*).}, font=\bfseries, itemsep=0.5ex, topsep=0.5ex} % For potential sub-sub-problems (i, ii, etc.)
 
 % --- tcolorbox default styling ---
 \tcbset{
@@ -89,10 +89,10 @@
     \clearpage
 }{}
 
-\section*{Problem 1} % Reverted to \section* with manual numbering in title
+\section*{Problem 1} % Main problems are "Problem 1", "Problem 2", etc.
 In this question, we are going to do some light reading. We will only read selected selections of the following article: \url{https://www.nature.com/articles/s41598-024-51600-y.pdf}. You do NOT have to read the entire article.
 
-\begin{enumerate}
+\begin{enumerate} % Sub-problems will now be a), b), c)...
 \easyquestion{What year was this paper published?}
 \\\\This paper was published in 2024.
 \easyquestion{In the article, what task are the researchers attempting to accomplish? Hint: look at the title.}
@@ -124,10 +124,10 @@ In this question, we are going to do some light reading. We will only read selec
 \\\\The earlier you find out that you have PD, you can receive prompt treatment, improve your quality of life, and slow the progression of symptoms. It can also help reduce the burden on healthcare systems by enabling earlier intervention. \\\\
 \end{enumerate}
 \newpage
-\section*{Problem 2} % Reverted to \section* with manual numbering in title
+\section*{Problem 2}
 In this exercise, we will review the basics needed in developing the support vector machine.
 
-\begin{enumerate}
+\begin{enumerate} % Sub-problems will now be a), b), c)...
 \easyquestion{Suppose we are given a bunch of data points which belong to one of two classes and these points are labeled (meaning we see that each data point has a label of either $+1$ or $-1$). What is our goal/task?}
 \\\\
 Our goal is to learn a decision boundary that correctly separates the data points into their respective classes (+1 or -1), ensuring that they have many spaces between them.
@@ -145,15 +145,25 @@ $\mathds{D} = \{(\vect{x_1},y_1),(\vect{x_2},y_2),...,(\vect{x_n},y_n)\}$ ,where
 \easyquestion{In the space below, sketch out a linearly separable dataset.}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.25\linewidth]{1.png}
+    \includegraphics[width=0.65\linewidth]{1.png}
     % \caption{A linearly separable dataset.}
 \end{figure}
 
 \easyquestion{Again sketch out your linearly separable dataset above and this time draw a hyperplane which divides the space and ensures correct classification.}
-% Students would draw on the image or provide a new one.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{2.png}
+    % \caption{A linearly separable dataset.}
+\end{figure}
 
 \easyquestion{Again, copy your linearly separable dataset from part $(e)$ and this time draw a hyperplane different from your answer in part $(f)$  which divides the space and ensures correct classification.}
-% Students would draw on the image or provide a new one.
+% Students would draw on the image or provide a new one. (Assumed 3.png)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{3.png} % Assuming you name the third image 3.png
+    % \caption{A linearly separable dataset with a different hyperplane.}
+\end{figure}
+
 
 \easyquestion{Given your answer in the above two parts, we now have two hyperplanes which correctly separates and classifies. Between your two hyperplanes, which hyperplane do you think is better? Why?}
 % Student answer space
@@ -174,9 +184,9 @@ $\mathds{D} = \{(\vect{x_1},y_1),(\vect{x_2},y_2),...,(\vect{x_n},y_n)\}$ ,where
 % Student answer space
 \end{enumerate}
 
-\section*{Problem 3} % Reverted to \section* with manual numbering in title
+\section*{Problem 3}
 In this exercise, we will now talk about the equivalent formulations of our hard margin SVM.
-\begin{enumerate}
+\begin{enumerate} % Sub-problems will now be a), b), c)...
 
 \easyquestion{Explain why
 \begin{tcolorbox}
@@ -243,9 +253,9 @@ $\vect{x_3} = [5 ~~ 5]^T$ with label 1. Perform the first two iterations of the 
 \end{enumerate}
 
 \vspace{30mm}
-\section*{Problem 4} % Reverted to \section* with manual numbering in title
+\section*{Problem 4}
 In this exercise, we will now talk about the soft margin SVM.
-\begin{enumerate}
+\begin{enumerate} % Sub-problems will now be a), b), c)...
 
 \easyquestion{Explain why in the case of non-linearly separable data the primal form of the hard margin SVM is impossible to satisfy.}
 
@@ -283,9 +293,9 @@ In this exercise, we will now talk about the soft margin SVM.
 
 \newpage
 
-\section*{Problem 5} % Reverted to \section* with manual numbering in title
+\section*{Problem 5}
 Here are some additional questions that we discussed during our derivation of the SVM.
-\begin{enumerate}
+\begin{enumerate} % Sub-problems will now be a), b), c)...
 
 \easyquestion{What is the Blessing of Dimensionality? Give an example.}
 
