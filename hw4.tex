@@ -198,7 +198,7 @@ is equivalent to
      \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~& \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ &\underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w}^T \vect{x_i} + b| = 1
 \end{align*}
 \end{tcolorbox}}
-
+\\\\The first formula maximizes the margin $\gamma(\vect{w}, b)$ while ensuring all data points are correctly classified. The second formula fixes the margin to 1 and instead minimizes $\vect{w}^T\vect{w}$
 
 \easyquestion{Explain if the following optimization
 \begin{tcolorbox}
