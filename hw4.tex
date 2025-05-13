@@ -17,6 +17,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tcolorbox}
+\usepackage{multicol}
 
 % \usepackage{esvect} % Likely in preamble
 % \usepackage{amsmath} % Likely in preamble
@@ -242,36 +243,61 @@ answer:
 \end{align*}
 \end{tcolorbox}
 implies the primal form (of the hard margin) SVM. (You do NOT have to show the primal form implies the boxed in optimization which is slightly harder).}\\\\
-The constraint $\underset{\vect{i}}{\text{min}}|\vect{w}^T\vect{x}_i+b| = 1$. The closest point to the hyperplane has margin 1. Combined with correct classification, this implies that:
+The constraint $\underset{\vect{i}}{\text{min}}|\vect{w}^T\vect{x}_i+b| = 1$. The closest point to the hyperplane has margin 1. Combined with correct classification, this implies that: $y_i(\vect{w}^T\vect{x_i} +b \geq 1 ) \forall i$, so the margin is exactly for the support vectors and larger for others, just like in the primal SVM. 
 
-
-
-
-\easyquestion{Interpret what the primal form (of the hard margin) SVM is asking us to do graphically.}
-
+\easyquestion{Interpret what the primal form (of the hard margin) SVM is asking us to do graphically.}\\\\
+The primal SVM tries to find the hyperplane that separates the two classes with the largest margin. It places the decision boundary halfway between the closest points of both classes (support vectors) and maximizes that gap.
 
 
 \easyquestion{What technique do we use to solve the optimization problem posed in the primal form?}
-
+\\\\We use Quadratic Programming (QP) or Subgradient methods in more complex or large-scale settings.
 
 
 \intermediatequestion{Suppose we are given
 $\vect{x_1} = [1 ~~ 0]^T$ with label $-1$,
 $\vect{x_2} = [2 ~~ 0]^T$ with label $-1$, and
-$\vect{x_3} = [5 ~~ 5]^T$ with label 1. Perform the first two iterations of the subgradient approach where we initialized at $\vect{w} = [1 ~~~ 1]^T$, $b = 0$ and $\alpha = 0.001$.}
+$\vect{x_3} = [5 ~~ 5]^T$ with label 1. Perform the first two iterations of the subgradient approach where we initialized at $\vect{w} = [1 ~~~ 1]^T$, $b = 0$, and $\alpha = 0.001$.}
+\\\\
 
+\begin{multicols}{2}
+
+\section*{Iteration 1:}
+Is $y_i(\vec{w}^T \vec{x}_i + b) \geq 1$ ? \\
+Is $-1\left(\begin{bmatrix} 1 & 1 \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} + 0\right) \geq 1$ ? \\
+$-1(1 + 0 + 0) \geq 1$ ? No! \\
+\vspace{1em} % Add some vertical space
+$\vec{w}_{\text{new}} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} - 0.001 \left(\begin{bmatrix} 1 \\ 1 \end{bmatrix} - \begin{bmatrix} 0 \\ 0 \end{bmatrix}\right)$ \\
+$= \begin{bmatrix} 1 \\ 1 \end{bmatrix} - 0.001 \begin{bmatrix} 2 \\ 1 \end{bmatrix}$ \\ % Transcribing the intermediate step shown in the image
+$= \begin{bmatrix} 0.998 \\ 0.999 \end{bmatrix}$ \\
+\vspace{1em}
+$b_{\text{new}} = 0 + 0.001(-1)$ \\
+$= -0.001$
+
+\columnbreak
+
+\section*{Iteration 2:}
+Is $y_i(\vec{w}^T \vec{x}_i + b) \geq 1$ ? \\
+Is $-1\left([0.998 \ 0.999]\begin{bmatrix} 2 \\ 0 \end{bmatrix} - 0.001\right) \geq 1$ ? \\
+$-1(1.996 - 0.001) \geq 1$ ? No! \\
+\vspace{1em}
+$\vec{w}_{\text{new}} = \begin{bmatrix} 0.998 \\ 0.999 \end{bmatrix} - 0.001 \left(\begin{bmatrix} 0.998 \\ 0.999 \end{bmatrix} - \begin{bmatrix} 2 \\ 0 \end{bmatrix}\right)$ \\
+$= \begin{bmatrix} 0.995002 \\ 0.998001 \end{bmatrix}$ \\
+\vspace{1em}
+$b_{\text{new}} = -0.001 + 0.001(-1)$ \\
+$= -0.002$
+
+\end{multicols}\newpage
 \easyquestion{Suppose the optimal hyperplane for a  dataset $\mathds{D}$ is given by $\frac{3}{17}x_1 + \frac{5}{17} x_2 - \frac{23}{17} = 0$. Predict the label for the new datapoint $\vect{x}_{\text{new}} = [4 ~~
  2.5]^T$}
-
+\\\\Plug in $\vect{x}_{\text{new}}=\frac{3}{17}(4) + \frac{5}{17}(2.5) - \frac{23}{17} = 0.08824 > 0$ so label is $+1$
 \end{enumerate}
 
 \section*{Problem 4}
 In this exercise, we will now talk about the soft margin SVM.
 \begin{enumerate} % Sub-problems will now be a), b), c)...
 
-\easyquestion{Explain why in the case of non-linearly separable data the primal form of the hard margin SVM is impossible to satisfy.}
-
-
+\easyquestion{Explain why in the case of non-linearly separable data the primal form of the hard margin SVM is impossible to satisfy.}\\\\
+Hard margin requires that all points be perfectly separated with no violations. For non-linearly separable data, this is impossible, so the constraints can't be satisfied — no solution exists.
 
 \easyquestion{In the case of the soft margin SVM, what is the optimization problem we aim to solve?}
 
