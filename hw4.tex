@@ -14,6 +14,10 @@
 \usepackage{xurl}
 % \usepackage{dsfont} % Likely in preamble
 \usepackage{systeme}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+
 % \usepackage{esvect} % Likely in preamble
 % \usepackage{amsmath} % Likely in preamble
 % \usepackage{amssymb} % Likely in preamble
@@ -31,7 +35,8 @@
 \color{DarkText}
 
 % --- Vector Command (user-defined) ---
-\newcommand{\vect}[1]{\boldsymbol{#1}}
+\newcommand{\vect}[1]
+{\boldsymbol{#1}}
 
 % --- Toggle for Professor Mode ---
 \newtoggle{professormode}
@@ -198,7 +203,7 @@ is equivalent to
      \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~& \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ &\underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w}^T \vect{x_i} + b| = 1
 \end{align*}
 \end{tcolorbox}}
-\\\\The first formula maximizes the margin $\gamma(\vect{w}, b)$ while ensuring all data points are correctly classified. The second formula fixes the margin to 1 and instead minimizes $\vect{w}^T\vect{w}$
+\\\\The first formula maximizes the margin $\gamma(\vect{w}, b)$ while ensuring all data points are correctly classified. The second formula fixes the margin to 1 and instead minimizes $\vect{w}^T\vect{w}$, which is equivalent since $\gamma = \frac{1}{|\vect{w}|}$. So minimizing $|\vect{w}|^2$ maximizes the margin. Therefore, both are equivalent ways of stating the same optimization problem, up to a rescaling of $\vect{w}$ and $b$.
 
 \easyquestion{Explain if the following optimization
 \begin{tcolorbox}
@@ -211,11 +216,23 @@ is equivalent to this optimization:
 \begin{align*}
      \underset{\vect{w}, b}{\text{arg min}} ~~ \frac{1}{2} \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~& \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ &\underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w}^T \vect{x_i} + b| = 1
 \end{align*}
-\end{tcolorbox} }
-
+\end{tcolorbox} }\\\\
+Yes, they are equivalent for optimization because $\frac{1}{2}$ is a constant scalar. Minimizing either leads to the same solution.
+Using $\frac{1}{2}$ is conventional in optimization for easier gradient computation (it cancels the 2 when differentiating).
 
 
 \easyquestion{State the primal form (of the hard margin) SVM.}
+\\\\
+\begin{tcolorbox}
+answer:
+\[
+\begin{aligned}
+\underset{\vect{w}, b} {\text{min}} \{\frac{1}{2} \|\vect{w}\|^2 \} \\
+\text{subject to} \quad & y_i(\vect{w}^T \vect{x_i} + b) \geq 1 \quad \text{for all } i = 1, 2, \dots, n
+\end{aligned}
+\]
+\end{tcolorbox}
+
 
 
 \intermediatequestion{Explain why
@@ -224,7 +241,9 @@ is equivalent to this optimization:
      \underset{\vect{w}, b}{\text{arg min}} ~~ \vect{w}^T \vect{w} ~~ \text{subject to the condition} ~& \forall i, y_i(\vect{w}^T \vect{x_i} + b) \geq 0 ~ \text{and} \\ &\underset{\vect{x_i} \in \mathds{D} }{\text{min}} |\vect{w}^T \vect{x_i} + b| = 1.
 \end{align*}
 \end{tcolorbox}
-implies the primal form (of the hard margin) SVM. (You do NOT have to show the primal form implies the boxed in optimization which is slightly harder).}
+implies the primal form (of the hard margin) SVM. (You do NOT have to show the primal form implies the boxed in optimization which is slightly harder).}\\\\
+The constraint $\underset{\vect{i}}{\text{min}}|\vect{w}^T\vect{x}_i+b| = 1$. The closest point to the hyperplane has margin 1. Combined with correct classification, this implies that:
+
 
 
 
