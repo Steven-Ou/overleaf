@@ -300,21 +300,23 @@ In this exercise, we will now talk about the soft margin SVM.
 Hard margin requires that all points be perfectly separated with no violations. For non-linearly separable data, this is impossible, so the constraints can't be satisfied — no solution exists.
 
 \easyquestion{In the case of the soft margin SVM, what is the optimization problem we aim to solve?}
-
-
-\easyquestion{In the case of the soft margin SVM, what does $\xi_i$ represent?}
-
+\\\\
+$
+\underset{\vect{w},\, b,\, \boldsymbol{\xi}}{\text{min}} \frac{1}{2} \|\vect{w}\|^2 + C \sum_i \xi_i \quad \text{subject to} \quad y_i(\vect{w}^T \vect{x}_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0 \quad \text{for all } i
+$\\
+\easyquestion{In the case of the soft margin SVM, what does $\xi_i$ represent?}\\\\
+It represents a measure of how much room or slack a point I needs for violating the condition $\forall i$, $y_i(\vect{w}^T \vect{x}_i + b) \geq1$. 
 
 \intermediatequestion{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
 \begin{figure}[H]
     \centering
-\includegraphics[width=1\linewidth]{svm_1.png}
+\includegraphics[width=0.75\linewidth]{svm_1.png}
 \end{figure}
 
 \intermediatequestion{In the graph below, a particular point has been circled in green. For that point, sketch  where $\xi_i$ is. }
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\linewidth]{svm_2.png}
+    \includegraphics[width=.75\linewidth]{svm_2.png}
 \end{figure}
 
 
@@ -322,25 +324,26 @@ Hard margin requires that all points be perfectly separated with no violations. 
 \intermediatequestion{In both graphs below, the soft margin SVM has been implemented. One of these graphs correspond to when $C = 0.01$ and the other graph corresponds to when $C = 100$. Which graph is which? How do you know?
 \begin{figure}[H]
     \centering
-\includegraphics[width=0.75\linewidth]{svm_4.png}
+\includegraphics[width=0.25\linewidth]{svm_4.png}
 \end{figure}
 }
 \end{enumerate}
-
+ I see that the margin is wider in the second graph so the c must be lower. Hence, the bottom graph is $c =0.01$ and the top is $c= 100$.
 
 
 \section*{Problem 5}
 Here are some additional questions that we discussed during our derivation of the SVM.
 \begin{enumerate} % Sub-problems will now be a), b), c)...
 
-\easyquestion{What is the Blessing of Dimensionality? Give an example.}
-
+\easyquestion{What is the Blessing of Dimensionality? Give an example.} \\\\
+In high dimensions, points become more linearly separable due to the concentration of measure. Example: In 2D, XOR is not linearly separable; in higher-dimensional feature space, it becomes separable via kernel tricks.
 
 \easyquestion{What is the Blessing of Non-Uniformity?}
+\\\\Real-world data is not uniformly distributed — it's clustered or structured, which makes learning easier. SVMs exploit this structure for better generalization. 
 
 
-\intermediatequestion{Suppose the $x$-axis represents tumor size and the $y-axis$ represents the cell density like the example discussed in class. If getting cancer was indeed random, then what would the graph look like?}
-% Student answer space
+\intermediatequestion{Suppose the $x$-axis represents tumor size and the $y-axis$ represents the cell density like the example discussed in class. If getting cancer was indeed random, then what would the graph look like?}\\\\
+If cancer were random, the plot (tumor size vs. cell density) would show no clear separation between cancerous and non-cancerous — points would be scattered without patterns, making classification impossible. Another way of saying it no visible clustering.
 
 \end{enumerate}
 
