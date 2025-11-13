@@ -1,7 +1,7 @@
 \documentclass[10pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath, amssymb, array} % For math, symbols, and array formatting
-\usepackage[letterpaper, margin=0.5in]{geometry} % Minimized margins for max content
+\usepackage[letterpaper, margin=0.45in]{geometry} % Minimized margins for max content
 \usepackage{multicol} % Essential for two-column layout
 \usepackage{enumitem} % For custom list spacing
 \usepackage[dvipsnames]{xcolor} % For custom colors
@@ -10,7 +10,7 @@
 \usepackage{booktabs} % For better table rules (if needed)
 
 % --- LAYOUT & FONT ---
-\setlength{\columnsep}{12pt} % Space between columns
+\setlength{\columnsep}{10pt} % Space between columns
 \setlist{nosep, topsep=2pt, parsep=0pt, leftmargin=*} % Extremely compact lists
 \titlespacing*{\section}{0pt}{*1.5}{*1} % Tighter section spacing
 \titleformat*{\section}{\large\bfseries\sffamily} % Section font
@@ -78,17 +78,10 @@
 \begin{document}
 \maketitle
 \thispagestyle{empty}
-\footnotesize % Setting font size for density
+\scriptsize 
 
-% =================================================================
-% --- PAGE 1: Linear Systems, Vectors, and Solution Sets ---
-% =================================================================
-\begin{center}
-\textbf{\large --- PAGE 1: Linear Systems, Vectors, and Solution Sets ---}
-\end{center}
-\hrule
-
-\begin{multicols}{2} % <<< START TWO-COLUMN FOR PAGE 1 >>>
+% --- WRAP EVERYTHING IN ONE MULTICOLS ENVIRONMENT ---
+\begin{multicols}{2} 
 
 \section*{I. Systems and RREF (1.1, 1.2)}
 \begin{defbox}
@@ -168,20 +161,6 @@ $$
 \mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \underbrace{\begin{bmatrix} 5 \\ -3 \\ 0 \\ 0 \end{bmatrix}}_{\mathbf{p}} + t \underbrace{\begin{bmatrix} -3 \\ -2 \\ 1 \\ 0 \end{bmatrix}}_{\mathbf{v}_h} \text{}
 $$
 \end{exbox}
-
-\end{multicols} % <<< END TWO-COLUMN FOR PAGE 1 >>>
-
-\pagebreak % <<< PAGE BREAK: FRONT/BACK >>>
-
-% =================================================================
-% --- PAGE 2: Transformations, Matrix Algebra, and IMT ---
-% =================================================================
-\begin{center}
-\textbf{\large --- PAGE 2: Transformations, Algebra, Determinants, and IMT ---}
-\end{center}
-\hrule
-
-\begin{multicols}{2} % <<< START TWO-COLUMN FOR PAGE 2 >>>
 
 \section*{IV. Linear Independence (1.7)}
 \begin{defbox}
@@ -289,8 +268,6 @@ $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
     \item $\det(A^T) = \det(A)$.
 \end{itemize}
 \end{thmbox}
-\vfill\null % Pushes content to the top
-\columnbreak % Manually break column
 
 % --- THE BIG ONE ---
 \begin{tcolorbox}[
@@ -301,7 +278,7 @@ $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
     fonttitle=\bfseries\sffamily,
     coltitle=black,
     colbacktitle=myyellow!80!White,
-    attach boxed title to top center={yshift=-4mm},
+    attach boxed title to top center={yshift=-2mm},
     boxed title style={boxrule=0.5pt, colframe=Orange!50!Black},
     title=THE INVERSE MATRIX THEOREM (CUMULATIVE),
     sharp corners,
@@ -335,5 +312,5 @@ The following statements are all equivalent (all true or all false).
 % Note: Eigenvalue statement (s) is from Ch 5,
 % but is a key part of the IMT.
 
-\end{multicols} % <<< END TWO-COLUMN FOR PAGE 2 >>>
+\end{multicols} % <<< END THE ONLY MULTICOLS ENVIRONMENT >>>
 \end{document}
