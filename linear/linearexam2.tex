@@ -18,22 +18,21 @@
 
 % --- THEME COLORS ---
 \definecolor{boxbg}{gray}{0.95}
-\definecolor{titlebg}{Blue!70!Black}
-\definecolor{thmblue}{Blue!60!Black}
-\definecolor{defgreen}{OliveGreen!70!Black}
-\definecolor{exred}{Red!70!Black}
-\definecolor{imtyellow}{Apricot!80!White}
+\definecolor{myblue}{named}{Blue}
+\definecolor{mygreen}{named}{OliveGreen}
+\definecolor{myred}{named}{Red}
+\definecolor{myyellow}{named}{Apricot}
 
 % --- CUSTOM TCOLORBOX STYLES ---
 % Definition Box (Green)
 \newtcolorbox{defbox}{
     enhanced,
-    colback=defgreen!5!white,
-    colframe=defgreen!75!black,
+    colback=mygreen!5!white,
+    colframe=mygreen!75!black,
     boxrule=0.5pt,
     fonttitle=\bfseries\sffamily,
     coltitle=white,
-    colbacktitle=defgreen!80!black,
+    colbacktitle=mygreen!80!black,
     attach boxed title to top left={yshift=-2mm, xshift=3mm},
     boxed title style={boxrule=0.5pt, frame code={}},
     title=Definition,
@@ -43,12 +42,12 @@
 % Theorem Box (Blue)
 \newtcolorbox{thmbox}{
     enhanced,
-    colback=thmblue!5!white,
-    colframe=thmblue!75!black,
+    colback=myblue!5!white,
+    colframe=myblue!75!black,
     boxrule=0.5pt,
     fonttitle=\bfseries\sffamily,
     coltitle=white,
-    colbacktitle=thmblue!80!black,
+    colbacktitle=myblue!80!black,
     attach boxed title to top left={yshift=-2mm, xshift=3mm},
     boxed title style={boxrule=0.5pt, frame code={}},
     title=Theorem,
@@ -58,12 +57,12 @@
 % Example Box (Red)
 \newtcolorbox{exbox}{
     enhanced,
-    colback=exred!5!white,
-    colframe=exred!75!black,
+    colback=myred!5!white,
+    colframe=myred!75!black,
     boxrule=0.5pt,
     fonttitle=\bfseries\sffamily,
     coltitle=white,
-    colbacktitle=exred!80!black,
+    colbacktitle=myred!80!black,
     attach boxed title to top left={yshift=-2mm, xshift=3mm},
     boxed title style={boxrule=0.5pt, frame code={}},
     title=Example,
@@ -117,7 +116,7 @@ $$
 \mathbf{1} & 0 & 3 & 0 & 5 \\
 0 & \mathbf{1} & 2 & 0 & -3 \\
 0 & 0 & 0 & \mathbf{1} & 0
-\end{bmatrix}
+\end{bmatrix} \text{}
 $$
 \begin{itemize}
     \item \textbf{Basic Variables:} $x_1, x_2, x_4$ (Pivots in Cols 1, 2, 4).
@@ -129,10 +128,11 @@ $$
 \section*{II. Vectors, Span, and $\mathbf{Ax=b}$ (1.3, 1.4)}
 
 \begin{thmbox}
-\textbf{Thm 1.3: Equivalence of Views} \\
-The linear system, the vector equation ($x_1 \mathbf{a}_1 + \dots + x_n \mathbf{a}_n = \mathbf{b}$), and the matrix equation ($A\mathbf{x} = \mathbf{b}$) \textbf{all share the same solution set}. $\mathbf{b}$ is in Span$\{\mathbf{a}_1, \dots, \mathbf{a}_n\}$ $\iff A\mathbf{x} = \mathbf{b}$ is consistent.
+\textbf{Thm 1.3: Equivalence of Views}
+The linear system, the vector equation ($x_1 \mathbf{a}_1 + \dots + x_n \mathbf{a}_n = \mathbf{b}$), and the matrix equation ($A\mathbf{x} = \mathbf{b}$) \textbf{all share the same solution set}.
+$\mathbf{b}$ is in Span$\{\mathbf{a}_1, \dots, \mathbf{a}_n\}$ $\iff A\mathbf{x} = \mathbf{b}$ is consistent.
 
-\textbf{Thm 1.4: Span $\mathbb{R}^m$ Equivalence} \\
+\textbf{Thm 1.4: Span $\mathbb{R}^m$ Equivalence}
 Let $A$ be $m \times n$. The following are equivalent:
 \begin{enumerate}
     \item For each $\mathbf{b} \in \mathbb{R}^m$, $A\mathbf{x} = \mathbf{b}$ has a solution.
@@ -150,10 +150,10 @@ Let $A$ be $m \times n$. The following are equivalent:
 \end{itemize}
 \end{defbox}
 \begin{thmbox}
-\textbf{Thm 1.6: Non-Homogeneous Solution Set} \\
+\textbf{Thm 1.6: Non-Homogeneous Solution Set}
 If $A\mathbf{x} = \mathbf{b}$ is consistent, the solution set is:
 $$
-\mathbf{x} = \mathbf{p} + \mathbf{v}_h \quad (\text{Particular} + \text{Homogeneous})
+\mathbf{x} = \mathbf{p} + \mathbf{v}_h \quad (\text{Particular} + \text{Homogeneous}) \text{}
 $$
 The set is a translation of the homogeneous solution space ($\text{Span}\{\mathbf{v}_1, \mathbf{v}_2, \dots\}$).
 \end{thmbox}
@@ -165,26 +165,9 @@ The set is a translation of the homogeneous solution space ($\text{Span}\{\mathb
 \end{itemize}
 General solution in PVF (Decomposition):
 $$
-\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \underbrace{\begin{bmatrix} 5 \\ -3 \\ 0 \\ 0 \end{bmatrix}}_{\mathbf{p}} + t \underbrace{\begin{bmatrix} -3 \\ -2 \\ 1 \\ 0 \end{bmatrix}}_{\mathbf{v}_h}
+\mathbf{x} = \begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix} = \underbrace{\begin{bmatrix} 5 \\ -3 \\ 0 \\ 0 \end{bmatrix}}_{\mathbf{p}} + t \underbrace{\begin{bmatrix} -3 \\ -2 \\ 1 \\ 0 \end{bmatrix}}_{\mathbf{v}_h} \text{}
 $$
 \end{exbox}
-
-\section*{IV. Linear Independence (1.7)}
-\begin{defbox}
-\begin{itemize}
-    \item \textbf{Linearly Independent (LI):} $x_1 \mathbf{v}_1 + \dots + x_p \mathbf{v}_p = \mathbf{0}$ has \textbf{only the trivial solution}.
-    \item \textbf{Tests for LD (Instant Dependence):}
-    \begin{itemize}
-        \item Contains the $\mathbf{0}$ vector.
-        \item More vectors than entries ($p>n$ in $\mathbb{R}^n$).
-        \item Matrix $A=[\mathbf{v}_1 \dots \mathbf{v}_p]$ has a \textbf{free variable}.
-    \end{itemize}
-\end{itemize}
-\end{defbox}
-\begin{thmbox}
-\textbf{Thm 1.7: Characterization of LD} \\
-A set $S$ is $\mathbf{LD} \iff$ at least one vector in $S$ is an \textbf{LC of the others}.
-\end{thmbox}
 
 \end{multicols} % <<< END TWO-COLUMN FOR PAGE 1 >>>
 
@@ -200,14 +183,31 @@ A set $S$ is $\mathbf{LD} \iff$ at least one vector in $S$ is an \textbf{LC of t
 
 \begin{multicols}{2} % <<< START TWO-COLUMN FOR PAGE 2 >>>
 
+\section*{IV. Linear Independence (1.7)}
+\begin{defbox}
+\begin{itemize}
+    \item \textbf{Linearly Independent (LI):} $x_1 \mathbf{v}_1 + \dots + x_p \mathbf{v}_p = \mathbf{0}$ has \textbf{only the trivial solution}.
+    \item \textbf{Tests for LD (Instant Dependence):}
+    \begin{itemize}
+        \item Contains the $\mathbf{0}$ vector.
+        \item More vectors than entries ($p>n$ in $\mathbb{R}^n$).
+        \item Matrix $A=[\mathbf{v}_1 \dots \mathbf{v}_p]$ has a \textbf{free variable}.
+    \end{itemize}
+\end{itemize}
+\end{defbox}
+\begin{thmbox}
+\textbf{Thm 1.7: Characterization of LD}
+A set $S$ is $\mathbf{LD} \iff$ at least one vector in $S$ is an \textbf{LC of the others}.
+\end{thmbox}
+
 \section*{V. Linear Transformations (1.8, 1.9)}
 \begin{thmbox}
-\textbf{Thm 1.10: The Standard Matrix $\mathbf{A}$} \\
+\textbf{Thm 1.10: The Standard Matrix $\mathbf{A}$}
 $T(\mathbf{x}) = A\mathbf{x}$, where $A$ is the unique standard matrix formed by transforming the standard basis vectors:
 $$
-A = [T(\mathbf{e}_1) \ T(\mathbf{e}_2) \ \dots \ T(\mathbf{e}_n)]
+A = [T(\mathbf{e}_1) \ T(\mathbf{e}_2) \ \dots \ T(\mathbf{e}_n)] \text{}
 $$
-\textbf{Thm 1.11 \& 1.12: One-to-One and Onto} \\
+\textbf{Thm 1.11 \& 1.12: One-to-One and Onto}
 Let $A$ be the $m \times n$ standard matrix for $T: \mathbb{R}^n \to \mathbb{R}^m$.
 \begin{itemize}
     \item \textbf{T is Onto (Surjective) $\iff$} $A$ has a \textbf{pivot in every row}.
@@ -222,7 +222,7 @@ Let $A$ be the $m \times n$ standard matrix for $T: \mathbb{R}^n \to \mathbb{R}^
     \item Defined only if (\# cols in $A$) = (\# rows in $B$).
     \item $\text{Col}_j(AB) = A \cdot \text{Col}_j(B)$.
     \item \textbf{Warning:} $AB \ne BA$ generally.
-\enditemize}
+\end{itemize}
 \textbf{Transpose Properties}
 \begin{itemize}
     \item $(A+B)^T = A^T + B^T$.
@@ -233,7 +233,7 @@ Let $A$ be the $m \times n$ standard matrix for $T: \mathbb{R}^n \to \mathbb{R}^
 \section*{VII. The Inverse (2.2, 2.3)}
 \begin{defbox}
 \textbf{2x2 Inverse}: For $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}$, if $ad-bc \ne 0$:
-$$ A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} $$
+$$ A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \text{} $$
 \textbf{Algorithm to find $\mathbf{A}^{-1}$}:
 Row reduce the augmented matrix $[\mathbf{A} \mid \mathbf{I}_n]$.
 If $A \sim \mathbf{I}_n$, then $[\mathbf{A} \mid \mathbf{I}_n] \sim [\mathbf{I}_n \mid \mathbf{A}^{-1}]$.
@@ -242,9 +242,9 @@ If $A \sim \mathbf{I}_n$, then $[\mathbf{A} \mid \mathbf{I}_n] \sim [\mathbf{I}_
 \textbf{Properties of Inverses}
 \begin{itemize}
     \item $(A^{-1})^{-1} = A$
-    \item $(AB)^{-1} = B^{-1}A^{-1}$ (\textbf{Reversal Rule})
+    \item $(AB)^{-1} = B^{-1}A^{-1}$ (Reversal Rule)
     \item $(A^T)^{-1} = (A^{-1})^T$
-    \item (From Quiz 5) If $AB$ and $B$ are invertible, $A$ must be invertible. Proof: $A = (AB)B^{-1}$.
+    \item (From Quiz 5) If $AB$ and $B$ are invertible, $A$ must be invertible. Proof: $A = (AB)B^{-1}$
 \end{itemize}
 \end{thmbox}
 
@@ -262,16 +262,20 @@ A \textbf{subspace} $H$ must satisfy:
 \end{itemize}
 \end{defbox}
 \begin{thmbox}
-\textbf{Rank-Nullity Theorem} \\
+\textbf{Rank-Nullity Theorem}
 For an $m \times n$ matrix $A$:
-$$ \text{rank}(A) + \text{dim}(\text{Nul}(A)) = n $$
-$$ (\text{\# pivot cols}) + (\text{\# free variables}) = (\text{\# total cols}) $$
+$$ \text{rank}(A) + \text{dim}(\text{Nul}(A)) = n \text{} $$
+$$ (\text{\# pivot cols}) + (\text{\# free variables}) = (\text{\# total cols}) \text{} $$
 \end{thmbox}
 
 \section*{IX. Determinants (3.1, 3.2)}
 \begin{defbox}
 \textbf{Cofactor Expansion} (across row $i$):
 $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
+\begin{itemize}
+    \item \textbf{Example (across row 1 for 3x3)}:
+    $\det(A) = a_{11}\det(A_{11}) - a_{12}\det(A_{12}) + a_{13}\det(A_{13})$
+\end{itemize}
 \end{defbox}
 \begin{thmbox}
 \textbf{Properties \& Row Ops}
@@ -291,19 +295,20 @@ $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
 % --- THE BIG ONE ---
 \begin{tcolorbox}[
     enhanced,
-    colback=imtyellow,
+    colback=myyellow!80!White,
     colframe=Orange!50!Black,
     boxrule=1pt,
     fonttitle=\bfseries\sffamily,
     coltitle=black,
-    colbacktitle=imtyellow,
+    colbacktitle=myyellow!80!White,
     attach boxed title to top center={yshift=-4mm},
     boxed title style={boxrule=0.5pt, colframe=Orange!50!Black},
     title=THE INVERSE MATRIX THEOREM (CUMULATIVE),
     sharp corners,
     breakable
 ]
-Let $A$ be a square $n \times n$ matrix. The following statements are all equivalent (all true or all false).
+Let $A$ be a square $n \times n$ matrix.
+The following statements are all equivalent (all true or all false).
 \begin{enumerate}[label=(\alph*)]
     \item $A$ is an invertible matrix.
     \item $A$ is row equivalent to the $n \times n$ identity matrix $I_n$.
