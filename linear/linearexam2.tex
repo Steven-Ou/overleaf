@@ -269,7 +269,6 @@ $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
 \end{itemize}
 \end{thmbox}
 
-% --- NEW SECTION ADDED HERE ---
 \section*{X. Eigenvalues \& Eigenvectors (5.1, 5.2)}
 \begin{defbox}
 \begin{itemize}
@@ -287,6 +286,44 @@ $\det(A) = \sum_{j=1}^n a_{ij} C_{ij}$, where $C_{ij} = (-1)^{i+j} \det(A_{ij})$
     \item The eigenvalues of a \textbf{triangular matrix} are the entries on its main diagonal.
 \end{itemize}
 \end{thmbox}
+
+% --- NEW EXAMPLES ADDED HERE ---
+\section*{XI. Additional Examples}
+
+\begin{exbox}
+\textbf{Ex (2.8/2.9): Find Rank/Nullity}
+For $A = \begin{bmatrix} 1 & 2 & 3 \\ 0 & 1 & 1 \end{bmatrix}$.
+\begin{itemize}
+    \item Pivots are in cols 1, 2. $\rank(A) = 2$.
+    \item Basis for $\colsp(A)$: $\left\{ \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \end{bmatrix} \right\}$.
+    \item Solve $A\mathbf{x}=\mathbf{0}$: $x_3$ is free. $x_2 = -x_3$. $x_1 = -2x_2 - 3x_3 = 2x_3 - 3x_3 = -x_3$.
+    \item $\mathbf{x} = x_3 \begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix}$.
+    \item Basis for $\nullsp(A)$: $\left\{ \begin{bmatrix} -1 \\ -1 \\ 1 \end{bmatrix} \right\}$. Nullity is 1.
+\end{itemize}
+\end{exbox}
+
+\begin{exbox}
+\textbf{Ex (3.1/3.2): Find Determinant}
+For $B = \begin{bmatrix} 1 & 5 & 0 \\ 2 & 4 & -1 \\ 0 & -2 & 0 \end{bmatrix}$.
+\begin{itemize}
+    \item Expand down Col 3 (easiest):
+    \item $\det(B) = 0 \cdot C_{13} - (-1) \cdot \det \begin{bmatrix} 1 & 5 \\ 0 & -2 \end{bmatrix} + 0 \cdot C_{33}$
+    \item $\det(B) = 1 \cdot ((1)(-2) - (5)(0)) = -2$.
+\end{itemize}
+\end{exbox}
+
+\begin{exbox}
+\textbf{Ex (5.1/5.2): Find Eigenvalues}
+For $C = \begin{bmatrix} 1 & 6 \\ 5 & 2 \end{bmatrix}$.
+\begin{itemize}
+    \item Solve $\det(C - \lambda I) = 0$.
+    \item $\det \begin{bmatrix} 1-\lambda & 6 \\ 5 & 2-\lambda \end{bmatrix} = (1-\lambda)(2-\lambda) - 30 = 0$
+    \item $\lambda^2 - 3\lambda + 2 - 30 = 0 \implies \lambda^2 - 3\lambda - 28 = 0$
+    \item $(\lambda - 7)(\lambda + 4) = 0$
+    \item Eigenvalues are $\lambda_1 = 7, \lambda_2 = -4$.
+\end{itemize}
+\end{exbox}
+
 
 % --- THE BIG ONE ---
 \begin{tcolorbox}[
