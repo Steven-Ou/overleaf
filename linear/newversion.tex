@@ -1,0 +1,206 @@
+\documentclass[9pt]{extarticle} % Smaller base font for maximum density
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage[letterpaper, margin=0.3in]{geometry} % Extreme margins
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+
+% --- COMPACT LISTS ---
+\setlist{nosep, leftmargin=*, topsep=0pt, partopsep=0pt}
+
+% --- NO INDENT / SPACING ---
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{0.2in}
+
+% --- COLORS (High Contrast for Readability) ---
+\definecolor{algo_bg}{HTML}{F0F8FF} % AliceBlue
+\definecolor{algo_frame}{HTML}{4682B4} % SteelBlue
+\definecolor{check_bg}{HTML}{FFF0F5} % LavenderBlush
+\definecolor{check_frame}{HTML}{C71585} % MediumVioletRed
+
+% --- CUSTOM BOXES ---
+% "Algorithm" Box - For Step-by-Step Instructions
+\newtcolorbox{algobox}[1]{
+    enhanced,
+    colback=algo_bg,
+    colframe=algo_frame,
+    fonttitle=\bfseries\sffamily,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={boxrule=0.5pt},
+    boxrule=0.5pt,
+    left=2pt, right=2pt, top=8pt, bottom=2pt,
+    arc=0pt, outer arc=0pt,
+    breakable
+}
+
+% "Sanity Check" Box - Quick Tests & Warnings
+\newtcolorbox{checkbox}[1]{
+    enhanced,
+    colback=check_bg,
+    colframe=check_frame,
+    fonttitle=\bfseries\sffamily,
+    title={#1},
+    attach boxed title to top left={yshift=-2mm, xshift=2mm},
+    boxed title style={boxrule=0.5pt},
+    boxrule=0.5pt,
+    left=2pt, right=2pt, top=8pt, bottom=2pt,
+    arc=0pt, outer arc=0pt,
+    breakable
+}
+
+\begin{document}
+% --- HEADER ---
+\textbf{\large MATH 231: FINAL EXAM PROCEDURAL REFERENCE} \hfill \textit{Battle Plan v1.0}
+\hrule
+\vspace{4pt}
+
+\begin{multicols}{2}
+
+% ============================================================
+% SECTION 1: EIGENVALUES & EIGENVECTORS (The Hard Part)
+% ============================================================
+
+\begin{algobox}{ALGORITHM: Finding Eigenvalues ($\lambda$) (3x3)}
+\textbf{Goal:} Solve $\det(A - \lambda I) = 0$.
+\begin{enumerate}
+    \item \textbf{Setup:} Write matrix $A - \lambda I$. (Subtract $\lambda$ from diagonal).
+    \item \textbf{Scan for Zeros:} Is there a row/col with two zeros? Expand along that immediately.
+    \item \textbf{The "Factor First" Trick:} Before expanding, look at rows. Can you perform $R_i + R_j$ or $R_i - R_j$ to create a common factor?
+    \item \textbf{Expand:} Result will be a cubic: $-\lambda^3 + c_2\lambda^2 - c_1\lambda + c_0 = 0$.
+    \item \textbf{Solve for Roots:}
+    \begin{itemize}
+        \item If you factored out $(\lambda - k)$ earlier, $\lambda=k$ is one root.
+        \item \textbf{Rational Root Thm:} Test integer factors of the constant term $c_0$ (e.g., $\pm 1, \pm 2$).
+        \item Use polynomial long division to reduce cubic to quadratic.
+    \end{itemize}
+\end{enumerate}
+\end{algobox}
+
+\begin{algobox}{ALGORITHM: Finding Eigenvectors ($\mathbf{x}$)}
+\textbf{Goal:} Find basis for $\text{Nul}(A - \lambda I)$ for each $\lambda$.
+\begin{enumerate}
+    \item Plug one specific $\lambda$ value back into matrix $A - \lambda I$.
+    \item \textbf{Row Reduce} this matrix. (You \emph{must} get at least one row of zeros. If not, your $\lambda$ is wrong).
+    \item Write equations (e.g., $x_1 - 2x_3 = 0 \implies x_1 = 2x_3$).
+    \item \textbf{Parametric Vector Form:} Separation variables.
+    $$ \mathbf{x} = x_2 \begin{bmatrix} \dots \end{bmatrix} + x_3 \begin{bmatrix} \dots \end{bmatrix} $$
+    \item The vectors are your eigenvectors.
+\end{enumerate}
+\end{algobox}
+
+\begin{checkbox}{QUICK CHECK: Triangular Matrices}
+If $A$ is Upper or Lower Triangular:
+\begin{itemize}
+    \item \textbf{Eigenvalues} = The entries on the main diagonal.
+    \item \textbf{Determinant} = Product of diagonal entries.
+    \item \textbf{Do not} compute characteristic poly. Just read them off.
+\end{itemize}
+\end{checkbox}
+
+% ============================================================
+% SECTION 2: RANK, NULLITY & BASES
+% ============================================================
+
+\begin{algobox}{ALGORITHM: Rank, Nullity, Col(A), Nul(A)}
+Given matrix $A$:
+\begin{enumerate}
+    \item \textbf{Step 1: Row Reduce} $A$ to REF (doesn't need to be RREF yet).
+    \item \textbf{Step 2: Identify Pivots.} Circle leading 1s.
+    \item \textbf{RANK} = Count of Pivots.
+    \item \textbf{NULLITY} = (Total Columns) - (Rank).
+    \item \textbf{BASIS for Col(A):}
+    \begin{itemize}
+        \item Look at REF. Which columns have pivots? (e.g., 1 and 3).
+        \item Go back to \textbf{ORIGINAL} matrix $A$.
+        \item Pick columns 1 and 3 from \textbf{original} $A$.
+    \end{itemize}
+    \item \textbf{BASIS for Nul(A):}
+    \begin{itemize}
+        \item Go to RREF.
+        \item Identify Free Variables (cols without pivots).
+        \item Write Basic Variables in terms of Free Variables.
+        \item Extract vectors (PVF). These are the basis.
+    \end{itemize}
+\end{enumerate}
+\end{algobox}
+
+% ============================================================
+% SECTION 3: DETERMINANTS & INVERSES
+% ============================================================
+
+\begin{algobox}{ALGORITHM: Determinant Strategy}
+\begin{enumerate}
+    \item \textbf{2x2:} $ad - bc$.
+    \item \textbf{3x3 or larger:}
+    \begin{itemize}
+        \item \textbf{Row Ops Strategy (Fastest):} Use row replacements ($R_i + kR_j$) to create zeros below a pivot. (Does NOT change det).
+        \item \textbf{Swap?} Multiply result by $-1$.
+        \item \textbf{Scale?} Factor out $k$.
+        \item Once Triangular: Multiply diagonal entries.
+    \end{itemize}
+    \item \textbf{Cofactor Expansion:} Only do this if a row/col already has many zeros.
+    $$ \det(A) = a_{11}C_{11} + a_{12}C_{12} + \dots $$
+\end{enumerate}
+\end{algobox}
+
+\begin{algobox}{ALGORITHM: Inverse Matrix ($A^{-1}$)}
+\begin{enumerate}
+    \item \textbf{2x2 Shortcut:}
+    $$ \begin{bmatrix} a & b \\ c & d \end{bmatrix}^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} $$
+    \item \textbf{3x3+ Algorithm:}
+    \begin{itemize}
+        \item Augment: $[ A \mid I ]$.
+        \item Row Reduce until left side is $I$: $[ I \mid A^{-1} ]$.
+        \item If you create a row of zeros on the left, $A$ is not invertible.
+    \end{itemize}
+\end{enumerate}
+\end{algobox}
+
+% ============================================================
+% SECTION 4: LINEAR INDEPENDENCE
+% ============================================================
+
+\begin{checkbox}{TEST: Linear Independence}
+Set of vectors $\{\mathbf{v}_1, \dots, \mathbf{v}_p\}$.
+\begin{enumerate}
+    \item \textbf{Matrix Check:} Form $A = [\mathbf{v}_1 \dots \mathbf{v}_p]$.
+    \item Row reduce.
+    \item \textbf{Pivot in every column?} $\to$ Independent.
+    \item \textbf{Free variable exists?} $\to$ Dependent.
+\end{enumerate}
+\textbf{Instant Checks (Dependent if...):}
+\begin{itemize}
+    \item More vectors than rows ($p > n$).
+    \item The set contains the $\mathbf{0}$ vector.
+    \item One vector is a scalar multiple of another.
+\end{itemize}
+\end{checkbox}
+
+% ============================================================
+% SECTION 5: COMMON "TRICK" QUESTIONS
+% ============================================================
+
+\begin{checkbox}{"Is $\lambda$ an eigenvalue?"}
+\textbf{Don't} find characteristic poly!
+\begin{enumerate}
+    \item Calculate matrix $A - \lambda I$.
+    \item Does this matrix have a non-trivial null space? (i.e., is it singular? Is $\det = 0$?)
+    \item If yes $\to$ Yes, it is an eigenvalue.
+\end{enumerate}
+\end{checkbox}
+
+\begin{checkbox}{"Is $\mathbf{x}$ an eigenvector?"}
+\textbf{Don't} find row reduce!
+\begin{enumerate}
+    \item Multiply $A\mathbf{x}$.
+    \item Check result: Does $A\mathbf{x} = (\text{number}) \cdot \mathbf{x}$?
+    \item If result is scalar multiple of original $\mathbf{x}$, yes.
+\end{enumerate}
+\end{checkbox}
+
+\end{multicols}
+\end{document}
