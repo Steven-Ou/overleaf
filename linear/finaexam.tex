@@ -1,0 +1,160 @@
+ \documentclass[10pt, landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.35in]{geometry}
+\usepackage{amsmath, amssymb, multicol, enumitem, titlesec, xcolor}
+
+\setlist{nosep} 
+\titleformat{\section}{\normalsize\bfseries\color{blue}}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\begin{document}
+
+% --- SHEET 1, SIDE A: SYSTEMS, RREF, & INVERTIBILITY ---
+\begin{center}
+    \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 1, Side A} \\
+    \textit{Topic: Systems of Equations, Row Reduction, and Matrix Inverses}
+\end{center}
+\begin{multicols}{3}
+
+\section*{1. Linear Systems \& RREF Logic}
+\begin{itemize}
+    \item \textbf{Basic vs. Free Variables:} Basic variables match pivot columns. Free variables ($x_n = t$) exist in non-pivot columns[cite: 442, 444, 754, 757].
+    \item \textbf{Existence/Uniqueness:} 
+        \begin{itemize}
+            \item \textbf{Inconsistent:} Last column of $[A|b]$ is a pivot (e.g., $0=2$)[cite: 414, 415, 527].
+            \item \textbf{Consistent:} No pivot in the last column[cite: 637, 644].
+            \item \textbf{Infinite Solutions:} Consistent AND at least one free variable[cite: 413, 765].
+        \end{itemize}
+    \item \textbf{Parametric Vector Form:} $x = p + t_1 v_1 + \dots + t_k v_k$ where $p$ is a particular solution and $\{v_i\}$ span the null space[cite: 445, 646].
+\end{itemize}
+
+\section*{2. The Invertible Matrix Theorem (IMT)}
+For an $n \times n$ matrix $A$, these are equivalent[cite: 66]:
+\begin{itemize}
+    \item $A$ is invertible[cite: 67].
+    \item $A$ is row equivalent to $I_n$[cite: 68].
+    \item $A$ has $n$ pivot positions[cite: 69].
+    \item $Ax = 0$ has only the trivial solution[cite: 70].
+    \item Columns of $A$ are linearly independent[cite: 71].
+    \item $x \mapsto Ax$ is one-to-one and onto[cite: 72, 75].
+    \item $\det(A) \neq 0$[cite: 85].
+    \item $0$ is not an eigenvalue of $A$[cite: 86, 878].
+    \item $\text{rank}(A) = n$ and $\text{nullity}(A) = 0$[cite: 81, 82, 143].
+\end{itemize}
+
+\section*{3. Matrix Inverse Computation}
+\begin{itemize}
+    \item \textbf{Algorithm:} Row reduce $[A | I]$ to $[I | A^{-1}]$[cite: 903, 1063].
+    \item \textbf{Properties:} $(AB)^{-1} = B^{-1}A^{-1}$[cite: 733, 738]; $(A^T)^{-1} = (A^{-1})^T$.
+    \item \textbf{Vlamis Counter:} If $AB$ is invertible, then both $A$ and $B$ must be invertible[cite: 272, 281].
+    \item \textbf{Example:} To solve $Ax=b$, compute $x = A^{-1}b$[cite: 151, 152].
+\end{itemize}
+
+\end{multicols}
+
+\newpage
+% --- SHEET 1, SIDE B: DETERMINANTS & TRANSFORMATION GEOMETRY ---
+\begin{center}
+    \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 1, Side B} \\
+    \textit{Topic: Determinants, Linear Transformations, and Size Logic}
+\end{center}
+\begin{multicols}{3}
+
+\section*{4. Determinants Master List}
+\begin{itemize}
+    \item \textbf{Formula:} $\det(A) = \sum a_{1j} C_{1j}$[cite: 882].
+    \item \textbf{Operations:}
+        \begin{itemize}
+            \item \textbf{Swap Rows:} Multiply det by $-1$[cite: 100].
+            \item \textbf{Scale Row by $k$:} Multiply det by $k$[cite: 100, 884].
+            \item \textbf{Add Row:} Det remains unchanged[cite: 884].
+        \end{itemize}
+    \item \textbf{Scaling Property:} $\det(cA) = c^n \det(A)$[cite: 94, 1132].
+    \item \textbf{Multiplication:} $\det(AB) = \det(A)\det(B)$[cite: 101, 102, 1131].
+    \item \textbf{Inverse:} $\det(A^{-1}) = 1/\det(A)$[cite: 96, 1133].
+\end{itemize}
+
+\section*{5. Linear Transformations ($T: \mathbb{R}^n \to \mathbb{R}^m$)}
+\begin{itemize}
+    \item \textbf{Standard Matrix:} $A = [T(e_1) \dots T(e_n)]$[cite: 300, 392, 521].
+    \item \textbf{Onto (Surjective):} Columns of $A$ span $\mathbb{R}^m$. Impossible if $n < m$[cite: 306, 481, 484].
+    \item \textbf{One-to-One (Injective):} $Ax=0$ has only trivial solution. Impossible if $n > m$[cite: 951].
+    \item \textbf{Example Argument:} If $T(u) = T(v)$ and $u \neq v$, $T$ is not 1-to-1. Then $T(u-v) = 0$ provides a non-trivial solution to $Ax=0$[cite: 431, 434].
+\end{itemize}
+
+\section*{6. Matrix Size \& Combination Logic}
+\begin{itemize}
+    \item \textbf{Multiplication:} $(m \times n) \times (n \times p) = m \times p$[cite: 240, 241, 930].
+    \item \textbf{Row Op Logic:} To transform $A$ into $B$, identify if $R_i + kR_j$ was used[cite: 422, 551].
+    \item \textbf{Subspace Checks:} $xy \ge 0$ is NOT a subspace (fails addition closure)[cite: 269, 270].
+\end{itemize}
+
+\end{multicols}
+
+\newpage
+% --- SHEET 2, SIDE A: VECTOR SPACES, RANK, & EIGENVALUES ---
+\begin{center}
+    \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 2, Side A} \\
+    \textit{Topic: Subspaces, Rank-Nullity, Eigenvalues, and Diagonalization}
+\end{center}
+\begin{multicols}{3}
+
+\section*{7. Subspaces: Col A, Null A, Basis}
+\begin{itemize}
+    \item \textbf{Col A:} Subspace of $\mathbb{R}^m$. Basis = \textbf{Pivot columns} of original $A$[cite: 130, 137, 244, 895].
+    \item \textbf{Null A:} Subspace of $\mathbb{R}^n$[cite: 245, 248]. Basis = vectors from parametric $Ax=0$[cite: 211, 234, 1011].
+    \item \textbf{Basis Theorem:} If $\dim(V) = p$, any set of $p$ linearly independent vectors in $V$ is a basis[cite: 882, 899].
+    \item \textbf{Rank-Nullity:} $\text{rank}(A) + \text{nullity}(A) = n$[cite: 142, 250, 897, 1023].
+\end{itemize}
+
+\section*{8. Eigenvalues \& Eigenvectors}
+\begin{itemize}
+    \item \textbf{Equation:} $Av = \lambda v$[cite: 187, 876].
+    \item \textbf{Find $\lambda$:} Solve $\det(A - \lambda I) = 0$[cite: 193, 198, 876].
+    \item \textbf{Find Eigenspace ($E_\lambda$):} Find basis for $\text{Null}(A - \lambda I)$[cite: 211, 224, 877].
+    \item \textbf{Check Eigenvector:} Calculate $Av$. If result is a multiple of $v$, it is an eigenvector[cite: 188, 197].
+    \item \textbf{Diagonalization:} $A = PDP^{-1}$ where $D$ is diagonal (eigenvalues) and $P$ contains eigenvectors[cite: 879].
+\end{itemize}
+
+\section*{9. Geometry \& Coordinate Systems}
+\begin{itemize}
+    \item \textbf{Basis Coordinates:} $[x]_B = P_B^{-1} x$ where $P_B = [b_1 \dots b_n]$[cite: 172, 174].
+    \item \textbf{Example:} To check if $v$ is in $\text{Span}\{b_1, b_2\}$, solve $[b_1 \ b_2 | v]$ for consistency[cite: 768, 776].
+    \item \textbf{Abstract Spaces:} $\dim(P_n) = n+1$; $\dim(\mathbb{R}^{m \times n}) = mn$[cite: 819].
+\end{itemize}
+
+\end{multicols}
+
+\newpage
+% --- SHEET 2, SIDE B: ORTHOGONALITY, LEAST SQUARES, & MARKOV ---
+\begin{center}
+    \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 2, Side B} \\
+    \textit{Topic: Orthogonality, Gram-Schmidt, Least Squares, and Markov Chains}
+\end{center}
+\begin{multicols}{3}
+
+\section*{10. Orthogonality \& Complements}
+\begin{itemize}
+    \item \textbf{Dot Product:} $u \cdot v = 0 \iff u \perp v$[cite: 852, 860].
+    \item \textbf{Complement $W^\perp$:} Set of all $x$ such that $x \cdot w = 0$ for all $w \in W$[cite: 617, 1105].
+    \item \textbf{Theorem:} $x$ is orthogonal to $W$ if it is orthogonal to the basis vectors of $W$[cite: 988, 997].
+    \item \textbf{Orthogonal Matrix:} $U^T U = I$. Columns are orthonormal[cite: 577, 834]. Preserves length: $\|Ux\| = \|x\|$[cite: 579].
+\end{itemize}
+
+\section*{11. Projections \& Gram-Schmidt}
+\begin{itemize}
+    \item \textbf{Projection:} $\hat{y} = \text{proj}_W y = \frac{y \cdot u_1}{u_1 \cdot u_1} u_1 + \dots + \frac{y \cdot u_k}{u_k \cdot u_k} u_k$ (for orthogonal basis $\{u_i\}$)[cite: 614, 845, 1104].
+        \item \textbf{Gram-Schmidt:} $v_1 = x_1$; $v_2 = x_2 - \text{proj}_{v_1} x_2$; $v_3 = x_3 - \text{proj}_{v_1} x_3 - \text{proj}_{v_2} x_3$[cite: 833].
+    \item \textbf{QR Decomposition:} $A=QR$ where $Q$ is orthogonal and $R$ is upper triangular[cite: 835].
+\end{itemize}
+
+\section*{12. Least Squares \& Markov Chains}
+\begin{itemize}
+    \item \textbf{Least Squares:} Solve $A^T A \hat{x} = A^T b$[cite: 837].
+    \item \textbf{Stochastic Matrix ($M$):} Columns sum to 1[cite: 687, 726, 830]. $\lambda=1$ is always an eigenvalue[cite: 864].
+    \item \textbf{Steady-State Vector ($w$):} Solve $(M-I)w = 0$ and scale entries so $\sum w_i = 1$[cite: 689, 690, 1045, 1056].
+    \item \textbf{Vlamis Style:} To find $M$ from a graph, $M_{ij}$ is the probability of moving from $j$ to $i$[cite: 687, 1043].
+\end{itemize}
+
+\end{multicols}
+\end{document}
