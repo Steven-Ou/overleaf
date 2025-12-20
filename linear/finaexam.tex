@@ -1,172 +1,151 @@
 \documentclass[9pt]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.35in]{geometry}
+\usepackage[margin=0.3in]{geometry}
 \usepackage{amsmath, amssymb, enumitem, xcolor}
 
 % Custom section styling for 4-page layout
-\newcommand{\mysection}[1]{\vspace{5pt}\noindent\textbf{\large\color{blue} #1}\hrule\vspace{3pt}}
+\newcommand{\mysection}[1]{\vspace{4pt}\noindent\textbf{\large\color{blue} #1}\hrule\vspace{2pt}}
 \setlist{nosep} 
 
 \begin{document}
 
-% --- SHEET 1, SIDE A: SYSTEMS & INVERTIBILITY ---
+% --- SHEET 1, SIDE A: SYSTEMS, MATRIX ALGEBRA & INVERTIBILITY ---
 \begin{center}
     \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 1, Side A} \\
-    \textit{Focus: Systems of Equations, RREF Logic, and the Master IMT}
+    \textit{Focus: Linear Systems, Augmented Matrices, and the Master IMT}
 \end{center}
 
-\mysection{1. Linear Systems \& RREF Logic}
+\mysection{1. Linear Systems \& RREF Procedures (Sec 1.1, 1.2)}
 \begin{itemize}
-    \item \textbf{Variables[cite: 442, 444, 754, 757, 955]:} Basic variables match pivot columns. Free variables ($x_n = t$) match non-pivot columns.
-    \item \textbf{Consistency Check[cite: 527, 644, 943]:} A system $Ax=b$ is inconsistent if the rightmost column of the augmented matrix is a pivot column (e.g., $0=2$).
-    \item \textbf{Solution Counts[cite: 380, 413, 415, 514, 764, 765]:}
-        \begin{itemize}
-            \item \textbf{Unique:} Pivot in every column of $A$ (no free variables)[cite: 381].
-            \item \textbf{Infinite:} Consistent AND at least one free variable[cite: 413, 765].
-            \item \textbf{None:} Augmented matrix has a row like $[0 \ 0 \ 0 \ | \ 2]$[cite: 414, 415].
-        \end{itemize}
-    \item \textbf{Step-by-Step RREF to Parametric[cite: 445, 452, 645, 1011]:} 
-        1. Write equations from RREF rows (e.g., $x_1 + 3x_3 = 5$).
-        2. Move free variables to the right side ($x_1 = 5 - 3x_3$).
-        3. Write vector $x$ as a sum of a constant vector and vectors multiplied by free variables ($s, t$).
+    \item \textbf{Augmented Matrix}: For system $Ax=b$, the matrix is $[A \mid b]$[cite: 2030, 2031].
+    \item \textbf{Pivot Position}: A leading 1 in the reduced row echelon form[cite: 1991, 2218].
+    \item \textbf{Variables}: \textbf{Basic} match pivot columns; \textbf{Free} match non-pivot columns[cite: 2099, 2101].
+    \item \textbf{Consistency}: System is inconsistent if the last column of $[A \mid b]$ is a pivot[cite: 2071, 2184].
+    \item \textbf{Solution Counts}: \textbf{Unique} (pivot in every column of $A$)[cite: 2041]; \textbf{Infinite} (consistent with free variables)[cite: 2070, 2102]; \textbf{None} (pivot in augmented column)[cite: 2072].
+    \item \textbf{Parametric Solution}: Solve for basic vars in terms of free vars ($s, t$) [cite: 2103-2107]. 
+    \item \textbf{Example}: $rref(A) = \begin{bmatrix} 1 & -7 & 0 & 2 \\ 0 & 0 & 1 & -1 \\ 0 & 0 & 0 & 0 \end{bmatrix} \Rightarrow x_1 = 7x_2 - 2x_4, x_3 = x_4$. Sol: $span\{ \begin{bmatrix} 7 \\ 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} -2 \\ 0 \\ 1 \\ 1 \end{bmatrix} \}$ [cite: 2108-2110].
 \end{itemize}
 
-\mysection{2. The Invertible Matrix Theorem (IMT)}
-For an $n \times n$ matrix $A$, these are equivalent[cite: 66, 904]:
+\mysection{2. The Invertible Matrix Theorem (IMT) (Sec 2.3)}
+For an $n \times n$ matrix $A$, the following are equivalent[cite: 1723]:
 \begin{itemize}
-    \item $A$ is invertible[cite: 67].
-    \item $A$ is row equivalent to $I_n$[cite: 68, 915].
-    \item $A$ has $n$ pivot positions[cite: 69].
-    \item $Ax = 0$ has only the trivial solution ($x=0$)[cite: 70, 1090].
-    \item Columns of $A$ are linearly independent and span $\mathbb{R}^n$[cite: 71, 74, 165].
-    \item $x \mapsto Ax$ is one-to-one and onto $\mathbb{R}^n$[cite: 72, 75, 905].
-    \item $\det(A) \neq 0$[cite: 85, 170, 890].
-    \item $0$ is not an eigenvalue of $A$[cite: 86, 878].
-    \item $\text{rank}(A) = n$ and $\text{nullity}(A) = 0$[cite: 81, 82, 142, 252].
+    \item $A$ is invertible $\iff \det(A) \neq 0$[cite: 1724, 1742, 1906].
+    \item $A$ is row equivalent to $I_n$ and has $n$ pivot positions[cite: 1725, 1726, 1909, 1910].
+    \item $Ax = 0$ has only the trivial solution ($x=0$) [cite: 1727, 2117-2126].
+    \item Columns form a basis for $\mathbb{R}^n$ and are linearly independent[cite: 1728, 1731, 1736].
+    \item $x \mapsto Ax$ is one-to-one and onto $\mathbb{R}^n$[cite: 1729, 1732].
+    \item $rank(A) = n$ and $nullity(A) = 0$[cite: 1738, 1739].
+    \item $0$ is not an eigenvalue of $A$[cite: 1743, 2535].
 \end{itemize}
 
-\mysection{3. Matrix Inverse Computation}
+\mysection{3. Matrix Algebra \& Inverse Computation (Sec 2.1, 2.2)}
 \begin{itemize}
-    \item \textbf{Algorithm[cite: 903, 921, 1061]:} Row reduce $[A | I]$ to $[I | A^{-1}]$. If you can't get $I$, $A$ is singular[cite: 1063].
-    \item \textbf{2x2 Shortcut[cite: 174, 932]:} $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \implies A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$.
-    \item \textbf{Detailed Steps[cite: 1064, 1065, 1083]:} 
-        1. Setup $[A | I_{3 \times 3}]$. 
-        2. Use $R_1$ to clear entries below it in Col 1.
-        3. Use $R_2$ to clear entries above/below in Col 2.
-        4. Normalize pivots to 1 at the end.
+    \item \textbf{Inverses}: $(AB)^{-1} = B^{-1}A^{-1}$[cite: 2588]. $A^{-1}$ exists if $\det(A) \neq 0$.
+    \item \textbf{Algorithm}: $[A \mid I] \sim [I \mid A^{-1}]$ via row ops [cite: 2560, 2718-2740].
+    \item \textbf{2x2 Shortcut}: $A = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \Rightarrow A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$[cite: 2589].
+    \item \textbf{Elementary Matrices ($E$)}: Row op on $I$[cite: 1899, 1900, 2571]. $A \to B \Rightarrow B=EA$.
+    \item \textbf{Logic}: If $AB$ and $B$ are invertible, $A$ is invertible because $A = (AB)B^{-1}$ [cite: 2390-2396].
 \end{itemize}
 
 \newpage
 % --- SHEET 1, SIDE B: DETERMINANTS & TRANSFORMATIONS ---
 \begin{center}
     \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 1, Side B} \\
-    \textit{Focus: Determinant Algebra, Transformations, and Logic Arguments}
+    \textit{Focus: Determinant Algebra, Transformations, and Vlamis Logic Arguments}
 \end{center}
 
-\mysection{4. Determinants Master List}
+\mysection{4. Determinant Operations \& Properties (Sec 3.1, 3.2)}
 \begin{itemize}
-    \item \textbf{Calculations[cite: 91, 1119, 1120]:} $\det(A) = \sum a_{ij}C_{ij}$. Best to expand along the row/column with most zeros[cite: 883].
-    \item \textbf{Operations[cite: 99, 884, 889]:}
-        \begin{itemize}
-            \item \textbf{Swap Rows:} Multiply det by $-1$[cite: 99].
-            \item \textbf{Scale Row by $k$:} Multiply det by $k$[cite: 99].
-            \item \textbf{Replacement:} Det remains unchanged[cite: 884].
-        \end{itemize}
-    \item \textbf{Scaling Property [cite: 93, 94, 1132]:} $\det(cA) = c^n \det(A)$ (where $n$ is number of rows)[cite: 94].
-    \item \textbf{Multiplication [cite: 101, 102, 891, 1125, 1131]:} $\det(AB) = \det(A)\det(B)$[cite: 1131].
-    \item \textbf{Inverse [cite: 95, 96, 874, 1128, 1133]:} $\det(A^{-1}) = 1/\det(A)$[cite: 96, 1133].
+    \item \textbf{Calculations}: Expand along row/col with most zeros[cite: 1751, 2777].
+    \item \textbf{Scaling}: $\det(cA) = c^n \det(A)$ for $n \times n$ matrix[cite: 1751, 2789].
+    \item \textbf{Multiplication}: $\det(AB) = \det(A)\det(B)$[cite: 1759, 1932, 2788].
+    \item \textbf{Inverses}: $\det(A^{-1}) = 1/\det(A)$[cite: 1753, 2790]. $\det(A^k) = (\det A)^k$[cite: 1755, 2791].
+    \item \textbf{Row Ops}: Swap rows ($\times -1$); Scale row by $k$ ($\times k$); Replacement (no change)[cite: 1756, 1757, 2541].
 \end{itemize}
 
-\mysection{5. Linear Transformations ($T: \mathbb{R}^n \to \mathbb{R}^m$)}
+\mysection{5. Linear Transformations (Sec 1.8, 1.9)}
 \begin{itemize}
-    \item \textbf{Standard Matrix [cite: 300, 390, 393, 521, 935]:} $A = [T(e_1) \dots T(e_n)]$[cite: 392].
-    \item \textbf{Onto (Surjective)[cite: 75, 481, 484]:} Columns of $A$ span $\mathbb{R}^m$. Possible only if $n \ge m$[cite: 306].
-    \item \textbf{One-to-One (Injective)[cite: 72]:} $Ax=0$ has only trivial solution. Possible only if $n \le m$.
-    \item \textbf{Example Argument[cite: 303, 428, 431]:} If $T(u) = T(v)$, then $T(u-v) = 0$. The vector $x = u-v$ is a non-trivial solution to $Ax=0$[cite: 431, 434].
+    \item \textbf{Standard Matrix}: $A = [T(e_1) \dots T(e_n)]$[cite: 1957, 2047, 2050, 2178].
+    \item \textbf{Onto}: Columns span codomain (pivot in every row). Impossible if $m > n$[cite: 1963].
+    \item \textbf{1-to-1}: $Ax=0$ has only trivial sol (pivot in every column)[cite: 2592].
+    \item \textbf{Geometric Matrix}: $R_{\theta} = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}$ is an orthogonal rotation matrix[cite: 2238, 2586].
+    \item \textbf{Nontrivial $T(x)=0$}: If $T(u)=T(v)$, then $x=u-v$ is a solution to $T(x)=0$ [cite: 2083-2091].
 \end{itemize}
 
-\mysection{6. Vlamis Style: Logical Arguments}
+\mysection{6. Detailed Vlamis Style Arguments (Counters)}
 \begin{itemize}
-    \item \textbf{Size Logic [cite: 240, 241]:} If $A$ is $m \times n$ and $AB$ is $m \times p$, then $B$ is $n \times p$[cite: 241].
-    \item \textbf{Dependency Argument [cite: 501, 502, 510]:} If the last column of $AB$ is $\vec{0}$ but $B$ has no zero columns, the last column of $B$ ($\vec{b}_n$) provides a non-trivial solution to $Ax = \vec{0}$, meaning columns of $A$ are dependent[cite: 507, 508, 510].
-    \item \textbf{Identical Columns :} A square matrix with two identical columns is NOT invertible because $A(e_i - e_j) = 0$, giving a non-trivial solution to $Ax=0$[cite: 1091, 1092].
-    \item \textbf{Invertibility Argument[cite: 272, 733, 734]:} If $AB$ is invertible, then $det(A)det(B) \neq 0$. Thus $det(A) \neq 0$ and $det(B) \neq 0$, so both $A$ and $B$ are invertible[cite: 273, 275, 278, 281].
+    \item \textbf{Dependency Arg}: If last column of $AB$ is $\vec{0}$ and $B$ has no zero columns, then $A\vec{b}_n = \vec{0}$ with $\vec{b}_n \neq \vec{0}$, so columns of $A$ are dependent [cite: 2158-2167].
+    \item \textbf{Logic}: To show $v \cdot v = 0 \Rightarrow v = \vec{0}$, assume $v \neq \vec{0}$, then $v \cdot v = \sum a_i^2 > 0$ [cite: 2146-2154].
+    \item \textbf{Identical Cols}: If square $A$ has identical cols $\vec{a}_i = \vec{a}_j$, then $A(\vec{e}_i - \vec{e}_j) = \vec{0}$ is non-trivial, so $A$ is not invertible [cite: 2741-2750].
+    \item \textbf{Subspace Counter}: $W = \{ \begin{bmatrix} x \\ y \end{bmatrix} : xy \ge 0 \}$ is NOT a subspace (not closed under addition) [cite: 1922-1927].
 \end{itemize}
 
 \newpage
-% --- SHEET 2, SIDE A: SUBSPACES, RANK, & EIGENVALUES ---
+% --- SHEET 2, SIDE A: SUBSPACES, RANK & EIGENVALUES ---
 \begin{center}
     \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 2, Side A} \\
-    \textit{Focus: Subspaces, Rank-Nullity, Eigenvalues, and Diagonalization}
+    \textit{Focus: Subspace Properties, Rank-Nullity, and Eigenvalue Calculations}
 \end{center}
 
-\mysection{7. Subspaces: Col A, Null A, Basis}
+\mysection{7. Subspaces, Rank \& Basis (Sec 2.8, 2.9)}
 \begin{itemize}
-    \item \textbf{Criteria [cite: 265, 268, 906]:} Contains $\vec{0}$; closed under addition and scaling[cite: 270].
-    \item \textbf{Col A[cite: 80, 244, 907, 959]:} Subspace of $\mathbb{R}^m$. Basis = \textbf{Pivot columns} of original $A$[cite: 135, 137, 895, 1004].
-    \item \textbf{Null A[cite: 83, 245, 907]:} Subspace of $\mathbb{R}^n$. Basis = vectors from parametric solution to $Ax=0$[cite: 453, 908, 1011, 1013].
-    \item \textbf{Rank-Nullity Theorem [cite: 141, 142, 897]:} $\text{rank}(A) + \text{nullity}(A) = n$ (total columns)[cite: 142, 1022, 1023].
-    \item \textbf{Basis Theorem[cite: 882, 899]:} If $\dim(V) = p$, any set of $p$ linearly independent vectors in $V$ is a basis.
+    \item \textbf{Criteria}: Contains $\vec{0}$, closed under addition and scaling[cite: 2563].
+    \item \textbf{Col A}: Span of columns. Basis = Pivot columns of \textbf{original} matrix $A$ [cite: 1787-1794, 2552, 2661].
+    \item \textbf{Null A}: Solutions to $Ax = 0$. Basis = vectors in parametric form[cite: 2565, 2662, 2668].
+    \item \textbf{Rank-Nullity}: $rank(A) + nullity(A) = n$ (total cols) [cite: 1799, 1800, 1907, 2554, 2679-2681].
+    \item \textbf{Dimension}: If $\dim(W) = \dim(V)$ and $W \subset V$, then $W = V$[cite: 2281, 2539, 2553].
 \end{itemize}
 
-\mysection{8. Eigenvalues ($\lambda$) \& Eigenvectors ($v$)}
+\mysection{8. Eigenvalues ($\lambda$) \& Eigenvectors ($v$) (Sec 5.1, 5.2, 5.3)}
 \begin{itemize}
-    \item \textbf{Checking an Eigenvector[cite: 183, 186, 187, 1088]:} Calculate $Av$. If $Av = \lambda v$, it is an eigenvector[cite: 187]. If components don't scale by a single constant, it is not[cite: 188, 189, 197].
-    \item \textbf{Characteristic Polynomial[cite: 190, 192, 198, 876]:} Solve $\det(A - \lambda I) = 0$.
-    \item \textbf{Finding Eigenspace ($E_\lambda$) [cite: 210, 211, 877]:} Solve $(A - \lambda I)x = 0$[cite: 211, 218, 224]. The spanning vectors are the basis for $E_\lambda$[cite: 222, 235].
-    \item \textbf{Diagonalization [cite: 879]:} $A = PDP^{-1}$ exists if and only if $A$ has $n$ linearly independent eigenvectors[cite: 879].
+    \item \textbf{Check Eigenvector}: $v \neq \vec{0}$ is eigenvector if $Av = \lambda v$ [cite: 1840-1846].
+    \item \textbf{Char Equation}: $\det(A - \lambda I) = 0$ [cite: 1847-1855, 2533].
+    \item \textbf{Eigenspace ($E_\lambda$)}: $Null(A - \lambda I)$ [cite: 1867-1886, 2534].
+    \item \textbf{Diagonalization}: $A = PDP^{-1}$ if $A$ has $n$ independent eigenvectors[cite: 2536].
 \end{itemize}
 
-\mysection{9. Coordinates \& Distance}
+\mysection{9. Markov Chains (Appendix 10.1, 10.2)}
 \begin{itemize}
-    \item \textbf{Basis Coordinates[cite: 172, 173]:} $[x]_B = c$ such that $x = c_1b_1 + \dots + c_nb_n$. Calculate as $[x]_B = P_B^{-1}x$[cite: 174].
-    \item \textbf{Dot Product[cite: 852, 957]:} $u \cdot v = \sum u_i v_i$.
-    \item \textbf{Norm \& Distance[cite: 852, 854, 980, 985]:} $\|v\| = \sqrt{v \cdot v}$[cite: 982]. $dist(u, v) = \|u - v\|$[cite: 986].
-    \item \textbf{Vlamis Argument [cite: 30, 489, 1110]:} If $v \cdot v = 0$, then $v = \vec{0}$[cite: 489, 496, 1114].
+    \item \textbf{Stochastic Matrix ($M$)}: Columns $\ge 0$ and sum to 1[cite: 2383, 2487, 2520].
+    \item \textbf{Steady-State ($w$)}: Solve $(M - I)x = \vec{0}$ and normalize entries to sum to 1 [cite: 2346, 2508, 2701-2713].
+    \item \textbf{Transition Graph}: $M_{ij}$ is prob from state $j$ to state $i$ [cite: 2341-2345, 2685-2700].
 \end{itemize}
 
 \newpage
-% --- SHEET 2, SIDE B: ORTHOGONALITY, LEAST SQUARES, & MARKOV ---
+% --- SHEET 2, SIDE B: ORTHOGONALITY, GRAM-SCHMIDT & LEAST SQUARES ---
 \begin{center}
     \textbf{\Large MATH 231 Final Exam Cheat Sheet - Sheet 2, Side B} \\
-    \textit{Focus: Orthogonality, Gram-Schmidt, Least Squares, and Markov Chains}
+    \textit{Focus: Projections, Gram-Schmidt, QR, and Least Squares Problems}
 \end{center}
 
-\mysection{10. Orthogonality \& Complements}
+\mysection{10. Orthogonality \& Projections (Sec 6.1, 6.2, 6.3)}
 \begin{itemize}
-    \item \textbf{Orthogonal Vectors [cite: 842, 860, 1099]:} $u \cdot v = 0 \iff u \perp v$[cite: 1100].
-    \item \textbf{Complement $W^\perp$[cite: 617, 1102]:} Set of all $x$ such that $x \cdot w = 0$ for all $w \in W$.
-    \item \textbf{Theorems[cite: 618, 621, 1110]:}
-        \begin{itemize}
-            \item $v \in W \cap W^\perp \implies v = 0$[cite: 1110, 1114].
-            \item $(W^\perp)^\perp = W$[cite: 621, 624].
-            \item If $x \perp u$ and $x \perp v$, then $x \perp \text{Span}\{u, v\}$[cite: 988, 997, 998].
-        \end{itemize}
-    \item \textbf{Orthogonal Matrix[cite: 577, 834]:} $U^T U = I$. Preserves length $\|Ux\| = \|x\|$ and dot product $(Ux) \cdot (Uy) = u \cdot v$[cite: 578].
+    \item \textbf{Inner Product}: $u \cdot v = \sum u_i v_i$ [cite: 2509, 2631-2636]. Norm $\|v\| = \sqrt{v \cdot v}$[cite: 2637, 2639].
+    \item \textbf{Orthogonal Sets}: $u \cdot v = 0$[cite: 2499, 2755, 2757]. Orthogonal sets are lin. independent[cite: 2499, 2517].
+    \item \textbf{Complement ($W^\perp$)}: $v \in W^\perp \iff v \cdot w = 0$ for all $w \in W$ [cite: 2504, 2645-2655].
+    \item \textbf{Theorem}: $(W^\perp)^\perp = W$ [cite: 2274-2281]. $v \in W \cap W^\perp \Rightarrow v = \vec{0}$ [cite: 2767-2771].
+    \item \textbf{Orthogonal Matrix ($U$)}: $U^T U = I$; preserves $\|Ux\| = \|x\|$ and $dot$ products[cite: 2234, 2491].
+    \item \textbf{Projection}: $\hat{y} = \text{proj}_W y = \sum \frac{y \cdot u_i}{u_i \cdot u_i} u_i$ for orthogonal basis $\{u_i\}$[cite: 2271, 2500, 2502, 2761].
+    \item \textbf{Decomposition}: $y = \hat{y} + z$, where $z = y - \hat{y} \in W^\perp$ [cite: 2758-2766].
 \end{itemize}
 
-\mysection{11. Projections \& Gram-Schmidt}
+
+\mysection{11. Algorithms: Gram-Schmidt \& QR (Sec 6.4)}
 \begin{itemize}
-    \item \textbf{Orthogonal Projection[cite: 614, 844, 845, 1101, 1103]:} If $\{u_i\}$ is an orthogonal basis for $W$:
-        $\hat{y} = \text{proj}_W y = \frac{y \cdot u_1}{u_1 \cdot u_1} u_1 + \dots + \frac{y \cdot u_k}{u_k \cdot u_k} u_k$[cite: 1104].
-        
-    \item \textbf{Vector Decomposition [cite: 1101, 1107]:} $y = \hat{y} + z$, where $\hat{y} \in W$ and $z = y - \hat{y} \in W^\perp$[cite: 1106, 1107].
-    \item \textbf{Gram-Schmidt Process[cite: 833]:} To find orthogonal basis $\{v_1, v_2, v_3\}$ from $\{x_1, x_2, x_3\}$:
-        1. $v_1 = x_1$.
-        2. $v_2 = x_2 - \text{proj}_{v_1} x_2$.
-        3. $v_3 = x_3 - \text{proj}_{v_1} x_3 - \text{proj}_{v_2} x_3$.
-    \item \textbf{QR Decomposition[cite: 818, 835]:} $A = QR$ ($Q$ orthogonal columns, $R$ upper triangular). Used for eigenvalue approximation[cite: 836].
+    \item \textbf{Gram-Schmidt}: Converts basis $\{x_i\}$ to orthogonal basis $\{v_i\}$[cite: 2490]:
+        1. $v_1 = x_1$
+        2. $v_2 = x_2 - \text{proj}_{v_1} x_2 = x_2 - \frac{x_2 \cdot v_1}{v_1 \cdot v_1} v_1$
+        3. $v_3 = x_3 - \frac{x_3 \cdot v_1}{v_1 \cdot v_1} v_1 - \frac{x_3 \cdot v_2}{v_2 \cdot v_2} v_2$.
+    \item \textbf{QR Decomposition}: $A = QR$ ($Q$ orthogonal columns, $R$ upper triangular)[cite: 2475, 2492].
 \end{itemize}
 
-\mysection{12. Least Squares \& Markov Chains}
+\mysection{12. Least Squares (Sec 6.5, 6.6)}
 \begin{itemize}
-    \item \textbf{Least Squares[cite: 818, 837]:} Solve $A^T A \hat{x} = A^T b$. Unique if columns of $A$ are independent[cite: 838].
-    \item \textbf{Stochastic Matrix ($M$) [cite: 687, 726, 830, 863]:} Columns sum to 1; entries $\ge 0$[cite: 715].
-    \item \textbf{Steady-State Vector ($w$)[cite: 689, 690, 851]:}
-        1. Solve $(M - I)x = 0$[cite: 1045, 1046].
-        2. Find the spanning vector[cite: 1053].
-        3. Scale vector $x$ so its sum of components is 1 ($w = x / \text{Sum}(x_i)$)[cite: 1054, 1056].
-    \item \textbf{Vlamis Graph Style [cite: 684, 1025, 1028]:} $M_{ij}$ is the weight of the arrow from node $j$ to node $i$[cite: 1043].
+    \item \textbf{Definition}: Find $\hat{x}$ that minimizes $\|b - Ax\|$[cite: 2494].
+    \item \textbf{Normal Equations}: Solve $A^T A \hat{x} = A^T b$[cite: 2475].
+    \item \textbf{Using QR}: If $A=QR$, solve $R \hat{x} = Q^T b$[cite: 2475].
+    \item \textbf{Uniqueness}: Unique if columns of $A$ are lin. independent[cite: 2495].
 \end{itemize}
 
+\end{multicols}
 \end{document}
