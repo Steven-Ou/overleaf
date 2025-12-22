@@ -3,7 +3,7 @@
 \usepackage[margin=0.3in]{geometry}
 \usepackage{amsmath, amssymb, amsfonts, bm, enumitem, xcolor, tcolorbox, multicol}
 
-% Custom Box Styles for High Density
+% Custom Box Styles for High Density and Visual Clarity
 \tcbset{
     enhanced, boxrule=0.5pt, arc=0pt, outer arc=0pt,
     fonttitle=\bfseries\sffamily, breakable,
@@ -17,185 +17,176 @@
 
 \begin{document}
 
-% --- PAGE 1: SYSTEMS, RREF, & ML BASICS ---
+% --- PAGE 1: SYSTEMS, MATRIX ALGEBRA & INVERTIBILITY ---
 \begin{center}
-    \textbf{\Large MATH 231 ULTIMATE FINAL EXAM BATTLE PLAN - PAGE 1} \\
-    \textit{Systems, Matrix Algebra, and Introduction to Machine Learning}
+    \textbf{\Large MATH 231 FINAL EXAM BATTLE PLAN - PAGE 1} \\
+    \textit{Linear Systems, Augmented Matrices, and the Master IMT}
 \end{center}
 
 \begin{multicols}{2}
-\section*{1. Linear Systems \& RREF (Sec 1.1, 1.2)}
-\begin{algobox}{RREF Procedures \& Solutions}
+\section*{1. Linear Systems \& RREF Procedures (Sec 1.1, 1.2)}
+\begin{algobox}{RREF and Solution Counts}
 \begin{itemize}
     \item \textbf{Augmented Matrix}: $[A \mid b]$.
-    \item \textbf{Pivot}: Leading 1 in RREF. \textbf{Basic Vars}: Pivot cols. \textbf{Free}: Non-pivot.
-    \item \textbf{Consistency}: Inconsistent if last col of $[A \mid b]$ is a pivot.
-    \item \textbf{Unique}: Consistent + Pivot in \textit{every} column of $A$.
-    \item \textbf{Infinite}: Consistent + Free variables.
+    \item \textbf{Pivot}: Leading 1 in RREF. \textbf{Basic}: Pivot cols; \textbf{Free}: Non-pivot.
+    \item \textbf{Consistency}: Inconsistent if the last column of $[A \mid b]$ is a pivot.
+    \item \textbf{Unique}: Pivot in every column of $A$; \textbf{Infinite}: Consistent with free variables.
 \end{itemize}
 \end{algobox}
 
-\section*{2. Invertible Matrix Theorem (IMT)}
-For an $n \times n$ matrix $A$, these are equivalent:
-\begin{thmbox}{The Master List}
-1. $A$ is invertible $\iff \det(A) \neq 0$. \\
-2. $A \sim I_n$ (n pivots). \\
-3. $Ax=0$ has only the trivial solution ($x=0$). \\
-4. Cols are LI and span $\mathbb{R}^n$. \\
-5. $rank(A) = n$ and $nullity(A) = 0$. \\
-6. $0$ is NOT an eigenvalue.
-\end{thmbox}
-
-\section*{3. AI \& Machine Learning Basics (HW 1-2)}
-\begin{exbox}{Conceptual Definitions}
-\begin{itemize}
-    \item \textbf{T/F}: All ML is AI? \textbf{True}. All AI is ML? \textbf{False}.
-    \item \textbf{Perceptron}: Step function (binary). Hard to train (small change $\to$ huge flip).
-    \item \textbf{Sigmoid}: $\sigma(z) = \frac{1}{1+e^{-z}}$. Smooth/Differentiable. Essential for Gradient Descent.
-    \item \textbf{Grayscale}: $Y = 0.2989R + 0.5870G + 0.1140B$.
-\end{itemize}
+\begin{exbox}{Example: Parametric Solution}
+$rref(A) = \begin{bmatrix} 1 & -7 & 0 & 2 \\ 0 & 0 & 1 & -1 \\ 0 & 0 & 0 & 0 \end{bmatrix}$. Basic: $x_1, x_3$. Free: $x_2, x_4$.
+$x_1 = 7x_2 - 2x_4$ and $x_3 = x_4$.
 \end{exbox}
 
-\section*{4. Gradient Descent \& Optimization}
-\begin{algobox}{Optimization Algorithms}
+\section*{2. The Invertible Matrix Theorem (IMT) (Sec 2.3)}
+\begin{thmbox}{Equivalent Statements for $n \times n$ Matrix $A$}
 \begin{itemize}
-    \item \textbf{GD Formula}: $x_{new} = x_{old} - \alpha f'(x_{old})$. 
-    \item \textbf{Learning Rate ($\alpha$)}: Too large $\to$ Overshoot/Diverge.
-    \item \textbf{Newton's Method}: $x_{n+1} = x_n - \frac{f'(x_n)}{f''(x_n)}$. Faster convergence but more costly (2nd derivatives).
+    \item $A$ is invertible $\iff \det(A) \neq 0$.
+    \item $A \sim I_n$ and has $n$ pivot positions.
+    \item $Ax = 0$ has only the trivial solution ($x=0$).
+    \item Columns form a basis for $\mathbb{R}^n$ and are linearly independent.
+    \item $x \mapsto Ax$ is one-to-one and onto $\mathbb{R}^n$.
+    \item $rank(A) = n$ and $nullity(A) = 0$.
+    \item $0$ is NOT an eigenvalue.
+\end{itemize}
+\end{thmbox}
+
+\section*{3. Matrix Algebra \& Inverse Computation (Sec 2.1, 2.2)}
+\begin{algobox}{Inverse Properties and Algorithms}
+\begin{itemize}
+    \item \textbf{Inverses}: $(AB)^{-1} = B^{-1}A^{-1}$.
+    \item \textbf{Algorithm}: $[A \mid I] \sim [I \mid A^{-1}]$.
+    \item \textbf{2x2 Shortcut}: $A^{-1} = \frac{1}{ad-bc} \begin{bmatrix} d & -b \\ -c & a \end{bmatrix}$.
+    \item \textbf{Logic}: If $AB$ and $B$ are invertible, $A = (AB)B^{-1}$ is invertible.
 \end{itemize}
 \end{algobox}
 \end{multicols}
 
 \newpage
-% --- PAGE 2: DETERMINANTS, TRANSFORMATIONS & HW LOGIC ---
+% --- PAGE 2: DETERMINANTS & TRANSFORMATIONS ---
 \begin{center}
-    \textbf{\Large MATH 231 ULTIMATE FINAL EXAM BATTLE PLAN - PAGE 2} \\
-    \textit{Determinants, Geometry, and Homework Logic Proofs}
+    \textbf{\Large MATH 231 FINAL EXAM BATTLE PLAN - PAGE 2} \\
+    \textit{Determinant Algebra, Transformations, and Vlamis Logic Arguments}
 \end{center}
 
 \begin{multicols}{2}
-\section*{5. Determinants (Sec 3.1, 3.2)}
-\begin{thmbox}{Algebra of Determinants}
+\section*{4. Determinant Operations (Sec 3.1, 3.2)}
+\begin{thmbox}{Properties}
 \begin{itemize}
-    \item \textbf{Scaling}: $\det(cA) = c^n \det(A)$ for $n \times n$ matrix.
-    \item \textbf{Operations}: $\det(AB) = \det(A)\det(B)$; $\det(A^{-1}) = 1/\det(A)$.
-    \item \textbf{Row Ops}: Swap rows ($\times -1$); Scale row by $k$ ($\times k$); Replacement (No change).
+    \item \textbf{Scaling}: $\det(cA) = c^n \det(A)$.
+    \item \textbf{Multiplication}: $\det(AB) = \det(A)\det(B)$.
+    \item \textbf{Inverses}: $\det(A^{-1}) = 1/\det(A)$.
+    \item \textbf{Row Ops}: Swap ($\times -1$); Scale by $k$ ($\times k$); Replacement (no change).
 \end{itemize}
 \end{thmbox}
 
-\section*{6. HW Special: Logic Arguments (HW 1-13)}
-\begin{exbox}{Vlamis-Style Proofs}
-\begin{itemize}
-    \item \textbf{Dot Product (HW 2)}: $v \cdot v = 0 \iff v = \vec{0}$. If $v \neq 0$, then $\sum a_i^2 > 0$.
-    \item \textbf{Identical Cols}: If col $i = col j$, then $A(\vec{e}_i - \vec{e}_j) = 0 \to$ dependent.
-    \item \textbf{1-to-1 Mapping (HW 4)}: If $T(u)=T(v)$, then $x=u-v$ is a non-trivial solution to $T(x)=0$.
-    \item \textbf{Onto Constraints}: $T: \mathbb{R}^n \to \mathbb{R}^m$ cannot be onto if $m > n$.
-\end{itemize}
+\begin{exbox}{Example: Row Operations}
+If $A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$ has $\det(A) = -2$, swapping rows yields $\det = 2$.
 \end{exbox}
 
-\section*{7. Transformations \& Geometry}
-\begin{algobox}{Standard Matrices}
+\section*{5. Linear Transformations (Sec 1.8, 1.9)}
+\begin{algobox}{Mappings}
 \begin{itemize}
     \item \textbf{Standard Matrix}: $A = [T(e_1) \dots T(e_n)]$.
-    \item \textbf{Rotation $\mathbb{R}^2$}: $R_\theta = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix}$.
-    \item \textbf{Orthogonal Matrix}: $Q^T Q = I$. Preserves length/dot products.
+    \item \textbf{Onto}: Pivot in every row. Impossible if $m > n$.
+    \item \textbf{1-to-1}: Pivot in every column ($Ax=0$ trivial).
+    \item \textbf{Rotation}: $R_{\theta} = \begin{bmatrix} \cos \theta & -\sin \theta \\ \sin \theta & \cos \theta \end{bmatrix}$.
 \end{itemize}
 \end{algobox}
 
-\section*{8. Support Vector Machines (SVM) (HW 4)}
-\begin{thmbox}{Hard vs. Soft Margin}
+\section*{6. Detailed Vlamis Style Arguments}
+\begin{exbox}{Counter-Examples and Logic}
 \begin{itemize}
-    \item \textbf{Objective}: Maximize margin $\gamma = 1/\|w\|$.
-    \item \textbf{Soft Margin (Slack $\xi_i$)}: $y_i(w^Tx_i + b) \geq 1 - \xi_i$.
-    \item \textbf{Hyperparameter C}: High $C$ = Narrow margin (low slack). Low $C$ = Wide margin (flexible).
-    \item \textbf{Blessing of Dimensionality}: Increasing dimensions makes data more linearly separable.
+    \item \textbf{Dependency}: If last col of $AB = \vec{0}$ and $B$ has no zero cols, then $A\vec{b}_n = \vec{0}$ (dependent cols).
+    \item \textbf{Identical Cols}: If $\vec{a}_i = \vec{a}_j$, then $A(\vec{e}_i - \vec{e}_j) = \vec{0}$ (not invertible).
+    \item \textbf{Subspace Trap}: $W = \{ \begin{bmatrix} x \\ y \end{bmatrix} : xy \ge 0 \}$ fails addition closure.
 \end{itemize}
-\end{thmbox}
+\end{exbox}
 \end{multicols}
 
 \newpage
-% --- PAGE 3: SUBSPACES, EIGENVALUES & MARKOV ---
+% --- PAGE 3: SUBSPACES & EIGENVALUES ---
 \begin{center}
-    \textbf{\Large MATH 231 ULTIMATE FINAL EXAM BATTLE PLAN - PAGE 3} \\
-    \textit{Vector Spaces, Eigen-theory, and Markov Chains}
+    \textbf{\Large MATH 231 FINAL EXAM BATTLE PLAN - PAGE 3} \\
+    \textit{Subspace Properties, Rank-Nullity, and Markov Chains}
 \end{center}
 
 \begin{multicols}{2}
-\section*{9. Subspaces \& Rank (Sec 2.8, 2.9)}
-\begin{thmbox}{Subspace Properties}
+\section*{7. Subspaces, Rank \& Basis (Sec 2.8, 2.9)}
+\begin{thmbox}{Definitions}
 \begin{itemize}
-    \item \textbf{Requirements}: $\vec{0} \in W$, $u+v \in W$, $cu \in W$.
-    \item \textbf{Counter-Example (HW 12)}: $W = \{[x,y]^T : xy \geq 0\}$ fails addition closure ($[1,0] + [0,-1] = [1,-1]$ which fails $xy \geq 0$).
-    \item \textbf{Col A}: Basis = Pivot cols of \textbf{original} $A$.
-    \item \textbf{Nul A}: Basis = vectors from parametric solution of $Ax=0$.
+    \item \textbf{Col A}: Basis = Pivot columns of \textbf{original} matrix $A$.
+    \item \textbf{Null A}: Basis = vectors in parametric form of $Ax=0$.
     \item \textbf{Rank-Nullity}: $rank(A) + nullity(A) = n$.
 \end{itemize}
 \end{thmbox}
 
-\section*{10. Eigenvalues \& Diagonalization (Sec 5.1-5.3)}
-\begin{algobox}{Finding $\lambda$ and $v$}
+\section*{8. Eigenvalues ($\lambda$) \& Eigenvectors ($v$)}
+\begin{algobox}{Calculations (Sec 5.1-5.3)}
 \begin{itemize}
-    \item \textbf{Char Eq}: $\det(A - \lambda I) = 0$.
-    \item \textbf{Eigenspace}: $Null(A - \lambda I)$. Solve for free variables.
-    \item \textbf{Diagonalization}: $A = PDP^{-1}$. $P$ is col of LI eigenvectors. $A$ is diagonalizable if it has $n$ LI eigenvectors.
+    \item \textbf{Char Equation}: $\det(A - \lambda I) = 0$.
+    \item \textbf{Eigenspace ($E_\lambda$)}: $Null(A - \lambda I)$.
+    \item \textbf{Diagonalization}: $A = PDP^{-1}$ (requires $n$ independent eigenvectors).
 \end{itemize}
 \end{algobox}
 
-\section*{11. Markov Chains (HW 10)}
-\begin{exbox}{Steady State $q$}
+\begin{exbox}{Example: Eigenvalues}
+For $A = \begin{bmatrix} 2 & 3 \\ 0 & 4 \end{bmatrix}$, $\det(A-\lambda I) = (2-\lambda)(4-\lambda) = 0 \Rightarrow \lambda = 2, 4$.
+\end{exbox}
+
+\section*{9. Markov Chains (App. 10.1, 10.2)}
+\begin{algobox}{Steady-State Calculations}
 \begin{itemize}
-    \item \textbf{Stochastic Matrix}: Columns $\geq 0$ and sum to 1.
-    \item \textbf{Process}: Solve $(M-I)q = 0$.
-    \item \textbf{Normalization}: Scale $q$ so sum of entries = 1.
-    \item \textbf{Interpretation}: $M_{ij}$ is prob from state $j$ to state $i$.
+    \item \textbf{Stochastic Matrix}: Columns $\ge 0$ and sum to 1.
+    \item \textbf{Steady-State}: Solve $(M - I)x = \vec{0}$ and normalize entries.
 \end{itemize}
+\end{algobox}
+
+\begin{exbox}{Example: Steady State}
+$M = \begin{bmatrix} 0.7 & 0.2 \\ 0.3 & 0.8 \end{bmatrix}$. Solve $(M-I)x = 0 \Rightarrow \begin{bmatrix} -0.3 & 0.2 \\ 0.3 & -0.2 \end{bmatrix} \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = 0$.
+$3x_1 = 2x_2$. If $x_1+x_2=1$, then $x_1=0.4, x_2=0.6$. $w = \begin{bmatrix} 0.4 \\ 0.6 \end{bmatrix}$.
 \end{exbox}
 \end{multicols}
 
 \newpage
-% --- PAGE 4: ORTHOGONALITY, GRAM-SCHMIDT & LEAST SQUARES ---
+% --- PAGE 4: ORTHOGONALITY & LEAST SQUARES ---
 \begin{center}
-    \textbf{\Large MATH 231 ULTIMATE FINAL EXAM BATTLE PLAN - PAGE 4} \\
-    \textit{Inner Products, Projections, and Final Optimization}
+    \textbf{\Large MATH 231 FINAL EXAM BATTLE PLAN - PAGE 4} \\
+    \textit{Projections, Gram-Schmidt, QR, and Least Squares}
 \end{center}
 
 \begin{multicols}{2}
-\section*{12. Orthogonality (Sec 6.1-6.3)}
-\begin{thmbox}{Core Theorems}
+\section*{10. Orthogonality \& Projections (Sec 6.1-6.3)}
+\begin{thmbox}{Theorems}
 \begin{itemize}
-    \item \textbf{Norm}: $\|v\| = \sqrt{v \cdot v}$. \textbf{Distance}: $\|u-v\|$.
-    \item \textbf{Complement}: $W^\perp = \{x : x \cdot w = 0, \forall w \in W\}$.
-    \item \textbf{Theorem}: $v \in W \cap W^\perp \Rightarrow v = \vec{0}$.
-    \item \textbf{Projection}: $\hat{y} = proj_W y = \sum \frac{y \cdot u_i}{u_i \cdot u_i}u_i$ (for orthogonal basis).
+    \item \textbf{Inner Product}: $u \cdot v = \sum u_i v_i$. Norm $\|v\| = \sqrt{v \cdot v}$.
+    \item \textbf{Complement}: $v \in W \cap W^\perp \Rightarrow v = \vec{0}$.
+    \item \textbf{Projection}: $\hat{y} = \text{proj}_W y = \sum \frac{y \cdot u_i}{u_i \cdot u_i} u_i$.
+    \item \textbf{Decomposition}: $y = \hat{y} + z$, where $z \in W^\perp$.
 \end{itemize}
 \end{thmbox}
 
-\section*{13. Gram-Schmidt \& QR (Sec 6.4)}
-\begin{algobox}{Orthogonalization}
+\section*{11. Gram-Schmidt \& QR (Sec 6.4)}
+\begin{algobox}{Algorithms}
 \begin{itemize}
-    \item \textbf{Step 1}: $v_1 = x_1$
-    \item \textbf{Step 2}: $v_2 = x_2 - \frac{x_2 \cdot v_1}{v_1 \cdot v_1}v_1$
-    \item \textbf{Step 3}: $v_3 = x_3 - \frac{x_3 \cdot v_1}{v_1 \cdot v_1}v_1 - \frac{x_3 \cdot v_2}{v_2 \cdot v_2}v_2$.
-    \item \textbf{QR}: $Q$ has orthonormal columns, $R = Q^T A$ (upper triangular).
+    \item \textbf{Gram-Schmidt}: $v_1 = x_1$; $v_2 = x_2 - \text{proj}_{v_1} x_2$.
+    \item \textbf{QR}: $A = QR$ ($Q$ orthogonal columns, $R$ upper triangular).
 \end{itemize}
 \end{algobox}
 
-\section*{14. Least Squares (Sec 6.5, 6.6)}
-\begin{algobox}{Solving the Normal Equations}
-\begin{itemize}
-    \item \textbf{Equation}: $A^T A \hat{x} = A^T b$.
-    \item \textbf{Error}: The minimum distance is $\|b - A\hat{x}\|$.
-    \item \textbf{Existence}: If columns of $A$ are LI, $A^T A$ is invertible and $\hat{x}$ is unique.
-\end{itemize}
-\end{algobox}
-
-\section*{15. Logic Check: Final T/F Traps}
-\begin{exbox}{Exam Strategy}
-\begin{itemize}
-    \item \textbf{T/F}: If $A$ is diagonalizable, it is invertible? \textbf{False} (can have $\lambda = 0$).
-    \item \textbf{T/F}: If columns are orthogonal, they are LI? \textbf{True} (if non-zero).
-    \item \textbf{T/F}: Every matrix has a QR decomposition? \textbf{False} (requires LI columns).
-\end{itemize}
+\begin{exbox}{Example: Gram-Schmidt}
+$x_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, x_2 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} \Rightarrow v_1 = \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}$, $v_2 = \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix} - \frac{1}{2}\begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} = \begin{bmatrix} 0.5 \\ -0.5 \\ 0 \end{bmatrix}$.
 \end{exbox}
+
+\section*{12. Least Squares (Sec 6.5, 6.6)}
+\begin{algobox}{Optimization}
+\begin{itemize}
+    \item \textbf{Goal}: Minimize $\|b - Ax\|$.
+    \item \textbf{Normal Equations}: Solve $A^T A \hat{x} = A^T b$.
+    \item \textbf{Uniqueness}: Unique if columns of $A$ are linearly independent.
+\end{itemize}
+\end{algobox}
 \end{multicols}
+
 \end{document}
