@@ -1,0 +1,330 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{Homework \#1 MATH 241 Spring \the\year}
+
+\author{Steven Ou} %STUDENTS: delete my name and write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace 11:59PM Sunday, February 8, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+\usepackage{xcolor}
+\begin{document}
+\maketitle
+
+
+
+
+
+
+
+
+\problem{Optional: Please read Pages 1 - 6 and Pages 581 - 583 here \url{https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/edit}.}
+
+\vspace{5mm}
+
+\problem{These exercises motivate the need to have a formal definition of probability.}
+
+\begin{enumerate}
+
+\easysubproblem{If you had to informally explain what a probability is in one or two words, what might you say?}
+\textcolor{red}{\\\\Happening and Appearing}. 
+
+
+
+\easysubproblem{If you had to informally explain what a probability is in one sentence, what might you say?}
+\\\\\textcolor{red}{Probability is the chance of something occurring to appear or the results of an unknown. }
+
+
+
+\intermediatesubproblem{Flip a coin ten times. Record the results and plot a relative frequency graph like we did in class.}
+
+\newpage 
+
+\easysubproblem{Given your answer above, list three to five problems that arise from an informal explanation of the word probability.}
+
+\vspace{40mm}
+
+\easysubproblem{Explain why using the word \textit{large} in your answer to 2b creates a problem. If possible, give an example.}
+
+\vspace{40mm}
+
+\easysubproblem{Explain why using the word \textit{repeat} in your answer to 2b creates a problem. If possible, give an example.}
+
+\vspace{40mm}
+
+\easysubproblem{Explain why using the word \textit{similar conditions} in your answer to 2b creates a problem. If possible, give an example.}\spc{0.5}
+
+\vspace{40mm}
+
+\intermediatesubproblem{Read the fourth paragraph under \textit{Adulthood} here: \url{https://en.wikipedia.org/wiki/Andrey_Kolmogorov}. What book did Andrey Kolmogorov write? And what did the book accomplish? How many years ago was this?}
+
+\end{enumerate}
+
+\vspace{40mm}
+
+\problem{These exercises reviews our definitions.}
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{Give an example of a process which can be regarded as an experiment (which is different from the ones we discussed in class). }
+
+\vspace{20mm}
+
+\intermediatesubproblem{For your experiment above, write down the sample space.}
+
+\vspace{20mm}
+
+\easysubproblem{What do we mean by an \textit{event}?}
+
+\vspace{20mm}
+
+\easysubproblem{Let $A = \{a, b, c, d, e \}$ and $B = \{a, b, c, d, e, f, g, h \}$. Find $A \cup B$ and $A \cap B$}.
+
+\vspace{20mm}
+
+
+\easysubproblem{What does it mean for a sequence of events to be mutually disjoint? }
+
+\vspace{20mm}
+
+\end{enumerate}
+
+\newpage
+
+
+\problem{The following questions are multiple choice questions that will test your understanding of the set theoretic operations of union, intersection, and complement. No work nor explanations are necessary. Just circle or indicate the best answer.}
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{ Suppose $x \in A \cup B \cup C$. What can you conclude?
+
+
+\begin{enumerate}
+ \item $x$ must belong to all three sets, $A$, $B$ and $C$.
+ \item $x$ must belong to exactly two sets.
+ \item $x$ must belong to exactly one set.
+ \item $x$ must belong to  at least one set.
+ \end{enumerate}}
+
+
+\intermediatesubproblem{Suppose $x \in A \cap B \cap C$. What can you conclude?
+\begin{enumerate}
+ \item $x$ must belong to all three sets, $A$, $B$ and $C$.
+ \item $x$ must belong to exactly two sets.
+ \item $x$ must belong to exactly one set.
+ \item $x$ must belong to none of the sets, $A$, $B$ and $C$.
+ \end{enumerate}}
+
+\intermediatesubproblem{Suppose $x \not\in A \cup B \cup C$. What can you conclude?
+
+
+\begin{enumerate}
+ \item $x$ must belong to all three sets, $A$, $B$ and $C$.
+ \item $x$ must belong to exactly two sets.
+ \item $x$ must belong to exactly one set.
+ \item $x$ must belong to  at least one set.
+ \item $x$ does not belong to $A$, $B$, and $C$.
+ \end{enumerate}}
+
+\intermediatesubproblem{Suppose $x \not\in A \cap B \cap C$. What can you conclude?
+
+
+\begin{enumerate}
+ \item $x$ must belong to all three sets, $A$, $B$ and $C$.
+ \item $x$ must belong to exactly two sets.
+ \item $x$ must belong to exactly one set.
+ \item $x$ is "missing" from at least one of the sets, $A$, $B$ or $C$.
+ \item $x \not\in A \cup B \cup C$.
+ \end{enumerate}}
+
+    
+\end{enumerate}
+
+\newpage 
+
+\problem{The following exercise consists of True or False questions. No work nor explanations are necessary. Just simply write \textit{True} or \textit{False}.}
+\begin{enumerate}
+   
+
+\intermediatesubproblem{For all sets $B$, if $x \in A$ then $x \in A \cup B$.}
+
+\intermediatesubproblem{For all sets $B$, if $x \in A$ then $x \in A \cap B$.}
+
+\intermediatesubproblem{For all sets $B$, if $x \not\in A$, then $x \in A \cap B$.}
+
+\intermediatesubproblem{For all sets $B$, if $x \not\in A$, then $x \in A \cup B$.}
+
+
+\intermediatesubproblem{If $E \subseteq F$ and $x \in E$, then $x \in F$.}
+
+
+\intermediatesubproblem{If $E \subseteq F$ and $x \in F$, then $x \in E$.}
+
+
+\intermediatesubproblem{If $E \subseteq F$  then $F = E \cup (E^c \cap F)$.}
+
+\easysubproblem{If $E \cap F \cap G = \emptyset$ then $E, F$ and $G$ are mutually exclusive.}
+
+\easysubproblem{If $E, F$ and $G$ are mutually exclusive then $E \cap F \cap G = \emptyset$.}
+\end{enumerate}
+
+
+\problem{The following exercises will further test your understanding of the set theoretic operations. For these questions, no work is necessary.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{$E \cap E^c = ~?$}
+
+\intermediatesubproblem{$E \cup E^{c} = ~?$}
+
+
+\intermediatesubproblem{$E \cap S = ~?$}
+
+
+\intermediatesubproblem{$E \cup S = ~?$}
+
+
+\intermediatesubproblem{$(E^c)^c = ~?$}
+
+
+\intermediatesubproblem{$S \cup \emptyset = ~?$}
+
+
+\intermediatesubproblem{$S \cap \emptyset = ~?$}
+
+\end{enumerate}
+
+\newpage 
+
+\problem{The following exercise will help your understanding of DeMorgan's Rules.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{In the Venn Diagram below, suppose the entire box represents the universal set shade in $(A \cup B)^c$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{Venn Diagram.png}
+\end{figure}
+
+\vspace{10mm}
+
+\intermediatesubproblem{In the Venn Diagram below, shade in $A^c \cap B^c$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{Venn Diagram.png}
+\end{figure}
+
+\easysubproblem{What do you notice about the above two diagrams?}
+
+\newpage 
+
+\intermediatesubproblem{In the Venn Diagram below, shade in $(A \cap B)^c$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{Venn Diagram.png}
+\end{figure}
+
+\vspace{10mm}
+
+\intermediatesubproblem{In the Venn Diagram below, shade in $A^c \cup B^c$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.3]{Venn Diagram.png}
+\end{figure}
+
+\easysubproblem{What do you notice about the above two diagrams?}
+
+
+\end{enumerate}
+\newpage 
+
+\problem{In this exercise, we will make sure that we can work with three sets.}
+
+\begin{enumerate}
+
+\intermediatesubproblem{In the Venn Diagram below, shade in $(A \cup B \cup C^c) \cap (A \cap B^c \cap C)$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{Venn_Diagram_3.png}
+\end{figure}
+\end{enumerate}
+\newpage
+
+\problem{In the earlier exercises, we motivated the need to have a formal definition of probability. We will now  review this formal understanding.}
+
+\begin{enumerate}
+
+\easysubproblem{What is an axiom and why do we need them?}
+
+
+
+\vspace{40mm}
+
+\easysubproblem{Formally state the definition of probability. A good answer would include the three axioms.}
+
+
+\vspace{110mm}
+
+\easysubproblem{What does it mean that probability is a real-valued function? Feel free to draw a picture.}
+
+\newpage 
+
+\easysubproblem{Translate the three axioms without using any mathematical notation.}
+
+\vspace{60mm}
+
+\easysubproblem{Why is Axiom 1 believable or why does Axiom 1 make sense?}
+
+\vspace{60mm}
+
+\easysubproblem{Why is Axiom 2 believable or why does Axiom 2 make sense?}
+
+
+\newpage 
+
+
+\easysubproblem{Why is Axiom 3 believable or why does Axiom 3 make sense?}
+
+\vspace{70mm}
+
+\extracreditsubproblem{Axioms should be as minimal as possible, meaning that anything we can prove, should \textit{not} be a part of our axioms. In class, we stated the \qu{easy} or \qu{simple} version of Axiom 3 for simplicity. However, here is the more standard version of Axiom 3:
+
+\begin{tcolorbox} 
+New Axiom 3: If $A_1, A_2, A_3 \ldots$ is an infinite sequence of mutually exclusive events, then $P(A_1 \cup A_2 \cup \ldots) = P(A_1) + P(A_2) + P(A_3) + \ldots $.
+\end{tcolorbox}
+
+
+Notice the new formulation does not say anything about a \textit{finite} sequence of mutually exclusive events. \textbf{This is because you can prove the statement regarding the probability of a union of a finite sequence of disjoint events}! That is, we have the following theorem:
+\begin{tcolorbox} 
+Theorem: If $A_1, A_2, A_3 \ldots A_n$ is an finite sequence of mutually exclusive events, then $P(A_1 \cup A_2 \cup \ldots \cup A_n) = P(A_1) + P(A_2) + P(A_3) + \ldots + P(A_n)$.
+\end{tcolorbox}
+
+Using the new version of Axiom 3, along with Axiom 1, Axiom 2, and our set-theoretic results, prove the above theorem. (Note: The New Axiom 3 is called countable additivity and the above theorem is called countable subadditivity.) 
+}
+
+\newpage
+~ This is space for the extra credit question above if needed. \newpage
+
+\end{enumerate}
+
+
+
+\end{document}
