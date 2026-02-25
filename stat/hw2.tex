@@ -1,0 +1,303 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\input{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+%\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Spring \the\year~ Homework \#2}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace 11:59PM February 15, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+
+
+\problem{The following exercise will review sets. Your end answer should be in terms of $A, B$ and $C$ and the usual set theoretic operations we discussed: union, intersection, and complement. Consider the diagram below.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.4]{Venn_Diagram_Labels.png}
+\end{figure}
+
+\begin{enumerate}
+
+\intermediatesubproblem{Write down a set that describes Region 1:}
+A  $\cap B^c \cap C^c$
+
+\intermediatesubproblem{Write down a set that describes Region 2:}
+$B \cap A^c \cap C^c$
+
+\intermediatesubproblem{Write down a set that describes Region 3:}
+$C\cap A^c \cap B^c$
+\intermediatesubproblem{Write down a set that describes Region 4:}
+$A\cap B  \cap C^c$ 
+\intermediatesubproblem{Write down a set that describes Region 5:}
+$A\cap C  \cap B^c$ 
+
+\intermediatesubproblem{Write down a set that describes Region 6:}
+$B\cap C  \cap A^c$ 
+
+\intermediatesubproblem{Write down a set that describes Region 7:}
+$A\cap B  \cap C$ 
+
+\intermediatesubproblem{Write down a set that describes Region 8:}
+$C^c\cap A^c \cap B^c$
+
+\intermediatesubproblem{Suppose Regions 5 and 7 are shaded in. What set describes the shaded area?}
+$A\cap C$
+
+\intermediatesubproblem{Suppose Regions 1 and 4 are shaded in. What set describes the shaded area?}
+$A\cap C^c$
+
+\intermediatesubproblem{Suppose Regions 1 and 4 are shaded in. Find \textit{another} way to describe the shaded area in terms of sets.}\\
+A \textbackslash C
+
+\hardsubproblem{Suppose Regions 1 and 4 are shaded in. Find a \textit{third} way to describe the shaded area in terms of sets.}\\
+$(A \cap B^c \cap C^c )\cup(A \cap B \cap C^c)$\\
+This can be simplified as A \textbackslash C
+\end{enumerate}
+
+
+\problem{These exercises reviews our set theoretic theorems.}
+
+
+\begin{enumerate}
+
+\easysubproblem{What is a theorem and how does a theorem differ from an axiom?}
+\\\\ A theorem is a statement that has been proven to be true based on axioms, previously established theorems, and logical deductions. The difference is proof; axioms are assumed, while theorems must be demonstrated. 
+
+\easysubproblem{What does it mean that the set theoretic operations of union and intersection are commutative, associative and distributive?}
+\\\\Commutative: The order doesn't matter. \\Associative: The grouping doesn't matter when using the same operation. \\Distributive: One operation "distributes" over the other. 
+\easysubproblem{Explain why $E$ and $E^c$ are mutually disjoint.}
+\\\\E and $E^c$ are mutually disjoint if their intersection is empty. The complement of $E^c$ contains all elements in the universal set S that are not in E. Thus, it is logically impossible for an element to be in both E and $E^c$ at the same time. 
+
+\easysubproblem{Explain why $S$ and $\emptyset$ are mutually disjoint.}
+\\\\
+The $\emptyset$ and S are mutually disjoint, because $\emptyset$ at all because $S \cap \emptyset = \emptyset$ , empty set is empty thats why it's mutually disjoint. 
+\easysubproblem{Simplify the following set and make a note of any results that you use:  \\ $(E_1 \cup E_2 \cup E_3 \cup E_4)^c = ~~ ? $}: $E_1^c \cap E_2^c \cap E_3^c \cap E_4^c$ \\
+Note: This uses De Morgan's Laws, that the complement of a union is the intersection of the complement.
+
+
+\easysubproblem{Simplify the following set and make a note of any results that you use: \\ $(E_1 \cap E_2 \cap E_3 \cap E_4)^c = ~~ ? $} :$E_1^c \cup E_2^c \cup E_3^c \cup E_4^c$
+\\Note: This also uses De Morgan's Laws, which state the complement of an intersection is the union of the complement.
+
+
+\end{enumerate}
+
+
+\problem{These exercises reviews our probabilistic theorems.}
+
+
+\begin{enumerate}
+
+\easysubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 1: Let $A$ be any event of a sample space $S$. Then 
+\begin{align*}
+    P(A^c) = 1 - P(A).
+\end{align*}
+    
+\end{tcolorbox}
+}
+By definition of sample space, $S = A \cup A^c$. By definition A and $A^c$
+are mutually disjoint because they share no outcomes. A$\cap A^c=\emptyset$.  Base of the Axiom 2, the P(S) = 1. For any two disjoint events, the probability of their union is the sum of their individual probabilities base off axiom 3.
+
+\easysubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 2: Let $S$ be the sample space of an experiment. Then
+\begin{align*}
+    P(\emptyset) = 0.
+\end{align*}
+    
+\end{tcolorbox}
+}
+Since the sample space S is the same as S $\cap  \emptyset$ and they don't overlap, $P(S) + P(\emptyset) = P(S)$. Because P(S) = 1, the only way for 1 = $1+P(\emptyset)$ to be true if $P(\emptyset) = 0$)
+
+\easysubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 3: If $A \subseteq B$ then $P(A) \leq P(B)$.
+\end{tcolorbox}
+}
+Since A is a subset of B, then B contains all of A, the probabilities of B is P(A) + the probabilities of the left over pieces. Since probabilities are never negative, P(B) must be greater than or equal to P(A). 
+
+\easysubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 4: For any event $A$ of a sample space, $P(A) \leq 1$.
+\end{tcolorbox}
+}
+Every event A is inside the sample space S. Based on theorem 3, P(A) cannot be larger than P(S). Since p(s) =1, no event inside it can exceed that value. 
+
+\easysubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 5: Let $A$ and $B$ be any two events of a sample space $S$. Then 
+    \begin{align*}
+        P(A \cup B) = P(A) + P(B) - P(A \cap B).
+    \end{align*}
+\end{tcolorbox}
+}
+To find the probabilities of A or B, you add them together but must subtract the overlap which is the intersection and A and B base of the axioms, so you don't count that middle section twice. 
+
+\intermediatesubproblem{ Prove the following theorem. Justify each step by noting any relevant definition(s), axiom(s) or previously proven theorem(s).
+\begin{tcolorbox}
+    Theorem 6: Let $A$, $B$ and $C$ be any three events of a sample space $S$. Then 
+   \begin{align*}
+        P(A \cup B \cup C) = ~ &P(A) + P(B) + P(C) \\
+                                  - &P(A \cap B) - P(A \cap C) - P(B \cap C) \\
+                                  + &P(A \cap B \cap C)                        
+    \end{align*}
+\end{tcolorbox}
+}
+Hint: In class, we started the first few lines of the proof and assigned the remainder for homework.
+\\We can first start of as setting $A \cup B $ as E, then we do $E\cup C$. Then we expand $E\cup C$ using theorem 5 into P(E) + P(C) - P(E$\cap$C). Then turn P(E) into P(A) + P(B) - P($A\cap B$). The term P(E$\cap$C) is actually P(A$\cup$$B)\cap C$). Then using the distributive law, this becomes $P((A\cap C) \cup (B\cap C))$. Now apply theorem 5 to that new union of  $(A\cap C) (B\cap C)$. This would then have $P(A\cap C) \cup P(B\cap C) - P(A\cap C) \cap (B\cap C)$. Lastly after  plugging back all these pieces back into the main equations and distribute the negative sign, we will get the full formula: \\
+$P(A) + P(B) + P(C)-P(A \cap B) - P(A \cap C) - P(B \cap C)+P(A \cap B \cap C)$
+\end{enumerate}
+
+
+\problem{These problems will test the applications of our theory.}
+\begin{enumerate}
+   
+
+\intermediatesubproblem{Consider two events $A$ and $B$ such that $P(A) = \frac{1}{3}$ and $P(B) = \frac{1}{2}$. Determine the value of $P(B \cap A^c)$ if $A \subseteq B$.}
+\\ $B\cap A^c$= $P(B) - P(A \cap B) $ =
+$\frac{1}{2} - \frac{1}{3} = \frac{1}{6} $ . 
+\intermediatesubproblem{Consider two events $A$ and $B$ such that $P(A) = \frac{1}{3}$ and $P(B) = \frac{1}{2}$. Determine the value of $P(B \cap A^c)$ if $P(A \cap B) = \frac{1}{8}$.}
+\\
+$B\cap A^c$= $P(B) - P(A \cap B) $ 
+$\frac{1}{2}- \frac{1}{8}= \frac{3}{8}$
+
+
+\intermediatesubproblem{Consider two events $A$ and $B$ such that $P(A) = \frac{1}{3}$ and $P(B) = \frac{1}{2}$. Determine the value of $P(B \cap A^c)$ if $A$ and $B$ are disjoint.}
+If A and B is disjoint then their intersection is empty set. Thus 1/2 - emptyset is basically 1/2. 
+
+\easysubproblem{Using a Venn Diagram, please answer the following question: if $P(A) = 0.5, P(B) = 0.6$ and $P(A \cap B) = 0.4$, find $P(A \cup B)$.}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.2]{unnamed.jpg}
+\caption{$P(A\cup B) = 0.5+ 0.6-0.4 = 0.7$}
+\end{figure}
+
+
+\easysubproblem{Using a more formal approach, please answer the following question: if $P(A) = 0.5, P(B) = 0.6$ and $P(A \cap B) = 0.4$, find $P(A \cup B)$.} \\
+I'm assuming that the formal approach towards this question is basically solving it directly using the formula $P(A\cup B) = 0.5+ 0.6-0.4 = 0.7$.
+
+
+\easysubproblem{Using a Venn Diagram, please answer the following question: if $P(A) = 0.5, P(B) = 0.6$ and $P(A \cap B) = 0.4$, find $P(A \cap B^c)$.}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.2\textwidth]{x.JPG}
+    \caption{Using the venn diagram, I've got 0.1 for A intersecting the complement of B. }
+
+\end{figure}
+
+
+\intermediatesubproblem{Using a formal approach, please answer the following question: if $P(A) = 0.5, P(B) = 0.6$ and $P(A \cap B) = 0.4$, find $P(A \cap B^c)$.}
+
+$P(A) = P(A \cap B) + P(A \cap B^C)$= (0.5 = 0.4 +$P(A \cap B^c)$ ) = 0.1.
+\intermediatesubproblem{Using a  formal approach, please answer the following question: if $P(A) = 0.5, P(B) = 0.6$ and $P(A \cap B) = 0.4$, find $P(A^c \cup B^c)$.}
+
+$P(A^c \cup B^c) = P(A\cap B)^c$ = 1 - $P(A\cap B) = .6$
+
+\easysubproblem{If 50 percent of the families in a certain city subscribe to the morning newspaper, 65 percent of the families subscribe to the afternoon newspaper, and 85 percent of the families subscribe to at least one of the two newspapers, then what percentage of the families subscribe to both newspapers?}
+\\.5 = Morning NewsPaper \space .65 = afternoon NewsPaper \space .85= Morning or Afternoon\\
+$P(A\cup B) = P(A) +P(B) - P(A\cap B)$ = (.85 = .5+.65 - $P(A\cap B)$) = .3
+\hardsubproblem{A patient arrives at a doctor’s office with a sore throat and low grade fever. After an exam, the doctor decides that the patient has either a bacterial infection or a viral infection (or both). The doctor decides that there is a probability of 0.7 that the patient has a bacterial infection and a probability of 0.4 that the person has a viral infection. What is the probability that the patient has both infections?}\\
+P(A) = The bacterial infection | \space
+P(B) = The viral infection | \space
+$P(A \cup B) = 1$ since there's at least one of them is 100$\%$.  $P(A \cup B) = P(A) + P(B) - P(A\cap B)$ Now we do the math 1.1 -1 = 0.1, so $ P(A\cap B)$ =0.1. 
+
+\easysubproblem{Suppose the probability that student $A$ will fail a certain statistics examination is 0.5, the probability that student $B$ will fail the examination is 0.2, and the probability that both student $A$ and student $B$ will fail the examination is 0.1. What is the probability that at least one of these two students will fail the examination?}
+A = 0.5 failing , B = 0.2 failing, A n B = 0.1 . 
+
+$P(A \cup B ) = P(A)+ P(B) - P(A \cap B)$
+$P(A\cup B)$ = .5 +.2 - .1 = .6. \\ The probabilitiy of at least one of these students failing is 60 \%. 
+
+\easysubproblem{Suppose the probability that student $A$ will fail a certain statistics examination is 0.5, the probability that student $B$ will fail the examination is 0.2, and the probability that both student $A$ and student $B$ will fail the examination is 0.1. What is the probability that exactly one of the two students will fail the examination?}
+\\
+P(Exactly One) = $P(A\cup B) - P(A \cap B) = 0.6-0.1=0.5$\\Exactly 50 \% one student will fail. 
+
+\intermediatesubproblem{Of a group of patients having injuries, 28\% visit both a physical therapist and a chiropractor while 8\% visit neither. Say that the probability of visiting a physical therapist exceeds the probability of visiting a chiropractor by 16\%. What is the probability of a randomly selected person from this group visiting a physical therapist?}
+\\Let A = therapist , Let B = Chiropractor \space| A n B = 28\% \space | 8\% neither | To find $A \cup B = 1 -0.08 =0.92$ \space | Since therapist exceeds the chiropractor , so $x=y+0.16$ | Using the formula $P(A \cup B ) = P(A)+ P(B) - P(A \cap B)$: (0.92 = x+y-0.28 )\\= (1.2 = x+y)| subbing in x, it will be 2y+.16= 1.2 | solve for y and y =0.52. Solving for x, x= 0.52+0.16 , and so X = 0.68. 
+
+
+\easysubproblem{A certain town with a population of 100,000 has 3 newspapers: I, II, and III. The proportions of townspeople who read these papers are as follows: \\ \\
+I: 10 percent, ~~~~~~~~~ II: 30 percent, ~~~~~~~~~~ III: 5 percent, \\
+I and II: 8 percent, ~~ I and III: 2 percent, ~~ II and III: 4 percent, \\
+I and II and III: 1 percent \\
+
+A person is selected at random. What is the probability that the selected person reads exactly two newspapers?}
+\\ I n II = 8\% | I n III =2\% | II n III=4\% | I n II n III = 1\% |\\ Exactly I and II: 0.08 - 0.01 = 0.07 | Exactly I and III: 0.02 -.01 = .01|\\
+Exactly II and III: 0.04 -0.01=0.03 | Adding all of them up 0.07+.01+.03=.11, So the probabilities that the selected person reads exactly two newspapers is 0.11. 
+\end{enumerate}
+
+\problem{The following set of problems are extra credit exercises. In class, we did not formally prove any of the set theoretic exercises. These extra credit problems are aimed at formally justifying the equations we obtained from the pictures. Let $E$ and $F$ be sets. In order to prove $E=F$ we must show that $E \subseteq F$ and $F \subseteq E$. In order to show $E \subseteq F$ and $F \subseteq E$, we will use our definitions. The first one is done for you.}
+
+\begin{enumerate}
+
+\extracreditsubproblem{Prove that $(A \cup B)^c = A^c \cap B^c$.}
+\begin{tcolorbox}
+    Answer: We first show that  $(A \cup B)^c \subseteq A^c \cap B^c$. To do so, we first assume that $x \in (A \cup B)^c$ and show that $x \in A^c \cap B^c$.
+    \begin{align*}
+        x \in (A \cup B)^c & \implies x \not\in A \cup B && ~~ \text{by the definition of the complement} \\
+                            & \implies x \not\in A ~\text{and} ~ x \not\in B && ~~ \text{by the definition of the union} \\
+                            & \implies x \in A^c ~\text{and} ~ x \in B^c && ~~ \text{by the definition of the complement} \\
+                            & \implies x \in A^c \cap B^c && ~~ \text{by the definition of the intersection}
+    \end{align*}
+    Hence  $(A \cup B)^c \subseteq A^c \cap B^c$. \\
+
+    We now show that  $A^c \cap B^c \subseteq (A \cup B)^c$. To do so, we first assume that $x \in A^c \cap B^c$ and show that $x \in (A \cup B)^c$.
+    \begin{align*}
+        x \in A^c \cap B^c & \implies x \in A^c ~\text{and} ~ x \in B^c && ~~ \text{by the definition of the intersection} \\
+                            & \implies x \not\in A ~\text{and} ~ x \not\in B && ~~ \text{by the definition of the complement} \\
+                            &  \implies x \not\in A \cup B && ~~ \text{by the definition of the union} \\
+                            & \implies x \in (A \cup B)^c && ~~ \text{by the definition of the complement} \\
+    \end{align*}
+    Hence  $A^c \cap B^c \subseteq (A \cup B)^c$. \\
+
+    Since  $(A \cup B)^c \subseteq A^c \cap B^c$ and $A^c \cap B^c \subseteq (A \cup B)^c$, we conclude that $(A \cup B)^c = A^c \cap B^c$.
+    
+\end{tcolorbox}
+
+\newpage
+
+\extracreditsubproblem{Prove that $(A \cap B)^c = A^c \cup B^c$.}
+\begin{itemize}
+        \item Let $x \in (A\cap B)^c$
+        \item By definition of complement, $x\notin (A\cap B)$
+        \item This implies $\neg(x\in A \land x\in B)$, Which is logically equivalent to $(x \notin A) \lor (x\notin B)$.
+        \item Therefore, $x \in A^c \lor x \in B^c$, which mean $x \in A^c \cup B^c$.
+\end{itemize}
+\extracreditsubproblem{Prove that $A \cup B = A \cup (A^c \cap B)$.}
+\begin{align*}
+    A \cup (A^c \cap B) &= (A \cup A^c) \cap (A \cup B) && \text{(Distributive Law)} \\
+    &= S \cap (A \cup B) && \text{(Complement Law)} \\
+    &= A \cup B && \text{(Identity Law)}
+\end{align*}
+
+
+\extracreditsubproblem{Prove that $B = (A^c \cap B) \cup (A \cap B)$.}
+\begin{align*}
+    (A^c \cap B) \cup (A \cap B) &= (A^c \cup A) \cap B && \text{(Distributive Law)} \\
+    &= S \cap B && \text{(Complement Law)} \\
+    &= B && \text{(Identity Law)}
+\end{align*}
+
+\end{enumerate}
+
+
+
+
+\end{document}
