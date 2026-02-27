@@ -147,7 +147,7 @@ True. \[ P(n, n) = \frac{n!}{(n - n)!}= \frac{n!}{0!}= \frac{n!}{1}= n! \]
 
 \intermediatesubproblem{Suppose we have five distinct elements, $a,b,c,d$ and $e$, and an experiment involves selecting two of these elements, one at a time, without replacement, and \textbf{disregarding} the order of selection. That is, selecting a $c$ and then selecting an  $e$ is the same as selecting an $e$ and then selecting a $c$. Does your diagram in part $(f)$ still apply? Explain your answer.}
 
-No, the tree diagram from part f no longer applies to this version of experiment. The 
+No, the tree diagram from part f no longer applies to this version of experiment. If, we use the tree diagram, we would ended up double counting every pair. This is why we can't apply the tree diagram to this part. 
 
 \intermediatesubproblem{Alice was asked the following question: From a group of three people, a president and two treasurers are to be chosen. How many outcomes are there? \\
 
@@ -166,12 +166,45 @@ By The Generalized Principle of Counting, there are $3 \times 2 \times 1 = 6$ ch
 \end{tcolorbox}
 
 Draw a tree diagram and use the diagram to explain why Alice's solution is incorrect.}
+Tr = Treasurer, Pres = President
+\begin{center}
+\begin{tikzpicture}[level distance=1.5cm,
+  level 1/.style={sibling distance=3cm},
+  level 2/.style={sibling distance=1.5cm},
+  level 3/.style={sibling distance=1cm}]
+  
+  \node {Start}
+    child {node {Pres: A}
+      child {node {Tr: B} child {node {Tr: C}}}
+      child [dashed] {node {Tr: C} child {node {Tr: B}}} % Redundant path
+    }
+    child {node {Pres: B}
+      child {node {Tr: A} child {node {Tr: C}}}
+      child [dashed] {node {Tr: C} child {node {Tr: A}}} % Redundant path
+    }
+    child {node {Pres: C}
+      child {node {Tr: A} child {node {Tr: B}}}
+      child [dashed] {node {Tr: B} child {node {Tr: A}}} % Redundant path
+    };
+\end{tikzpicture}
+\end{center}
 
-
-
+\newpage
 
 \intermediatesubproblem{Prove that $P_{n,k} = \frac{n!}{(n-k)!}$.}
 
+\begin{enumerate}
+    \item The first element can be chosen in $n$ ways.
+    \item The second element can be chosen in $(n-1)$ ways.
+    \item This continues until the $k$-th element, which can be chosen in $(n - (k - 1)) = (n - k + 1)$ ways.
+\end{enumerate}
+
+The product of these choices is:
+\[ P_{n,k} = n \times (n-1) \times (n-2) \times \dots \times (n-k+1) \]
+
+To express this in factorial notation, we multiply the expression by $\frac{(n-k)!}{(n-k)!}$:
+\[ P_{n,k} = \frac{n \times (n-1) \times \dots \times (n-k+1) \times (n-k) \times \dots \times 1}{(n-k)!} \]
+\[ P_{n,k} = \frac{n!}{(n-k)!} \]
 
 \end{enumerate}
 
