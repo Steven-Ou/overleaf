@@ -1,0 +1,231 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Spring \the\year~ Homework \#4}
+
+\author{Elliot Gangaram} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace 11:59PM Sunday, March 8, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to make an Overleaf account, click the link to the \LaTeX~ template, go to \textit{File} and select \textit{Make a copy}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{These exercises will review the beginning of combinations.}
+
+
+\begin{enumerate}
+
+\easysubproblem{ What are the four assumptions we need in order to have a combination?}
+
+\vspace{30mm}
+
+\easysubproblem{Informally speaking, what is a combination?
+}
+
+\vspace{30mm}
+
+\easysubproblem{Give three examples of a combination of 40 elements taken 5 at a time. Also provide four non-examples.}
+
+\vspace{50mm}
+
+
+\easysubproblem{Write down two symbols which denotes the number of combinations of $n$ distinct elements taken $k$ at a time.}
+
+\newpage 
+
+\end{enumerate}
+
+\problem{These exercises will provide a more detailed perspective on combinations.}
+
+
+\begin{enumerate}
+
+\easysubproblem{Prove the following theorem: $\binom{n}{k}= \frac{P_{n,k}}{k!}$}
+
+\vspace{150mm}
+
+\easysubproblem{In the above question, $\binom{n}{k}$ is expressed in terms of permutations and factorials. Re-express $\binom{n}{k}$ by \textbf{only} using factorials. Hint: substitute in the formula for $P_{n,k}$. We also did this in class. }
+
+\newpage
+
+\easysubproblem{True or False? For a certain group of elements, if the order of selection does not matter, then we should select all those elements within one step.}
+
+\vspace{10mm}
+
+\intermediatesubproblem{Alice was asked the following question: From a group of three people, a president and two treasurers are to be chosen. How many outcomes are there? \\
+
+Alice wrote down the following solution: 
+\begin{tcolorbox}
+We proceed in steps. 
+
+\begin{enumerate}
+    \item First choose a president. There are 3 choices.
+    \item Then choose a subset of two treasurers. There are now $\binom{2}{2}$ choices.
+\end{enumerate}
+
+By The Generalized Principle of Counting, there are $3 \times \binom{2}{2} = 3$ choices.
+
+\end{tcolorbox}
+
+Draw a tree diagram for this experiment and use the diagram to explain why Alice's solution is correct. (That is, explain why we are allowed to invoke The Generalized Principle of Counting). }
+
+\newpage 
+
+\intermediatesubproblem{Alice was asked the following question: From a regular deck of 52 cards, suppose an outcome is a subset of 5 cards. How many outcomes are there where we have the denominations $a, a, a, b, b$ where $a$ and $b$ are distinct? For example, we obtain $\braces{A \clubsuit, A \diamondsuit, A \heartsuit, J \spadesuit, J \heartsuit} $.
+
+Alice wrote down the following solution: 
+
+\begin{tcolorbox}
+We proceed in steps. 
+
+\begin{enumerate}
+    \item First choose a denomination for $a$. There are $\binom{13}{1}$ choices.
+    \item Now choose three cards of that denomination. There are $\binom{4}{3}$ ways to do so.
+    \item Then select a denomination for $b$. There are $\binom{12}{1}$ choices.
+    \item Now choose two cards of this denomination. There are $\binom{4}{2}$ ways to do so.
+\end{enumerate}
+
+By The Generalized Principle of Counting, there are $ \binom{13}{1} \times \binom{4}{3} \times \binom{12}{1} \times \binom{4}{2}$ choices.
+
+\end{tcolorbox}
+
+Is Alice's solution correct? Explain why or why not. Hint: Look back at the question we considered in class regarding the full house.}
+
+\newpage 
+
+\hardsubproblem{Alice was asked the following question: From a regular deck of 52 cards, suppose an outcome is a subset of 6 cards. How many outcomes are there where we have the denominations $a, a, a, b, b, b$ where $a$ and $b$ are distinct? For example, we obtain $\braces{A \clubsuit, A \diamondsuit, A \heartsuit, J \spadesuit, J \heartsuit, J \diamondsuit} $.
+
+Alice wrote down the following solution: 
+
+\begin{tcolorbox}
+We proceed in steps. 
+
+\begin{enumerate}
+    \item First choose a denomination for $a$. There are $\binom{13}{1}$ choices.
+    \item Now choose three cards of that denomination. There are $\binom{4}{3}$ ways to do so.
+    \item Then select a denomination for $b$. There are $\binom{12}{1}$ choices.
+    \item Now choose three cards of this denomination. There are $\binom{4}{3}$ ways to do so.
+\end{enumerate}
+
+By The Generalized Principle of Counting, there are $ \binom{13}{1} \times \binom{4}{3} \times \binom{12}{1} \times \binom{4}{3}$ choices.
+
+\end{tcolorbox}
+
+Is Alice's solution correct? Explain why or why not.}
+
+\newpage 
+
+\easysubproblem{Prove that $\binom{n}{k} = \binom{n}{n-k}$.}
+
+
+\vspace{60mm}
+
+\easysubproblem{Intuitively explain why $\binom{25}{5} = \binom{25}{20}$.}
+
+\vspace{60mm}
+
+\easysubproblem{A committee of 7, consisting of 2 Republicans, 2 Democrats, and 3 Independents, is to be chosen from a group of 5 Republicans, 6 Democrats, and 4 Independents. How many committees are possible?} 
+
+\newpage 
+
+\hardsubproblem{ A dance class consists of 22 students, of which 10 are women and 12 are men. If 5 men and 5 women are to be chosen and then paired off, how many
+results are possible? (Paired off means that each man is partnered to one woman as a dance partner).}
+
+\vspace{80mm}
+
+
+
+\intermediatesubproblem{Consider a group of 20 people. If everyone shakes hands with everyone else, then how many handshakes take place?} 
+
+\vspace{60mm}
+
+\easysubproblem{From a group of 5 women and 7 men, how many different committees are there which consist of 2 women and 3 men?}
+
+\newpage 
+
+\hardsubproblem{In the question above, suppose that one woman (Amber) is feuding with a man (Johnny) and the two of them refuse to serve together. How many different committees are possible? }
+
+\end{enumerate}
+
+\newpage 
+
+\problem{We are almost finished with our study of combinatorial analysis. Our last step is to bridge the Chapter 2 material (counting) with the Chapter 1 material (probability). These set of exercises will begin to establish this connection. At the end of Chapter 1, we introduced the notion of simple sample spaces. We then stated a theorem that  said if $S$ is a simple sample space with $k$ elements, and $A$ is an event with $m$ elements, then 
+\begin{align*}
+    P(A) = \frac{m}{k} = \frac{\text{the number of elements in $A$}}{\text{the number of elements in $S$}}
+\end{align*}
+Take a few moments to remind yourself of why this result is true. It may be helpful for the next set of exercises! }
+
+
+\begin{enumerate}
+
+\easysubproblem{ An experiment involves flipping a fair coin four times, and recording the resulting sequence of heads and tails in the order they appear. Write down all of the outcomes in $S$. }
+
+\vspace{60mm}
+
+\easysubproblem{If the coin is truly fair, then the probability of each outcome in the above part should be 1/16. Let the events $A$, $B$, $C$, and $D$ be given by $A = \{\text{at least 3 heads} \}, B = \{\text{at most 2 heads} \}, C = \{ \text{heads on the third toss} \}$, and $D = \{\text{1 head and 3 tails} \}$.  Find $P(A)$. Hint: count the number of outcomes in $A$ and divide by the number of outcomes in $S$ which is 16.
+}
+
+\vspace{30mm}
+
+\easysubproblem{Find $P(B)$.}
+
+\vspace{30mm}
+
+\easysubproblem{Find $P(A \cap B)$. Hint: count the number of outcomes in $A \cap B$ and divide by the number of outcomes in $S$ which is 16.  }
+
+\vspace{30mm}
+
+\easysubproblem{Find $P(A \cap C)$.}
+
+\vspace{30mm}
+
+\easysubproblem{Find $P(A \cup C)$.}
+
+\vspace{30mm}
+
+\easysubproblem{Find $P(B \cap D)$.}
+\end{enumerate}
+\newpage
+
+\problem 
+\begin{enumerate}
+ 
+\easysubproblem{ \textbf{Optional}: This question will not be graded. If you can, try to explain the following meme: 
+\\
+\begin{center}
+\includegraphics[width=7cm]{memes.png}
+\end{center}}
+
+\end{enumerate}
+
+\end{document}
