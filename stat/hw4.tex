@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{tcolorbox}
 \usepackage{amsmath}
-
+\usepackage{tikz}
 \include{preamble}
 %All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
 
@@ -45,35 +45,48 @@ NAME: \line(1,0){380}
 \begin{enumerate}
 
 \easysubproblem{ What are the four assumptions we need in order to have a combination?}
-
+\\One of the assumptions that we need in order to have a combination is that there is a single pool of n items to choose from. Second, the n items is the pool are all distinct. Third, the selection is done without replacement. The order in whcih the items are selected doesn't matter. 
 
 \easysubproblem{Informally speaking, what is a combination?
 }
-
+\\A combination is a way of choosing a group of items from a larger set where the order in which you pick them doesn't change the final group. 
 
 \easysubproblem{Give three examples of a combination of 40 elements taken 5 at a time. Also provide four non-examples.}
-
+\begin{itemize}
+    \item Examples of Combination 
+    \begin{itemize}
+        \item Selecting a 5-person committee from a club of 40 members. 
+        \item Drawing a 5-card poker hand from a custom 40-card deck. 
+        \item Choosing 5 winning lottery numbers out of a pool of 40 numbers. 
+    \end{itemize}
+    \item None Examples
+    \begin{itemize}
+        \item Electing a President, Vice President, Secretary, Treasurer, and Historian from a 40-member club.
+        \item Rolling a 40-sided die 5 times (you can get the same number more than once).
+        \item Selecting a 5-person committee from a 50-member club.
+        \item Choosing 10 winning lottery numbers from a pool of 40.
+    \end{itemize}
+\end{itemize}
 
 
 \easysubproblem{Write down two symbols which denotes the number of combinations of $n$ distinct elements taken $k$ at a time.}
-
+\\There are $\binom{n}{k}$ and C(n,k) as symbols for combination.  
 
 \end{enumerate}
-
+\newpage
 \problem{These exercises will provide a more detailed perspective on combinations.}
-
 
 \begin{enumerate}
 
-\easysubproblem{Prove the following theorem: $\binom{n}{k}= \frac{P_{n,k}}{k!}$}
-
+\easysubproblem{Prove the following theorem: $\binom{n}{k}= \frac{P_{n,k}}{k!}$}\\
+By definition, a permutation ($P_{n,k}$) is the number of ways to choose $k$ elements from a set of $n$ distinct elements and arrange them in a specific order.To find the number of combinations ($\binom{n}{k}$), we want to choose $k$ elements but we do not care about the order. Since any group of $k$ chosen elements can be arranged in $k!$ different ways, the permutation formula counts every unique combination $k!$ times.Therefore, to find the number of ways to simply select the group without regard to order, we must take the total number of permutations and divide out the number of internal arrangements. This gives us the formula:$$\binom{n}{k} = \frac{P_{n,k}}{k!}$$
 
 \easysubproblem{In the above question, $\binom{n}{k}$ is expressed in terms of permutations and factorials. Re-express $\binom{n}{k}$ by \textbf{only} using factorials. Hint: substitute in the formula for $P_{n,k}$. We also did this in class. }
+\\The formula for permutations of $n$ items taken $k$ at a time is:$$P_{n,k} = \frac{n!}{(n-k)!}$$Substituting this into the theorem from part (a), we get:$$\binom{n}{k} = \frac{\frac{n!}{(n-k)!}}{k!}$$Simplifying this expression yields the standard factorial formula for combinations:$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
 
-
-\easysubproblem{True or False? For a certain group of elements, if the order of selection does not matter, then we should select all those elements within one step.}
-
-
+\easysubproblem{True or False? For a certain group of elements, if the order of selection does not matter, then we should select all those elements within one step.}\\
+True!
+\newpage
 \intermediatesubproblem{Alice was asked the following question: From a group of three people, a president and two treasurers are to be chosen. How many outcomes are there? \\
 
 Alice wrote down the following solution: 
@@ -90,7 +103,42 @@ By The Generalized Principle of Counting, there are $3 \times \binom{2}{2} = 3$ 
 \end{tcolorbox}
 
 Draw a tree diagram for this experiment and use the diagram to explain why Alice's solution is correct. (That is, explain why we are allowed to invoke The Generalized Principle of Counting). }
-
+\begin{figure}[ht]
+    \centering
+    % Define the spacing between levels and sibling nodes
+    \begin{tikzpicture}[
+        level distance=2cm,
+        level 1/.style={sibling distance=4cm},
+        level 2/.style={sibling distance=4cm},
+        level 3/.style={level distance=1.5cm}, % Closer spacing for the outcome labels
+        every node/.style={align=center, font=\sffamily} 
+    ]
+        
+    % The root of the tree
+    \node {Start}
+        % First branch
+        child {node {Pres: A}
+            child {node {Treas: \{B, C\}}
+                % Invisible edge for the outcome label
+                child[edge from parent/.style={draw=none}] {node {Outcome 1}}
+            }
+        }
+        % Second branch
+        child {node {Pres: B}
+            child {node {Treas: \{A, C\}}
+                child[edge from parent/.style={draw=none}] {node {Outcome 2}}
+            }
+        }
+        % Third branch
+        child {node {Pres: C}
+            child {node {Treas: \{A, B\}}
+                child[edge from parent/.style={draw=none}] {node {Outcome 3}}
+            }
+        };
+        
+    \end{tikzpicture}
+    \caption{Base off the diagarm, Alice solution is correct since a president is just 1 spot, so anyone can take it, and we are left with 2 people and there's only 2 spot for treasurer, so 2 choose 2, and that's basically 1 and time 3, you will get 3 choices. Thus, Alice is correct.}
+\end{figure}
 
 \intermediatesubproblem{Alice was asked the following question: From a regular deck of 52 cards, suppose an outcome is a subset of 5 cards. How many outcomes are there where we have the denominations $a, a, a, b, b$ where $a$ and $b$ are distinct? For example, we obtain $\braces{A \clubsuit, A \diamondsuit, A \heartsuit, J \spadesuit, J \heartsuit} $.
 
@@ -112,7 +160,7 @@ By The Generalized Principle of Counting, there are $ \binom{13}{1} \times \bino
 
 Is Alice's solution correct? Explain why or why not. Hint: Look back at the question we considered in class regarding the full house.}
 
-
+Alice solution is correct since, there are two entriely different 5-card hands, because selecting a and b produces a different outcome than selecting b then a, her sequential method of 13*12 accurately counts every unique possibility without accidentally coutning the same hand twices. 
 
 \hardsubproblem{Alice was asked the following question: From a regular deck of 52 cards, suppose an outcome is a subset of 6 cards. How many outcomes are there where we have the denominations $a, a, a, b, b, b$ where $a$ and $b$ are distinct? For example, we obtain $\braces{A \clubsuit, A \diamondsuit, A \heartsuit, J \spadesuit, J \heartsuit, J \diamondsuit} $.
 
