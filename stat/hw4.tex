@@ -160,8 +160,8 @@ By The Generalized Principle of Counting, there are $ \binom{13}{1} \times \bino
 
 Is Alice's solution correct? Explain why or why not. Hint: Look back at the question we considered in class regarding the full house.}
 
-Alice solution is correct since, there are two entriely different 5-card hands, because selecting a and b produces a different outcome than selecting b then a, her sequential method of 13*12 accurately counts every unique possibility without accidentally coutning the same hand twices. 
-
+Alice solution is correct since, there are two entriely different 5-card hands, because selecting a and b produces a different outcome than selecting b then a, her sequential method of 13*12 accurately counts every unique possibility without accidentally counting the same hand twices. 
+ 
 \hardsubproblem{Alice was asked the following question: From a regular deck of 52 cards, suppose an outcome is a subset of 6 cards. How many outcomes are there where we have the denominations $a, a, a, b, b, b$ where $a$ and $b$ are distinct? For example, we obtain $\braces{A \clubsuit, A \diamondsuit, A \heartsuit, J \spadesuit, J \heartsuit, J \diamondsuit} $.
 
 Alice wrote down the following solution: 
@@ -181,10 +181,10 @@ By The Generalized Principle of Counting, there are $ \binom{13}{1} \times \bino
 \end{tcolorbox}
 
 Is Alice's solution correct? Explain why or why not.}
+Alice solution is incorrect, since if she choose 1 denomination card from the deck and then  pick 3 of its differnet suits and then pick 1 denomination card from the deck and then pick 3 of its different suits, then you would results in repetitions, cuz at the end the order of cards in a hand doesn't matter, so you will just only have the same subsets again. It wasn't the same like the fullhouse!
 
-
-\easysubproblem{Prove that $\binom{n}{k} = \binom{n}{n-k}$.}
-
+\easysubproblem{Prove that $\binom{n}{k} = \binom{n}{n-k}$.}\\
+The formula for $\binom{n}{k}$ is:$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$Now, let's write out the formula for $\binom{n}{n-k}$ by substituting $(n-k)$ wherever there is a $k$:$$\binom{n}{n-k} = \frac{n!}{(n-k)!(n-(n-k))!}$$Simplify the expression inside the second parenthesis in the denominator:$n - (n - k) = k$Substitute that back into the formula:$$\binom{n}{n-k} = \frac{n!}{(n-k)!k!}$$Because multiplication is commutative (the order doesn't matter, so $x \times y = y \times x$), the denominator $(n-k)!k!$ is exactly the same as $k!(n-k)!$. Therefore:$$\binom{n}{k} = \binom{n}{n-k}$$
 
 
 
