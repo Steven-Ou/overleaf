@@ -186,31 +186,26 @@ Alice solution is incorrect, since if she choose 1 denomination card from the de
 \easysubproblem{Prove that $\binom{n}{k} = \binom{n}{n-k}$.}\\
 The formula for $\binom{n}{k}$ is:$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$Now, let's write out the formula for $\binom{n}{n-k}$ by substituting $(n-k)$ wherever there is a $k$:$$\binom{n}{n-k} = \frac{n!}{(n-k)!(n-(n-k))!}$$Simplify the expression inside the second parenthesis in the denominator:$n - (n - k) = k$Substitute that back into the formula:$$\binom{n}{n-k} = \frac{n!}{(n-k)!k!}$$Because multiplication is commutative (the order doesn't matter, so $x \times y = y \times x$), the denominator $(n-k)!k!$ is exactly the same as $k!(n-k)!$. Therefore:$$\binom{n}{k} = \binom{n}{n-k}$$
 
-
-
 \easysubproblem{Intuitively explain why $\binom{25}{5} = \binom{25}{20}$.}
 
-
+Let's take the number 25 as items and 5 as items you want to take from 25 leaving behind exactly 20 items, then you want to choose 20 items from 25 that you don't want leaving behind 5 items that you want, isn't that basically the same thing as getting the thing you want at the end!
 
 \easysubproblem{A committee of 7, consisting of 2 Republicans, 2 Democrats, and 3 Independents, is to be chosen from a group of 5 Republicans, 6 Democrats, and 4 Independents. How many committees are possible?} 
 
- 
+ $\binom{5}{2}*\binom{6}{2}*\binom{4}{3}=600$
+About 600 committees are possibles.
 
 \hardsubproblem{ A dance class consists of 22 students, of which 10 are women and 12 are men. If 5 men and 5 women are to be chosen and then paired off, how many
-results are possible? (Paired off means that each man is partnered to one woman as a dance partner).}
+results are possible? (Paired off means that each man is partnered to one woman as a dance partner).}$\binom{12}{5}* \binom{10}{5}*5!$= 23,950,080 results are possible. 
 
 
-
-
-\intermediatesubproblem{Consider a group of 20 people. If everyone shakes hands with everyone else, then how many handshakes take place?} 
-
-
+\intermediatesubproblem{Consider a group of 20 people. If everyone shakes hands with everyone else, then how many handshakes take place?} Basically 20 choose 2, so 190 handshakes. 
 
 \easysubproblem{From a group of 5 women and 7 men, how many different committees are there which consist of 2 women and 3 men?}
-
+Bascially, 5 choose 2 and 7 choose 3, and you multiply them you will get 350 differnt committees. 
 
 \hardsubproblem{In the question above, suppose that one woman (Amber) is feuding with a man (Johnny) and the two of them refuse to serve together. How many different committees are possible? }
-
+We know the total unrestricted committees is 350. If Amber and Johnny is having a feud, subtract 1 from each total amount of women and men, resulting of 4 womens and 6 mens, now we choose 1 from 4 womens, and 2 from 6 mens,  leaving 4*15 =60, now we subtract 60 from 350 and will get 290 vaid committees. 
 \end{enumerate}
 
 
@@ -223,31 +218,45 @@ Take a few moments to remind yourself of why this result is true. It may be help
 
 \begin{enumerate}
 
-\easysubproblem{ An experiment involves flipping a fair coin four times, and recording the resulting sequence of heads and tails in the order they appear. Write down all of the outcomes in $S$. }
-
+\easysubproblem{ An experiment involves flipping a fair coin four times, and recording the resulting sequence of heads and tails in the order they appear. Write down all of the outcomes in $S$. }\\
+Here's all the outcome When flipping a coin 4 times, there are $2 \times 2 \times 2 \times 2 = 16$ total possible outcomes. We can list the complete sample space $S$ by grouping them by the number of heads:
+\begin{itemize}
+    \item \textbf{4 Heads:} HHHH
+    \item \textbf{3 Heads:} HHHT, HHTH, HTHH, THHH
+    \item \textbf{2 Heads:} HHTT, HTHT, HTTH, THHT, THTH, TTHH
+    \item \textbf{1 Head:} HTTT, THTT, TTHT, TTTH
+    \item \textbf{0 Heads:} TTTT
+\end{itemize}
+$$S = \{HHHH, HHHT, HHTH, HTHH, THHH, HHTT, HTHT, HTTH, THHT, THTH, TTHH, HTTT, THTT, TTHT, TTTH, TTTT\}$$
 
 
 \easysubproblem{If the coin is truly fair, then the probability of each outcome in the above part should be 1/16. Let the events $A$, $B$, $C$, and $D$ be given by $A = \{\text{at least 3 heads} \}, B = \{\text{at most 2 heads} \}, C = \{ \text{heads on the third toss} \}$, and $D = \{\text{1 head and 3 tails} \}$.  Find $P(A)$. Hint: count the number of outcomes in $A$ and divide by the number of outcomes in $S$ which is 16.
 }
 
-
+$P(A) = \frac{5}{16}$, because in the sample of 4 heads and 3 heads there's 5 of the H's that has 3 or more H, thus, there's $\frac{5}{16}$.  
 
 \easysubproblem{Find $P(B)$.}
-
+Since there are 16 total outcomes and 5 are in $A$, there must be 11 in $B$.
+$P(B) = \frac{11}{16}$
 
 \easysubproblem{Find $P(A \cap B)$. Hint: count the number of outcomes in $A \cap B$ and divide by the number of outcomes in $S$ which is 16.  }
 
+An outcome cannot have 3 or more heads while simultaneously having 2 or fewer heads. The sets are mutually exclusive (disjoint). \\
+Number of outcomes in $A \cap B$ is 0.
+$P(A \cap B) = \frac{0}{16} = 0$
 
-
-\easysubproblem{Find $P(A \cap C)$.}
-
-
+\easysubproblem{Find $P(A \cap C)$.}\\
+$P(A \cap C) = \frac{4}{16} = \frac{1}{4}$
 
 \easysubproblem{Find $P(A \cup C)$.}
-
+Need to find P(C) and that is 8/16. So
+$P(A \cup C) = \frac{5}{16} + \frac{8}{16} - \frac{4}{16}$ and so, 
+$P(A \cup C) = \frac{9}{16}$
 
 
 \easysubproblem{Find $P(B \cap D)$.}
+
+$P(B \cap D) = \frac{4}{16} = \frac{1}{4}$
 \end{enumerate}
 
 
