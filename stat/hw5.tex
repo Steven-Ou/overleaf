@@ -1,0 +1,270 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+\include{preamble}
+
+\newtoggle{professormode}
+
+
+
+\title{MATH 241 Spring \the\year~Homework \#5}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace by 11:59PM Sunday, March 15, \the\year \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and program for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to make an Overleaf account, click the link to the \LaTeX~ template, go to \textit{File} and select \textit{Make a copy}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{These exercises will designed to review the multinomial.}
+
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{What is the point of the multinomial? When do we use this counting structure?}
+\\The point of the multinomial coefficeint is to generalize the binomial coefficient, so that we can choose groups of two types the success vs failure, chosen vs. not chosen , the multinomial would extends to K different types. We only use this counting structure when there's permutations of multisets like MISSISSIPPI.  And also use this counting structure when there's paritioning sets, for counting the number of ways to distribute n distinct objects into K distinct bins, where the first bins hold exactly $n_1$ objects, the second bins holds $n_2$.
+
+\intermediatesubproblem{Express $\binom{30}{3, 10, 5, 12}$ as a product of multiple binominals.}
+
+$\binom{30}{3}, \binom{27}{10},\binom{17}{5}, \binom{12}{12}$
+
+\easysubproblem{Explain why we call $ \binom{n}{n_1, n_2, \ldots, n_k} $ a \textit{multinomial}. }
+
+It gets its name from the Multinomial Theorem, which is the expansion of an algebraic expression with more than two terms raised to a power, like $(x_1 + x_2 + \dots + x_k)^n$
+
+
+
+
+\intermediatesubproblem{Suppose a small army is stationed at point $A$ (pictured below) and they are required to move to point $B$. The army is only allowed to move one step up or one step to the right at each point. How many different paths from $A$ to $B$ are possible? Hint: list out a few paths from $A$ to $B$. What do you notice?
+\begin{center}
+\includegraphics[width=8cm]{grid.png} 
+\end{center}}
+
+
+\intermediatesubproblem{ Suppose a small army is stationed at point $A$ (pictured below) and they are required to move to point $B$. The army is only allowed to move one step up or one step to the right at each point. How many different paths from $A$ to $B$ are possible if the army must pass through the point circled below?
+\begin{center}
+\includegraphics[width=10cm]{grid2.png}
+\end{center}}
+From point A to B, it will take a total of 7 steps , right 4 and up 3, 4+3 =7 and so:
+$\binom{7}{4} = \frac{7!}{4!3!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$. 35 ways of traveling from point A to point B, but if we are traveling through the circle c, we would have to do $\binom{4}{2}$ from A to c, and c to B it will take $\binom{3}{2}$. Doing 3 *6 we will get 18 different paths that pass through the circle point.  
+\newpage
+\easysubproblem{Prove the following theorem:
+
+\begin{tcolorbox}
+    Given $n$ objects where
+
+    \begin{align*}
+       & n_1 ~ \text{objects are of Type} ~ 1, \\
+       & n_2 ~ \text{objects are of Type} ~ 2, \\
+       & \ldots   \ldots   \ldots  \ldots   \ldots  \ldots  \ldots  \ldots \\
+        & n_k ~ \text{objects are of Type} ~ k, \\
+    \end{align*}
+and $n_1 + n_2 + \ldots + n_k = n$, the number of different arrangements of the $n$ objects is given by
+
+\begin{align*}
+    \binom{n}{n_1, n_2, \ldots, n_k} :=   \frac{n!}{n_1! n_2! \ldots n_k!}.
+\end{align*}
+
+\end{tcolorbox}}
+
+By the Multiplication Principle, the total number of arrangements is the product of all these choices:$$\text{Total Arrangements} = \binom{n}{n_1} \times \binom{n - n_1}{n_2} \times \dots \times \binom{n_k}{n_k}$$Next, we expand each of these binomial coefficients using the factorial definition $\binom{n}{k} = \frac{n!}{k!(n-k)!}$:$$= \frac{n!}{n_1!(n-n_1)!} \times \frac{(n-n_1)!}{n_2!(n-n_1-n_2)!} \times \frac{(n-n_1-n_2)!}{n_3!(n-n_1-n_2-n_3)!} \times \dots \times \frac{n_k!}{n_k!0!}$$Notice how the numerator of each fraction perfectly cancels out the second term in the denominator of the previous fraction:$(n-n_1)!$ cancels out.$(n-n_1-n_2)!$ cancels out.This cascading cancellation continues all the way down the line.The only terms that survive the cancellation are the $n!$ in the very first numerator, and the individual $n_i!$ terms in the denominators:$$= \frac{n!}{n_1! n_2! \dots n_k!}$$
+\newpage
+\intermediatesubproblem{Prove the following theorem:
+
+\begin{tcolorbox}
+    Given $n$ distinct objects and $k$ distinct groups where
+
+    \begin{align*}
+       &  \text{group} ~ 1 ~ \text{has} ~ n_1 ~ \text{elements,} \\
+       &  \text{group}  ~ 2 ~ \text{has} ~ n_2 ~ \text{elements,} \\
+       & \ldots   \ldots   \ldots  \ldots   \ldots  \ldots  \ldots  \ldots \\
+        &  \text{group} ~  k ~ \text{has} ~ n_k ~ \text{elements,} \\
+    \end{align*}
+and $n_1 + n_2 + \ldots + n_k = n$, the number of different ways to divide the $n$ distinct objects among $k$ distinct groups is given by
+
+\begin{align*}
+    \binom{n}{n_1, n_2, \ldots, n_k} :=   \frac{n!}{n_1! n_2! \ldots n_k!}.
+\end{align*}
+\end{tcolorbox}}
+Using the Multiplication Principle, the total number of ways to divide the objects is the product of all these choices:$$\text{Total Divisions} = \binom{n}{n_1} \times \binom{n - n_1}{n_2} \times \dots \times \binom{n_k}{n_k}$$If you expand these binomials into their factorial forms $\frac{n!}{k!(n-k)!}$, you get the exact same cascading cancellation we saw in 1(f):$$= \frac{n!}{n_1!(n-n_1)!} \times \frac{(n-n_1)!}{n_2!(n-n_1-n_2)!} \times \dots \times \frac{n_k!}{n_k!0!}$$All the intermediate terms cancel out, leaving:$$= \frac{n!}{n_1! n_2! \dots n_k!}$$
+\end{enumerate}
+\newpage
+
+
+\problem{These exercises will have you come up with an example for every counting structure we've considered.}
+
+\begin{enumerate}
+
+
+\intermediatesubproblem{Give an example of a specific experiment where the sample space will contain $P_{n,k}$ outcomes.}
+
+You have a library of $n=15$ different sorting algorithms. You want to set up an automated benchmark test that selects $k=3$ algorithms to run one after the other (first, second, and third) on a specific dataset. How many unique testing sequences can you create?
+
+\intermediatesubproblem{Give an example of a specific experiment where the sample space will contain $n^k$ outcomes.}
+
+You are writing a brute-force script to guess a $k=8$ character password. If the system only allows lowercase English letters ($n=26$ possibilities for each slot), how many total password combinations are there in the sample space?
+
+\intermediatesubproblem{Give an example of a specific experiment where the sample space will contain $n!$ outcomes.}
+
+You have a playlist of $n=20$ distinct songs. If you hit "shuffle" and the system guarantees every song will play exactly once before repeating, how many different playback orders are possible?
+
+\intermediatesubproblem{In class, we mentioned that $\binom{n}{k}$ has two interpretations. Give an example of a specific experiment where the sample space will contain $\binom{n}{k}$ outcomes under one of the interpretations.  }
+
+You have a pool of $n=50$ beta testers. You want to randomly select a group of $k=10$ users to receive a new experimental feature. How many different groups of 10 testers can you form?
+
+\intermediatesubproblem{Give an example of a specific experiment where the sample space will contain $\binom{n}{k}$ outcomes under the other interpretation.}
+
+You need to generate a valid $n=16$ bit binary sequence (a string of 1s and 0s). If the protocol requires the string to contain exactly $k=4$ ones (and therefore $12$ zeros), how many valid strings can you generate?
+
+
+\intermediatesubproblem{In class, we mentioned that $\binom{n}{n_1, n_2, \ldots, n_k}$ has two interpretations. Give an example of a specific experiment where the sample space will contain $\binom{n}{n_1, n_2, \ldots, n_k}$  outcomes under one of the interpretations.  }
+
+You are a tech lead with a backlog of $n=12$ unique bug tickets. You need to assign $n_1=4$ tickets to Junior Dev A, $n_2=5$ tickets to Mid-level Dev B, and $n_3=3$ tickets to Senior Dev C. How many different ways can you distribute the workload?
+
+\intermediatesubproblem{Give an example of a specific experiment where the sample space will contain $\binom{n}{n_1, n_2, \ldots, n_k}$  outcomes under the other interpretation.}
+
+Your system needs to generate all unique anagrams of the word "MISSISSIPPI" for a hashing function test. There are $n=11$ total letters, consisting of $n_1=4$ 'I's, $n_2=4$ 'S's, $n_3=2$ 'P's, and $n_4=1$ 'M'. How many unique strings can be generated?
+
+\end{enumerate}
+
+
+\problem{These questions will review the general ideas we should consider when working with simple sample spaces. }
+
+
+\begin{enumerate}
+
+\easysubproblem{ Define what is meant by a simple sample space. }
+
+A simple sample space is where evert single outcome is equally likely to occur. 
+
+\easysubproblem{What is the six-step process in solving questions pertaining to a simple sample space? You may paraphrase. 
+}
+
+The six step process in solving questions pertaining to a simple sample space is defining the experiment, define the sample space (S), count the sample space, define the event (E) of interest, count the event, and finally calculate the probability $p(E)= \frac{|E|}{|S|}$. 
+
+\easysubproblem{Suppose an experiment consists of randomly selecting $k$ elements from $n$. There are two ways to define an outcome in the sample space for this experiment. What are these two ways? }
+
+The two ways to define an outcome depends entirely on whether order matter, which it could be an order sequence-permutation , and the last way is the unordered subset-combination. 
+
+
+\end{enumerate}
+
+
+\problem{These questions will ask you to apply specific ideas when working with simple sample spaces. Please note that some of the work for these questions have already been done in Homework 04 and you can simply quote the cardinalities you found. }
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{ If four regular six-sided dice are rolled, then what is the probability that all four numbers that appear will be different?}\\
+S= sample space, E= events:\\
+S = 6*6*6*6,E = 6*5*4*3 = \space P(E)=$\frac{|E|}{|S|}$ = 5/18, this is the chance of getting all four numbers that appear if four regular six sided dice are rolled.
+
+\intermediatesubproblem{John, Jim, Jay, and Jack have formed a band consisting of 4 different instruments. Suppose each person is randomly assigned an instrument. If John and Jim can play all 4 instruments, but Jay and Jack can each play only piano and drums, then what is the probability that each person is able to play their assigned instrument?
+}
+\\Since we know that we have 4 people adn 4 instruments, there's 4! ways , that would be sample space. Then And since john and jim can only play piano and drums. There's only 2 instrument left for the other two guys. So 2! * 2! = 4, which is the event. Event/Sample Space = 1/6 probabilitiy that each person is able to play their assigned instrument.
+
+\intermediatesubproblem{A child has 12 blocks, of which 6 are black, 4 are red, 1 is white, and 1 is blue. If the child randomly places the blocks in a line, then what is the probability that the first block is blue?  }
+
+There's a chance of every block appearing on the first block, and it can be blue, thus it's 1/12 probabilities. 
+
+\intermediatesubproblem{Suppose eight people are randomly seated in a row. Among these eight people are a couple named Jim and Pam. What is the probability that Jim and Pam are seated together? }\\
+The S = sample space of 8! since there's 8 different ways of arranging the couples to sit together. Let E be the events, since Jim and Pam are couple put them as 1 , and is there's 7! and since Jim and Pam can be arrange vice versa it's 2!, thus, $\frac{7!*2!}{8!} = \frac{1}{4}$. 
+
+\intermediatesubproblem{A dance class consists of 22 students, of which 10 are women and 12 are men. Suppose 5 men and 5 women are to be chosen and then paired off. What is the probability that one specific man, Jim, is paired off with a specific woman, Pam?}\\
+The probabilities of that one specific man Jim, paring with Pam is by $\frac{1}{2}$  of the total women(5/10) times the $\frac{5}{12}$ the total men, times the specific women, which is $\frac{1}{5}$, multiplying them all together we will get $\frac{1}{24}$.    
+
+\intermediatesubproblem{ If two regular, fair dice are rolled, then what is the probability that the sum of the two numbers that appear will be odd?}
+
+
+\intermediatesubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that 3 red, 2 blue, and 2 green marbles  are withdrawn.}
+
+
+
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that at least 2 red marbles are withdrawn.}
+
+
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that all withdrawn marbles are the same color. }
+
+
+
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that  either exactly 3 red marbles or exactly 3 blue marbles are withdrawn. }
+
+
+
+\hardsubproblem{Two symmetric dice have had two of their sides painted red, two painted black, one painted yellow, and the other painted white. When this pair of dice are rolled, what is the probability that both dice land with the same color face up?}
+
+
+
+\intermediatesubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they are both aces?}
+
+
+\hardsubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they have the same face value/denomination? }
+
+
+
+\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain four of a kind? (Meaning four cards of equal value and one card of a different value). }
+
+
+
+
+\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain a full house? (Meaning two cards of the same value and then three cards of the same value which are different from the first value). }
+
+
+
+\hardsubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain three of a kind? (Meaning three equal face values plus two cards of different values).}
+
+\end{enumerate}
+
+
+\problem Finally, we will study a problem that we have considered before. In Homework 04 Problem 03, we conisdered the following: an experiment involves flipping a fair coin four times, and recording the resulting sequence of heads and tails in the order they appear. Let the events $A$, $B$, $C$, and $D$ be given by $A = \{\text{at least 3 heads} \}, B = \{\text{at most 2 heads} \}, C = \{ \text{heads on the third toss} \}$, and $D = \{\text{1 head and 3 tails} \}$. 
+
+\begin{enumerate}
+
+\intermediatesubproblem{ Find $P(A)$ by using your counting structures as opposed to enumerating.
+}
+
+
+
+
+
+\intermediatesubproblem{Find $P(B)$ by using your counting structures as opposed to enumerating.}
+
+
+
+\intermediatesubproblem{Find $P(A \cap C)$ by using your counting structures as opposed to enumerating.}
+
+
+
+\intermediatesubproblem{Find $P(A \cup C)$ by using your counting structures as opposed to enumerating.}
+
+
+
+\intermediatesubproblem{Find $P(B \cap D)$ by using your counting structures as opposed to enumerating.}
+
+
+\end{enumerate}
+
+
+\end{document}
