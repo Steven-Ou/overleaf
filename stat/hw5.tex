@@ -197,44 +197,45 @@ The probabilities of that one specific man Jim, paring with Pam is by $\frac{1}{
 
 \intermediatesubproblem{ If two regular, fair dice are rolled, then what is the probability that the sum of the two numbers that appear will be odd?}
 
+When rolling a dice we could get even and then odd and vice versa. Getting them 1/2 even * 1/2 odd we would end up with 1/4. Then  adding up with the vice versa scenario which also result with 1/4 , you would get 1/2. Thus, the probabilities of the two numbers that appear will be odd. 
 
 \intermediatesubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that 3 red, 2 blue, and 2 green marbles  are withdrawn.}
 
+7 marbles are randomly withdrawn from an urn of 47 marbles, so $\binom{46}{7}$, this would be the denominator also the sample space. 
+$\binom{12}{3}\binom{16}{2}\binom{18}{2}$ This would be the event of the marbles getting withdrawn. Thus $\frac{|E|}{|S|}= \frac{\binom{12}{3}\binom{16}{2}\binom{18}{2}}{\binom{46}{7}}$
+
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that at least 2 red marbles are withdrawn.}\\To find the probabilities of at least 2 red marble we must use the complement rule 1 minus the probabilities of getting 0 red or exactly 1 red, and there are 34 none red marbles, so $P = 1 - \frac{\binom{34}{7} + \binom{12}{1}\binom{34}{6}}{\binom{46}{7}}$
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that all withdrawn marbles are the same color. } \\To get the probabilities that all withdrawn marbles are the same color, is by basically adding up all the colors that can be drawn up to 7, then we divide the sample space like this: $P = \frac{\binom{12}{7} + \binom{16}{7} + \binom{18}{7}}{\binom{46}{7}}$.
 
 
-\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that at least 2 red marbles are withdrawn.}
 
-
-\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that all withdrawn marbles are the same color. }
-
-
-
-\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that  either exactly 3 red marbles or exactly 3 blue marbles are withdrawn. }
-
-
+\hardsubproblem{Seven marbles are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green marbles. Find the probability that  either exactly 3 red marbles or exactly 3 blue marbles are withdrawn. }\\
+P(A) = $\binom{12}{3}\binom{34}{4}$,
+P(B) = $\binom{16}{3}\binom{30}{4}$, P(A n B) = $\binom{12}{3}\binom{16}{3}\binom{18}{1}$
+To find the probabilities of exactly 3 red marbles or exactly 3 blue marbles we have to P(A U B )= P(A) + P(B) - P(A n B ) and here's how I would apply the formula to the event section $P = \frac{\binom{12}{3}\binom{34}{4} + \binom{16}{3}\binom{30}{4} - \binom{12}{3}\binom{16}{3}\binom{18}{1}}{\binom{46}{7}}$
 
 \hardsubproblem{Two symmetric dice have had two of their sides painted red, two painted black, one painted yellow, and the other painted white. When this pair of dice are rolled, what is the probability that both dice land with the same color face up?}
 
+A dice has 6 sides and the sample space is 6 x 6 = 36. To get the same color face up, we do 2x2 for all the colors that has 2 colors the same ,while only a side that has an unique color, we will get 4+4+1+1, the ones represent white+yellow, and the fours represent red and black. We will have 10 successful outcomes out of 36 the samples space, thus it would be 5/18. 
+
+\intermediatesubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they are both aces?}\\
+Event: There's 4 kinds of aces, and you want 2 of them. Sample Space choosing 2 cards out of 52. Thus, $P = \frac{\binom{4}{2}}{\binom{52}{2}} = \frac{6}{1326} = \frac{1}{221}$.
+
+\hardsubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they have the same face value/denomination? }\\
+Event: The face stays as 1 kind, so 13 of them getting chosen 1, then 2 of the 4 of that value, the sample space stays the same, thus, $P = \frac{\binom{13}{1} \binom{4}{2}}{\binom{52}{2}} = \frac{78}{1326} = \frac{1}{17}$. 
 
 
-\intermediatesubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they are both aces?}
+\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain four of a kind? (Meaning four cards of equal value and one card of a different value). }\\
+Sample space 52 choose 5. The event would be (13 choose 1 )* (4 choose 4) and the last card would be 12 choose 1 multiply the 4 choose 1. It would look like this:
+$P = \frac{\binom{13}{1}\binom{4}{4} \times \binom{12}{1}\binom{4}{1}}{\binom{52}{5}} = \frac{624}{2,598,960} = \frac{1}{4165}$. 
 
 
-\hardsubproblem{Two cards are chosen at random from a deck of 52 playing cards. What is the probability that they have the same face value/denomination? }
+\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain a full house? (Meaning two cards of the same value and then three cards of the same value which are different from the first value). }\\
+Sample space stays the same. The event would be 13 choose 1 multiply 4 choose 3 the suits, 12 choose 1 multiply 4 choose 2. $P = \frac{\binom{13}{1}\binom{4}{3} \times \binom{12}{1}\binom{4}{2}}{\binom{52}{5}} = \frac{3744}{2,598,960} = \frac{6}{4165}$
 
 
-
-\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain four of a kind? (Meaning four cards of equal value and one card of a different value). }
-
-
-
-
-\intermediatesubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain a full house? (Meaning two cards of the same value and then three cards of the same value which are different from the first value). }
-
-
-
-\hardsubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain three of a kind? (Meaning three equal face values plus two cards of different values).}
-
+\hardsubproblem{Suppose five cards are drawn at random from a regular deck of 52 cards. What is the probability we obtain three of a kind? (Meaning three equal face values plus two cards of different values).}\\
+Same thing as before 13 choose 1 multiply 4 choose 3 the suits, but then we would do 12 choose 2 then pick 1 suits out of the 4 suits 2 times, so 4 choose 1 two times and multiply them all together and divide by the same sample space, it would look like this:$P = \frac{\binom{13}{1}\binom{4}{3} \times \binom{12}{2}\binom{4}{1}\binom{4}{1}}{\binom{52}{5}} = \frac{54,912}{2,598,960} = \frac{88}{4165}$
 \end{enumerate}
 
 
@@ -245,25 +246,34 @@ The probabilities of that one specific man Jim, paring with Pam is by $\frac{1}{
 \intermediatesubproblem{ Find $P(A)$ by using your counting structures as opposed to enumerating.
 }
 
+Here are the sample spaces that I recorded:\\
+4 Heads: HHHH
 
+3 Heads: HHHT, HHTH, HTHH, THHH
 
+2 Heads: HHTT, HTHT, HTTH, THHT, THTH, TTHH
 
+1 Head: HTTT, THTT, TTHT, TTTH
+
+0 Heads: TTTT
+
+P(A) = at least 3 heads so only 3 and 4 heads fulfilled and there's 5  results in total, so 5/16.
 
 \intermediatesubproblem{Find $P(B)$ by using your counting structures as opposed to enumerating.}
 
-
+P(B) = to at most 2 heads so everything <=2,that would be 11/16. 
 
 \intermediatesubproblem{Find $P(A \cap C)$ by using your counting structures as opposed to enumerating.}
 
-
+4/16 of them are intersecting having H as the 3rd position, so $P(A \cap C)$ = 1/4. 
 
 \intermediatesubproblem{Find $P(A \cup C)$ by using your counting structures as opposed to enumerating.}
 
-
+$P(A \cup C)$= 9/16 Since P(C) has 8 outcomes, and P(A) has 1 outcomes thats not in it, but the rest are all in it, so adding them all together we would get 9/16. 
 
 \intermediatesubproblem{Find $P(B \cap D)$ by using your counting structures as opposed to enumerating.}
 
-
+4/16 , since there's only 1 exactly head, so the whole 1 Head results are the events out of the total , which $P(B \cap D)$ = 1/4. 
 \end{enumerate}
 
 
