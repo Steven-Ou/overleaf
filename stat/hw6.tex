@@ -48,30 +48,27 @@ NAME: \line(1,0){380}
 
 \inthenotessubproblem{Formally define what is meant by the conditional probability of the event $A$ given that the event $B$ has occurred.}
 \\
-
+The conditional probability of event A given that event B has occurred is denoted by P(A|B). If P(B) >0, it is defined as: 
+P(A|B) = $\frac{P(A\cap B)}{P(B)}$
 
 \inthenotessubproblem{Explain why it makes sense to define $P(A|B)$ to be $ \frac{P(A \cap B)}{P(B)}$. }
-
-\vspace{80mm}
+\\
+When $B$ has occurred, $B$ becomes our "new sample space" or the realm of all possible outcomes. For $A$ to occur within this new space, the actual outcome must be in both $A$ and $B$ (the intersection $A \cap B$). Thus, the probability is the "stuff" in $A$ that can still happen ($A \cap B$) divided by all the "stuff" that can now happen ($B$).
 
 \inthenotessubproblem{Consider the way that the MegaMillions (lottery) is played. Suppose we played the following numbers: the white balls selected will be 20, 30, 54, 63, 65 and the golden number will be 14. Let $A = \{ \text{we win the lottery} \}$. Assuming that the selection of numbers is random, find $P(A)$.   }
-
-\newpage 
+\\The total number of outcomes $|S|$ is calculated by choosing 5 white balls from 70 and 1 golden ball from 24: $\binom{70}{5} \times \binom{24}{1} = 290,472,336$. Since we have one unique ticket,$P(A) = \frac{1}{290,472,336}$
 
 \intermediatesubproblem{Suppose we are watching the lottery live and the first (white) number drawn is 65. What is the probability that we win the lottery ?}
-
-\vspace{100mm}
+\\The probability we win the lottery is $P(A) = \frac{1}{290,472,336}$.
 
 \intermediatesubproblem{Suppose we are watching the lottery live and the first few (white) numbers drawn are 30, 54, 63, 65. What is the probability that we win the lottery?}
 
-\vspace{80mm} 
 
 \hardsubproblem{If you win the lottery, what would you do with the money?}
 
 
 \end{enumerate}
 
-\newpage 
 
 \problem{These exercises will test some of the theoretic aspects of conditional probability.}
 
@@ -81,33 +78,32 @@ NAME: \line(1,0){380}
 \easysubproblem{ If $S$ is the sample space of an experiment and $A$ is any event in that space, what is the value of $P(A|S)$? 
 }
 
-\vspace{20mm}
+
 
 \easysubproblem{Prove if $P(B)>0$, then $P(B|B) = 1$.}
 
-\vspace{40mm}
+
 
 
 \inthenotessubproblem{Prove if $P(B)>0$, then $P(A^c|B) = 1 - P(A|B)$}
 
-\vspace{60mm}
+
 
 
 \inthenotessubproblem{State and prove The Basic Conditioning Rule.}
 
-\newpage 
 
 
 \inthenotessubproblem{State and prove The Generalized Conditioning Rule.}
 
-\vspace{140mm}
+
 
 \easysubproblem{Suppose $E, F$ and $G$ are events of a sample space $S$. How many different ways can you write $P(E \cap F \cap G)$ using The Generalized Conditioning Rule? }
 
 
 \end{enumerate}
 
-\newpage
+
 
 \problem{These exercises will test some of the applications of conditional probabilities. }
 
@@ -118,18 +114,17 @@ NAME: \line(1,0){380}
 one die lands on 6 given that the dice land on different numbers?
  }
 
-\vspace{60mm}
+
 
 \easysubproblem{Suppose two fair dice are rolled and let $A = \{ \text{the first die lands on 6} \}$. Let $B_i = \{ \text{the sum of the dice is}~ i \}$. Find $P(A | B_2), P(A| B_3), \ldots, P(A | B_{12})$. 
 }
 
-\newpage 
+
 
 %\easysubproblem{Suppose two fair dice are rolled and let $A = \{ \text{at least one of the dice lands on 6} \}$. Let $B_i = \{ \text{the sum of the dice is}~ i \}$. Find $P(A | B_2), P(A| B_3), \ldots, P(A | B_{12})$. }
 
 \intermediatesubproblem{You are a member of a class of 18 students. A bowl contains 18 chips: 1 blue and 17 red. Each student is to take 1 chip from the bowl without replacement. The student who draws the blue chip is guaranteed an A for the course. If you have a choice of drawing first, fifth, or last, which position would you choose? Justify your choice on the basis of probability.}
 
-\vspace{100mm}
 
 \easysubproblem{Each time a shopper purchases a tube of toothpaste,
 he chooses either brand $A$ or brand $B$. Suppose that for
@@ -147,7 +142,7 @@ and both his third and fourth purchases will be brand $B$?
 
 \end{enumerate}
 
-\newpage
+
 
 \problem{These questions will test the idea behind independence which is covered in Section 3.2. }
 
@@ -156,28 +151,22 @@ and both his third and fourth purchases will be brand $B$?
 
 \inthenotessubproblem{ Formally, how do we define the word independence? }
 
-\vspace{40mm}
 
 \inthenotessubproblem{Intuitively, what does it mean when we say two events are independent?}
 
-\vspace{40mm}
 
 \inthenotessubproblem{Explain why it is impossible for two events, $E$ and $F$, to be independent and disjoint. You may assume that $P(E) > 0$ and $P(F) > 0$.}
 
-\vspace{100mm}
 
 \hardsubproblem{In class, we answered the rocket question via two different methods (a direct method followed by the complement method). We then considered the following problem where we used the direct method: \textit{A biased coin is repeatedly tossed until a heads appears for the first time at which point the experiment stops. Assuming that the outcomes of the tosses are independent of each other, find the probability that a heads will be obtained at some point. You may assume the probability that we get heads on any flip is 0.0001.} Try to answer this problem using the complement method.} 
 
-\newpage 
 
 \inthenotessubproblem{A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Find the probability that at least one success occurs.}
 
-\vspace{100mm}
 
 
 \inthenotessubproblem{A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Find the probability that exactly four successes occur.}
 \end{enumerate}
-\newpage 
 
 \problem{In this question, we are going to generalize the problem above.}
 
