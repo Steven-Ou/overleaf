@@ -59,13 +59,13 @@ When $B$ has occurred, $B$ becomes our "new sample space" or the realm of all po
 \\The total number of outcomes $|S|$ is calculated by choosing 5 white balls from 70 and 1 golden ball from 24: $\binom{70}{5} \times \binom{24}{1} = 290,472,336$. Since we have one unique ticket,$P(A) = \frac{1}{290,472,336}$
 
 \intermediatesubproblem{Suppose we are watching the lottery live and the first (white) number drawn is 65. What is the probability that we win the lottery ?}
-\\The probability we win the lottery is $P(A) = \frac{1}{290,472,336}$.
+\\The probability we win the lottery is $\frac{1}{\binom{69}{4} \times \binom{24}{1}}$.
 
 \intermediatesubproblem{Suppose we are watching the lottery live and the first few (white) numbers drawn are 30, 54, 63, 65. What is the probability that we win the lottery?}
+\\The probability that we win the lottery is $\frac{1}{\binom{66}{1} \times \binom{24}{1}} = \frac{1}{66 \times 24} = \frac{1}{1,584}$
 
-
-\hardsubproblem{If you win the lottery, what would you do with the money?}
-
+\hardsubproblem{If you win the lottery, what would you do with the money?}\\
+If I win the lottery, I would invest all of it into stocks markets!! Increasing the money, it doesn't hurt to have more money!
 
 \end{enumerate}
 
@@ -77,32 +77,36 @@ When $B$ has occurred, $B$ becomes our "new sample space" or the realm of all po
 
 \easysubproblem{ If $S$ is the sample space of an experiment and $A$ is any event in that space, what is the value of $P(A|S)$? 
 }
-
+$$P(A|S) = \frac{P(A \cap S)}{P(S)} = \frac{P(A)}{1} = P(A)$$
 
 
 \easysubproblem{Prove if $P(B)>0$, then $P(B|B) = 1$.}
-
+$$P(B|B) = \frac{P(B \cap B)}{P(B)} = \frac{P(B)}{P(B)} = 1$$
 
 
 
 \inthenotessubproblem{Prove if $P(B)>0$, then $P(A^c|B) = 1 - P(A|B)$}
+\\First step add $- P(A|B)$ to the left side. Then:$$\frac{P(A^c \cap B) + P(A \cap B)}{P(B)} = \frac{P(B)}{P(B)} = 1$$
 
 
 
+\inthenotessubproblem{State and prove The Basic Conditioning Rule.}\\
+Statement: \\$P(A \cap B) = P(A)P(B|A)$ (if $P(A)>0$)\\ or\\ $P(A \cap B) = P(B)P(A|B)$ (if $P(B)>0$).\\Proof: Start with the RHS: \\$P(A)P(B|A) = P(A) \frac{P(B \cap A)}{P(A)} = P(B \cap A) = P(A \cap B)$.
 
-\inthenotessubproblem{State and prove The Basic Conditioning Rule.}
 
-
-
-\inthenotessubproblem{State and prove The Generalized Conditioning Rule.}
-
+\inthenotessubproblem{State and prove The Generalized Conditioning Rule.}\\
+Statement:\\ $P(E_1 \cap E_2 \cap \dots \cap E_n) = P(E_1)P(E_2|E_1)P(E_3|E_1 \cap E_2) \dots P(E_n|E_1 \cap \dots \cap E_{n-1})$.\\
+Proof:
+\\$$P(E_1) \cdot \frac{P(E_1 \cap E_2)}{P(E_1)} \cdot \frac{P(E_1 \cap E_2 \cap E_3)}{P(E_1 \cap E_2)} \dots \frac{P(E_1 \cap E_2 \cap \dots \cap E_n)}{P(E_1 \cap E_2 \cap \dots \cap E_{n-1})}$$
+\\After canceling them $P(E_1 \cap E_2 \cap \dots \cap E_n)$
 
 
 \easysubproblem{Suppose $E, F$ and $G$ are events of a sample space $S$. How many different ways can you write $P(E \cap F \cap G)$ using The Generalized Conditioning Rule? }
-
+\\There's 3! = 6 ways of writing it : \\$1.P(E) P(F|E) P(G|E \cap F)$\space$2.P(E) P(G|E) P(F|E \cap G)$\space
+$3.P(F)P(E|F)P(G|F \cap E)$ \space$4.P(F)P(G|F)P(E|F \cap G)$ \space$5.P(G)P(E|G)P(F|G \cap E)$ \space$6.P(G)P(F|G)P(E|G \cap F)$ 
 
 \end{enumerate}
-
+\newpage
 
 
 \problem{These exercises will test some of the applications of conditional probabilities. }
@@ -113,8 +117,9 @@ When $B$ has occurred, $B$ becomes our "new sample space" or the realm of all po
 \easysubproblem{ Two fair dice are rolled. What is the conditional probability that at least
 one die lands on 6 given that the dice land on different numbers?
  }
-
-
+\\ Let A = {At least one die lads on 6}\\Let B ={The dice land on different numbers}\\ B= 36 possible outcomes removing the doubles because it won't occur so 36-6=30. \\ $A\cap B =$10, results that can have 6 in it so now...\\
+$P(A|B) = \frac{|A \cap B|}{|B|}$
+$P(A|B) = \frac{10}{30} = \mathbf{\frac{1}{3}}$
 
 \easysubproblem{Suppose two fair dice are rolled and let $A = \{ \text{the first die lands on 6} \}$. Let $B_i = \{ \text{the sum of the dice is}~ i \}$. Find $P(A | B_2), P(A| B_3), \ldots, P(A | B_{12})$. 
 }

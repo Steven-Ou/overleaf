@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  8 APR 2026 00:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  9 APR 2026 02:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -453,7 +453,7 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw6.tex:67: Undefined control sequence.
 l.67 \hardsubproblem
-                    {If you win the lottery, what would you do with the money?}
+                    {If you win the lottery, what would you do with the mone...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -472,6 +472,9 @@ l.70 \end{enumerate}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[1
+
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 /Users/steve/CS/overleaf/stat/hw6.tex:73: Undefined control sequence.
 l.73 \problem
              {These exercises will test some of the theoretic aspects of con...
@@ -490,9 +493,6 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[1
-
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 /Users/steve/CS/overleaf/stat/hw6.tex:83: Undefined control sequence.
 l.83 \easysubproblem
                     {Prove if $P(B)>0$, then $P(B|B) = 1$.}
@@ -513,7 +513,7 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw6.tex:93: Undefined control sequence.
 l.93 \inthenotessubproblem
-                          {State and prove The Basic Conditioning Rule.}
+                          {State and prove The Basic Conditioning Rule.}\\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -522,15 +522,20 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw6.tex:97: Undefined control sequence.
 l.97 \inthenotessubproblem
-                          {State and prove The Generalized Conditioning Rule.}
+                          {State and prove The Generalized Conditioning Rule...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:101: Undefined control sequence.
-l.101 \easysubproblem
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--100
+
+ []
+
+/Users/steve/CS/overleaf/stat/hw6.tex:104: Undefined control sequence.
+l.104 \easysubproblem
                      {Suppose $E, F$ and $G$ are events of a sample space $S...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -539,19 +544,30 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw6.tex:104: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:108: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 \end{enumerate}
+l.108 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:108: Undefined control sequence.
-l.108 \problem
+
+Overfull \hbox (34.85342pt too wide) in paragraph at lines 100--108
+\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )$ $2\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 E \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$ $3\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 \
+ []
+
+
+Overfull \hbox (58.89941pt too wide) in paragraph at lines 100--108
+\OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )$  $4\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 F \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )$  $5\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G \OMS/cmsy/m/n/12 \ \OML/cmm/m/it/12 E\OT1/cmr/m/n/12 )$  $6\OML/cmm/m/it/12 :P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 F\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 E\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 G \OMS/cmsy/m/n/12 \
+ []
+
+[2] [3]
+/Users/steve/CS/overleaf/stat/hw6.tex:112: Undefined control sequence.
+l.112 \problem
               {These exercises will test some of the applications of conditi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -559,8 +575,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:113: Undefined control sequence.
-l.113 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:117: Undefined control sequence.
+l.117 \easysubproblem
                      { Two fair dice are rolled. What is the conditional pro...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -568,8 +584,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:119: Undefined control sequence.
-l.119 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:124: Undefined control sequence.
+l.124 \easysubproblem
                      {Suppose two fair dice are rolled and let $A = \{ \text...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -577,8 +593,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:126: Undefined control sequence.
-l.126 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:131: Undefined control sequence.
+l.131 \intermediatesubproblem
                              {You are a member of a class of 18 students. A ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -586,8 +602,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:129: Undefined control sequence.
-l.129 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:134: Undefined control sequence.
+l.134 \easysubproblem
                      {Each time a shopper purchases a tube of toothpaste,
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -596,24 +612,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw6.tex:143: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:148: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.143 \end{enumerate}
+l.148 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-
-Overfull \hbox (22.87206pt too wide) in paragraph at lines 113--143
-\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 B[] \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f[] \OML/cmm/m/it/12 i\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . Find $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; [] ; P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 B[]\OT1/cmr/m/n/12 )$.
- []
-
-/Users/steve/CS/overleaf/stat/hw6.tex:147: Undefined control sequence.
-l.147 \problem
+/Users/steve/CS/overleaf/stat/hw6.tex:152: Undefined control sequence.
+l.152 \problem
               {These questions will test the idea behind independence which ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -621,8 +632,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:152: Undefined control sequence.
-l.152 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:157: Undefined control sequence.
+l.157 \inthenotessubproblem
                            { Formally, how do we define the word independenc...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -630,8 +641,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:155: Undefined control sequence.
-l.155 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:160: Undefined control sequence.
+l.160 \inthenotessubproblem
                            {Intuitively, what does it mean when we say two e...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -639,8 +650,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:158: Undefined control sequence.
-l.158 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:163: Undefined control sequence.
+l.163 \inthenotessubproblem
                            {Explain why it is impossible for two events, $E$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -648,8 +659,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:161: Undefined control sequence.
-l.161 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:166: Undefined control sequence.
+l.166 \hardsubproblem
                      {In class, we answered the rocket question via two diff...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -657,8 +668,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:164: Undefined control sequence.
-l.164 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:169: Undefined control sequence.
+l.169 \inthenotessubproblem
                            {A sequence of five independent trials are to be ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -666,8 +677,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:168: Undefined control sequence.
-l.168 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:173: Undefined control sequence.
+l.173 \inthenotessubproblem
                            {A sequence of five independent trials are to be ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -676,20 +687,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw6.tex:169: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:174: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.169 \end{enumerate}
+l.174 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[2]
-/Users/steve/CS/overleaf/stat/hw6.tex:171: Undefined control sequence.
-l.171 \problem
+[4]
+/Users/steve/CS/overleaf/stat/hw6.tex:176: Undefined control sequence.
+l.176 \problem
               {In this question, we are going to generalize the problem above.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -697,8 +708,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:174: Undefined control sequence.
-l.174     \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:179: Undefined control sequence.
+l.179     \intermediatesubproblem
                                  {A sequence of $n$ independent trials are t...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -707,36 +718,36 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw6.tex:175: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:180: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.175 \end{enumerate}
+l.180 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3] (./hw6.aux)
+[5] (./hw6.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15460 strings out of 467525
- 326770 string characters out of 5418982
- 709593 words of memory out of 5000000
- 44128 multiletter control sequences out of 15000+600000
- 633141 words of font info for 59 fonts, out of 8000000 for 9000
+ 15466 strings out of 467525
+ 326829 string characters out of 5418982
+ 708594 words of memory out of 5000000
+ 44131 multiletter control sequences out of 15000+600000
+ 634069 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,6n,121p,722b,201s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw6.pdf (3 pages, 111319 bytes).
+ 116i,6n,121p,722b,202s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on hw6.pdf (5 pages, 131631 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 78 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
