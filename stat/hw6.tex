@@ -122,15 +122,14 @@ $P(A|B) = \frac{|A \cap B|}{|B|}$
 $P(A|B) = \frac{10}{30} = \mathbf{\frac{1}{3}}$
 
 \easysubproblem{Suppose two fair dice are rolled and let $A = \{ \text{the first die lands on 6} \}$. Let $B_i = \{ \text{the sum of the dice is}~ i \}$. Find $P(A | B_2), P(A| B_3), \ldots, P(A | B_{12})$. 
-}
-
+}\\
+$P(A|B_2) \dots P(A|B_6) = 0$ \\(Sum cannot be $\leq 6$ if the first die is 6).\\$P(A|B_7) = 1/6$ (Outcome is $(6,1)$ out of 6 possible sums).\\$P(A|B_8) = 1/5$ (Outcome is $(6,2)$ out of 5 possible sums).\\$P(A|B_9) = 1/4$, $P(A|B_{10}) = 1/3$, $P(A|B_{11}) = 1/2$; $P(A|B_{12}) = 1/1 = 1$.
 
 
 %\easysubproblem{Suppose two fair dice are rolled and let $A = \{ \text{at least one of the dice lands on 6} \}$. Let $B_i = \{ \text{the sum of the dice is}~ i \}$. Find $P(A | B_2), P(A| B_3), \ldots, P(A | B_{12})$. }
 
 \intermediatesubproblem{You are a member of a class of 18 students. A bowl contains 18 chips: 1 blue and 17 red. Each student is to take 1 chip from the bowl without replacement. The student who draws the blue chip is guaranteed an A for the course. If you have a choice of drawing first, fifth, or last, which position would you choose? Justify your choice on the basis of probability.}
-
-
+\\ The position that I would choose does not matter. Using the Generalized Conditioning Rule, the probability for the $k$-th person is:$P(k\text{-th is blue}) = P(1\text{st is red}) \dots P((k-1)\text{th is red})P(k\text{-th is blue}| \dots)$$= \frac{17}{18} \times \frac{16}{17} \times \dots \times \frac{18-k+1}{18-k+2} \times \frac{1}{18-k+1} = \frac{1}{18}$.All positions have a $1/18$ chance.
 \easysubproblem{Each time a shopper purchases a tube of toothpaste,
 he chooses either brand $A$ or brand $B$. Suppose that for
 each purchase after the first, the probability is 1/3 that he
