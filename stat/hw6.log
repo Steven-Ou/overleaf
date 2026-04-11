@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  10 APR 2026 02:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  11 APR 2026 01:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -637,6 +637,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[4]
 /Users/steve/CS/overleaf/stat/hw6.tex:156: Undefined control sequence.
 l.156 \inthenotessubproblem
                            { Formally, how do we define the word independenc...
@@ -664,8 +665,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:165: Undefined control sequence.
-l.165 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:166: Undefined control sequence.
+l.166 \hardsubproblem
                      {In class, we answered the rocket question via two diff...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -673,8 +674,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:168: Undefined control sequence.
-l.168 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:170: Undefined control sequence.
+l.170 \inthenotessubproblem
                            {A sequence of five independent trials are to be ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -682,8 +683,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:172: Undefined control sequence.
-l.172 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:174: Undefined control sequence.
+l.174 \inthenotessubproblem
                            {A sequence of five independent trials are to be ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -692,20 +693,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw6.tex:173: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:176: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.173 \end{enumerate}
+l.176 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[4]
-/Users/steve/CS/overleaf/stat/hw6.tex:175: Undefined control sequence.
-l.175 \problem
+/Users/steve/CS/overleaf/stat/hw6.tex:178: Undefined control sequence.
+l.178 \problem
               {In this question, we are going to generalize the problem above.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -713,8 +713,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw6.tex:178: Undefined control sequence.
-l.178     \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw6.tex:181: Undefined control sequence.
+l.181     \intermediatesubproblem
                                  {A sequence of $n$ independent trials are t...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -722,19 +722,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[5]
 
-/Users/steve/CS/overleaf/stat/hw6.tex:179: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw6.tex:183: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.179 \end{enumerate}
+l.183 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[5] (./hw6.aux)
+[6] (./hw6.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -743,16 +744,16 @@ L3 programming layer <2026-01-19>
 Here is how much of TeX's memory you used:
  15466 strings out of 467525
  326829 string characters out of 5418982
- 711594 words of memory out of 5000000
+ 710594 words of memory out of 5000000
  44131 multiletter control sequences out of 15000+600000
  634069 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,6n,121p,722b,202s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw6.pdf (5 pages, 133762 bytes).
+Output written on hw6.pdf (6 pages, 136638 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

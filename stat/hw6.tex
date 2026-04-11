@@ -141,7 +141,7 @@ that both his first and second purchases will be brand $A$
 and both his third and fourth purchases will be brand $B$?
 }
 
-
+$P(A_1) = 1/2$.$P(A_2|A_1) = 1/3$ (same brand).$P(B_3|A_2) = 2/3$ (switch).$P(B_4|B_3) = 1/3$ (same brand).$P(A_1 \cap A_2 \cap B_3 \cap B_4) = \frac{1}{2} \times \frac{1}{3} \times \frac{2}{3} \times \frac{1}{3} = \frac{2}{54} = \frac{1}{27}$.
 
 
 \end{enumerate}
@@ -153,29 +153,33 @@ and both his third and fourth purchases will be brand $B$?
 
 \begin{enumerate}
 
-\inthenotessubproblem{ Formally, how do we define the word independence? }
+\inthenotessubproblem{ Formally, how do we define the word independence? }\\
+Two events $E$ and $F$ are independent if $P(E \cap F) = P(E)P(F)$
+
+\inthenotessubproblem{Intuitively, what does it mean when we say two events are independent?}\\
+The occurrence of one event does not affect the probability of the other event.
+
+\inthenotessubproblem{Explain why it is impossible for two events, $E$ and $F$, to be independent and disjoint. You may assume that $P(E) > 0$ and $P(F) > 0$.}\\
+If $E$ and $F$ are independent and have $P > 0$, then $P(E \cap F) = P(E)P(F) > 0$. If they are disjoint, $P(E \cap F) = 0$. You cannot have a number be both $>0$ and $=0$ simultaneously.
 
 
-\inthenotessubproblem{Intuitively, what does it mean when we say two events are independent?}
-
-
-\inthenotessubproblem{Explain why it is impossible for two events, $E$ and $F$, to be independent and disjoint. You may assume that $P(E) > 0$ and $P(F) > 0$.}
-
-
-\hardsubproblem{In class, we answered the rocket question via two different methods (a direct method followed by the complement method). We then considered the following problem where we used the direct method: \textit{A biased coin is repeatedly tossed until a heads appears for the first time at which point the experiment stops. Assuming that the outcomes of the tosses are independent of each other, find the probability that a heads will be obtained at some point. You may assume the probability that we get heads on any flip is 0.0001.} Try to answer this problem using the complement method.} 
+\hardsubproblem{In class, we answered the rocket question via two different methods (a direct method followed by the complement method). We then considered the following problem where we used the direct method: \textit{A biased coin is repeatedly tossed until a heads appears for the first time at which point the experiment stops. Assuming that the outcomes of the tosses are independent of each other, find the probability that a heads will be obtained at some point. You may assume the probability that we get heads on any flip is 0.0001.} Try to answer this problem using the complement method.} \\
+$A = \{\text{eventually get heads}\}$, \\$A^c = \{\text{never get heads / infinite tails}\}$.$P(A^c) = \lim_{n \to \infty} (0.9999)^n = 0$.\\$P(A) = 1 - P(A^c) = 1 - 0 = 1$.
 
 
 \inthenotessubproblem{A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Find the probability that at least one success occurs.}
-
+\\$P(\text{Success}) = 0.75$, \\$P(\text{Failure}) = 0.25,$\\$P(\text{at least one}) = 1 - P(\text{all failures}) = 1 - (0.25)^5 = 1 - 0.0009765625 = 0.999023$
 
 
 \inthenotessubproblem{A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Find the probability that exactly four successes occur.}
+\\ $\binom{5}{4} * 0.75^{4}*0.25^1=0.3955$\\The probability of exactly 4 successes occur is about 40 percent. 
 \end{enumerate}
 
 \problem{In this question, we are going to generalize the problem above.}
 
 \begin{enumerate}
-    \intermediatesubproblem{A sequence of $n$ independent trials are to be performed where each trial may result in either a success with probability $p$ or may result in a failure with probability $1-p$. Show that the probability that we obtain exactly $x$ successes (where $x$ is either $0, 1, 2, \ldots, n$) is given by $\binom{n}{x}p^x (1-p)^{n-x}$. (Please star or circle this problem! We will come back to this in a later chapter).}
+    \intermediatesubproblem{A sequence of $n$ independent trials are to be performed where each trial may result in either a success with probability $p$ or may result in a failure with probability $1-p$. Show that the probability that we obtain exactly $x$ successes (where $x$ is either $0, 1, 2, \ldots, n$) is given by $\binom{n}{x}p^x (1-p)^{n-x}$. (Please star or circle this problem! We will come back to this in a later chapter).}\\
+    $P(X=x) = \binom{n}{x}p^x(1-p)^{n-x}$ \space Not going to  circle it but will give the formula.
 \end{enumerate}
 
 
