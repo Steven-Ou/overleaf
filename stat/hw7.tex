@@ -1,0 +1,209 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+
+
+
+\title{MATH 241 Spring 2026 Homework \#7}
+
+\author{Elliot Gangaram} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace by 11:59PM Sunday, April $12^{th}$, 2026 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{Menu} and select \textit{Copy Project}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{Please skim through the article found here: \url{https://en.wikipedia.org/wiki/Bayes\%27_theorem}. }
+
+
+
+\begin{enumerate}
+
+\easysubproblem{When was Bayes' Theorem published?}\\
+Bayes' Theorem was first published posthumously in 1763. It appeared in a paper titled "An Essay Towards Solving a Problem in the Doctrine of Chances". The work was edited and presented to the Royal Society by his friend Richard Price, two years after Thomas Bayes's death. 
+
+
+\easysubproblem{True or False? Bayes' Theorem is to the theory of probability what the Pythagorean Theorem is to  geometry. }
+\\True
+\end{enumerate}
+
+
+\problem{These exercises will review The Law of Total Probability. }
+
+\begin{enumerate}
+
+
+\inthenotessubproblem{ State The Law of Total Probability.}\\
+Let $B_1, B_2, \dots, B_n$ be a partition of a sample space $S$, such that $P(B_i) > 0$ for all $i$. For any event $A$, the Law of Total Probability states that the probability of $A$ is the sum of the probabilities of these mutually exclusive intersections:\\$$P(A) = \sum_{i=1}^{n} P(A \cap B_i)$$\\Using the multiplication rule for conditional probability, this is most commonly written as:
+$$P(A) = \sum_{i=1}^{n} P(A|B_i)P(B_i)$$
+
+\inthenotessubproblem{Prove The Law of Total Probability.}
+
+
+
+\inthenotessubproblem{State Bayes' Theorem.}
+
+
+
+\inthenotessubproblem{Prove Bayes' Theorem.}
+
+
+
+\inthenotessubproblem{In order to use The Law of Total Probability or Bayes' Theorem, we always need a partition. Explain what is meant by a partition.}
+\end{enumerate}
+
+
+\problem{These exercises will test some of the applications of The Law of Total Probability and Bayes' Theorem.}
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{Suppose we have a deck of cards from which Player 1 randomly selects a single card (without replacement) and then Player 2 also selects a single card from the deck. Find the probability that Player 2 draws an ace. Does your answer make sense?
+ }
+
+
+\intermediatesubproblem{Suppose there are bowls, $B_1, B_2$, and $B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random. What is the probability that we obtain a red chip?
+}
+
+
+\intermediatesubproblem{Suppose there are bowls, $B_1, B_2$, and $B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 1}? }
+
+
+\intermediatesubproblem{Suppose there are bowls, $B_1, B_2, B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 2}? }
+
+
+\intermediatesubproblem{Suppose there are bowls, $B_1, B_2, B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 3}? }
+
+
+\intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
+Independents, whereas 30 percent classify themselves as Liberals and 24
+percent say that they are Conservatives. In a recent local election, 35 percent
+of the Independents, 62 percent of the Liberals, and 58 percent of the
+Conservatives voted. A voter is chosen at random. Given that this person
+voted in the local election, what is the probability that he or she is an \textbf{Independent}?}
+
+\vspace{100mm}
+
+\intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
+Independents, whereas 30 percent classify themselves as Liberals and 24
+percent say that they are Conservatives. In a recent local election, 35 percent
+of the Independents, 62 percent of the Liberals, and 58 percent of the
+Conservatives voted. A voter is chosen at random. Given that this person
+voted in the local election, what is the probability that he or she is a \textbf{Liberal}?}
+
+
+
+\intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
+Independents, whereas 30 percent classify themselves as Liberals and 24
+percent say that they are Conservatives. In a recent local election, 35 percent
+of the Independents, 62 percent of the Liberals, and 58 percent of the
+Conservatives voted. A voter is chosen at random. Given that this person
+voted in the local election, what is the probability that he or she is a \textbf{Conservative}?}
+
+
+
+\intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
+Independents, whereas 30 percent classify themselves as Liberals and 24
+percent say that they are Conservatives. In a recent local election, 35 percent
+of the Independents, 62 percent of the Liberals, and 58 percent of the
+Conservatives voted. A voter is chosen at random. What percent of voters participated in the local election?}
+
+
+
+\hardsubproblem{An ectopic (abnormal) pregnancy is twice as likely to develop when the pregnant
+woman is a smoker as it is when she is a nonsmoker. If 32 percent of women
+of childbearing age are smokers, what percentage of women having ectopic
+pregnancies are smokers?}
+
+
+\hardsubproblem{Ninety-eight percent of all babies survive delivery. However, 15 percent
+of all births involve Cesarean (C) sections, and when a C section is
+performed, the baby survives 96 percent of the time. If a randomly chosen pregnant woman does not have a C section, then what is the probability that her
+baby survives?
+}
+
+
+\hardsubproblem{ To become an actuary, this involves taking a probability exam known as Exam P. (If you find probability interesting or you're unsure of careers in math, then take a look at this website: \url{https://www.beanactuary.org/why-actuarial-science/} and this site: \url{https://www.ezrapenland.com/resources/actuarial-salary-survey/}.) This is a sample question from Exam P: An insurance company examines its pool of auto insurance customers and gathers the following information:
+\begin{enumerate}
+    \item All customers insure at least one car.
+    \item 70\% of the customers insure more than one car.
+    \item 20\% of the customers insure a sports car.
+    \item Of those customers who insure more than one car, 15\% insure a sports car.
+\end{enumerate}
+Calculate the probability that a randomly selected customer insures exactly one car and that car is not a sports car.}
+
+\newpage 
+
+\easysubproblem{This is also a sample question from Exam P: An insurance company issues life insurance policies in three separate categories: standard, preferred, and ultra-preferred. Of the company’s policyholders, 50\% are standard, 40\% are preferred, and 10\% are ultra-preferred. Each standard policyholder has probability 0.010 of dying in the next year, each preferred policyholder has probability 0.005 of dying in the next year, and each ultra-preferred policyholder has probability 0.001 of dying in the next year. A policyholder dies in the next year. What is the probability that the deceased policyholder was ultra-preferred?}
+
+
+\end{enumerate}
+
+
+
+
+\problem{In this exercise, we will study the Monty Hall problem from both a conditional and visual perspective.}
+
+\begin{enumerate}
+\hardsubproblem{Suppose you are a contestant on a game show and you have to choose between 3 closed doors. Whatever is behind your chosen door, is your prize. Behind one door is a brand new car (which is what you would like to have) and behind the other two doors are goats. The host of the show Monty knows where the car and goats are located, but you, being the contestant, does not. That is, from your perspective, the placement of the car and goats are random. You now select a door. Before Monty opens up your selected door, he opens up a different door which reveals a goat. (Note that Monty will never open up your door first and he will never open up the door with the car first. If he has multiple eligible doors to choose from, then he selects a door at random). Monty then asks you if you would like to keep your door or switch doors. What should you do and why? For concreteness, suppose we chose Door 1 and Monty opens up Door 3 to reveal a goat. What is the probability that the car is behind Door 2? What is the probability that the car is behind Door 1?}
+
+\begin{tcolorbox}
+    This question is difficult so I'll start you off. Let
+    \begin{align*}
+        B_1 &= \{ \text{the car is behind Door} ~ 1 \}, \\
+        B_2 &= \{ \text{the car is behind Door} ~ 2 \}, \\
+        B_3 &= \{ \text{the car is behind Door} ~ 3 \}, \\
+        \text{and} ~ A &= \{ \text{Monty opens up Door 3 which reveals a goat} \}
+    \end{align*}
+    Find $P(B_2 | A)$ and find $P(B_1 |A)$. 
+\end{tcolorbox}
+
+
+\easysubproblem{Watch the video provided here which creates a diagram: \url{https://www.youtube.com/watch?v=cphYs1bCeDs}. You do not have to write anything for this question.}
+
+\easysubproblem{The Monty Hall problem is called a  \textit{veridical paradox}. A veridical paradox produces a result that appears counter to intuition, but is demonstrated to be true nonetheless. The paradox comes in from the fact that at the moment Monty opens up Door 3, there are only two configurations left: either Door 1 has the car and Door 2 has the goat OR Door 1 has the goat and Door 2 has the car. Since there are only two configurations, we think there is a 50-50 shot. The problem is, we are not in a simple sample space and this is counter intuitive. Many people have a tough time in believing that we should switch doors despite seeing the math above. To understand why this makes sense intuitively, here are two comments from the YouTube video above: \\
+
+@rogerbodey9475: \qu{The simplest solution: \\
+                                1. If you swap doors, you will always get other object (ie goat to car, car to goat). \\
+                                2. Two-thirds of the time you will pick a goat initially.
+Need I say more?} \\
+
+@cslack813: \qu{if you chose a goat initially Monty HAS TO CHOOSE THE OTHER GOAT. Therefore this needs to be factored into the decision to switch and it’s not 50/50 despite the appearance}. \\
+
+After reading these comments, does the Monty Hall problem seem less paradoxical?}
+
+\hardsubproblem{Consider the following modified version of the Monty Hall Problem: Suppose you are a contestant on a game show and you have to choose between 100 closed doors. Whatever is behind your chosen door, is your prize. Behind one door is a brand new car and behind the other 99 doors are goats. The host of the show, Monty, knows where the car and goats are located, but you, the contestant, does not. Suppose you choose a door at random. Before Monty opens up your chosen door, he opens up 98 other doors which reveals all goats. Note that while opening up these 98 other doors, Monty will never open your initial door and will never open the door with the car. At this point, there are two doors left. Monty then asks you if you would like to keep your door or if you would like to switch doors. Find the probability you win the car by switching. }
+
+\end{enumerate}
+
+
+
+
+\end{document}
