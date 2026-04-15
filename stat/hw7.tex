@@ -61,24 +61,23 @@ Bayes' Theorem was first published posthumously in 1763. It appeared in a paper 
 
 
 \inthenotessubproblem{ State The Law of Total Probability.}\\
-Let $B_1, B_2, \dots, B_n$ be a partition of a sample space $S$, such that $P(B_i) > 0$ for all $i$. For any event $A$, the Law of Total Probability states that the probability of $A$ is the sum of the probabilities of these mutually exclusive intersections:\\$$P(A) = \sum_{i=1}^{n} P(A \cap B_i)$$\\Using the multiplication rule for conditional probability, this is most commonly written as:
-$$P(A) = \sum_{i=1}^{n} P(A|B_i)P(B_i)$$
-
-\inthenotessubproblem{Prove The Law of Total Probability.}
-
+Suppose the events $B_1, B_2, \dots, B_K$ forms a partition on a sample space $S$ such that $P(B_j) > 0$ for $j=1,2,\dots,k$. Then for every event $A$ in $S$, $$P(A)=\sum_{j=1}^{K}P(B_j)P(A|B_j)$$
+\inthenotessubproblem{Prove The Law of Total Probability.}\\
+Proof: Since $B_1, B_2, \dots, B_K$ partitions $S$, then $(B_1 \cap A, B_2 \cap A, \dots, B_K \cap A)$ partitions $A$. By the definition of partition, this means $[(B_1 \cap A) \cup (B_2 \cap A) \cup \dots \cup (B_K \cap A) = A]$. By the 3rd Axiom of Probability (for disjoint events): $$P(B_1 \cap A) + \dots + P(B_K \cap A) = P(A)$$Which can also be written as: $\sum_{i=1}^{K}P(B_i \cap A) = P(A)$. By the Basic Conditional Rule, this substitutes to: $$\sum_{i=1}^{K}P(B_i)P(A|B_i) = P(A)$$
 
 
 \inthenotessubproblem{State Bayes' Theorem.}
 
+Suppose the events $B_1, B_2, \dots, B_k$ forms a partition on a sample space $S$ such that $P(B_j) > 0$ for $j=1,2,\dots,k$. Also suppose that $A$ is any event in $S$ such that $P(A) > 0$. Then for $i=1,2,\dots,k$: $$P(B_i|A) = \frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{k}P(B_j)P(A|B_j)}$$
 
+\inthenotessubproblem{Prove Bayes' Theorem.}\\
+$P(B_i|A) = \frac{P(B_i \cap A)}{P(A)}$
+$= \frac{P(B_i)P(A|B_i)}{P(A)}$$= \frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{k}P(B_j)P(A|B_j)}$ 
+\\By the Basic Conditional Rule, we were able to complete this step :$P(B_i|A) = \frac{P(B_i \cap A)}{P(A)}$, then we substituting the denominator P(A) using the law of total probability, we end up with the last part:$ \frac{P(B_i)P(A|B_i)}{\sum_{j=1}^{k}P(B_j)P(A|B_j)}$.
+\inthenotessubproblem{In order to use The Law of Total Probability or Bayes' Theorem, we always need a partition. Explain what is meant by a partition.}\\
+A partition fragments the sample space into disjoint pieces (and if you were to "glue" these pieces back together, you would have recovered the entire sample space).
 
-\inthenotessubproblem{Prove Bayes' Theorem.}
-
-
-
-\inthenotessubproblem{In order to use The Law of Total Probability or Bayes' Theorem, we always need a partition. Explain what is meant by a partition.}
 \end{enumerate}
-
 
 \problem{These exercises will test some of the applications of The Law of Total Probability and Bayes' Theorem.}
 
@@ -184,6 +183,7 @@ Calculate the probability that a randomly selected customer insures exactly one 
     \end{align*}
     Find $P(B_2 | A)$ and find $P(B_1 |A)$. 
 \end{tcolorbox}
+
 
 \easysubproblem{Watch the video provided here which creates a diagram: \url{https://www.youtube.com/watch?v=cphYs1bCeDs}. You do not have to write anything for this question.}
 
