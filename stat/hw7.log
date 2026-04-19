@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  17 APR 2026 01:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 APR 2026 01:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -751,8 +751,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:193: Undefined control sequence.
-l.193 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:192: Undefined control sequence.
+l.192 \easysubproblem
                      {Watch the video provided here which creates a diagram:...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -760,8 +760,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:193: Undefined control sequence.
-l.193 ...ovided here which creates a diagram: \url
+/Users/steve/CS/overleaf/stat/hw7.tex:192: Undefined control sequence.
+l.192 ...ovided here which creates a diagram: \url
                                                   {https://www.youtube.com/w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -770,13 +770,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (190.40092pt too wide) in paragraph at lines 193--194
+Overfull \hbox (190.40092pt too wide) in paragraph at lines 192--193
 []\OT1/cmr/m/n/12 Watch the video pro-vided here which cre-ates a di-a-gram: https://www.youtube.com/watch?v=cphYs1bCeDs.
  []
 
 [6]
-/Users/steve/CS/overleaf/stat/hw7.tex:195: Undefined control sequence.
-l.195 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:194: Undefined control sequence.
+l.194 \easysubproblem
                      {The Monty Hall problem is called a  \textit{veridical ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -785,12 +785,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:197: Undefined control sequence.
-l.197 @rogerbodey9475: \qu
+/Users/steve/CS/overleaf/stat/hw7.tex:196: Undefined control sequence.
+l.196 @rogerbodey9475: \qu
                           {The simplest solution: \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -799,12 +799,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--201
+Underfull \hbox (badness 10000) in paragraph at lines 196--200
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:202: Undefined control sequence.
-l.202 @cslack813: \qu
+/Users/steve/CS/overleaf/stat/hw7.tex:201: Undefined control sequence.
+l.201 @cslack813: \qu
                      {if you chose a goat initially Monty HAS TO CHOOSE THE ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -813,12 +813,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:206: Undefined control sequence.
-l.206 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:205: Undefined control sequence.
+l.205 \hardsubproblem
                      {Consider the following modified version of the Monty H...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
