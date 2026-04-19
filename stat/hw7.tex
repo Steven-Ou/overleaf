@@ -94,16 +94,20 @@ $P(A|B_2) = \frac{4}{51}$ (All four aces are still in the deck)
 \\Using the law of total prob:
 $$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2)$$$$P(A) = \left(\frac{4}{52}\right)\left(\frac{3}{51}\right) + \left(\frac{48}{52}\right)\left(\frac{4}{51}\right)$$$$P(A) = \frac{12}{2652} + \frac{192}{2652}$$$$P(A) = \frac{204}{2652}$$ My answer make senese since the outcome of the unconditional probabilities of both players drawing an ace is exactly the same as if they had drawn first. 
 \intermediatesubproblem{Suppose there are bowls, $B_1, B_2$, and $B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random. What is the probability that we obtain a red chip?
-}
+}\\Creating some events:\\
+Let $B_1 = \{\text{Bowl 1 is chosen}\}$$\rightarrow P(B_1) = \frac{1}{3}\\$Let $B_2 = \{\text{Bowl 2 is chosen}\}$ $\rightarrow P(B_2) = \frac{1}{3}\\$Let $B_3 = \{\text{Bowl 3 is chosen}\}$ $\rightarrow P(B_3) = \frac{1}{3}\\$Let $A = \{\text{We obtain a red chip}\}$\\ $P(A|B_1) = \frac{2}{6} = \frac{1}{3}$ \space | $P(A|B_2) = \frac{1}{3}$ \space | $P(A|B_3) = \frac{5}{9}$\\Now, using law of total prob:$$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)$$$$P(A) = \left(\frac{1}{3}\right)\left(\frac{1}{3}\right) + \left(\frac{1}{3}\right)\left(\frac{1}{3}\right) + \left(\frac{1}{3}\right)\left(\frac{5}{9}\right)$$$$P(A) = \frac{1}{9} + \frac{1}{9} + \frac{5}{27}$$$$P(A) = \frac{3}{27} + \frac{3}{27} + \frac{5}{27}$$$$P(A) = \frac{11}{27}$$The probability that we obtain a red chip is $\frac{11}{27}$.
 
 
 \intermediatesubproblem{Suppose there are bowls, $B_1, B_2$, and $B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 1}? }
-
+\\Using the event from above:
+Now, using Bayes' Theorem:$$P(B_1|A) = \frac{P(B_1)P(A|B_1)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)}$$$$P(B_1|A) = \frac{\left(\frac{1}{3}\right)\left(\frac{1}{3}\right)}{\left(\frac{1}{3}\right)\left(\frac{1}{3}\right) + \left(\frac{1}{3}\right)\left(\frac{1}{3}\right) + \left(\frac{1}{3}\right)\left(\frac{5}{9}\right)}$$$$P(B_1|A) = \frac{\frac{1}{9}}{\frac{1}{9} + \frac{1}{9} + \frac{5}{27}}$$$$P(B_1|A) = \frac{\frac{3}{27}}{\frac{3}{27} + \frac{3}{27} + \frac{5}{27}}$$$$P(B_1|A) = \frac{\frac{3}{27}}{\frac{11}{27}}$$$$P(B_1|A) = \frac{3}{11}$$The probability this red chip came from Bowl 1 is $\frac{3}{11}$.
 
 \intermediatesubproblem{Suppose there are bowls, $B_1, B_2, B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 2}? }
-
+\\Since the bowl 2 is similar to bowl 1 because of there probability is equals to 1/3. We going to use the same method as above but using $P(B_2)P(A|B_2)$ , we will still end up getting 3/11 as the probability this red chip came from bowl 2. 
 
 \intermediatesubproblem{Suppose there are bowls, $B_1, B_2, B_3$. Bowl 1 contains two red and four white chips, Bowl 2 contains one red and two white chips and Bowl 3 contains five red and four white chips. Suppose a bowl is chosen at random and a chip is selected. We learn that the selected chip is red. What is the probability this red chip came from \textbf{Bowl 3}? }
+
+The probability of the red chip coming from bowl 3 is 5/11 because we can do 1- 3/11+3/11, and will still get 5/11. Or we can use bayes theorem and $P(B_3)P(A|B_3)$ would be 5/9 * 1/3 and will get $\frac{\frac{5}{27}}{\frac{11}{27}}$, and would still end up with 5/11. 
 
 
 \intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
@@ -112,16 +116,20 @@ percent say that they are Conservatives. In a recent local election, 35 percent
 of the Independents, 62 percent of the Liberals, and 58 percent of the
 Conservatives voted. A voter is chosen at random. Given that this person
 voted in the local election, what is the probability that he or she is an \textbf{Independent}?}
-
-\vspace{100mm}
-
+\\Creating some events:
+\\Let $B_1 = \{\text{Voter is an Independent}\}$ $\rightarrow P(B_1) = \frac{46}{100}$
+\\Let $B_2 = \{\text{Voter is a Liberal}\}$ $\rightarrow P(B_2) = \frac{30}{100}$
+\\Let $B_3 = \{\text{Voter is a Conservative}\}$ $\rightarrow P(B_3) = \frac{24}{100}$
+\\Let $A = \{\text{Voter voted in the local election}\}$\\
+$P(A|B_1) = \frac{35}{100}$ \space | $P(A|B_2) = \frac{62}{100}$ \space | $P(A|B_3) = \frac{58}{100}$
+\\Now, using the Bayes Theorem:$$P(B_1|A) = \frac{P(B_1)P(A|B_1)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)}$$$$P(B_1|A) = \frac{\left(\frac{46}{100}\right)\left(\frac{35}{100}\right)}{\left(\frac{46}{100}\right)\left(\frac{35}{100}\right) + \left(\frac{30}{100}\right)\left(\frac{62}{100}\right) + \left(\frac{24}{100}\right)\left(\frac{58}{100}\right)}$$$$P(B_1|A) = \frac{\frac{1610}{10000}}{\frac{1610}{10000} + \frac{1860}{10000} + \frac{1392}{10000}}$$$$P(B_1|A) = \frac{\frac{1610}{10000}}{\frac{4862}{10000}}$$$$P(B_1|A) = \frac{1610}{4862}$$$$P(B_1|A) = \frac{805}{2431}$$The probability that he or she is an Independent is $\frac{805}{2431}$.
 \intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
 Independents, whereas 30 percent classify themselves as Liberals and 24
 percent say that they are Conservatives. In a recent local election, 35 percent
 of the Independents, 62 percent of the Liberals, and 58 percent of the
 Conservatives voted. A voter is chosen at random. Given that this person
 voted in the local election, what is the probability that he or she is a \textbf{Liberal}?}
-
+\\Using the events from above $\frac{\frac{30}{100}*\frac{62}{100}}{\frac{4862}{10000}}=\frac{1860}{4862}= \frac{930}{2431}$. So the probability that he or she is a liberal is $\frac{930}{2431}$.
 
 
 \intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
@@ -129,8 +137,8 @@ Independents, whereas 30 percent classify themselves as Liberals and 24
 percent say that they are Conservatives. In a recent local election, 35 percent
 of the Independents, 62 percent of the Liberals, and 58 percent of the
 Conservatives voted. A voter is chosen at random. Given that this person
-voted in the local election, what is the probability that he or she is a \textbf{Conservative}?}
-
+voted in the local election, what is the probability that he or she is a \textbf{Conservative}?}\\
+Using the events from above $\frac{\frac{24}{100}*\frac{58}{100}}{\frac{4862}{10000}}=\frac{1392}{4862}= \frac{696}{2431}$. So the probability that he or she is a Conservative is $\frac{696}{2431}$.
 
 
 \intermediatesubproblem{A total of 46 percent of the voters in a certain city classify themselves as
@@ -139,7 +147,9 @@ percent say that they are Conservatives. In a recent local election, 35 percent
 of the Independents, 62 percent of the Liberals, and 58 percent of the
 Conservatives voted. A voter is chosen at random. What percent of voters participated in the local election?}
 
-
+Using the events from above, the total percentage of voters who participated is just the total probability of event $A$ (the denominator we already calculated).
+$P(A) = \frac{4862}{10000} = 48.62\%$.
+So $48.62\%$ of voters participated in the local election.
 
 \hardsubproblem{An ectopic (abnormal) pregnancy is twice as likely to develop when the pregnant
 woman is a smoker as it is when she is a nonsmoker. If 32 percent of women
@@ -189,6 +199,7 @@ Calculate the probability that a randomly selected customer insures exactly one 
     Find $P(B_2 | A)$ and find $P(B_1 |A)$. 
 \end{tcolorbox}
 
+
 \easysubproblem{Watch the video provided here which creates a diagram: \url{https://www.youtube.com/watch?v=cphYs1bCeDs}. You do not have to write anything for this question.}
 
 \easysubproblem{The Monty Hall problem is called a  \textit{veridical paradox}. A veridical paradox produces a result that appears counter to intuition, but is demonstrated to be true nonetheless. The paradox comes in from the fact that at the moment Monty opens up Door 3, there are only two configurations left: either Door 1 has the car and Door 2 has the goat OR Door 1 has the goat and Door 2 has the car. Since there are only two configurations, we think there is a 50-50 shot. The problem is, we are not in a simple sample space and this is counter intuitive. Many people have a tough time in believing that we should switch doors despite seeing the math above. To understand why this makes sense intuitively, here are two comments from the YouTube video above: \\
@@ -197,6 +208,7 @@ Calculate the probability that a randomly selected customer insures exactly one 
                                 1. If you swap doors, you will always get other object (ie goat to car, car to goat). \\
                                 2. Two-thirds of the time you will pick a goat initially.
 Need I say more?} \\
+
 @cslack813: \qu{if you chose a goat initially Monty HAS TO CHOOSE THE OTHER GOAT. Therefore this needs to be factored into the decision to switch and it’s not 50/50 despite the appearance}. \\
 
 After reading these comments, does the Monty Hall problem seem less paradoxical?}
