@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 APR 2026 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  20 APR 2026 00:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -660,6 +660,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[5] [6]
 /Users/steve/CS/overleaf/stat/hw7.tex:160: Undefined control sequence.
 l.160 \hardsubproblem
                      {Ninety-eight percent of all babies survive delivery. H...
@@ -669,8 +670,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:167: Undefined control sequence.
-l.167 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:166: Undefined control sequence.
+l.166 \hardsubproblem
                      { To become an actuary, this involves taking a probabil...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -678,8 +679,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:167: Undefined control sequence.
-l.167 ...h, then take a look at this website: \url
+/Users/steve/CS/overleaf/stat/hw7.tex:166: Undefined control sequence.
+l.166 ...h, then take a look at this website: \url
                                                   {https://www.beanactuary.o...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -687,8 +688,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:167: Undefined control sequence.
-l.167 ...y-actuarial-science/} and this site: \url
+/Users/steve/CS/overleaf/stat/hw7.tex:166: Undefined control sequence.
+l.166 ...y-actuarial-science/} and this site: \url
                                                   {https://www.ezrapenland.c...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -697,37 +698,42 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
+/Users/steve/CS/overleaf/stat/hw7.tex:167: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 \begin{enumerate}
+                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
 /Users/steve/CS/overleaf/stat/hw7.tex:168: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.168 \begin{enumerate}
-                       
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw7.tex:169: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.169     \item A
+l.168     \item A
                  ll customers insure at least one car.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (89.91719pt too wide) in paragraph at lines 125--169
-\OT1/cmr/m/n/12 actuarial-science/ and this site: https://www.ezrapenland.com/resources/actuarial-
+Overfull \hbox (4.9264pt too wide) in paragraph at lines 164--168
+\OT1/cmr/m/n/12 https://www.beanactuary.org/why-actuarial-science/ and this site:
  []
 
-[5] [6] [7]
-/Users/steve/CS/overleaf/stat/hw7.tex:178: Undefined control sequence.
-l.178 \easysubproblem
+
+Overfull \hbox (9.56108pt too wide) in paragraph at lines 164--168
+\OT1/cmr/m/n/12 https://www.ezrapenland.com/resources/actuarial-salary-survey/.)
+ []
+
+[7] [8]
+/Users/steve/CS/overleaf/stat/hw7.tex:179: Undefined control sequence.
+l.179 \easysubproblem
                      {This is also a sample question from Exam P: An insuran...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -735,8 +741,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:186: Undefined control sequence.
-l.186 \problem
+[9]
+/Users/steve/CS/overleaf/stat/hw7.tex:188: Undefined control sequence.
+l.188 \problem
               {In this exercise, we will study the Monty Hall problem from b...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -744,8 +751,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:189: Undefined control sequence.
-l.189 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:191: Undefined control sequence.
+l.191 \hardsubproblem
                      {Suppose you are a contestant on a game show and you ha...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -753,8 +760,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:203: Undefined control sequence.
-l.203 \easysubproblem
+[10] [11]
+/Users/steve/CS/overleaf/stat/hw7.tex:206: Undefined control sequence.
+l.206 \easysubproblem
                      {Watch the video provided here which creates a diagram:...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -762,8 +770,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw7.tex:203: Undefined control sequence.
-l.203 ...ovided here which creates a diagram: \url
+/Users/steve/CS/overleaf/stat/hw7.tex:206: Undefined control sequence.
+l.206 ...ovided here which creates a diagram: \url
                                                   {https://www.youtube.com/w...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -772,13 +780,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (190.40092pt too wide) in paragraph at lines 203--204
+Overfull \hbox (190.40092pt too wide) in paragraph at lines 206--207
 []\OT1/cmr/m/n/12 Watch the video pro-vided here which cre-ates a di-a-gram: https://www.youtube.com/watch?v=cphYs1bCeDs.
  []
 
-[8]
-/Users/steve/CS/overleaf/stat/hw7.tex:205: Undefined control sequence.
-l.205 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw7.tex:208: Undefined control sequence.
+l.208 \easysubproblem
                      {The Monty Hall problem is called a  \textit{veridical ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -787,12 +794,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:207: Undefined control sequence.
-l.207 @rogerbodey9475: \qu
+/Users/steve/CS/overleaf/stat/hw7.tex:210: Undefined control sequence.
+l.210 @rogerbodey9475: \qu
                           {The simplest solution: \\
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -801,12 +808,12 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--211
+Underfull \hbox (badness 10000) in paragraph at lines 210--214
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:212: Undefined control sequence.
-l.212 @cslack813: \qu
+/Users/steve/CS/overleaf/stat/hw7.tex:215: Undefined control sequence.
+l.215 @cslack813: \qu
                      {if you chose a goat initially Monty HAS TO CHOOSE THE ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -815,12 +822,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
-/Users/steve/CS/overleaf/stat/hw7.tex:216: Undefined control sequence.
-l.216 \hardsubproblem
+[12]
+/Users/steve/CS/overleaf/stat/hw7.tex:220: Undefined control sequence.
+l.220 \hardsubproblem
                      {Consider the following modified version of the Monty H...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -828,7 +836,7 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[9] [10] (./hw7.aux)
+[13] (./hw7.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -842,16 +850,16 @@ L3 programming layer <2026-01-19>
 Here is how much of TeX's memory you used:
  15508 strings out of 467525
  328000 string characters out of 5418982
- 716595 words of memory out of 5000000
+ 716593 words of memory out of 5000000
  44175 multiletter control sequences out of 15000+600000
  633448 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,13n,121p,1129b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,13n,121p,1224b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on hw7.pdf (10 pages, 161236 bytes).
+Output written on hw7.pdf (13 pages, 173704 bytes).
 PDF statistics:
- 105 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 115 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

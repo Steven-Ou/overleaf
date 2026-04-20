@@ -154,15 +154,14 @@ So $48.62\%$ of voters participated in the local election.
 \hardsubproblem{An ectopic (abnormal) pregnancy is twice as likely to develop when the pregnant
 woman is a smoker as it is when she is a nonsmoker. If 32 percent of women
 of childbearing age are smokers, what percentage of women having ectopic
-pregnancies are smokers?}
-
+pregnancies are smokers?}\\
+Creating some events:\\Let $B_1 = \{\text{Woman is a smoker}\}$ $\rightarrow P(B_1) = \frac{32}{100}$\\Let $B_2 = \{\text{Woman is a nonsmoker}\}$ $\rightarrow P(B_2) = \frac{68}{100}$\\Let $A = \{\text{Woman has an ectopic pregnancy}\}$ let the probability for a nonsmoker be $x$. Then:$P(A|B_1) = 2x$  |  $P(A|B_2) = x$\\Now, using Bayes' Theorem:$$P(B_1|A) = \frac{P(B_1)P(A|B_1)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2)}$$$$P(B_1|A) = \frac{\left(\frac{32}{100}\right)(2x)}{\left(\frac{32}{100}\right)(2x) + \left(\frac{68}{100}\right)(x)}$$$$P(B_1|A) = \frac{\frac{64x}{100}}{\frac{64x}{100} + \frac{68x}{100}}$$$$P(B_1|A) = \frac{\frac{64x}{100}}{\frac{132x}{100}}$$$$P(B_1|A) = \frac{64x}{132x}$$$$P(B_1|A) = \frac{64}{132}$$$$P(B_1|A) = \frac{16}{33}$$The percentage of women having ectopic pregnancies who are smokers is $\frac{16}{33}$.
 
 \hardsubproblem{Ninety-eight percent of all babies survive delivery. However, 15 percent
 of all births involve Cesarean (C) sections, and when a C section is
 performed, the baby survives 96 percent of the time. If a randomly chosen pregnant woman does not have a C section, then what is the probability that her
-baby survives?
-}
-
+baby survives?\\
+}Creating some events:\\Let $B_1 = \{\text{Birth involves a C section}\}$ $\rightarrow P(B_1) = \frac{15}{100}$\\Let $B_2 = \{\text{Birth does not involve a C section}\}$ $\rightarrow P(B_2) = \frac{85}{100}$\\Let $A = \{\text{Baby survives delivery}\}$ $\rightarrow P(A) = \frac{98}{100}$\\$P(A|B_1) = \frac{96}{100}$  |  $P(A|B_2) = x$\\Now, using the Law of Total Probability:$$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2)$$$$\frac{98}{100} = \left(\frac{15}{100}\right)\left(\frac{96}{100}\right) + \left(\frac{85}{100}\right)(x)$$$$\frac{98}{100} = \frac{1440}{10000} + \frac{85x}{100}$$$$\frac{9800}{10000} = \frac{1440}{10000} + \frac{8500x}{10000}$$$$9800 = 1440 + 8500x$$$$8360 = 8500x$$$$x = \frac{8360}{8500}$$$$x = \frac{418}{425}$$The probability that her baby survives is $\frac{418}{425}$ (or approximately $98.35\%$).
 
 \hardsubproblem{ To become an actuary, this involves taking a probability exam known as Exam P. (If you find probability interesting or you're unsure of careers in math, then take a look at this website: \url{https://www.beanactuary.org/why-actuarial-science/} and this site: \url{https://www.ezrapenland.com/resources/actuarial-salary-survey/}.) This is a sample question from Exam P: An insurance company examines its pool of auto insurance customers and gathers the following information:
 \begin{enumerate}
@@ -173,10 +172,13 @@ baby survives?
 \end{enumerate}
 Calculate the probability that a randomly selected customer insures exactly one car and that car is not a sports car.}
 
-\newpage 
+Creating some events:\\Let $B_1 = \{\text{Customer insures exactly one car}\}$ $\rightarrow P(B_1) = \frac{30}{100}$\\Let $B_2 = \{\text{Customer insures more than one car}\}$ $\rightarrow P(B_2) = \frac{70}{100}$\\Let $A = \{\text{Customer insures a sports car}\}$ $\rightarrow P(A) = \frac{20}{100}$\\We are given $P(A|B_2) = \frac{15}{100}$.\\First, using the Law of Total Probability to find $P(A|B_1)$:$$P(A) = P(B_1)P(A|B_1) + P(B_2)P(A|B_2)$$$$\frac{20}{100} = \left(\frac{30}{100}\right)P(A|B_1) + \left(\frac{70}{100}\right)\left(\frac{15}{100}\right)$$$$\frac{2000}{10000} = \left(\frac{30}{100}\right)P(A|B_1) + \frac{1050}{10000}$$$$\frac{950}{10000} = \left(\frac{30}{100}\right)P(A|B_1)$$$$P(A|B_1) = \frac{950}{10000} \cdot \frac{100}{30}$$$$P(A|B_1) = \frac{95}{300} = \frac{19}{60}$$
+$P(A|B_1)$is the probability of all the people who only insure one car, are driving a sport cars, so to find the probablitiy of exactly one car and that car is not a sport car, we subtract 19/60 from 1 and we will get 41/60.
+Now, using the conditional probability multiplication rule:$$P(B_1 \cap A^c) = P(B_1)P(A^c|B_1)$$$$P(B_1 \cap A^c) = \left(\frac{30}{100}\right)\left(\frac{41}{60}\right)$$$$P(B_1 \cap A^c) = \frac{1230}{6000}$$$$P(B_1 \cap A^c) = \frac{41}{200}$$The probability that a randomly selected customer insures exactly one car and that car is not a sports car is $\frac{41}{200}$ (or $20.5\%$).
 
 \easysubproblem{This is also a sample question from Exam P: An insurance company issues life insurance policies in three separate categories: standard, preferred, and ultra-preferred. Of the company’s policyholders, 50\% are standard, 40\% are preferred, and 10\% are ultra-preferred. Each standard policyholder has probability 0.010 of dying in the next year, each preferred policyholder has probability 0.005 of dying in the next year, and each ultra-preferred policyholder has probability 0.001 of dying in the next year. A policyholder dies in the next year. What is the probability that the deceased policyholder was ultra-preferred?}
-
+\\Creating some events:
+\\Let $B_1 = \{\text{Policyholder is standard}\}$ $\rightarrow P(B_1) = \frac{50}{100}$\\Let $B_2 = \{\text{Policyholder is preferred}\}$ $\rightarrow P(B_2) = \frac{40}{100}$\\Let $B_3 = \{\text{Policyholder is ultra-preferred}\}$ $\rightarrow P(B_3) = \frac{10}{100}$\\Let $A = \{\text{Policyholder dies in the next year}\}$\\$P(A|B_1) = \frac{10}{1000}$  |  $P(A|B_2) = \frac{5}{1000}$  |  $P(A|B_3) = \frac{1}{1000}$\\Now, using Bayes' Theorem:$$P(B_3|A) = \frac{P(B_3)P(A|B_3)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)}$$$$P(B_3|A) = \frac{\left(\frac{10}{100}\right)\left(\frac{1}{1000}\right)}{\left(\frac{50}{100}\right)\left(\frac{10}{1000}\right) + \left(\frac{40}{100}\right)\left(\frac{5}{1000}\right) + \left(\frac{10}{100}\right)\left(\frac{1}{1000}\right)}$$$$P(B_3|A) = \frac{\frac{10}{100000}}{\frac{500}{100000} + \frac{200}{100000} + \frac{10}{100000}}$$$$P(B_3|A) = \frac{\frac{10}{100000}}{\frac{710}{100000}}$$$$P(B_3|A) = \frac{10}{710}$$$$P(B_3|A) = \frac{1}{71}$$The probability that the deceased policyholder was ultra-preferred is $\frac{1}{71}$.
 
 \end{enumerate}
 
@@ -198,7 +200,8 @@ Calculate the probability that a randomly selected customer insures exactly one 
     \end{align*}
     Find $P(B_2 | A)$ and find $P(B_1 |A)$. 
 \end{tcolorbox}
-
+$P(A|B_1) = \frac{1}{2}$ | $P(A|B_2) = 1$ | $P(A|B_3) = 0$
+\\Now, using Bayes' Theorem to find $P(B_2|A)$:$$P(B_2|A) = \frac{P(B_2)P(A|B_2)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)}$$$$P(B_2|A) = \frac{\left(\frac{1}{3}\right)(1)}{\left(\frac{1}{3}\right)\left(\frac{1}{2}\right) + \left(\frac{1}{3}\right)(1) + \left(\frac{1}{3}\right)(0)}$$$$P(B_2|A) = \frac{\frac{1}{3}}{\frac{1}{6} + \frac{1}{3} + 0}$$$$P(B_2|A) = \frac{\frac{1}{3}}{\frac{1}{6} + \frac{2}{6}}$$$$P(B_2|A) = \frac{\frac{1}{3}}{\frac{3}{6}}$$$$P(B_2|A) = \frac{\frac{1}{3}}{\frac{1}{2}}$$$$P(B_2|A) = \frac{2}{3}$$Now, using Bayes' Theorem to find $P(B_1|A)$:$$P(B_1|A) = \frac{P(B_1)P(A|B_1)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2) + P(B_3)P(A|B_3)}$$(Since we already calculated the denominator to be $\frac{1}{2}$)$$P(B_1|A) = \frac{\left(\frac{1}{3}\right)\left(\frac{1}{2}\right)}{\frac{1}{2}}$$$$P(B_1|A) = \frac{\frac{1}{6}}{\frac{1}{2}}$$$$P(B_1|A) = \frac{1}{3}$$The probability that the car is behind Door 2 is $\frac{2}{3}$, and the probability that the car is behind Door 1 is $\frac{1}{3}$. You should switch doors because your probability of winning doubles from $\frac{1}{3}$ to $\frac{2}{3}$.
 
 \easysubproblem{Watch the video provided here which creates a diagram: \url{https://www.youtube.com/watch?v=cphYs1bCeDs}. You do not have to write anything for this question.}
 
@@ -212,9 +215,11 @@ Need I say more?} \\
 @cslack813: \qu{if you chose a goat initially Monty HAS TO CHOOSE THE OTHER GOAT. Therefore this needs to be factored into the decision to switch and it’s not 50/50 despite the appearance}. \\
 
 After reading these comments, does the Monty Hall problem seem less paradoxical?}
-
+\\Yes, after reading these comments it seems like the Monty Hall problem seems less paradoxical!
+\newpage
 \hardsubproblem{Consider the following modified version of the Monty Hall Problem: Suppose you are a contestant on a game show and you have to choose between 100 closed doors. Whatever is behind your chosen door, is your prize. Behind one door is a brand new car and behind the other 99 doors are goats. The host of the show, Monty, knows where the car and goats are located, but you, the contestant, does not. Suppose you choose a door at random. Before Monty opens up your chosen door, he opens up 98 other doors which reveals all goats. Note that while opening up these 98 other doors, Monty will never open your initial door and will never open the door with the car. At this point, there are two doors left. Monty then asks you if you would like to keep your door or if you would like to switch doors. Find the probability you win the car by switching. }
-
+\\Listing out events:
+\\Let $B_1 = \{\text{Car is behind Door 1}\}$ $\rightarrow P(B_1) = \frac{1}{100}$\\Let $B_2 = \{\text{Car is behind Door 2}\}$ $\rightarrow P(B_2) = \frac{1}{100}$\\Let $A = \{\text{Monty opens Doors 3 through 100}\}$\\$P(A|B_1) = \frac{1}{99}$  |  $P(A|B_2) = 1$  |  $P(A|B_{\text{any other door}}) = 0$\\Now, using Bayes' Theorem:$$P(B_2|A) = \frac{P(B_2)P(A|B_2)}{P(B_1)P(A|B_1) + P(B_2)P(A|B_2)}$$$$P(B_2|A) = \frac{\left(\frac{1}{100}\right)(1)}{\left(\frac{1}{100}\right)\left(\frac{1}{99}\right) + \left(\frac{1}{100}\right)(1)}$$$$P(B_2|A) = \frac{\frac{1}{100}}{\frac{1}{9900} + \frac{1}{100}}$$$$P(B_2|A) = \frac{\frac{1}{100}}{\frac{1}{9900} + \frac{99}{9900}}$$$$P(B_2|A) = \frac{\frac{1}{100}}{\frac{100}{9900}}$$$$P(B_2|A) = \frac{\frac{1}{100}}{\frac{1}{99}}$$$$P(B_2|A) = \frac{99}{100}$$The probability you win the car by switching is $\frac{99}{100}$.
 \end{enumerate}
 
 
