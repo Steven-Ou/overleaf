@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+
+
+
+
+\title{MATH 241 Spring 2026 Homework \#8}
+
+\author{Steven Ou} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace by 11:59PM Sunday, May 26, 2026 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{File} and select \textit{Make a Copy}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{These exercises are designed with the intention of reviewing one of the most important topics in all of probability and statistics -- \textit{random variables}. We will start off reviewing the lecture notes of Section 4.1 accompanied by some light reading on Wikipedia. This means most of these questions can be answered by studying the lecture notes.}
+
+
+
+\begin{enumerate}
+
+\inthenotessubproblem{Formally define what is meant by a \textit{random variable}.}
+
+\vspace{60mm}
+
+\inthenotessubproblem{Draw a picture that illustrates how we think of a random variable. Call your random variable $X$.}
+
+\vspace{50mm}
+
+\easysubproblem{Explain what the event $ \{ X(s) = x \}$ means. What is the difference between $X$ and $x$?}
+
+\vspace{30mm}
+
+\easysubproblem{In class, we made a whimsical comment that a random variable is not random and is not a variable. Does the Wikipedia page on random variables agree with this comment? \href{https://en.wikipedia.org/wiki/Random_variable}{Link to Random Variables.} Write ``Yes'' or ``No''. Hint: read the first paragraph.}
+
+\easysubproblem{In the Wikipedia article above on random variables, under ``\textbf{Definition}'' there is a subsection called ``\textbf{Extensions}''. Read the ``\textbf{Extensions}'' section. In what other disciplines is the idea of random variables/random elements useful? List a few. }
+
+\vspace{30mm}
+
+\inthenotessubproblem{What are the three classes of random variables? }
+
+\vspace{20mm}
+
+\inthenotessubproblem{Define what is meant by a \textit{discrete random variable}. }
+
+\vspace{60mm}
+
+
+\easysubproblem{True or False: If $X$ models the number of classes a student will take the following semester, then $X$ is a discrete random variable.}
+
+
+\easysubproblem{True or False: If $X$ models the number of flash floods in New York in the year 2025, then $X$ is a discrete random variable.}
+
+\easysubproblem{True or False: Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then $X$ is a discrete random variable.}
+
+\easysubproblem{True or False: If $X$ measures the amount of time that passes between two earthquakes, then $X$ is a discrete random variable.}
+
+\newpage
+
+\inthenotessubproblem{Define what is meant by a \textit{probability mass function}. }
+
+\vspace{60mm}
+
+\inthenotessubproblem{Define what is meant by a \textit{cumulative distribution function}. }
+
+\vspace{60mm}
+
+\intermediatesubproblem{Explain what is the difference between a probability mass function and a cumulative distribution function.}
+
+\newpage 
+
+\inthenotessubproblem{Define what is meant by the support of a discrete random variable. }
+
+\vspace{20mm}
+
+
+\easysubproblem{Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then what is the support of $X$?}
+
+\vspace{20mm}
+
+
+\intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) = F_X(a)$? Explain your answer. Hint: Look back at the examples we did in Section 4.1. For any of the examples, can you find an $a$ such that $f_X(a) = F_X(a)$?}
+
+\vspace{40mm}
+
+
+\intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) \neq F_X(a)$? Explain your answer.}
+
+\vspace{40mm}
+
+
+\inthenotessubproblem{How do we derive a probability mass function?}
+
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this exercise, we will derive the probability mass function for a specific random variable. A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Let $X$ model the number of patients for which the drug is successful. }
+
+\begin{enumerate}
+
+
+\easysubproblem{ Find the support of $X$.}
+
+\vspace{10mm}
+
+\easysubproblem{Your answer above should have six possible values. Study any three of the six values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
+
+\vspace{30mm}
+
+\intermediatesubproblem{}{Write down the probability mass function of $X$.}
+
+\end{enumerate}
+
+\vspace{30mm}
+
+
+
+\problem{In this exercise, we will derive the probability mass function for a slightly more general random variable. Suppose an experiment consists of a sequence of $n$ independent trials. Each trial may result in a success or a failure. Suppose the probability of a success on any trial is $p$ and hence the probability of failure on any trial is $1-p$. Let $X$ model the total number of successes among the $n$ trials.}
+
+
+\begin{enumerate}
+
+\intermediatesubproblem{ Find the support of $X$.}
+
+\vspace{10mm}
+
+
+%\intermediatesubproblem{Your answer above should have $n+1$ possible values. Study any three of the $n+1$ values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
+
+\vspace{5mm}
+
+\intermediatesubproblem{Write down the probability mass function of $X$.}
+
+\vspace{30mm}
+
+\end{enumerate}
+
+\problem{We will now re-consider a problem in Section 3.2 through the lens of random variables.  Suppose an experiment consists of continually flipping a fair coin until a heads appears for the first time at which point the experiment stops. Let $X$ model the total number of flips required to get our first heads and assume that the outcomes of the tosses are independent of each other.}
+
+
+\begin{enumerate}
+
+\easysubproblem{ Find the support of $X$.}
+
+\vspace{10mm}
+
+\easysubproblem{Find the probability that $X$ takes the value 1. That is, find $P(X=1)$.}
+
+\vspace{20mm}
+
+\easysubproblem{Find the probability that $X$ takes the value 2. That is, find $P(X=2)$.}
+
+\vspace{20mm}
+
+\easysubproblem{Find the probability that $X$ takes the value 3. That is, find $P(X=3)$.}
+\vspace{20mm}
+
+\intermediatesubproblem{Write down the probability mass function of $X$.}
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this problem, we will study a few questions involving random variables.}
+
+
+\begin{enumerate}
+
+
+\intermediatesubproblem{Suppose $X$ is a discrete random variable with probability mass function $f$ such that 
+$$
+f_X(x) = P(X = x) =
+\begin{cases}
+1/10 & \text{if} ~ x = 1, 2, 3, \ldots 10  \\   
+0 & \text{otherwise} \\
+\end{cases}
+$$ 
+
+Sketch or find the cumulative distribution function of $X$.}
+
+
+\vspace{90mm}
+
+
+\hardsubproblem{Suppose the cumulative distribution function of a random variable $X$ is given by 
+$$
+F_X(x) = P(X \leq x) =
+\begin{cases}
+0 & \text{if} ~ x < 0, \\
+0.5, & \text{if} ~ 0 \leq x < 1 \\  
+0.6, & \text{if} ~ 1 \leq x < 2 \\  
+0.8, & \text{if} ~ 2 \leq x < 3 \\ 
+0.9, & \text{if} ~ 3 \leq x < 3.5 \\ 
+1, & \text{if} ~ x \geq 3.5 \\  
+\end{cases}
+$$ 
+
+Find the probability mass function of $X$. }
+
+\vspace{60mm}
+
+\hardsubproblem{Let $X$ denote the winnings of a gambler. Suppose $f$ denotes the probability mass function of $X$ where 
+$$
+f_X(x) = P(X = x) =
+\begin{cases}
+1/3 & \text{if} ~ x = 0, \\
+13/55, & \text{if} ~ x = -1, 1 \\  
+1/11, & \text{if} ~ x = -2, 2 \\   
+1/165, & \text{if} ~ x = -3, 3 \\   
+0 &  \text{otherwise} \\
+\end{cases}
+$$ 
+
+Given that the gambler wins a positive amount, find the probability that he wins $1$ dollar.}
+
+\vspace{50mm}
+
+\hardsubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find the probability mass function of $X$. }
+
+\vspace{60mm}
+
+
+%\hardsubproblem{Suppose there are twenty marbles in an urn numbered from 1 though 20 and an experiment involves randomly selecting three marbles from the urn without replacement. Let $X$ denote the random variable which models the largest number selected among the three marbles. Find the probability mass function of $X$.}
+
+\vspace{60mm}
+
+\hardsubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
+$$
+f_X(x) = P(X = x) =
+\begin{cases}
+cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\  
+0 & \text{otherwise} \\
+\end{cases}
+$$ Can $c$ be any constant you wish? Why or why not? Hint: If $c = 2.41$ then what is $P(X = 5)?$ }
+
+
+\vspace{60mm}
+
+
+\intermediatesubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
+$$
+f(x) = P(X = x) =
+\begin{cases}
+cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\  
+0 & \text{otherwise} \\
+\end{cases}
+$$
+Imposing the condition that 
+\begin{align*}
+\sum_{\text{all}~ x} f_X(x) = 1
+\end{align*}
+find the appropriate value for $c$.}
+\end{enumerate}
+
+\newpage 
+
+
+\problem{Extra Credit - We are often denoting the probability mass function of a (discrete) random variable as a piecewise defined function. In a more advanced probability course, we might wish to condense the number of cases within the piecewise defined function for a variety of reasons. The way we can achieve this is by using an \textit{indicator function}. Allow us to define the indicator function.
+
+\begin{tcolorbox}
+    Let $C$ denote some condition. We define 
+    \begin{align*}
+        \indic{C} = \begin{cases}
+1 & \text{if} ~ C ~ \text{is true}   \\  
+0 & \text{if} ~ C ~ \text{is false} \\
+\end{cases}
+    \end{align*} and we call $\indic{C}$ the indicator function.
+\end{tcolorbox}
+}
+
+Example: The function $h(x) = \indic{x \in \{2,6,7\}}$ means 
+ \begin{align*} h(x) =
+    \begin{cases}
+1 & \text{if} ~ x = 2, 6, 7  \\   
+0 & \text{otherwise}  
+\end{cases}
+\end{align*}
+
+Essentially, the indicator function is like a switch. When the condition is true, the indicator function ``switches on'' and becomes equal to 1. When the condition is false, the indicator function is ``switched off'' and becomes equal to 0. \\
+
+Example: Expand and simplify the following: 
+\begin{align*}
+    \sum_{x \in \{1,2,3,4,5,6,7,8\}} \indic{x \in \{2,6,7\}}
+\end{align*}
+
+This means plug $x=1$ into $h(x)$, add to the result when we plug in $x=2$, into $h(x)$, add to the result when we plug in $x=3$ into $h(x), \ldots,$ add to the result when we plug in $x=8$ into $h(x)$. Hence, 
+\begin{align*}
+    \sum_{x \in \{1,2,3,4,5,6,7,8\}} \indic{x \in \{2,6,7\}} = 0+1+0+0+0+1+1+0 = 3 
+\end{align*}
+
+Example: Suppose we wish to use an indicator function to rewrite the following probability mass function:
+\begin{align}
+f_X(x) = P(X = x) =
+\begin{cases}
+\binom{10}{x} 0.25^x (0.75)^{10-x}  & \text{if} ~ x = 0, 1, 2, 3, \ldots 10,  \\  
+0 & \text{otherwise} \\
+\end{cases}
+\end{align}
+
+We can now rewrite this function as 
+
+\begin{align}
+    f_X(x) = \binom{10}{x} 0.25^x (0.75)^{10-x} \indic{x \in \{ 0, 1, \ldots, 10 \} }
+\end{align}
+
+With these examples in mind, here are some practice problems:
+
+\begin{enumerate}
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x = 17}$.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x = 17}$ where $c \in \reals$ is a constant.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x\indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
+
+
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \naturals_0} x^{\indic{x \in \braces{1, 2, 3}}}$.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\prod_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}\indic{x \in \braces{4, 5, 6}}$.}\spc{2.5}
+
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} t \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
+
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
+
+
+\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \oneover{x!} \indic{x \in \naturals}$.}\spc{2.5}
+
+\end{enumerate}
+
+
+
+\end{document}
