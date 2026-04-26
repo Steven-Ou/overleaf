@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{tcolorbox}
 \usepackage{amsmath}
-
+\usepackage{graphicx}
 
 \include{preamble}
 %All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
@@ -49,99 +49,100 @@ NAME: \line(1,0){380}
 
 \inthenotessubproblem{Formally define what is meant by a \textit{random variable}.}
 
-\vspace{60mm}
-
+A random variable is a real-valued function defined on the sample space s of an experiment. It is typically denoted by a capital letter, such as $X$.
 \inthenotessubproblem{Draw a picture that illustrates how we think of a random variable. Call your random variable $X$.}
-
-\vspace{50mm}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{1.png}
+    \caption{Illustrations of Random Variable}
+    \label{fig:label}
+\end{figure}
 
 \easysubproblem{Explain what the event $ \{ X(s) = x \}$ means. What is the difference between $X$ and $x$?}
 
-\vspace{30mm}
+The event $\{X(s) = x\}$ represents the set of all outcomes in the sample space $S$ that result in a specific realization or value $x$. $X$ is the random variable itself, which is a function. $x$ is a realization, which is a specific numerical outcome or value that the function takes. 
 
 \easysubproblem{In class, we made a whimsical comment that a random variable is not random and is not a variable. Does the Wikipedia page on random variables agree with this comment? \href{https://en.wikipedia.org/wiki/Random_variable}{Link to Random Variables.} Write ``Yes'' or ``No''. Hint: read the first paragraph.}
 
+Yes!
+
 \easysubproblem{In the Wikipedia article above on random variables, under ``\textbf{Definition}'' there is a subsection called ``\textbf{Extensions}''. Read the ``\textbf{Extensions}'' section. In what other disciplines is the idea of random variables/random elements useful? List a few. }
 
-\vspace{30mm}
-
+The idea of random variables are useful in Physics-modeling quantum states or particle motion, Economics/Finances-modeling market fluctuations, and Computer Science - for randomized algorithms.
 \inthenotessubproblem{What are the three classes of random variables? }
 
-\vspace{20mm}
+Discrete, Continous, and Mixed.
 
 \inthenotessubproblem{Define what is meant by a \textit{discrete random variable}. }
 
-\vspace{60mm}
-
+A random variable is said to be discrete r.v if it takes ob either a finite number of possibilities or a countably infinite number of possibilities. 
 
 \easysubproblem{True or False: If $X$ models the number of classes a student will take the following semester, then $X$ is a discrete random variable.}
 
+True.
 
 \easysubproblem{True or False: If $X$ models the number of flash floods in New York in the year 2025, then $X$ is a discrete random variable.}
 
+True.
+
 \easysubproblem{True or False: Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then $X$ is a discrete random variable.}
 
+True.
 \easysubproblem{True or False: If $X$ measures the amount of time that passes between two earthquakes, then $X$ is a discrete random variable.}
 
-\newpage
+False, this would be continuous r.v rather than discrete. 
 
-\inthenotessubproblem{Define what is meant by a \textit{probability mass function}. }
+\inthenotessubproblem{Define what is meant by a \textit{probability mass function(P.M.F)}. }
 
-\vspace{60mm}
+P.M.F of a discrete r.v X is defined as the function $f_x$ such that for every real number x,$f_X(x) = P(X = x)$.  This tells the probability that X takes a singular value.
 
-\inthenotessubproblem{Define what is meant by a \textit{cumulative distribution function}. }
+\inthenotessubproblem{Define what is meant by a \textit{cumulative distribution function(C.D.F)}. }
 
-\vspace{60mm}
+C.D.F is a discrete r.v X, denoted by $F_x$ is defined as $F_X(x) = P(X \le x)$.
 
 \intermediatesubproblem{Explain what is the difference between a probability mass function and a cumulative distribution function.}
-
-\newpage 
+\\The C.D.F provides the probability that X is less than or equal to a specific value x. The P.M.F provides the probability of X being exactly equal to speigic value x.
 
 \inthenotessubproblem{Define what is meant by the support of a discrete random variable. }
 
-\vspace{20mm}
-
+The support of a discrete random variable X is the set of all possible values that X can take. 
 
 \easysubproblem{Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then what is the support of $X$?}
 
-\vspace{20mm}
-
+The support of $X$ is: $S_x = \{0, 1, 2, 3, 4, 5\}$.
 
 \intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) = F_X(a)$? Explain your answer. Hint: Look back at the examples we did in Section 4.1. For any of the examples, can you find an $a$ such that $f_X(a) = F_X(a)$?}
 
-\vspace{40mm}
-
+Yes, it is possible. This occurs specifically when $a$ is the minimum value in the support of $X$. By definition, $F_X(a) = P(X \le a)$. If $a$ is the smallest possible value that $X$ can take, there are no values smaller than $a$ with a non-zero probability. Therefore, the probability of $X$ being less than or equal to $a$ is exactly equal to the probability of $X$ being equal to $a$.  In the State Farm insurance example, the support of $X$ starts at $0$. The pmf at 0 is $f_X(0) = 0.855$. The cdf at 0 is $F_X(0) = P(X \le 0) = 0.855$. In this case, $f_X(0) = F_X(0)$. 
 
 \intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) \neq F_X(a)$? Explain your answer.}
 
-\vspace{40mm}
-
+Yes, this is the most common scenario and occurs for any value $a$ in the support that is not the minimum value. For any value $a$ greater than the minimum value in the support, $F_X(a)$ accumulates the probabilities of all values less than or equal to $a$. This sum will be strictly greater than the individual probability $f_X(a)$ as long as the preceding values in the support have non-zero probabilities.In the same State Farm example, consider $a = 100,000$. The pmf is $f_X(100,000) = 0.140$. The cdf is $F_X(100,000) = P(X \le 100,000) = 0.855 + 0.140 = 0.995$. Clearly, $0.140 \neq 0.995$.  
 
 \inthenotessubproblem{How do we derive a probability mass function?}
 
+To derive the pmf of a discrete r.v, we would use the following recipe:\\'Find the Support' - determine all the possible values that the r.v X can take. \\'Calculate Probabilities' -Calculate the probability P(X=x)\\ 'Summarize'- Organize these values and their corresponding porbabilities into a functional format. 
 
 \end{enumerate}
-
-\newpage 
+\newpage
 
 \problem{In this exercise, we will derive the probability mass function for a specific random variable. A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Let $X$ model the number of patients for which the drug is successful. }
 
 \begin{enumerate}
 
 
-\easysubproblem{ Find the support of $X$.}
-
-\vspace{10mm}
+\easysubproblem{ Find the support of $X$.}\\
+The support of $X$ is: $S_x = \{0, 1, 2, 3, 4, 5\}$.
 
 \easysubproblem{Your answer above should have six possible values. Study any three of the six values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
 
-\vspace{30mm}
-
+Using 0,1, and 5:
+\\$P(X=0)$: All 5 patients are failures. $(0.25)^5 = 0.0009765625$.\\$P(X=1)$: Exactly 1 success out of 5. $\binom{5}{1}(0.75)^1(0.25)^4 = 5(0.75)(0.00390625) = 0.0146484375$.\\$P(X=5)$: All 5 patients are successes. $(0.75)^5 = 0.2373046875$
 \intermediatesubproblem{}{Write down the probability mass function of $X$.}
-
+\\The general form $X \sim Binom(n, p)$:
+$$f_X(x) = \begin{cases} \binom{5}{x}(0.75)^x(0.25)^{5-x} & x = 0, 1, 2, 3, 4, 5 \\ 0 & \text{otherwise} \end{cases}$$
 \end{enumerate}
 
-\vspace{30mm}
 
 
 
@@ -150,21 +151,18 @@ NAME: \line(1,0){380}
 
 \begin{enumerate}
 
-\intermediatesubproblem{ Find the support of $X$.}
-
-\vspace{10mm}
+\intermediatesubproblem{ Find the support of $X$.}\\
+X: $S_X = \{0, 1, 2, \dots, n\}$.
 
 
 %\intermediatesubproblem{Your answer above should have $n+1$ possible values. Study any three of the $n+1$ values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
 
-\vspace{5mm}
 
 \intermediatesubproblem{Write down the probability mass function of $X$.}
-
-\vspace{30mm}
+\\$$f_X(x) = \begin{cases} \binom{n}{x}p^x(1-p)^{n-x} & x = 0, 1, \dots, n \\ 0 & \text{otherwise} \end{cases}$$
 
 \end{enumerate}
-
+\newpage
 \problem{We will now re-consider a problem in Section 3.2 through the lens of random variables.  Suppose an experiment consists of continually flipping a fair coin until a heads appears for the first time at which point the experiment stops. Let $X$ model the total number of flips required to get our first heads and assume that the outcomes of the tosses are independent of each other.}
 
 
@@ -172,24 +170,26 @@ NAME: \line(1,0){380}
 
 \easysubproblem{ Find the support of $X$.}
 
-\vspace{10mm}
+X: $S_X = \{1, 2, 3, 4, \dots\}$
 
 \easysubproblem{Find the probability that $X$ takes the value 1. That is, find $P(X=1)$.}
 
-\vspace{20mm}
+$P(X=1)$: First flip is heads. $P(H) = 0.5$.
 
 \easysubproblem{Find the probability that $X$ takes the value 2. That is, find $P(X=2)$.}
 
-\vspace{20mm}
+$P(X=2)$: First is tails, second is heads. $P(T)P(H) = (0.5)(0.5) = 0.25$.
 
 \easysubproblem{Find the probability that $X$ takes the value 3. That is, find $P(X=3)$.}
-\vspace{20mm}
+
+$P(X=3)$: $P(T)P(T)P(H) = (0.5)^2(0.5) = 0.125$.
 
 \intermediatesubproblem{Write down the probability mass function of $X$.}
 
+$$f_X(x) = \begin{cases} (0.5)^x & x = 1, 2, 3, \dots \\ 0 & \text{otherwise} \end{cases}$$
+
 \end{enumerate}
 
-\newpage 
 
 \problem{In this problem, we will study a few questions involving random variables.}
 
@@ -208,8 +208,8 @@ $$
 
 Sketch or find the cumulative distribution function of $X$.}
 
-
-\vspace{90mm}
+The CDF is a step function that jumps by $1/10$ at each integer from 1 to 10:
+$$F_X(x) = \begin{cases} 0 & x < 1 \\ \frac{\lfloor x \rfloor}{10} & 1 \le x < 10 \\ 1 & x \ge 10 \end{cases}$$
 
 
 \hardsubproblem{Suppose the cumulative distribution function of a random variable $X$ is given by 
@@ -225,9 +225,8 @@ F_X(x) = P(X \leq x) =
 \end{cases}
 $$ 
 
-Find the probability mass function of $X$. }
-
-\vspace{60mm}
+Find the probability mass function of $X$. }\\
+The pmf value at $x$ is the "jump" height in the CDF at that point:\\$f_X(0) = F_X(0) - F_X(0^-) = 0.5 - 0 = 0.5$$f_X(1) = 0.6 - 0.5 = 0.1$\\$f_X(2) = 0.8 - 0.6 = 0.2$\\$f_X(3) = 0.9 - 0.8 = 0.1$\\$f_X(3.5) = 1 - 0.9 = 0.1$\\$f_X(x) = 0$ otherwise.
 
 \hardsubproblem{Let $X$ denote the winnings of a gambler. Suppose $f$ denotes the probability mass function of $X$ where 
 $$
@@ -243,16 +242,13 @@ $$
 
 Given that the gambler wins a positive amount, find the probability that he wins $1$ dollar.}
 
-\vspace{50mm}
 
 \hardsubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find the probability mass function of $X$. }
 
-\vspace{60mm}
 
 
 %\hardsubproblem{Suppose there are twenty marbles in an urn numbered from 1 though 20 and an experiment involves randomly selecting three marbles from the urn without replacement. Let $X$ denote the random variable which models the largest number selected among the three marbles. Find the probability mass function of $X$.}
 
-\vspace{60mm}
 
 \hardsubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
 $$
@@ -264,7 +260,6 @@ cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\
 $$ Can $c$ be any constant you wish? Why or why not? Hint: If $c = 2.41$ then what is $P(X = 5)?$ }
 
 
-\vspace{60mm}
 
 
 \intermediatesubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
@@ -282,7 +277,6 @@ Imposing the condition that
 find the appropriate value for $c$.}
 \end{enumerate}
 
-\newpage 
 
 
 \problem{Extra Credit - We are often denoting the probability mass function of a (discrete) random variable as a piecewise defined function. In a more advanced probability course, we might wish to condense the number of cases within the piecewise defined function for a variety of reasons. The way we can achieve this is by using an \textit{indicator function}. Allow us to define the indicator function.
