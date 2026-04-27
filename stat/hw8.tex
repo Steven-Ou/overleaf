@@ -211,7 +211,6 @@ Sketch or find the cumulative distribution function of $X$.}
 The CDF is a step function that jumps by $1/10$ at each integer from 1 to 10:
 $$F_X(x) = \begin{cases} 0 & x < 1 \\ \frac{\lfloor x \rfloor}{10} & 1 \le x < 10 \\ 1 & x \ge 10 \end{cases}$$
 
-
 \hardsubproblem{Suppose the cumulative distribution function of a random variable $X$ is given by 
 $$
 F_X(x) = P(X \leq x) =
@@ -242,10 +241,15 @@ $$
 
 Given that the gambler wins a positive amount, find the probability that he wins $1$ dollar.}
 
-
-\hardsubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find the probability mass function of $X$. }
-
-
+Since it's asking for positive amount $X>0$ so we are looking for $P(X=1 \mid X>0)$
+\\$P(X>0) = f_X(1) + f_X(2) + f_X(3) = \frac{13}{55} + \frac{1}{11} + \frac{1}{165} = \frac{39+15+1}{165} = \frac{55}{165} = \frac{1}{3}$. \\$P(X=1) = \frac{13}{55}$.\\
+$P(X=1 \mid X>0) = \frac{13/55}{1/3} = \frac{39}{55}$.
+\hardsubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find the probability mass function of $X$. }\\
+Support $S_X = \{0, 1, 2\}$:\\
+$P(X=0) = P(T_1)P(T_2) = (0.4)(0.3) = 0.12$.\\
+$P(X=2) = P(H_1)P(H_2) = (0.6)(0.7) = 0.42$.\\
+$P(X=1) = P(H_1)P(T_2) + P(T_1)P(H_2) = (0.6)(0.3) + (0.4)(0.7) = 0.18 + 0.28 = 0.46$.\\
+$$f_X(x) = \begin{cases} 0.12 & x=0 \\ 0.46 & x=1 \\ 0.42 & x=2 \\ 0 & \text{O.W.} \end{cases}$$
 
 %\hardsubproblem{Suppose there are twenty marbles in an urn numbered from 1 though 20 and an experiment involves randomly selecting three marbles from the urn without replacement. Let $X$ denote the random variable which models the largest number selected among the three marbles. Find the probability mass function of $X$.}
 
@@ -259,7 +263,7 @@ cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\
 \end{cases}
 $$ Can $c$ be any constant you wish? Why or why not? Hint: If $c = 2.41$ then what is $P(X = 5)?$ }
 
-
+No. A property of a pmf is $0 \le f_X(x) \le 1$ for all $x$. If $c = 2.41$, then $f_X(5) = 2.41(5) = 12.05$, which is greater than 1 and impossible for a probability.
 
 
 \intermediatesubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
@@ -274,7 +278,10 @@ Imposing the condition that
 \begin{align*}
 \sum_{\text{all}~ x} f_X(x) = 1
 \end{align*}
-find the appropriate value for $c$.}
+find the appropriate value for $c$.}\\
+The sum of all probabilities in the support must equal 1:\\
+$\sum_{x=1}^{10} cx = 1 \implies c(1+2+\dots+10) = 1$.\\
+$c(55) = 1 \implies c = \frac{1}{55}$.
 \end{enumerate}
 
 
@@ -332,48 +339,57 @@ With these examples in mind, here are some practice problems:
 \begin{enumerate}
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x = 17}$.}\spc{2.5}
 
-
+The indicator function is $1$ only when $x=17$ and $0$ for all other real numbers\\
+Sum = $1$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x = 17}$ where $c \in \reals$ is a constant.}\spc{2.5}
 
-
+The constant $c$ is multiplied by the result of the indicator function. Since the indicator is $1$ only at $x=17$:\\
+Sum = $c(1) = c$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
 
-
+The "switch" is on for $x=1$, $x=2$, and $x=3$.\\Sum = $1 + 1 + 1 = 3$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x\indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
 
-
+We multiply the value of $x$ by $1$ when it is in the set and by $0$ otherwise.\\
+Sum = $(1)(1) + (2)(1) + (3)(1) = 1 + 2 + 3 = 6$.
 
 
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \naturals_0} x^{\indic{x \in \braces{1, 2, 3}}}$.}\spc{2.5}
 
-
+For $x \in \{1, 2, 3\}$, the term is $x^1 = x$.\\For all other $x \in \mathbb{N}_0$, the term is $x^0 = 1$.Because there are infinitely many values where $x \notin \{1, 2, 3\}$, we are adding $1$ infinitely many times.\\Sum = Diverges to $\infty$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\prod_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
 
-
+This is a product. For any value $x \notin \{1, 2, 3\}$, the indicator is $0$.\\Product = $0$ (since most terms in the product are $0$).
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}\indic{x \in \braces{4, 5, 6}}$.}\spc{2.5}
 
-
+For the product of two indicators to be $1$, $x$ must be in both sets simultaneously. \\Since these sets are disjoint (they have no common numbers):
+Sum = $0$.
 
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
 
-
+The indicator is "on" for $t$ distinct values. For each of these, we add $c$.\\
+Sum = $c \times t = ct$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} t \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
 
-
+The constant $t$ is added $t$ times.\\
+Sum = $t \times t = t^2$.
 
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
 
-
+This sums the integers from $1$ to $t$.\\
+Sum = $1 + 2 + \ldots + t = \frac{t(t+1)}{2}$.
 \extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \oneover{x!} \indic{x \in \naturals}$.}\spc{2.5}
 
+The indicator limits the sum to positive integers $\{1, 2, 3, \ldots\}$.\\
+Sum = $\sum_{x=1}^{\infty} \frac{1}{x!}$.
 \end{enumerate}
 
 

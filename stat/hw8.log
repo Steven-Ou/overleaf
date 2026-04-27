@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  26 APR 2026 00:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  26 APR 2026 01:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -995,8 +995,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:215: Undefined control sequence.
-l.215 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:214: Undefined control sequence.
+l.214 \hardsubproblem
                      {Suppose the cumulative distribution function of a rand...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1004,8 +1004,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:231: Undefined control sequence.
-l.231 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:230: Undefined control sequence.
+l.230 \hardsubproblem
                      {Let $X$ denote the winnings of a gambler. Suppose $f$ ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1014,8 +1014,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [5]
-/Users/steve/CS/overleaf/stat/hw8.tex:246: Undefined control sequence.
-l.246 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:247: Undefined control sequence.
+l.247 \hardsubproblem
                      {Each of two coins are to be flipped exactly once. The ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1023,8 +1023,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:253: Undefined control sequence.
-l.253 \hardsubproblem
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--252
+
+ []
+
+/Users/steve/CS/overleaf/stat/hw8.tex:257: Undefined control sequence.
+l.257 \hardsubproblem
                      {Let $c$ denote some constant. Suppose a random variabl...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1032,8 +1037,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:265: Undefined control sequence.
-l.265 \intermediatesubproblem
+[6]
+/Users/steve/CS/overleaf/stat/hw8.tex:269: Undefined control sequence.
+l.269 \intermediatesubproblem
                              {Let $c$ denote some constant. Suppose a random...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1042,19 +1048,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw8.tex:278: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw8.tex:285: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.278 \end{enumerate}
+l.285 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:282: Undefined control sequence.
-l.282 \problem
+/Users/steve/CS/overleaf/stat/hw8.tex:289: Undefined control sequence.
+l.289 \problem
               {Extra Credit - We are often denoting the probability mass fun...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1062,11 +1068,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[6]
-/Users/steve/CS/overleaf/stat/hw8.tex:291: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw8.tex:298: Undefined control sequence.
 <argument>  \indic 
                    {C} = \begin {cases} 1 & \text {if} ~ C ~ \text {is true}...
-l.291     \end{align*}
+l.298     \end{align*}
                        and we call $\indic{C}$ the indicator function.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1074,10 +1079,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:291: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw8.tex:298: Undefined control sequence.
 <argument>  \indic 
                    {C} = \begin {cases} 1 & \text {if} ~ C ~ \text {is true}...
-l.291     \end{align*}
+l.298     \end{align*}
                        and we call $\indic{C}$ the indicator function.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1085,10 +1090,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:291: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw8.tex:298: Undefined control sequence.
 <recently read> \indic 
                        
-l.291     \end{align*} and we call $\indic
+l.298     \end{align*} and we call $\indic
                                           {C}$ the indicator function.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1096,8 +1101,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:295: Undefined control sequence.
-l.295 Example: The function $h(x) = \indic
+/Users/steve/CS/overleaf/stat/hw8.tex:302: Undefined control sequence.
+l.302 Example: The function $h(x) = \indic
                                           {x \in \{2,6,7\}}$ means
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1106,59 +1111,59 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
-/Users/steve/CS/overleaf/stat/hw8.tex:308: Undefined control sequence.
-<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
-                                                  {x \in \{2,6,7\}} 
-l.308 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:308: Undefined control sequence.
-<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
-                                                  {x \in \{2,6,7\}} 
-l.308 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:313: Undefined control sequence.
-<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
-                                                  {x \in \{2,6,7\}} = 0+1+0+...
-l.313 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:313: Undefined control sequence.
-<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
-                                                  {x \in \{2,6,7\}} = 0+1+0+...
-l.313 \end{align*}
-                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
 [7]
-/Users/steve/CS/overleaf/stat/hw8.tex:328: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw8.tex:315: Undefined control sequence.
+<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
+                                                  {x \in \{2,6,7\}} 
+l.315 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:315: Undefined control sequence.
+<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
+                                                  {x \in \{2,6,7\}} 
+l.315 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:320: Undefined control sequence.
+<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
+                                                  {x \in \{2,6,7\}} = 0+1+0+...
+l.320 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:320: Undefined control sequence.
+<argument> ..._{x \in \{1,2,3,4,5,6,7,8\}} \indic 
+                                                  {x \in \{2,6,7\}} = 0+1+0+...
+l.320 \end{align*}
+                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:335: Undefined control sequence.
 <argument> ...{10}{x} 0.25^x (0.75)^{10-x} \indic 
                                                   {x \in \{ 0, 1, \ldots , 1...
-l.328 \end{align}
+l.335 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1166,10 +1171,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:328: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw8.tex:335: Undefined control sequence.
 <argument> ...{10}{x} 0.25^x (0.75)^{10-x} \indic 
                                                   {x \in \{ 0, 1, \ldots , 1...
-l.328 \end{align}
+l.335 \end{align}
                  
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1177,8 +1182,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:333: Undefined control sequence.
-l.333 \extracreditsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:340: Undefined control sequence.
+l.340 \extracreditsubproblem
                             {Expand and simplify as much as you can: $\sum_{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1186,8 +1191,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:333: Undefined control sequence.
-l.333 ...y as much as you can: $\sum_{x \in \reals
+/Users/steve/CS/overleaf/stat/hw8.tex:340: Undefined control sequence.
+l.340 ...y as much as you can: $\sum_{x \in \reals
                                                   } \indic{x = 17}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1195,8 +1200,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:333: Undefined control sequence.
-l.333 ...h as you can: $\sum_{x \in \reals} \indic
+/Users/steve/CS/overleaf/stat/hw8.tex:340: Undefined control sequence.
+l.340 ...h as you can: $\sum_{x \in \reals} \indic
                                                   {x = 17}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1204,98 +1209,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:333: Undefined control sequence.
-l.333 ...\sum_{x \in \reals} \indic{x = 17}$.}\spc
-                                                  {2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:337: Undefined control sequence.
-l.337 \extracreditsubproblem
-                            {Expand and simplify as much as you can: $\sum_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:337: Undefined control sequence.
-l.337 ...y as much as you can: $\sum_{x \in \reals
-                                                  } c \indic{x = 17}$ where ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:337: Undefined control sequence.
-l.337 ...as you can: $\sum_{x \in \reals} c \indic
-                                                  {x = 17}$ where $c \in \re...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:337: Undefined control sequence.
-l.337 ...ls} c \indic{x = 17}$ where $c \in \reals
-                                                  $ is a constant.}\spc{2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:337: Undefined control sequence.
-l.337 ... where $c \in \reals$ is a constant.}\spc
-                                                  {2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:341: Undefined control sequence.
-l.341 \extracreditsubproblem
-                            {Expand and simplify as much as you can: $\sum_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:341: Undefined control sequence.
-l.341 ...y as much as you can: $\sum_{x \in \reals
-                                                  } \indic{x \in \braces{1, ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:341: Undefined control sequence.
-l.341 ...h as you can: $\sum_{x \in \reals} \indic
-                                                  {x \in \braces{1, 2, 3}}$....
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:341: Undefined control sequence.
-l.341 ...$\sum_{x \in \reals} \indic{x \in \braces
-                                                  {1, 2, 3}}$.}\spc{2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:341: Undefined control sequence.
-l.341 ...ls} \indic{x \in \braces{1, 2, 3}}$.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:340: Undefined control sequence.
+l.340 ...\sum_{x \in \reals} \indic{x = 17}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1314,6 +1229,96 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
 l.345 ...y as much as you can: $\sum_{x \in \reals
+                                                  } c \indic{x = 17}$ where ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
+l.345 ...as you can: $\sum_{x \in \reals} c \indic
+                                                  {x = 17}$ where $c \in \re...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
+l.345 ...ls} c \indic{x = 17}$ where $c \in \reals
+                                                  $ is a constant.}\spc{2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
+l.345 ... where $c \in \reals$ is a constant.}\spc
+                                                  {2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:350: Undefined control sequence.
+l.350 \extracreditsubproblem
+                            {Expand and simplify as much as you can: $\sum_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:350: Undefined control sequence.
+l.350 ...y as much as you can: $\sum_{x \in \reals
+                                                  } \indic{x \in \braces{1, ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:350: Undefined control sequence.
+l.350 ...h as you can: $\sum_{x \in \reals} \indic
+                                                  {x \in \braces{1, 2, 3}}$....
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:350: Undefined control sequence.
+l.350 ...$\sum_{x \in \reals} \indic{x \in \braces
+                                                  {1, 2, 3}}$.}\spc{2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:350: Undefined control sequence.
+l.350 ...ls} \indic{x \in \braces{1, 2, 3}}$.}\spc
+                                                  {2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:354: Undefined control sequence.
+l.354 \extracreditsubproblem
+                            {Expand and simplify as much as you can: $\sum_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:354: Undefined control sequence.
+l.354 ...y as much as you can: $\sum_{x \in \reals
                                                   } x\indic{x \in \braces{1,...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1321,8 +1326,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
-l.345 ... as you can: $\sum_{x \in \reals} x\indic
+/Users/steve/CS/overleaf/stat/hw8.tex:354: Undefined control sequence.
+l.354 ... as you can: $\sum_{x \in \reals} x\indic
                                                   {x \in \braces{1, 2, 3}}$....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1330,8 +1335,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
-l.345 ...\sum_{x \in \reals} x\indic{x \in \braces
+/Users/steve/CS/overleaf/stat/hw8.tex:354: Undefined control sequence.
+l.354 ...\sum_{x \in \reals} x\indic{x \in \braces
                                                   {1, 2, 3}}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1339,8 +1344,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:345: Undefined control sequence.
-l.345 ...s} x\indic{x \in \braces{1, 2, 3}}$.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:354: Undefined control sequence.
+l.354 ...s} x\indic{x \in \braces{1, 2, 3}}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1348,8 +1353,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:351: Undefined control sequence.
-l.351 \extracreditsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:361: Undefined control sequence.
+l.361 \extracreditsubproblem
                             {Expand and simplify as much as you can: $\sum_{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1357,8 +1362,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:351: Undefined control sequence.
-l.351 ...s much as you can: $\sum_{x \in \naturals
+/Users/steve/CS/overleaf/stat/hw8.tex:361: Undefined control sequence.
+l.361 ...s much as you can: $\sum_{x \in \naturals
                                                   _0} x^{\indic{x \in \brace...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1366,8 +1371,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:351: Undefined control sequence.
-l.351 ... can: $\sum_{x \in \naturals_0} x^{\indic
+/Users/steve/CS/overleaf/stat/hw8.tex:361: Undefined control sequence.
+l.361 ... can: $\sum_{x \in \naturals_0} x^{\indic
                                                   {x \in \braces{1, 2, 3}}}$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1375,8 +1380,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:351: Undefined control sequence.
-l.351 ... \in \naturals_0} x^{\indic{x \in \braces
+/Users/steve/CS/overleaf/stat/hw8.tex:361: Undefined control sequence.
+l.361 ... \in \naturals_0} x^{\indic{x \in \braces
                                                   {1, 2, 3}}}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1384,8 +1389,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:351: Undefined control sequence.
-l.351 ...x^{\indic{x \in \braces{1, 2, 3}}}$.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:361: Undefined control sequence.
+l.361 ...x^{\indic{x \in \braces{1, 2, 3}}}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1393,8 +1398,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:355: Undefined control sequence.
-l.355 \extracreditsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:363: Undefined control sequence.
+l.363 ... $x^1 = x$.\\For all other $x \in \mathbb
+                                                  {N}_0$, the term is $x^0 =...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:365: Undefined control sequence.
+l.365 \extracreditsubproblem
                             {Expand and simplify as much as you can: $\prod_...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1402,8 +1416,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:355: Undefined control sequence.
-l.355 ... as much as you can: $\prod_{x \in \reals
+/Users/steve/CS/overleaf/stat/hw8.tex:365: Undefined control sequence.
+l.365 ... as much as you can: $\prod_{x \in \reals
                                                   } \indic{x \in \braces{1, ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1411,8 +1425,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:355: Undefined control sequence.
-l.355 ... as you can: $\prod_{x \in \reals} \indic
+/Users/steve/CS/overleaf/stat/hw8.tex:365: Undefined control sequence.
+l.365 ... as you can: $\prod_{x \in \reals} \indic
                                                   {x \in \braces{1, 2, 3}}$....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1420,8 +1434,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:355: Undefined control sequence.
-l.355 ...\prod_{x \in \reals} \indic{x \in \braces
+/Users/steve/CS/overleaf/stat/hw8.tex:365: Undefined control sequence.
+l.365 ...\prod_{x \in \reals} \indic{x \in \braces
                                                   {1, 2, 3}}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1429,8 +1443,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:355: Undefined control sequence.
-l.355 ...ls} \indic{x \in \braces{1, 2, 3}}$.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:365: Undefined control sequence.
+l.365 ...ls} \indic{x \in \braces{1, 2, 3}}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1438,8 +1452,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 \extracreditsubproblem
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 \extracreditsubproblem
                             {Expand and simplify as much as you can: $\sum_{...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1447,8 +1461,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ...y as much as you can: $\sum_{x \in \reals
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ...y as much as you can: $\sum_{x \in \reals
                                                   } \indic{x \in \braces{1, ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1456,8 +1470,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ...h as you can: $\sum_{x \in \reals} \indic
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ...h as you can: $\sum_{x \in \reals} \indic
                                                   {x \in \braces{1, 2, 3}}\i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1465,8 +1479,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ...$\sum_{x \in \reals} \indic{x \in \braces
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ...$\sum_{x \in \reals} \indic{x \in \braces
                                                   {1, 2, 3}}\indic{x \in \br...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1474,8 +1488,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ...als} \indic{x \in \braces{1, 2, 3}}\indic
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ...als} \indic{x \in \braces{1, 2, 3}}\indic
                                                   {x \in \braces{4, 5, 6}}$....
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1483,8 +1497,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ...\in \braces{1, 2, 3}}\indic{x \in \braces
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ...\in \braces{1, 2, 3}}\indic{x \in \braces
                                                   {4, 5, 6}}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1492,197 +1506,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:359: Undefined control sequence.
-l.359 ... 3}}\indic{x \in \braces{4, 5, 6}}$.}\spc
-                                                  {2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 \extracreditsubproblem
-                            {Expand and simplify as much as you can: $\sum_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...y as much as you can: $\sum_{x \in \reals
-                                                  } c \indic{x \in \braces{1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...as you can: $\sum_{x \in \reals} c \indic
-                                                  {x \in \braces{1, 2, \ldot...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...sum_{x \in \reals} c \indic{x \in \braces
-                                                  {1, 2, \ldots, t}}$ where ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...es{1, 2, \ldots, t}}$ where $c \in \reals
-                                                  $ is a constant and $t \in...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...reals$ is a constant and $t \in \naturals
-                                                  $ is a constant.}\spc{2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:364: Undefined control sequence.
-l.364 ...and $t \in \naturals$ is a constant.}\spc
-                                                  {2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 \extracreditsubproblem
-                            {Expand and simplify as much as you can: $\sum_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...y as much as you can: $\sum_{x \in \reals
-                                                  } t \indic{x \in \braces{1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...as you can: $\sum_{x \in \reals} t \indic
-                                                  {x \in \braces{1, 2, \ldot...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...sum_{x \in \reals} t \indic{x \in \braces
-                                                  {1, 2, \ldots, t}}$ where ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...es{1, 2, \ldots, t}}$ where $c \in \reals
-                                                  $ is a constant and $t \in...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...reals$ is a constant and $t \in \naturals
-                                                  $ is a constant.}\spc{2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:368: Undefined control sequence.
-l.368 ...and $t \in \naturals$ is a constant.}\spc
-                                                  {2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 \extracreditsubproblem
-                            {Expand and simplify as much as you can: $\sum_{...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...y as much as you can: $\sum_{x \in \reals
-                                                  } x \indic{x \in \braces{1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...as you can: $\sum_{x \in \reals} x \indic
-                                                  {x \in \braces{1, 2, \ldot...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...sum_{x \in \reals} x \indic{x \in \braces
-                                                  {1, 2, \ldots, t}}$ where ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...es{1, 2, \ldots, t}}$ where $c \in \reals
-                                                  $ is a constant and $t \in...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...reals$ is a constant and $t \in \naturals
-                                                  $ is a constant.}\spc{2.5}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw8.tex:372: Undefined control sequence.
-l.372 ...and $t \in \naturals$ is a constant.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:369: Undefined control sequence.
+l.369 ... 3}}\indic{x \in \braces{4, 5, 6}}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1701,6 +1526,195 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
 l.375 ...y as much as you can: $\sum_{x \in \reals
+                                                  } c \indic{x \in \braces{1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
+l.375 ...as you can: $\sum_{x \in \reals} c \indic
+                                                  {x \in \braces{1, 2, \ldot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
+l.375 ...sum_{x \in \reals} c \indic{x \in \braces
+                                                  {1, 2, \ldots, t}}$ where ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
+l.375 ...es{1, 2, \ldots, t}}$ where $c \in \reals
+                                                  $ is a constant and $t \in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
+l.375 ...reals$ is a constant and $t \in \naturals
+                                                  $ is a constant.}\spc{2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
+l.375 ...and $t \in \naturals$ is a constant.}\spc
+                                                  {2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 \extracreditsubproblem
+                            {Expand and simplify as much as you can: $\sum_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...y as much as you can: $\sum_{x \in \reals
+                                                  } t \indic{x \in \braces{1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...as you can: $\sum_{x \in \reals} t \indic
+                                                  {x \in \braces{1, 2, \ldot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...sum_{x \in \reals} t \indic{x \in \braces
+                                                  {1, 2, \ldots, t}}$ where ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...es{1, 2, \ldots, t}}$ where $c \in \reals
+                                                  $ is a constant and $t \in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...reals$ is a constant and $t \in \naturals
+                                                  $ is a constant.}\spc{2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:380: Undefined control sequence.
+l.380 ...and $t \in \naturals$ is a constant.}\spc
+                                                  {2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 \extracreditsubproblem
+                            {Expand and simplify as much as you can: $\sum_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...y as much as you can: $\sum_{x \in \reals
+                                                  } x \indic{x \in \braces{1...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...as you can: $\sum_{x \in \reals} x \indic
+                                                  {x \in \braces{1, 2, \ldot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...sum_{x \in \reals} x \indic{x \in \braces
+                                                  {1, 2, \ldots, t}}$ where ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...es{1, 2, \ldots, t}}$ where $c \in \reals
+                                                  $ is a constant and $t \in...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...reals$ is a constant and $t \in \naturals
+                                                  $ is a constant.}\spc{2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:385: Undefined control sequence.
+l.385 ...and $t \in \naturals$ is a constant.}\spc
+                                                  {2.5}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 \extracreditsubproblem
+                            {Expand and simplify as much as you can: $\sum_{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 ...y as much as you can: $\sum_{x \in \reals
                                                   } \oneover{x!} \indic{x \i...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1708,8 +1722,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
-l.375 ...as you can: $\sum_{x \in \reals} \oneover
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 ...as you can: $\sum_{x \in \reals} \oneover
                                                   {x!} \indic{x \in \natural...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1717,8 +1731,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
-l.375 ... $\sum_{x \in \reals} \oneover{x!} \indic
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 ... $\sum_{x \in \reals} \oneover{x!} \indic
                                                   {x \in \naturals}$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1726,8 +1740,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
-l.375 ...eals} \oneover{x!} \indic{x \in \naturals
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 ...eals} \oneover{x!} \indic{x \in \naturals
                                                   }$.}\spc{2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1735,8 +1749,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw8.tex:375: Undefined control sequence.
-l.375 ...neover{x!} \indic{x \in \naturals}$.}\spc
+/Users/steve/CS/overleaf/stat/hw8.tex:389: Undefined control sequence.
+l.389 ...neover{x!} \indic{x \in \naturals}$.}\spc
                                                   {2.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1745,18 +1759,33 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw8.tex:377: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw8.tex:393: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.377 \end{enumerate}
+l.393 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[8] (./hw8.aux)
+
+Overfull \hbox (28.52823pt too wide) in paragraph at lines 340--393
+\OT1/cmr/m/n/12 Sum = $\OML/cmm/m/it/12 c\OT1/cmr/m/n/12 (1) = \OML/cmm/m/it/12 c$\OT1/cmr/m/n/12 . Ex-pand and sim-plify as much as you can: $[][] []$.2.5
+ []
+
+
+Overfull \hbox (36.72267pt too wide) in paragraph at lines 340--393
+\OT1/cmr/m/n/12 Sum = $\OML/cmm/m/it/12 c \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 ct$\OT1/cmr/m/n/12 . Ex-pand and sim-plify as much as you can: $[][] \OML/cmm/m/it/12 t[]$
+ []
+
+
+Overfull \hbox (38.03603pt too wide) in paragraph at lines 340--393
+\OT1/cmr/m/n/12 Sum = $\OML/cmm/m/it/12 t \OMS/cmsy/m/n/12 ^^B \OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 t[]$\OT1/cmr/m/n/12 . Ex-pand and sim-plify as much as you can: $[][] \OML/cmm/m/it/12 x[]$
+ []
+
+[8] [9] (./hw8.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1769,16 +1798,16 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Here is how much of TeX's memory you used:
  15560 strings out of 467525
  328799 string characters out of 5418982
- 713593 words of memory out of 5000000
+ 713594 words of memory out of 5000000
  44222 multiletter control sequences out of 15000+600000
  634939 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,18n,121p,721b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on hw8.pdf (8 pages, 152732 bytes).
+Output written on hw8.pdf (9 pages, 158587 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
