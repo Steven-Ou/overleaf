@@ -1,0 +1,312 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Spring 2026 Homework \#9 \\
+(Last Homework for Exam 02)}
+
+\author{Elliot Gangaram} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace by 11:59PM Sunday, May 3, 2026 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{Menu} and select \textit{Copy Project}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+\problem{These exercises are designed to review Section 4.2.}
+
+
+
+\begin{enumerate}
+
+\inthenotessubproblem{What is the formula we use to compute $\mu = \mathbb{E}[X]$?}
+
+\vspace{10mm}
+
+\inthenotessubproblem{Can you intuitively/geometrically explain what is meant by $\mu = \mathbb{E}[X]$?
+ }
+
+\vspace{15mm}
+
+
+\easysubproblem{Suppose $X$ is a discrete random variable with probability mass function $f$. What is the difference between 
+\begin{align*}
+    \sum_{\text{all} ~ x } f_X(x) ~~\text{and} ~~ \sum_{\text{all} ~ x } x f_X(x) ?
+\end{align*}}
+
+\vspace{15mm}
+
+%\easysubproblem{Suppose that a fair six sided die is rolled twice. Let $X$ denote the maximum value to appear in the two rolls. Find $\mathbb{E}[X]$.  }
+
+
+\intermediatesubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find $\mathbb{E}[X]$.}
+
+\newpage
+
+\inthenotessubproblem{What does The Law of The Unconscious Statistician state?
+}
+
+\vspace{20mm}
+
+\inthenotessubproblem{Explain what is meant by the $n^{th}$ moment of $X$.}
+
+\vspace{20mm}
+
+\intermediatesubproblem{Suppose $X$ is a random variable with the following cdf: $$
+F_X(x) = P(X \leq x) =
+\begin{cases}
+0 & \text{if} ~ x < 3,  \\ 
+0.12 & \text{if} ~ 3 \leq x < 5,  \\
+0.40 & \text{if} ~ 5 \leq x < 6,  \\
+0.55 & \text{if} ~ 6 \leq x < 7,  \\
+0.72 & \text{if} ~ 7 \leq x < 11,  \\
+0.90 & \text{if} ~ 11 \leq x < 12,  \\
+1 & \text{if} ~ x \geq 12  
+\end{cases}
+$$ 
+
+Find $E[X^2]$.}
+
+
+
+\newpage 
+
+%\easysubproblem{A person tosses a fair coin until a tail appears for the first time.
+% If the tail appears on the $n^{th}$ flip, the person wins $2^n$ dollars. Let $X$
+%  denote the player's winnings. Show that $\mathbb{E}[X] = \infty$. This problem
+%is known as the St. Petersburg paradox. Would you be willing to pay \$1 million dollars to play this game once? Would you be willing to pay \$1 million dollars  for each game if you could play for as long as you liked and only had to settle up when you stopped playing? }
+\end{enumerate}
+
+\vspace{100mm}
+
+\problem{In this exercise, we will review what is meant by the variance of a random variable. This is Section 4.3 in the notes.}
+
+\begin{enumerate}
+
+
+\inthenotessubproblem{ Formally define what we mean by the variance of a random variable $X$.}
+
+\vspace{15mm}
+
+\inthenotessubproblem{Can you summarize what the formula above means? (We color coded this in the notes for Section 4.3).}
+
+\vspace{15mm}
+
+\inthenotessubproblem{When we compute the variance of a random variable, what are the units of the variance?}
+
+\vspace{5mm}
+
+\inthenotessubproblem{Define what we mean by the standard deviation of a random variable $X$.}
+
+\vspace{10mm}
+
+
+\inthenotessubproblem{ Prove for a discrete random variable $X$, $\mathbb{V}ar[X] = E\big[ X^2 \big] - \big( E[X] )^2$.} 
+
+
+
+% \easysubproblem{ Using the  formula in part $(e)$, compute the variance of the random variable $X$ which has the following probability mass function:
+%  $$
+% f(x) =
+% \begin{cases}
+% 0.5 & \text{if} ~ x = 0,1  \ \\ 
+% 0 , & \text{otherwise} \\
+% \end{cases}
+% $$}
+
+\newpage
+
+\easysubproblem{ Using the  formula in part $(e)$, compute the variance of the random variable $Y$ which has the following probability mass function:
+ $$
+f_Y(y) =
+\begin{cases}
+0.5 & \text{if} ~ y = -100, 100  \ \\ 
+0  & \text{otherwise} \\
+\end{cases}
+$$ }
+
+
+% \easysubproblem{ Suppose $X$ is a discrete random variable with probability mass function: 
+% $$
+% f(x) = P(X = x) =
+% \begin{cases}
+% 1/10 & \text{if} ~ x = 1, 2, 3, \ldots 10  \\   
+% 0 & \text{otherwise} \\
+% \end{cases}
+% $$ 
+
+% Compute $SD[X]$.}
+\end{enumerate}
+
+\vspace{40mm}
+
+\problem{In this problem, we will review the material of Section 4.4 which covers the Bernoulli and Binomial random variables. }
+\begin{enumerate}
+
+\inthenotessubproblem{What is the point of a random variable?}
+
+\vspace{15mm}
+
+
+\inthenotessubproblem{Define the probability mass function of a Bernoulli random variable.}
+
+\vspace{20mm}
+
+\inthenotessubproblem{What does a Bernoulli random variable model?}
+
+\vspace{15mm}
+
+\inthenotessubproblem{Let $X$ model the number of successes when we conduct an experiment with one and only one trial. If this trial results in either a success with probability $p$ or failure with probability $1-p$, then prove that $X \sim Bern(p)$.}
+
+\newpage
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Bernoulli random variable.}
+
+\vspace{15mm}
+
+\inthenotessubproblem{What is the support of the Bernoulli random variable?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{If $X \sim Bern(p)$, then sketch the cumulative distribution function of $X$.}
+
+\vspace{40mm}
+
+\inthenotessubproblem{If $X \sim Bern(p)$ then prove that $\mathbb{E}[X] = p$.}
+
+\vspace{15mm}
+
+\intermediatesubproblem{If $X \sim Bern(p)$ then prove that $\mathbb{V}ar[X] = p(1-p)$.}
+
+\vspace{20mm}
+
+\inthenotessubproblem{Define the probability mass function of a Binomial random variable.}
+
+\vspace{25mm}
+
+\inthenotessubproblem{What does a Binomial random variable model?}
+
+\vspace{15mm}
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Binomial random variable.}
+
+\vspace{15mm}
+
+\inthenotessubproblem{What is the support of the Binomial random variable?}
+
+\vspace{10mm}
+
+\intermediatesubproblem{If $X \sim Binomial(3, 0.6)$, then sketch the cumulative distribution function of $X$.}
+
+\vspace{90mm}
+
+\inthenotessubproblem{If $X \sim Binom(n,p)$ then what is $\mathbb{E}[X]$? You do not have to prove your answer. What is $\mathbb{V}ar[X]$? Again you do not have to prove your answer, just state the results.}
+
+\vspace{15mm}
+
+
+\intermediatesubproblem{On a multiple-choice exam with 3 possible answers for each of
+the 5 questions, what is the probability that a student will get 4 or
+more correct answers just by guessing? (You may assume that the questions are independent of each other). You may leave your answer in terms of a calculator command.}
+
+\newpage
+
+\intermediatesubproblem{Suppose  the probability that a certain experiment will be successful is 0.4 and let $X$ denote the number of successes that are obtained in 15 independent performances of the experiment. Find $P(6 \leq X \leq 9)$.  You may leave your answer in terms of a calculator command.
+ }
+
+\vspace{50mm}
+
+\intermediatesubproblem{A certain electronic system contains 10 components. Suppose that the probability that each individual component will fail is 0.2 and that the components fail independently of each other. Given that at least one of the components has failed, what is the probability that at least two of the components have failed?   You may leave your answer in terms of a calculator command. }
+
+
+
+\end{enumerate}
+
+\newpage 
+
+\problem{In this problem we will review the random variable(s) covered in Section 4.5.}
+
+\begin{enumerate}
+
+\inthenotessubproblem{What is the pmf of the Geometric random variable?}
+
+\vspace{10mm}
+
+
+\inthenotessubproblem{What is the support of the Geometric random variable?}
+
+\vspace{5mm}
+
+
+\inthenotessubproblem{Under what conditions do we obtain a Geometric random variable?}
+
+\vspace{20mm}
+
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Geometric random variable.}
+
+\vspace{20mm}
+
+\inthenotessubproblem{What is the cdf of the Geometric random variable? There is no need to prove your answer, just state the result.}
+
+\vspace{20mm}
+
+\hardsubproblem{Suppose $X \sim Geo(p)$. Show that $P(X > m + n ~|~ X>n) = P(X > m)$. This is what is known as the \textit{memorylessness} property. You may assume that $m$ and $n$ are in the support of $X$.}
+
+\newpage 
+
+\hardsubproblem{At Coney Island, you can play a game that requires the player to shoot a basketball seven times. If a player makes at least six of the seven shots, then they win a  prize and the game is over. If a player does not make at least six of the seven shots, then they lose and the game is over. A contestant, Stephen Curry, continually plays the game until he is able to win a prize at which point he stops. Find the probability that Curry will have to play the game more than three times. You may assume that the probability  Curry makes any shot is 82\% and each shot is independent of the others. You may also assume that the games are independent of each other. You may leave your answer in terms of a calculator command.}
+
+\vspace{60mm}
+
+\hardsubproblem{A student wishes to take a driving test in order to obtain their learners permit. There are exactly 20 questions on the New York permit driving test. All of the questions on the test are multiple choice, with four possible answers. In order to pass the permit test, the student has to correctly answer \textbf{at least} 14  of the 20 questions. However, the student is unprepared and comes up with the following strategy. They decide they will not study and randomly guess the answer to each question. They will then repeatedly take the test until they are able to pass the exam at which point they will stop. Find the probability that the student will have to take the test more than fifty  times. (Note: Each question on the test has only one correct answer. You may assume each question is independent of other questions, and each time they take an exam is independent of other exams).}
+
+
+
+%\inthenotessubproblem{What is the pmf of the Negative Binomial random variable?}
+
+
+%\inthenotessubproblem{What is the support of the Negative Binomial random variable?}
+
+
+
+%\inthenotessubproblem{Under what conditions do we obtain a Negative Binomial  random variable?}
+
+
+%\easysubproblem{Give an example of an experiment that can be modeled by a Negative Binomial  random variable.}
+
+
+
+\end{enumerate}
+
+
+\end{document}
