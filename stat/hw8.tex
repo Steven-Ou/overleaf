@@ -10,12 +10,13 @@
 
 
 
-\title{MATH 241 Spring 2026 Homework \#8}
+\title{MATH 241 Spring 2026 Homework \#9 \\
+(Last Homework for Exam 02)}
 
 \author{Steven Ou} %STUDENTS: write your name here
 
 \iftoggle{professormode}{
-\date{Due via Brightspace by 11:59PM Sunday, May 26, 2026 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+\date{Due via Brightspace by 11:59PM Sunday, May 3, 2026 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
 }
 
 \renewcommand{\abstractname}{Instructions and Philosophy}
@@ -29,7 +30,7 @@ The path to success in this class is to do many problems. Unlike other courses, 
 
 The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
 
-Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{File} and select \textit{Make a Copy}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{Menu} and select \textit{Copy Project}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
 
 
 \end{abstract}
@@ -40,357 +41,272 @@ NAME: \line(1,0){380}
 \clearpage
 }
 
-\problem{These exercises are designed with the intention of reviewing one of the most important topics in all of probability and statistics -- \textit{random variables}. We will start off reviewing the lecture notes of Section 4.1 accompanied by some light reading on Wikipedia. This means most of these questions can be answered by studying the lecture notes.}
+\problem{These exercises are designed to review Section 4.2.}
 
 
 
 \begin{enumerate}
 
-\inthenotessubproblem{Formally define what is meant by a \textit{random variable}.}
+\inthenotessubproblem{What is the formula we use to compute $\mu = \mathbb{E}[X]$?}\\
+$E[X] := \sum_{\text{all } x} x f_X(x)$. 
 
-A random variable is a real-valued function defined on the sample space s of an experiment. It is typically denoted by a capital letter, such as $X$.
-\inthenotessubproblem{Draw a picture that illustrates how we think of a random variable. Call your random variable $X$.}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.5\textwidth]{1.png}
-    \caption{Illustrations of Random Variable}
-    \label{fig:label}
-\end{figure}
+\inthenotessubproblem{Can you intuitively/geometrically explain what is meant by $\mu = \mathbb{E}[X]$?
+ }
+Geometrically, the expected value represents the balance point of the distribution. If the x-axis is imagined as a weightless rod with weights of size $f(x)$ placed at each $x$, $E[X]$ is the point where the rod balances.
 
-\easysubproblem{Explain what the event $ \{ X(s) = x \}$ means. What is the difference between $X$ and $x$?}
 
-The event $\{X(s) = x\}$ represents the set of all outcomes in the sample space $S$ that result in a specific realization or value $x$. $X$ is the random variable itself, which is a function. $x$ is a realization, which is a specific numerical outcome or value that the function takes. 
 
-\easysubproblem{In class, we made a whimsical comment that a random variable is not random and is not a variable. Does the Wikipedia page on random variables agree with this comment? \href{https://en.wikipedia.org/wiki/Random_variable}{Link to Random Variables.} Write ``Yes'' or ``No''. Hint: read the first paragraph.}
+\easysubproblem{Suppose $X$ is a discrete random variable with probability mass function $f$. What is the difference between 
+\begin{align*}
+    \sum_{\text{all} ~ x } f_X(x) ~~\text{and} ~~ \sum_{\text{all} ~ x } x f_X(x) ?
+\end{align*}}
+$\sum f_X(x) = 1$ (the sum of all probabilities in a pmf). \\ $\sum x f_X(x) = E[X]$ (the weighted average or expected value).
 
-Yes!
+%\easysubproblem{Suppose that a fair six sided die is rolled twice. Let $X$ denote the maximum value to appear in the two rolls. Find $\mathbb{E}[X]$.  }
 
-\easysubproblem{In the Wikipedia article above on random variables, under ``\textbf{Definition}'' there is a subsection called ``\textbf{Extensions}''. Read the ``\textbf{Extensions}'' section. In what other disciplines is the idea of random variables/random elements useful? List a few. }
 
-The idea of random variables are useful in Physics-modeling quantum states or particle motion, Economics/Finances-modeling market fluctuations, and Computer Science - for randomized algorithms.
-\inthenotessubproblem{What are the three classes of random variables? }
+\intermediatesubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote   that results. Find $\mathbb{E}[X]$.}\\
+Let $X_1$ and $X_2$ be Bernoulli trials for each coin.\\ $E[X_1] = 0.6$ and $E[X_2] = 0.7$. \\Since $E[X+Y] = E[X] + E[Y]$, the total expected heads is $0.6 + 0.7 = \mathbf{1.3}$.  
 
-Discrete, Continous, and Mixed.
 
-\inthenotessubproblem{Define what is meant by a \textit{discrete random variable}. }
-
-A random variable is said to be discrete r.v if it takes ob either a finite number of possibilities or a countably infinite number of possibilities. 
-
-\easysubproblem{True or False: If $X$ models the number of classes a student will take the following semester, then $X$ is a discrete random variable.}
-
-True.
-
-\easysubproblem{True or False: If $X$ models the number of flash floods in New York in the year 2025, then $X$ is a discrete random variable.}
-
-True.
-
-\easysubproblem{True or False: Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then $X$ is a discrete random variable.}
-
-True.
-\easysubproblem{True or False: If $X$ measures the amount of time that passes between two earthquakes, then $X$ is a discrete random variable.}
-
-False, this would be continuous r.v rather than discrete. 
-
-\inthenotessubproblem{Define what is meant by a \textit{probability mass function(P.M.F)}. }
-
-P.M.F of a discrete r.v X is defined as the function $f_x$ such that for every real number x,$f_X(x) = P(X = x)$.  This tells the probability that X takes a singular value.
-
-\inthenotessubproblem{Define what is meant by a \textit{cumulative distribution function(C.D.F)}. }
-
-C.D.F is a discrete r.v X, denoted by $F_x$ is defined as $F_X(x) = P(X \le x)$.
-
-\intermediatesubproblem{Explain what is the difference between a probability mass function and a cumulative distribution function.}
-\\The C.D.F provides the probability that X is less than or equal to a specific value x. The P.M.F provides the probability of X being exactly equal to speigic value x.
-
-\inthenotessubproblem{Define what is meant by the support of a discrete random variable. }
-
-The support of a discrete random variable X is the set of all possible values that X can take. 
-
-\easysubproblem{Suppose an experimental drug is to be given to five patients. If $X$ models the number of patients for which the drug is successful for, then what is the support of $X$?}
-
-The support of $X$ is: $S_x = \{0, 1, 2, 3, 4, 5\}$.
-
-\intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) = F_X(a)$? Explain your answer. Hint: Look back at the examples we did in Section 4.1. For any of the examples, can you find an $a$ such that $f_X(a) = F_X(a)$?}
-
-Yes, it is possible. This occurs specifically when $a$ is the minimum value in the support of $X$. By definition, $F_X(a) = P(X \le a)$. If $a$ is the smallest possible value that $X$ can take, there are no values smaller than $a$ with a non-zero probability. Therefore, the probability of $X$ being less than or equal to $a$ is exactly equal to the probability of $X$ being equal to $a$.  In the State Farm insurance example, the support of $X$ starts at $0$. The pmf at 0 is $f_X(0) = 0.855$. The cdf at 0 is $F_X(0) = P(X \le 0) = 0.855$. In this case, $f_X(0) = F_X(0)$. 
-
-\intermediatesubproblem{Suppose $\support{X}$ denotes the support of a discrete random variable $X$. Let $a \in \support{X}$, $f_X$ denote the probability mass function of $X$ and  $F_X$ denote the cumulative distribution of $X$. Is it possible that $f_X(a) \neq F_X(a)$? Explain your answer.}
-
-Yes, this is the most common scenario and occurs for any value $a$ in the support that is not the minimum value. For any value $a$ greater than the minimum value in the support, $F_X(a)$ accumulates the probabilities of all values less than or equal to $a$. This sum will be strictly greater than the individual probability $f_X(a)$ as long as the preceding values in the support have non-zero probabilities.In the same State Farm example, consider $a = 100,000$. The pmf is $f_X(100,000) = 0.140$. The cdf is $F_X(100,000) = P(X \le 100,000) = 0.855 + 0.140 = 0.995$. Clearly, $0.140 \neq 0.995$.  
-
-\inthenotessubproblem{How do we derive a probability mass function?}
-
-To derive the pmf of a discrete r.v, we would use the following recipe:\\'Find the Support' - determine all the possible values that the r.v X can take. \\'Calculate Probabilities' -Calculate the probability P(X=x)\\ 'Summarize'- Organize these values and their corresponding porbabilities into a functional format. 
-
-\end{enumerate}
+\inthenotessubproblem{What does The Law of The Unconscious Statistician state?
+}\\
+It states that $E[r(X)] = \sum_{\text{all } x} r(x) f_X(x)$. \\This allows us to find the expected value of a function of $X$ without first finding the pmf of the new transformed variable.  
 \newpage
+\inthenotessubproblem{Explain what is meant by the $n^{th}$ moment of $X$.}
 
-\problem{In this exercise, we will derive the probability mass function for a specific random variable. A sequence of five independent trials are to be performed. Each trial consists of administering a drug to a patient and then seeing if the drug is a success (beneficial) or a failure (non-beneficial) for that patient. The probability the drug is successful for any patient is 0.75. Let $X$ model the number of patients for which the drug is successful. }
-
-\begin{enumerate}
-
-
-\easysubproblem{ Find the support of $X$.}\\
-The support of $X$ is: $S_x = \{0, 1, 2, 3, 4, 5\}$.
-
-\easysubproblem{Your answer above should have six possible values. Study any three of the six values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
-
-Using 0,1, and 5:
-\\$P(X=0)$: All 5 patients are failures. $(0.25)^5 = 0.0009765625$.\\$P(X=1)$: Exactly 1 success out of 5. $\binom{5}{1}(0.75)^1(0.25)^4 = 5(0.75)(0.00390625) = 0.0146484375$.\\$P(X=5)$: All 5 patients are successes. $(0.75)^5 = 0.2373046875$
-\intermediatesubproblem{}{Write down the probability mass function of $X$.}
-\\The general form $X \sim Binom(n, p)$:
-$$f_X(x) = \begin{cases} \binom{5}{x}(0.75)^x(0.25)^{5-x} & x = 0, 1, 2, 3, 4, 5 \\ 0 & \text{otherwise} \end{cases}$$
-\end{enumerate}
-
-
-
-
-\problem{In this exercise, we will derive the probability mass function for a slightly more general random variable. Suppose an experiment consists of a sequence of $n$ independent trials. Each trial may result in a success or a failure. Suppose the probability of a success on any trial is $p$ and hence the probability of failure on any trial is $1-p$. Let $X$ model the total number of successes among the $n$ trials.}
-
-
-\begin{enumerate}
-
-\intermediatesubproblem{ Find the support of $X$.}\\
-X: $S_X = \{0, 1, 2, \dots, n\}$.
-
-
-%\intermediatesubproblem{Your answer above should have $n+1$ possible values. Study any three of the $n+1$ values in the support of $X$ and find the probability that $X$ takes that particular value. Hint: look back at Homework 6, Problem 5.}
-
-
-\intermediatesubproblem{Write down the probability mass function of $X$.}
-\\$$f_X(x) = \begin{cases} \binom{n}{x}p^x(1-p)^{n-x} & x = 0, 1, \dots, n \\ 0 & \text{otherwise} \end{cases}$$
-
-\end{enumerate}
-\newpage
-\problem{We will now re-consider a problem in Section 3.2 through the lens of random variables.  Suppose an experiment consists of continually flipping a fair coin until a heads appears for the first time at which point the experiment stops. Let $X$ model the total number of flips required to get our first heads and assume that the outcomes of the tosses are independent of each other.}
-
-
-\begin{enumerate}
-
-\easysubproblem{ Find the support of $X$.}
-
-X: $S_X = \{1, 2, 3, 4, \dots\}$
-
-\easysubproblem{Find the probability that $X$ takes the value 1. That is, find $P(X=1)$.}
-
-$P(X=1)$: First flip is heads. $P(H) = 0.5$.
-
-\easysubproblem{Find the probability that $X$ takes the value 2. That is, find $P(X=2)$.}
-
-$P(X=2)$: First is tails, second is heads. $P(T)P(H) = (0.5)(0.5) = 0.25$.
-
-\easysubproblem{Find the probability that $X$ takes the value 3. That is, find $P(X=3)$.}
-
-$P(X=3)$: $P(T)P(T)P(H) = (0.5)^2(0.5) = 0.125$.
-
-\intermediatesubproblem{Write down the probability mass function of $X$.}
-
-$$f_X(x) = \begin{cases} (0.5)^x & x = 1, 2, 3, \dots \\ 0 & \text{otherwise} \end{cases}$$
-
-\end{enumerate}
-
-
-\problem{In this problem, we will study a few questions involving random variables.}
-
-
-\begin{enumerate}
-
-
-\intermediatesubproblem{Suppose $X$ is a discrete random variable with probability mass function $f$ such that 
-$$
-f_X(x) = P(X = x) =
-\begin{cases}
-1/10 & \text{if} ~ x = 1, 2, 3, \ldots 10  \\   
-0 & \text{otherwise} \\
-\end{cases}
-$$ 
-
-Sketch or find the cumulative distribution function of $X$.}
-
-The CDF is a step function that jumps by $1/10$ at each integer from 1 to 10:
-$$F_X(x) = \begin{cases} 0 & x < 1 \\ \frac{\lfloor x \rfloor}{10} & 1 \le x < 10 \\ 1 & x \ge 10 \end{cases}$$
-
-\hardsubproblem{Suppose the cumulative distribution function of a random variable $X$ is given by 
-$$
+The $n^{th}$ moment is defined as $E[X^n]$, where $n$ is a positive integer. 
+\intermediatesubproblem{Suppose $X$ is a random variable with the following cdf: $$
 F_X(x) = P(X \leq x) =
 \begin{cases}
-0 & \text{if} ~ x < 0, \\
-0.5, & \text{if} ~ 0 \leq x < 1 \\  
-0.6, & \text{if} ~ 1 \leq x < 2 \\  
-0.8, & \text{if} ~ 2 \leq x < 3 \\ 
-0.9, & \text{if} ~ 3 \leq x < 3.5 \\ 
-1, & \text{if} ~ x \geq 3.5 \\  
+0 & \text{if} ~ x < 3,  \\ 
+0.12 & \text{if} ~ 3 \leq x < 5,  \\
+0.40 & \text{if} ~ 5 \leq x < 6,  \\
+0.55 & \text{if} ~ 6 \leq x < 7,  \\
+0.72 & \text{if} ~ 7 \leq x < 11,  \\
+0.90 & \text{if} ~ 11 \leq x < 12,  \\
+1 & \text{if} ~ x \geq 12  
 \end{cases}
 $$ 
 
-Find the probability mass function of $X$. }\\
-The pmf value at $x$ is the "jump" height in the CDF at that point:\\$f_X(0) = F_X(0) - F_X(0^-) = 0.5 - 0 = 0.5$$f_X(1) = 0.6 - 0.5 = 0.1$\\$f_X(2) = 0.8 - 0.6 = 0.2$\\$f_X(3) = 0.9 - 0.8 = 0.1$\\$f_X(3.5) = 1 - 0.9 = 0.1$\\$f_X(x) = 0$ otherwise.
+Find $E[X^2]$.}
 
-\hardsubproblem{Let $X$ denote the winnings of a gambler. Suppose $f$ denotes the probability mass function of $X$ where 
-$$
-f_X(x) = P(X = x) =
-\begin{cases}
-1/3 & \text{if} ~ x = 0, \\
-13/55, & \text{if} ~ x = -1, 1 \\  
-1/11, & \text{if} ~ x = -2, 2 \\   
-1/165, & \text{if} ~ x = -3, 3 \\   
-0 &  \text{otherwise} \\
-\end{cases}
-$$ 
-
-Given that the gambler wins a positive amount, find the probability that he wins $1$ dollar.}
-
-Since it's asking for positive amount $X>0$ so we are looking for $P(X=1 \mid X>0)$
-\\$P(X>0) = f_X(1) + f_X(2) + f_X(3) = \frac{13}{55} + \frac{1}{11} + \frac{1}{165} = \frac{39+15+1}{165} = \frac{55}{165} = \frac{1}{3}$. \\$P(X=1) = \frac{13}{55}$.\\
-$P(X=1 \mid X>0) = \frac{13/55}{1/3} = \frac{39}{55}$.
-\hardsubproblem{Each of two coins are to be flipped exactly once. The first coin will land on heads with probability 0.6, and the second coin will land on heads with probability 0.7. Assume that the results of the flips are independent of each other and let $X$ denote the total number of heads that results. Find the probability mass function of $X$. }\\
-Support $S_X = \{0, 1, 2\}$:\\
-$P(X=0) = P(T_1)P(T_2) = (0.4)(0.3) = 0.12$.\\
-$P(X=2) = P(H_1)P(H_2) = (0.6)(0.7) = 0.42$.\\
-$P(X=1) = P(H_1)P(T_2) + P(T_1)P(H_2) = (0.6)(0.3) + (0.4)(0.7) = 0.18 + 0.28 = 0.46$.\\
-$$f_X(x) = \begin{cases} 0.12 & x=0 \\ 0.46 & x=1 \\ 0.42 & x=2 \\ 0 & \text{O.W.} \end{cases}$$
-
-%\hardsubproblem{Suppose there are twenty marbles in an urn numbered from 1 though 20 and an experiment involves randomly selecting three marbles from the urn without replacement. Let $X$ denote the random variable which models the largest number selected among the three marbles. Find the probability mass function of $X$.}
+We need to first identify the pmf from the jumps in the CDF:\\
+$P(X=3) = 0.12$\\$P(X=5) = 0.40 - 0.12 = 0.28$\\$P(X=6) = 0.55 - 0.40 = 0.15$\\$P(X=7) = 0.72 - 0.55 = 0.17$\\$P(X=11) = 0.90 - 0.72 = 0.18$\\$P(X=12) = 1 - 0.90 = 0.10$\\
+Using LOTUS: $E[X^2] = 3^2(0.12) + 5^2(0.28) + 6^2(0.15) + 7^2(0.17) + 11^2(0.18) + 12^2(0.10)$.
+$E[X^2] = 1.08 + 7.0 + 5.4 + 8.33 + 21.78 + 14.4 = \mathbf{57.99}$.  
 
 
-\hardsubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
-$$
-f_X(x) = P(X = x) =
-\begin{cases}
-cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\  
-0 & \text{otherwise} \\
-\end{cases}
-$$ Can $c$ be any constant you wish? Why or why not? Hint: If $c = 2.41$ then what is $P(X = 5)?$ }
 
-No. A property of a pmf is $0 \le f_X(x) \le 1$ for all $x$. If $c = 2.41$, then $f_X(5) = 2.41(5) = 12.05$, which is greater than 1 and impossible for a probability.
-
-
-\intermediatesubproblem{Let $c$ denote some constant. Suppose a random variable $X$ has the following probability mass function:
-$$
-f(x) = P(X = x) =
-\begin{cases}
-cx & \text{if} ~ x = 1, 2, 3, \ldots 10,  \\  
-0 & \text{otherwise} \\
-\end{cases}
-$$
-Imposing the condition that 
-\begin{align*}
-\sum_{\text{all}~ x} f_X(x) = 1
-\end{align*}
-find the appropriate value for $c$.}\\
-The sum of all probabilities in the support must equal 1:\\
-$\sum_{x=1}^{10} cx = 1 \implies c(1+2+\dots+10) = 1$.\\
-$c(55) = 1 \implies c = \frac{1}{55}$.
+%\easysubproblem{A person tosses a fair coin until a tail appears for the first time.
+% If the tail appears on the $n^{th}$ flip, the person wins $2^n$ dollars. Let $X$
+%  denote the player's winnings. Show that $\mathbb{E}[X] = \infty$. This problem
+%is known as the St. Petersburg paradox. Would you be willing to pay \$1 million dollars to play this game once? Would you be willing to pay \$1 million dollars  for each game if you could play for as long as you liked and only had to settle up when you stopped playing? }
 \end{enumerate}
 
 
-
-\problem{Extra Credit - We are often denoting the probability mass function of a (discrete) random variable as a piecewise defined function. In a more advanced probability course, we might wish to condense the number of cases within the piecewise defined function for a variety of reasons. The way we can achieve this is by using an \textit{indicator function}. Allow us to define the indicator function.
-
-\begin{tcolorbox}
-    Let $C$ denote some condition. We define 
-    \begin{align*}
-        \indic{C} = \begin{cases}
-1 & \text{if} ~ C ~ \text{is true}   \\  
-0 & \text{if} ~ C ~ \text{is false} \\
-\end{cases}
-    \end{align*} and we call $\indic{C}$ the indicator function.
-\end{tcolorbox}
-}
-
-Example: The function $h(x) = \indic{x \in \{2,6,7\}}$ means 
- \begin{align*} h(x) =
-    \begin{cases}
-1 & \text{if} ~ x = 2, 6, 7  \\   
-0 & \text{otherwise}  
-\end{cases}
-\end{align*}
-
-Essentially, the indicator function is like a switch. When the condition is true, the indicator function ``switches on'' and becomes equal to 1. When the condition is false, the indicator function is ``switched off'' and becomes equal to 0. \\
-
-Example: Expand and simplify the following: 
-\begin{align*}
-    \sum_{x \in \{1,2,3,4,5,6,7,8\}} \indic{x \in \{2,6,7\}}
-\end{align*}
-
-This means plug $x=1$ into $h(x)$, add to the result when we plug in $x=2$, into $h(x)$, add to the result when we plug in $x=3$ into $h(x), \ldots,$ add to the result when we plug in $x=8$ into $h(x)$. Hence, 
-\begin{align*}
-    \sum_{x \in \{1,2,3,4,5,6,7,8\}} \indic{x \in \{2,6,7\}} = 0+1+0+0+0+1+1+0 = 3 
-\end{align*}
-
-Example: Suppose we wish to use an indicator function to rewrite the following probability mass function:
-\begin{align}
-f_X(x) = P(X = x) =
-\begin{cases}
-\binom{10}{x} 0.25^x (0.75)^{10-x}  & \text{if} ~ x = 0, 1, 2, 3, \ldots 10,  \\  
-0 & \text{otherwise} \\
-\end{cases}
-\end{align}
-
-We can now rewrite this function as 
-
-\begin{align}
-    f_X(x) = \binom{10}{x} 0.25^x (0.75)^{10-x} \indic{x \in \{ 0, 1, \ldots, 10 \} }
-\end{align}
-
-With these examples in mind, here are some practice problems:
+\problem{In this exercise, we will review what is meant by the variance of a random variable. This is Section 4.3 in the notes.}
 
 \begin{enumerate}
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x = 17}$.}\spc{2.5}
-
-The indicator function is $1$ only when $x=17$ and $0$ for all other real numbers\\
-Sum = $1$.
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x = 17}$ where $c \in \reals$ is a constant.}\spc{2.5}
-
-The constant $c$ is multiplied by the result of the indicator function. Since the indicator is $1$ only at $x=17$:\\
-Sum = $c(1) = c$.
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
-
-The "switch" is on for $x=1$, $x=2$, and $x=3$.\\Sum = $1 + 1 + 1 = 3$.
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x\indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
-
-We multiply the value of $x$ by $1$ when it is in the set and by $0$ otherwise.\\
-Sum = $(1)(1) + (2)(1) + (3)(1) = 1 + 2 + 3 = 6$.
 
 
+\inthenotessubproblem{ Formally define what we mean by the variance of a random variable $X$.}
+$Var[X] := E[(X - \mu)^2]$, where $\mu = E[X]$.
 
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \naturals_0} x^{\indic{x \in \braces{1, 2, 3}}}$.}\spc{2.5}
+\inthenotessubproblem{Can you summarize what the formula above means? (We color coded this in the notes for Section 4.3).}\\
+Variance is the average squared distance each value is from its center (mean).
 
-For $x \in \{1, 2, 3\}$, the term is $x^1 = x$.\\For all other $x \in \mathbb{N}_0$, the term is $x^0 = 1$.Because there are infinitely many values where $x \notin \{1, 2, 3\}$, we are adding $1$ infinitely many times.\\Sum = Diverges to $\infty$.
+\inthenotessubproblem{When we compute the variance of a random variable, what are the units of the variance?}\\
+The units are the square units of the original variable $X$.  
 
-\extracreditsubproblem{Expand and simplify as much as you can: $\prod_{x \in \reals} \indic{x \in \braces{1, 2, 3}}$.}\spc{2.5}
+\inthenotessubproblem{Define what we mean by the standard deviation of a random variable $X$.}
+$SD[X] := \sqrt{Var[X]}$.  
+\newpage
+\inthenotessubproblem{ Prove for a discrete random variable $X$, $\mathbb{V}ar[X] = E\big[ X^2 \big] - \big( E[X] )^2$.} 
+$Var[X] = E[(X-\mu)^2] = E[X^2 - 2\mu X + \mu^2]$.\\
+By linearity of expectation:
+$E[X^2] - 2\mu E[X] + E[\mu^2] = E[X^2] - 2\mu(\mu) + \mu^2 = E[X^2] - \mu^2$.  
+% \easysubproblem{ Using the  formula in part $(e)$, compute the variance of the random variable $X$ which has the following probability mass function:
+%  $$
+% f(x) =
+% \begin{cases}
+% 0.5 & \text{if} ~ x = 0,1  \ \\ 
+% 0 , & \text{otherwise} \\
+% \end{cases}
+% $$}
 
-This is a product. For any value $x \notin \{1, 2, 3\}$, the indicator is $0$.\\Product = $0$ (since most terms in the product are $0$).
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \indic{x \in \braces{1, 2, 3}}\indic{x \in \braces{4, 5, 6}}$.}\spc{2.5}
-
-For the product of two indicators to be $1$, $x$ must be in both sets simultaneously. \\Since these sets are disjoint (they have no common numbers):
-Sum = $0$.
 
 
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} c \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
+\easysubproblem{ Using the  formula in part $(e)$, compute the variance of the random variable $Y$ which has the following probability mass function:
+ $$
+f_Y(y) =
+\begin{cases}
+0.5 & \text{if} ~ y = -100, 100  \ \\ 
+0  & \text{otherwise} \\
+\end{cases}
+$$ }
+$\mu = E[Y] = -100(0.5) + 100(0.5) = 0$.\\
+$E[Y^2] = (-100)^2(0.5) + (100)^2(0.5) = 10,000(0.5) + 10,000(0.5) = 10,000$.\\
+$Var[Y] = 10,000 - 0^2 = \mathbf{10,000}$. 
+% \easysubproblem{ Suppose $X$ is a discrete random variable with probability mass function: 
+% $$
+% f(x) = P(X = x) =
+% \begin{cases}
+% 1/10 & \text{if} ~ x = 1, 2, 3, \ldots 10  \\   
+% 0 & \text{otherwise} \\
+% \end{cases}
+% $$ 
 
-The indicator is "on" for $t$ distinct values. For each of these, we add $c$.\\
-Sum = $c \times t = ct$.
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} t \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
-
-The constant $t$ is added $t$ times.\\
-Sum = $t \times t = t^2$.
-
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} x \indic{x \in \braces{1, 2, \ldots, t}}$ where $c \in \reals$ is a constant and $t \in \naturals$ is a constant.}\spc{2.5}
-
-This sums the integers from $1$ to $t$.\\
-Sum = $1 + 2 + \ldots + t = \frac{t(t+1)}{2}$.
-\extracreditsubproblem{Expand and simplify as much as you can: $\sum_{x \in \reals} \oneover{x!} \indic{x \in \naturals}$.}\spc{2.5}
-
-The indicator limits the sum to positive integers $\{1, 2, 3, \ldots\}$.\\
-Sum = $\sum_{x=1}^{\infty} \frac{1}{x!}$.
+% Compute $SD[X]$.}
 \end{enumerate}
 
+
+
+\problem{In this problem, we will review the material of Section 4.4 which covers the Bernoulli and Binomial random variables. }
+\begin{enumerate}
+
+\inthenotessubproblem{What is the point of a random variable?}\\
+To model a process or real-life phenomenon to help predict or forecast quantities of interest.
+
+
+
+\inthenotessubproblem{Define the probability mass function of a Bernoulli random variable.}\\
+$f_X(x) = p$ if $x=1$; \\$1-p$ if $x=0$; \\$0$ otherwise.  
+
+
+\inthenotessubproblem{What does a Bernoulli random variable model?}
+
+The number of successes in one and only one trial where the outcome is binary (success/failure).
+
+\inthenotessubproblem{Let $X$ model the number of successes when we conduct an experiment with one and only one trial. If this trial results in either a success with probability $p$ or failure with probability $1-p$, then prove that $X \sim Bern(p)$.}
+
+$P(X=1) = P(\text{success}) = p$ and $P(X=0) = P(\text{failure}) = 1-p$. This matches the Bernoulli definition. 
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Bernoulli random variable.}
+
+Flipping a fair coin once where $X=1$ if heads and $X=0$ if tails.
+
+\inthenotessubproblem{What is the support of the Bernoulli random variable?}
+
+$S_x= \{0,1\}$
+\newpage
+\intermediatesubproblem{If $X \sim Bern(p)$, then sketch the cumulative distribution function of $X$.}
+
+\includegraphics[width=0.5\textwidth]{1.png}
+
+
+\inthenotessubproblem{If $X \sim Bern(p)$ then prove that $\mathbb{E}[X] = p$.}
+
+$E[X] = 0(1-p) + 1(p) = p$.
+
+\intermediatesubproblem{If $X \sim Bern(p)$ then prove that $\mathbb{V}ar[X] = p(1-p)$.}
+
+$E[X^2] = 0^2(1-p) + 1^2(p) = p$.\\
+$Var[X] = E[X^2] - (E[X])^2 = p - p^2 = p(1-p)$.  
+\inthenotessubproblem{Define the probability mass function of a Binomial random variable.}
+
+$f_X(x) = \binom{n}{x} p^x (1-p)^{n-x}$ for $x=0, 1, \dots, n$.  
+
+\inthenotessubproblem{What does a Binomial random variable model?}
+
+The total number of successes in $n$ independent trials.
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Binomial random variable.}
+
+Rolling a die 2025 times and counting how many times a "5" appears.
+
+\inthenotessubproblem{What is the support of the Binomial random variable?}
+
+$S_x=\{0, 1, 2, \dots, n\}$.
+
+\intermediatesubproblem{If $X \sim Binomial(3, 0.6)$, then sketch the cumulative distribution function of $X$.}
+
+A step function with jumps at each integer from $0$ to $n$.
+
+\inthenotessubproblem{If $X \sim Binom(n,p)$ then what is $\mathbb{E}[X]$? You do not have to prove your answer. What is $\mathbb{V}ar[X]$? Again you do not have to prove your answer, just state the results.}
+
+$E[X] = np$ and $Var[X] = np(1-p)$.  
+\newpage
+
+\intermediatesubproblem{On a multiple-choice exam with 3 possible answers for each of
+the 5 questions, what is the probability that a student will get 4 or
+more correct answers just by guessing? (You may assume that the questions are independent of each other). You may leave your answer in terms of a calculator command.}\\
+$P(X \geq 4) = P(X=4) + P(X=5)$. $n=5, p=1/3$
+\\Command: 1 - binomcdf(5, 1/3, 3)
+
+\intermediatesubproblem{Suppose  the probability that a certain experiment will be successful is 0.4 and let $X$ denote the number of successes that are obtained in 15 independent performances of the experiment. Find $P(6 \leq X \leq 9)$.  You may leave your answer in terms of a calculator command.
+ }
+\\$P(6 \leq X \leq 9)$ with $n=15, p=0.4$:\\
+Command: binomcdf(15, 0.4, 9) - binomcdf(15, 0.4, 5).
+
+\intermediatesubproblem{A certain electronic system contains 10 components. Suppose that the probability that each individual component will fail is 0.2 and that the components fail independently of each other. Given that at least one of the components has failed, what is the probability that at least two of the components have failed?   You may leave your answer in terms of a calculator command. }\\
+$P(X \geq 2 | X \geq 1) = \frac{P(X \geq 2)}{P(X \geq 1)} = \frac{1 - P(X \leq 1)}{1 - P(X=0)}$.
+\\Command: (1 - binomcdf(10, 0.2, 1)) / (1 - binompdf(10, 0.2, 0)).
+
+
+\end{enumerate}
+
+
+
+\problem{In this problem we will review the random variable(s) covered in Section 4.5.}
+
+\begin{enumerate}
+
+\inthenotessubproblem{What is the pmf of the Geometric random variable?}
+
+$f(x) = (1-p)^{x-1}p$ for $x=1, 2, 3, \dots$. 
+
+
+\inthenotessubproblem{What is the support of the Geometric random variable?}
+
+$S_x= \{1, 2, 3, \dots\}$
+
+
+\inthenotessubproblem{Under what conditions do we obtain a Geometric random variable?}
+
+Repeating independent trials with constant probability $p$ until the first success occurs, then stopping.  
+
+
+\easysubproblem{Give an example of an experiment that can be modeled by a Geometric random variable.}
+
+Tossing a coin repeatedly until the first "Heads" appears.
+
+\inthenotessubproblem{What is the cdf of the Geometric random variable? There is no need to prove your answer, just state the result.}
+
+$P(X \leq k) = 1 - (1-p)^k$
+
+\hardsubproblem{Suppose $X \sim Geo(p)$. Show that $P(X > m + n ~|~ X>n) = P(X > m)$. This is what is known as the \textit{memorylessness} property. You may assume that $m$ and $n$ are in the support of $X$.}
+
+$P(X > m+n | X > n) = \frac{P(X > m+n)}{P(X > n)} = \frac{(1-p)^{m+n}}{(1-p)^n} = (1-p)^m = P(X > m)$.
+
+\hardsubproblem{At Coney Island, you can play a game that requires the player to shoot a basketball seven times. If a player makes at least six of the seven shots, then they win a  prize and the game is over. If a player does not make at least six of the seven shots, then they lose and the game is over. A contestant, Stephen Curry, continually plays the game until he is able to win a prize at which point he stops. Find the probability that Curry will have to play the game more than three times. You may assume that the probability  Curry makes any shot is 82\% and each shot is independent of the others. You may also assume that the games are independent of each other. You may leave your answer in terms of a calculator command.}
+
+First, find the probability of winning one game \\($p_{win}$):
+$p_{win} = P(\text{make } \geq 6 \text{ of } 7) = \text{binompdf}(7, 0.82, 6) + \text{binompdf}(7, 0.82, 7)$.\\
+Let $Y$ be the number of games played until a win. $Y \sim Geo(p_{win})$.\\
+We want $P(Y > 3) = (1 - p_{win})^3$.\\
+$Command: (1 - (binompdf(7, .82, 6) + binompdf(7, .82, 7)))^3$
+
+\hardsubproblem{A student wishes to take a driving test in order to obtain their learners permit. There are exactly 20 questions on the New York permit driving test. All of the questions on the test are multiple choice, with four possible answers. In order to pass the permit test, the student has to correctly answer \textbf{at least} 14  of the 20 questions. However, the student is unprepared and comes up with the following strategy. They decide they will not study and randomly guess the answer to each question. They will then repeatedly take the test until they are able to pass the exam at which point they will stop. Find the probability that the student will have to take the test more than fifty  times. (Note: Each question on the test has only one correct answer. You may assume each question is independent of other questions, and each time they take an exam is independent of other exams).}
+
+$p_{pass} = P(X \geq 14)$ where $X \sim Binom(20, 0.25)$.\\
+Let $Y \sim Geo(p_{pass})$. We want $P(Y > 50) = (1 - p_{pass})^{50}$.\\
+$Command: (binomcdf(20, 0.25, 13))^50. $
+%\inthenotessubproblem{What is the pmf of the Negative Binomial random variable?}
+
+
+%\inthenotessubproblem{What is the support of the Negative Binomial random variable?}
+
+
+
+%\inthenotessubproblem{Under what conditions do we obtain a Negative Binomial  random variable?}
+
+
+%\easysubproblem{Give an example of an experiment that can be modeled by a Negative Binomial  random variable.}
+
+
+
+\end{enumerate}
 
 
 \end{document}

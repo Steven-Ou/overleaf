@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1777352136.77473 "/Users/steve/CS/overleaf/stat/hw8.tex" "hw8.pdf" "hw8" 1777352137.71645 2
-  "/Users/steve/CS/overleaf/stat/hw8.tex" 1777352135.20134 21660 a595b6d6444592920fd425696c0c1abb ""
+["pdflatex"] 1777838103.07248 "/Users/steve/CS/overleaf/stat/hw8.tex" "hw8.pdf" "hw8" 1777838103.95493 2
+  "/Users/steve/CS/overleaf/stat/hw8.tex" 1777838101.38326 15592 428c7f357fb99b33336aecb5e8efcc51 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -25,6 +25,7 @@
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1248133631 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
@@ -134,8 +135,8 @@
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
   "1.png" 0 -1 0 ""
-  "hw8.aux" 1777352137.54128 210 c898d0074c9d2c6f477571958d470681 "pdflatex"
-  "hw8.tex" 1777352135.20134 21660 a595b6d6444592920fd425696c0c1abb ""
+  "hw8.aux" 1777838103.82004 32 4d1825978335c8847f72f7c473f9edc8 "pdflatex"
+  "hw8.tex" 1777838101.38326 15592 428c7f357fb99b33336aecb5e8efcc51 ""
   "preamble" 0 -1 0 ""
   (generated)
   "hw8.aux"
