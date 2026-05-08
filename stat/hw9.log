@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  6 MAY 2026 00:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  8 MAY 2026 02:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,13 +908,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw9.tex:302: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw9.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.302 \end{enumerate}
+l.301 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -928,7 +928,7 @@ L3 programming layer <2026-01-19>
 Here is how much of TeX's memory you used:
  15470 strings out of 467525
  326943 string characters out of 5418982
- 710614 words of memory out of 5000000
+ 710615 words of memory out of 5000000
  44135 multiletter control sequences out of 15000+600000
  633448 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
