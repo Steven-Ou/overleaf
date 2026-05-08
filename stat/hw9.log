@@ -908,13 +908,13 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw9.tex:301: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw9.tex:300: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.301 \end{enumerate}
+l.300 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
