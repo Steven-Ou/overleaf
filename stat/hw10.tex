@@ -1,0 +1,326 @@
+\documentclass[12pt]{article}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+
+\include{preamble}
+%All credit goes towards Dr. Adam Kapelner for providing the preamble and homework template.
+
+\newtoggle{professormode}
+\toggletrue{professormode} %STUDENTS: DELETE or COMMENT this line
+
+
+
+\title{MATH 241 Spring 2026 Homework \#10 }
+
+\author{Elliot Gangaram} %STUDENTS: write your name here
+
+\iftoggle{professormode}{
+\date{Due via Brightspace by 11:59PM Tuesday, May 19, 2025 \\ \vspace{0.5cm} \small (this document last updated \today ~at \currenttime)}
+}
+
+\renewcommand{\abstractname}{Instructions and Philosophy}
+
+\begin{document}
+\maketitle
+
+\iftoggle{professormode}{
+\begin{abstract}
+The path to success in this class is to do many problems. Unlike other courses, exclusively doing reading(s) will not help. Coming to lecture is akin to watching workout videos; thinking about and solving problems on your own is the actual ``working out.''  Feel free to \qu{work out} with others; \textbf{I want you to work on this in groups.}
+
+The problems below are color coded: \ingreen{green} problems are considered \textit{easy} and marked \qu{[easy]}; \inorange{yellow} problems are considered \textit{intermediate} and marked \qu{[harder]}, \inred{red} problems are considered \textit{difficult} and marked \qu{[difficult]} and \inpurple{purple} problems are extra credit. The \textit{easy} problems are intended to be ``giveaways'' if you went to class. Do as much as you can of the others; I expect you to at least attempt the \textit{difficult} problems. 
+
+Bonus points are given as a bonus if the homework is typed using \LaTeX. Links to installing \LaTeX~and programs for compiling \LaTeX~is found on the syllabus. You are encouraged to use \url{https://www.overleaf.com/}. If you are handing in homework this way, read the comments in the code; there is a line to comment out and you should replace my name with yours. The easiest way to use Overleaf is to go to \textit{File} and select \textit{Make a Copy}. If you are asked to make drawings, you can take a picture of your handwritten drawing and insert them as figures or leave space using the \qu{$\backslash$vspace} command and draw them in after printing or attach them stapled.
+
+
+\end{abstract}
+
+\thispagestyle{empty}
+\vspace{1cm}
+NAME: \line(1,0){380}
+\clearpage
+}
+
+% \problem{In this problem we will review the Poisson random variable covered in Section 4.6.}
+
+% \begin{enumerate}
+
+% \inthenotessubproblem{What is the pmf of the Poisson random variable?}
+
+% \vspace{25mm}
+
+
+% \inthenotessubproblem{What is the support of the Poisson random variable?}
+
+% \vspace{10mm}
+
+
+% \inthenotessubproblem{Under what conditions do we obtain a Poisson random variable? We discussed two ways in class -- just list the simpler way. }
+
+% \vspace{25mm}
+
+% \hardsubproblem{The number of times that a person contracts a cold in a given year is a Poisson random variable with parameter $\lambda = 5$. Suppose that a new wonder drug (based on large quantities of vitamin C) has just been marketed that reduces the Poisson parameter to  $\lambda = 3$ for 75\%  percent of the population. For the other 25\%  percent of the population, the drug has no appreciable effect on colds. If an individual tries the drug for a year and has 2 colds in that time, how likely is it that the drug is beneficial for him or her?}
+
+% \newpage
+
+
+% \easysubproblem{(Optional): What is a whitepaper? Feel free to search this term on the Internet.}
+
+% \vspace{20mm}
+
+% \easysubproblem{(Optional): Who is Satoshi Nakamoto?  }
+
+% \vspace{20mm}
+
+% \easysubproblem{(Optional): True or False? In the Bitcoin whitepaper (published in 2008), the Poisson distribution is used.}
+
+% \end{enumerate}
+
+\problem{In this problem, we will review the ideas discussed in Section 5.1.}
+\begin{enumerate}
+\inthenotessubproblem{What are some quantities that cannot be modeled by a discrete random variable?}
+
+\vspace{20mm}
+
+\easysubproblem{True or False? Given a random variable $X$, it is possible that $X$ does not have a probability mass function.}
+
+\inthenotessubproblem{Define what is meant by a \textit{continuous} random variable.}
+
+\newpage
+
+\intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
+$$
+f(x) = 
+\begin{cases}
+c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\   
+0 & \text{otherwise} \\
+\end{cases} 
+$$
+What is the value of $c$? Hint: Apply Humpty-Dumpty.}
+
+\vspace{30mm}
+
+\intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
+$$
+f(x) = 
+\begin{cases}
+c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\   
+0 & \text{otherwise} \\
+\end{cases} 
+$$
+Find the cumulative distribution function of $X$.}
+
+\vspace{90mm}
+
+\intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
+$$
+f(x) = 
+\begin{cases}
+c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\   
+0 & \text{otherwise} \\
+\end{cases} 
+$$
+Find $\mathbb{E}[X]$.}
+
+\vspace{30mm}
+
+\intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
+$$
+f(x) = 
+\begin{cases}
+c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\   
+0 & \text{otherwise} \\
+\end{cases} 
+$$
+Find $\mathbb{E}[X^2]$.}
+
+\vspace{30mm}
+
+\hardsubproblem{Suppose that a random variable $X$ measures the lifetime of a certain type of electronic device in hours. Suppose its probability density function is given by:
+ $$
+f(x) =
+\begin{cases}
+\frac{10}{x^2}, & \text{if} ~ x>10  \ \\ 
+0 , & \text{otherwise} \\
+\end{cases}
+$$ 
+What is the probability that of 6 such types of devices, at least 3 will function for at least 15 hours? (You may assume that the devices operate independently of one another). You may leave your answer in terms of a calculator command. }
+
+\end{enumerate}
+
+\newpage
+
+\problem{These exercises will review the king of all random variables -- the Normal random variable.}
+
+\begin{enumerate}
+
+\inthenotessubproblem{What is the density of the normal random variable?}
+
+\vspace{10mm}
+
+\inthenotessubproblem{What is the support of the normal random variable?}
+
+\vspace{5mm}
+
+\easysubproblem{What is the cumulative distribution function of the normal random variable?}
+\vspace{10mm}
+
+\easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{E}[X]$?}
+
+\vspace{5mm}
+
+\easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{V}ar[X]$?}
+
+\vspace{5mm}
+
+\easysubproblem{What is the standard normal random variable?}
+
+\vspace{5mm}
+
+\inthenotessubproblem{What is the density of the standard normal random variable? Use the appropriate letter/notation.}
+
+\vspace{10mm}
+
+\inthenotessubproblem{What is the cumulative distribution function of the standard normal random variable? Use the appropriate letter/notation.}
+
+\vspace{10mm}
+
+\easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z<2.41)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places. } 
+
+\vspace{25mm}
+
+\easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z> 2.41)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
+
+\vspace{15mm}
+
+
+\easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z = 2.41)$.}
+
+\vspace{5mm}
+
+
+\easysubproblem{Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X > 231)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
+
+\vspace{15mm}
+
+
+\easysubproblem{Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X < 231)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
+\end{enumerate}
+
+\newpage 
+
+\problem{These exercises are designed to review the first half of Section 5.4. Suppose the joint  mass function of $X$ and $Y$ is given by: \begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{joint_distribution.png}
+    \label{fig:enter-label}
+\end{figure}}
+
+\begin{enumerate}
+
+\easysubproblem{Define what is meant by a joint mass function (jmf). }
+
+\vspace{20mm}
+
+\intermediatesubproblem{Find $P(X \leq 2, Y \leq 2)$.}
+
+\vspace{20mm}
+
+\intermediatesubproblem{Find $f_X(2)$.}
+
+\vspace{20mm}
+
+\intermediatesubproblem{Find $f_Y(4)$.}
+
+\vspace{20mm}
+
+
+\intermediatesubproblem{Find $f_X(x)$.}
+
+\newpage
+
+\intermediatesubproblem{Find $f_Y(y)$.}
+
+\vspace{40mm}
+
+\inthenotessubproblem{What does it mean for two random variables, $X$ and $Y$, to be independent?}
+
+\vspace{40mm}
+
+\hardsubproblem{For the joint probability mass function specified above, is $X$ and $Y$ independent? Explain why or why not.}
+
+\vspace{40mm}
+
+\end{enumerate}
+
+\problem{In this problem, we will review the last part of Section 5.4.}
+
+\begin{enumerate}
+
+\easysubproblem{Explain what is meant by a convolution of random variables.}
+
+\vspace{25mm}
+
+\intermediatesubproblem{Suppose $X_1, X_2 \iid \geometric{p}$}. Let $T = X_1 + X_2$. What is the support of $T$?
+
+\vspace{10mm}
+
+\hardsubproblem{Find $P(T = 2)$.}
+
+\vspace{25mm}
+
+\hardsubproblem{Find $P(T = 3)$.}
+
+\vspace{30mm}
+
+\hardsubproblem{Find $P(T = 4)$.}
+
+\vspace{35mm}
+
+\hardsubproblem{Based off the last three computations, can you guess the probability mass function of $T$? You do not have to mathematically prove your answer. (If you are curious, the actual proof requires induction and the general convolution formula which you are not required to know).}
+
+\vspace{25mm}
+
+\end{enumerate}
+
+
+\problem{Here is the last problem for the semester. Congratulations on making it this far! These exercises are designed to review Section 5.5.}
+\begin{enumerate}
+
+\easysubproblem{Without simply quoting the formal statement of the Central Limit Theorem, can you explain what the Central Limit Theorem states?}
+
+\newpage 
+
+\hardsubproblem{ Suppose the random variables, $X_1, X_2, \ldots, X_{100}$ are independent and all have the following density:
+\begin{Large}
+$$
+f(x) =
+\begin{cases}
+\frac{x^2}{72} & \text{if} ~ 0<x<6 \ \\ 
+0 , & \text{otherwise} \\
+\end{cases}
+$$ 
+\end{Large}
+
+If $Y = X_1 + X_2 + \ldots + X_{100}$, then find/approximate $P(439 \leq Y \leq 461)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.
+ }
+
+ \vspace{70mm}
+
+\hardsubproblem{Suppose the random variables $X_1, X_2, \ldots, X_{36}$  are independent and all  have the density specified below. 
+
+\begin{Large}
+\[
+  f(x) =
+  \begin{cases}
+    \frac{1}{20}x^3 & \text{if $1<x<3$} \\
+    0 & \text{otherwise} 
+  \end{cases}
+\]
+\end{Large}
+
+Find/approximate  $P(2 \leq \overline{X}_{36} \leq 2.5)$.   You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.
+}
+
+\end{enumerate}
+
+\end{document}
