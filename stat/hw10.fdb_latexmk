@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779082310.70186 "/Users/steve/CS/overleaf/stat/hw10.tex" "hw10.pdf" "hw10" 1779082311.58334 2
-  "/Users/steve/CS/overleaf/stat/hw10.tex" 1779082309.17561 11030 205a3c94ff1ce342e7c009dde6ec8785 ""
+["pdflatex"] 1779163264.67644 "/Users/steve/CS/overleaf/stat/hw10.tex" "hw10.pdf" "hw10" 1779163265.62698 2
+  "/Users/steve/CS/overleaf/stat/hw10.tex" 1779163263.07744 11518 80d6a437a5cb8ca1d7034070a69bf0f9 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -127,8 +127,8 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1775017742 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "hw10.aux" 1779082311.45593 72 d142a3743d655edfb847297dde2d800c "pdflatex"
-  "hw10.tex" 1779082309.17561 11030 205a3c94ff1ce342e7c009dde6ec8785 ""
+  "hw10.aux" 1779163265.50433 72 e937c3ab55866b2b1eb7a2dcaaba8bef "pdflatex"
+  "hw10.tex" 1779163263.07744 11518 80d6a437a5cb8ca1d7034070a69bf0f9 ""
   "joint_distribution.png" 0 -1 0 ""
   "preamble" 0 -1 0 ""
   (generated)

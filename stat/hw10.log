@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  18 MAY 2026 01:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.22)  19 MAY 2026 00:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,7 +336,8 @@ No file preamble.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
-) (./hw10.aux)
+)
+No file hw10.aux.
 \openout1 = `hw10.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
@@ -353,7 +354,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
 LaTeX Font Info:    ... okay on input line 24.
- (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
 \scratchdimen=\dimen267
@@ -414,8 +415,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:85: Undefined control sequence.
-l.85 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:84: Undefined control sequence.
+l.84 \easysubproblem
                     {True or False? Given a random variable $X$, it is possi...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -423,8 +424,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:87: Undefined control sequence.
-l.87 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:85: Undefined control sequence.
+l.85 \inthenotessubproblem
                           {Define what is meant by a \textit{continuous} ran...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -432,35 +433,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-/Users/steve/CS/overleaf/stat/hw10.tex:89: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.89 \newpage
-             
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1
-
-{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-/Users/steve/CS/overleaf/stat/hw10.tex:90: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.90 
-     
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:91: Undefined control sequence.
-l.91 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:88: Undefined control sequence.
+l.88 \intermediatesubproblem
                             { Suppose that $X$ is a continuous random variab...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -468,32 +442,17 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+/Users/steve/CS/overleaf/stat/hw10.tex:98: Undefined control sequence.
+l.98 \intermediatesubproblem
+                            { Suppose that $X$ is a continuous random variab...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:100: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.100 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:102: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.102 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:103: Undefined control sequence.
-l.103 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:109: Undefined control sequence.
+l.109 \intermediatesubproblem
                              { Suppose that $X$ is a continuous random varia...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -501,44 +460,13 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+[1
 
-/Users/steve/CS/overleaf/stat/hw10.tex:112: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.112 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:114: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:115: Undefined control sequence.
-l.115 \intermediatesubproblem
-                             { Suppose that $X$ is a continuous random varia...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[2]
-/Users/steve/CS/overleaf/stat/hw10.tex:123: Undefined control sequence.
+{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+/Users/steve/CS/overleaf/stat/hw10.tex:117: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.123 Find $\mathbb
+l.117 Find $\mathbb
                    {E}[X]$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -546,32 +474,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-/Users/steve/CS/overleaf/stat/hw10.tex:124: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.124 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:126: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:127: Undefined control sequence.
-l.127 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:120: Undefined control sequence.
+l.120 \intermediatesubproblem
                              { Suppose that $X$ is a continuous random varia...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -579,10 +483,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:135: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw10.tex:128: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.135 Find $\mathbb
+l.128 Find $\mathbb
                    {E}[X^2]$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -590,32 +494,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-/Users/steve/CS/overleaf/stat/hw10.tex:136: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.136 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:138: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.138 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:139: Undefined control sequence.
-l.139 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:132: Undefined control sequence.
+l.132 \hardsubproblem
                      {Suppose that a random variable $X$ measures the lifeti...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -624,32 +504,19 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:148: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:142: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:149: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 \end{enumerate}
+l.142 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[3]
-/Users/steve/CS/overleaf/stat/hw10.tex:153: Undefined control sequence.
-l.153 \problem
+/Users/steve/CS/overleaf/stat/hw10.tex:145: Undefined control sequence.
+l.145 \problem
               {These exercises will review the king of all random variables ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -657,8 +524,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:157: Undefined control sequence.
-l.157 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:149: Undefined control sequence.
+l.149 \inthenotessubproblem
                            {What is the density of the normal random variable?}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -666,8 +533,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:161: Undefined control sequence.
-l.161 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:153: Undefined control sequence.
+l.153 \inthenotessubproblem
                            {What is the support of the normal random variable?}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -675,8 +542,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:165: Undefined control sequence.
-l.165 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:156: Undefined control sequence.
+l.156 \easysubproblem
                      {What is the cumulative distribution function of the no...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -684,8 +551,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:168: Undefined control sequence.
-l.168 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:159: Undefined control sequence.
+l.159 \easysubproblem
                      {If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -693,10 +560,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:168: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw10.tex:159: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.168 ...{N}(\mu, \sigma^2)$ then what is $\mathbb
+l.159 ...{N}(\mu, \sigma^2)$ then what is $\mathbb
                                                   {E}[X]$?}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -704,8 +571,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:172: Undefined control sequence.
-l.172 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:162: Undefined control sequence.
+l.162 \easysubproblem
                      {If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -713,10 +580,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:172: Undefined control sequence.
+/Users/steve/CS/overleaf/stat/hw10.tex:162: Undefined control sequence.
 <recently read> \mathbb 
                         
-l.172 ...{N}(\mu, \sigma^2)$ then what is $\mathbb
+l.162 ...{N}(\mu, \sigma^2)$ then what is $\mathbb
                                                   {V}ar[X]$?}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -724,8 +591,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:176: Undefined control sequence.
-l.176 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:166: Undefined control sequence.
+l.166 \easysubproblem
                      {What is the standard normal random variable?}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -733,8 +600,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:180: Undefined control sequence.
-l.180 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:170: Undefined control sequence.
+l.170 \inthenotessubproblem
                            {What is the density of the standard normal rando...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -742,8 +609,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:184: Undefined control sequence.
-l.184 \inthenotessubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:174: Undefined control sequence.
+l.174 \inthenotessubproblem
                            {What is the cumulative distribution function of ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -751,9 +618,27 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:188: Undefined control sequence.
-l.188 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:178: Undefined control sequence.
+l.178 \easysubproblem
                      {Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z<2.41)$. Y...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw10.tex:182: Undefined control sequence.
+l.182 \easysubproblem
+                     {Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z> 2.41)$. ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/steve/CS/overleaf/stat/hw10.tex:187: Undefined control sequence.
+l.187 \easysubproblem
+                     {Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z = 2.41)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -762,7 +647,7 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw10.tex:192: Undefined control sequence.
 l.192 \easysubproblem
-                     {Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z> 2.41)$. ...
+                     {Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X > 231)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -771,24 +656,6 @@ and I'll forget about whatever was undefined.
 
 /Users/steve/CS/overleaf/stat/hw10.tex:197: Undefined control sequence.
 l.197 \easysubproblem
-                     {Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z = 2.41)$.}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:202: Undefined control sequence.
-l.202 \easysubproblem
-                     {Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X > 231)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:207: Undefined control sequence.
-l.207 \easysubproblem
                      {Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X < 231)...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -797,20 +664,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:208: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:198: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.208 \end{enumerate}
+l.198 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[4] [5]
-/Users/steve/CS/overleaf/stat/hw10.tex:212: Undefined control sequence.
-l.212 \problem
+[2] [3]
+/Users/steve/CS/overleaf/stat/hw10.tex:202: Undefined control sequence.
+l.202 \problem
               {These exercises are designed to review the first half of Sect...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -819,22 +686,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: File `joint_distribution.png' not found on input line 214.
+LaTeX Warning: File `joint_distribution.png' not found on input line 204.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:214: Package pdftex.def Error: File `joint_distribution.png' not found: using draft setting.
+/Users/steve/CS/overleaf/stat/hw10.tex:204: Package pdftex.def Error: File `joint_distribution.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.214 ...th=0.5\linewidth]{joint_distribution.png}
+l.204 ...th=0.5\linewidth]{joint_distribution.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:220: Undefined control sequence.
-l.220 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:210: Undefined control sequence.
+l.210 \easysubproblem
                      {Define what is meant by a joint mass function (jmf). }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -842,8 +709,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:224: Undefined control sequence.
-l.224 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:214: Undefined control sequence.
+l.214 \intermediatesubproblem
                              {Find $P(X \leq 2, Y \leq 2)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -851,8 +718,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:228: Undefined control sequence.
-l.228 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:218: Undefined control sequence.
+l.218 \intermediatesubproblem
                              {Find $f_X(2)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -860,8 +727,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:232: Undefined control sequence.
-l.232 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:222: Undefined control sequence.
+l.222 \intermediatesubproblem
                              {Find $f_Y(4)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -869,8 +736,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:237: Undefined control sequence.
-l.237 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:227: Undefined control sequence.
+l.227 \intermediatesubproblem
                              {Find $f_X(x)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -879,18 +746,105 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:239: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:229: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.239 \newpage
+l.229 \newpage
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[6]
+[4]
+
+/Users/steve/CS/overleaf/stat/hw10.tex:230: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.230 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/steve/CS/overleaf/stat/hw10.tex:231: Undefined control sequence.
+l.231 \intermediatesubproblem
+                             {Find $f_Y(y)$.}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/steve/CS/overleaf/stat/hw10.tex:232: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.232 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/steve/CS/overleaf/stat/hw10.tex:234: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.234 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/steve/CS/overleaf/stat/hw10.tex:235: Undefined control sequence.
+l.235 \inthenotessubproblem
+                           {What does it mean for two random variables, $X$ ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/steve/CS/overleaf/stat/hw10.tex:236: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.236 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/steve/CS/overleaf/stat/hw10.tex:238: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.238 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/Users/steve/CS/overleaf/stat/hw10.tex:239: Undefined control sequence.
+l.239 \hardsubproblem
+                     {For the joint probability mass function specified abov...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 
 /Users/steve/CS/overleaf/stat/hw10.tex:240: LaTeX Error: Something's wrong--perhaps a missing \item.
 
@@ -902,15 +856,6 @@ l.240
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:241: Undefined control sequence.
-l.241 \intermediatesubproblem
-                             {Find $f_Y(y)$.}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 
 /Users/steve/CS/overleaf/stat/hw10.tex:242: LaTeX Error: Something's wrong--perhaps a missing \item.
@@ -925,97 +870,19 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:244: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:243: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.244 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:245: Undefined control sequence.
-l.245 \inthenotessubproblem
-                           {What does it mean for two random variables, $X$ ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:246: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.246 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:248: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.248 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-/Users/steve/CS/overleaf/stat/hw10.tex:249: Undefined control sequence.
-l.249 \hardsubproblem
-                     {For the joint probability mass function specified abov...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:250: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.250 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:252: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:253: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.253 \end{enumerate}
+l.243 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:255: Undefined control sequence.
-l.255 \problem
+/Users/steve/CS/overleaf/stat/hw10.tex:245: Undefined control sequence.
+l.245 \problem
               {In this problem, we will review the last part of Section 5.4.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1023,8 +890,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:259: Undefined control sequence.
-l.259 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:249: Undefined control sequence.
+l.249 \easysubproblem
                      {Explain what is meant by a convolution of random varia...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1032,8 +899,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:263: Undefined control sequence.
-l.263 \intermediatesubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:253: Undefined control sequence.
+l.253 \intermediatesubproblem
                              {Suppose $X_1, X_2 \iid \geometric{p}$}. Let $T...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1041,8 +908,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:263: Undefined control sequence.
-l.263 ...rmediatesubproblem{Suppose $X_1, X_2 \iid
+/Users/steve/CS/overleaf/stat/hw10.tex:253: Undefined control sequence.
+l.253 ...rmediatesubproblem{Suppose $X_1, X_2 \iid
                                                    \geometric{p}$}. Let $T =...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1050,8 +917,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:263: Undefined control sequence.
-l.263 ...problem{Suppose $X_1, X_2 \iid \geometric
+/Users/steve/CS/overleaf/stat/hw10.tex:253: Undefined control sequence.
+l.253 ...problem{Suppose $X_1, X_2 \iid \geometric
                                                   {p}$}. Let $T = X_1 + X_2$...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1059,8 +926,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:267: Undefined control sequence.
-l.267 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:257: Undefined control sequence.
+l.257 \hardsubproblem
                      {Find $P(T = 2)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1068,8 +935,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:271: Undefined control sequence.
-l.271 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:261: Undefined control sequence.
+l.261 \hardsubproblem
                      {Find $P(T = 3)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1077,8 +944,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:275: Undefined control sequence.
-l.275 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:265: Undefined control sequence.
+l.265 \hardsubproblem
                      {Find $P(T = 4)$.}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1086,8 +953,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:279: Undefined control sequence.
-l.279 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:269: Undefined control sequence.
+l.269 \hardsubproblem
                      {Based off the last three computations, can you guess t...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1096,20 +963,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:283: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:273: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.283 \end{enumerate}
+l.273 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[7]
-/Users/steve/CS/overleaf/stat/hw10.tex:286: Undefined control sequence.
-l.286 \problem
+[5]
+/Users/steve/CS/overleaf/stat/hw10.tex:276: Undefined control sequence.
+l.276 \problem
               {Here is the last problem for the semester. Congratulations on...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1117,8 +984,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:289: Undefined control sequence.
-l.289 \easysubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:279: Undefined control sequence.
+l.279 \easysubproblem
                      {Without simply quoting the formal statement of the Cen...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1127,32 +994,32 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:291: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:281: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.291 \newpage
+l.281 \newpage
               
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[8]
+[6]
 
-/Users/steve/CS/overleaf/stat/hw10.tex:292: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:282: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.292 
+l.282 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:293: Undefined control sequence.
-l.293 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:283: Undefined control sequence.
+l.283 \hardsubproblem
                      { Suppose the random variables, $X_1, X_2, \ldots, X_{1...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1161,49 +1028,61 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:303: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:293: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.303 
+l.293 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:306: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:296: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.306 
+l.296 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:308: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:298: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.308 
+l.298 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-/Users/steve/CS/overleaf/stat/hw10.tex:309: Undefined control sequence.
-l.309 \hardsubproblem
+/Users/steve/CS/overleaf/stat/hw10.tex:299: Undefined control sequence.
+l.299 \hardsubproblem
                      {Suppose the random variables $X_1, X_2, \ldots, X_{36}...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+/Users/steve/CS/overleaf/stat/hw10.tex:300: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.300 
+      
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
 /Users/steve/CS/overleaf/stat/hw10.tex:310: LaTeX Error: Something's wrong--perhaps a missing \item.
@@ -1218,42 +1097,30 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:320: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:313: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 
+l.313 
       
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-/Users/steve/CS/overleaf/stat/hw10.tex:323: LaTeX Error: Something's wrong--perhaps a missing \item.
+/Users/steve/CS/overleaf/stat/hw10.tex:314: LaTeX Error: Something's wrong--perhaps a missing \item.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.323 
-      
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-/Users/steve/CS/overleaf/stat/hw10.tex:324: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.324 \end{enumerate}
+l.314 \end{enumerate}
                      
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[9] (./hw10.aux)
+[7] (./hw10.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1264,18 +1131,18 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 15512 strings out of 467525
- 328154 string characters out of 5418982
- 704588 words of memory out of 5000000
- 44177 multiletter control sequences out of 15000+600000
+ 15509 strings out of 467525
+ 328115 string characters out of 5418982
+ 708595 words of memory out of 5000000
+ 44176 multiletter control sequences out of 15000+600000
  634675 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,121p,722b,305s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on hw10.pdf (9 pages, 121331 bytes).
+Output written on hw10.pdf (7 pages, 123597 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

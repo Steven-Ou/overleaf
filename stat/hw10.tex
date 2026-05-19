@@ -79,15 +79,12 @@ NAME: \line(1,0){380}
 \problem{In this problem, we will review the ideas discussed in Section 5.1.}
 \begin{enumerate}
 \inthenotessubproblem{What are some quantities that cannot be modeled by a discrete random variable?}
+\\Continuous quantities variables like time, physical measurements, and rates/speeds. 
 
-\vspace{20mm}
-
-\easysubproblem{True or False? Given a random variable $X$, it is possible that $X$ does not have a probability mass function.}
-
+\easysubproblem{True or False? Given a random variable $X$, it is possible that $X$ does not have a probability mass function.} True
 \inthenotessubproblem{Define what is meant by a \textit{continuous} random variable.}
 
-\newpage
-
+A random variable $X$ is said to be continuous if its Cumulative Distribution Function (CDF), $F(x) = P(X \le x)$, is continuous everywhere.More practically, $X$ is continuous if there exists a non-negative function $f(x)$ (called the probability density function, or PDF) defined for all real numbers such that for any interval $[a, b]$:$$P(a \le X \le b) = \int_{a}^{b} f(x) \,dx$$
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
 f(x) = 
@@ -97,9 +94,7 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 \end{cases} 
 $$
 What is the value of $c$? Hint: Apply Humpty-Dumpty.}
-
-\vspace{30mm}
-
+\\ After using the integration from 0 to 2 , and pulling out the c constant , we solve for the anti derivative and set c * $\frac{8}{3}$=1 and got c =3/8. 
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
 f(x) = 
@@ -110,7 +105,6 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 $$
 Find the cumulative distribution function of $X$.}
 
-\vspace{90mm}
 
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
@@ -122,7 +116,6 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 $$
 Find $\mathbb{E}[X]$.}
 
-\vspace{30mm}
 
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
@@ -134,7 +127,7 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 $$
 Find $\mathbb{E}[X^2]$.}
 
-\vspace{30mm}
+
 
 \hardsubproblem{Suppose that a random variable $X$ measures the lifetime of a certain type of electronic device in hours. Suppose its probability density function is given by:
  $$
@@ -148,7 +141,6 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \end{enumerate}
 
-\newpage
 
 \problem{These exercises will review the king of all random variables -- the Normal random variable.}
 
@@ -156,18 +148,16 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \inthenotessubproblem{What is the density of the normal random variable?}
 
-\vspace{10mm}
+
 
 \inthenotessubproblem{What is the support of the normal random variable?}
 
-\vspace{5mm}
 
 \easysubproblem{What is the cumulative distribution function of the normal random variable?}
-\vspace{10mm}
+
 
 \easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{E}[X]$?}
 
-\vspace{5mm}
 
 \easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{V}ar[X]$?}
 
