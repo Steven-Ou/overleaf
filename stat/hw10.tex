@@ -105,7 +105,12 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 $$
 Find the cumulative distribution function of $X$.}
 
-
+$F(x)$ is:$$F(x) = 
+\begin{cases} 
+0 & \text{if } x \le 0 \\ 
+\frac{3}{4}x^2 - \frac{1}{4}x^3 & \text{if } 0 < x < 2 \\ 
+1 & \text{if } x \ge 2 
+\end{cases}$$
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
 f(x) = 
@@ -115,7 +120,7 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 \end{cases} 
 $$
 Find $\mathbb{E}[X]$.}
-
+$$E[X] = \int_{0}^{2} x \cdot \frac{3}{8}(4x - 2x^2) \,dx = \frac{3}{8} \int_{0}^{2} (4x^2 - 2x^3) \,dx$$ $$E[X] = \frac{3}{8} \left[ \frac{4}{3}x^3 - \frac{1}{2}x^4 \right]_{0}^{2}$$$$E[X] = \frac{3}{8} \left( \left[ \frac{4}{3}(8) - \frac{1}{2}(16) \right] - 0 \right) = \frac{3}{8} \left( \frac{32}{3} - 8 \right)$$$$E[X] = \frac{3}{8} \left( \frac{32}{3} - \frac{24}{3} \right) = \frac{3}{8} \left( \frac{8}{3} \right) = 1$$Answer: $E[X] = 1$
 
 \intermediatesubproblem{ Suppose that $X$ is a continuous random variable whose probability density function is given by 
 $$
@@ -127,7 +132,7 @@ c(4x - 2x^2) & \text{if} ~ 0< x  < 2  \\
 $$
 Find $\mathbb{E}[X^2]$.}
 
-
+$$E[X^2] = \int_{0}^{2} x^2 \cdot \frac{3}{8}(4x - 2x^2) \,dx = \frac{3}{8} \int_{0}^{2} (4x^3 - 2x^4) \,dx$$ $$E[X^2] = \frac{3}{8} \left[ x^4 - \frac{2}{5}x^5 \right]_{0}^{2}$$$$E[X^2] = \frac{3}{8} \left( 16 - \frac{2}{5}(32) \right) = \frac{3}{8} \left( 16 - \frac{64}{5} \right)$$$$E[X^2] = \frac{3}{8} \left( \frac{80}{5} - \frac{64}{5} \right) = \frac{3}{8} \left( \frac{16}{5} \right) = \frac{6}{5} \text{ (or } 1.2\text{)}$$Answer: $E[X^2] = \frac{6}{5}$
 
 \hardsubproblem{Suppose that a random variable $X$ measures the lifetime of a certain type of electronic device in hours. Suppose its probability density function is given by:
  $$
@@ -139,6 +144,7 @@ f(x) =
 $$ 
 What is the probability that of 6 such types of devices, at least 3 will function for at least 15 hours? (You may assume that the devices operate independently of one another). You may leave your answer in terms of a calculator command. }
 
+$1 - \text{binomcdf}(6, 2/3, 2)$ is the answer. 
 \end{enumerate}
 
 
@@ -148,45 +154,54 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \inthenotessubproblem{What is the density of the normal random variable?}
 
-
+$$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2} \quad \text{for } -\infty < x < \infty$$
 
 \inthenotessubproblem{What is the support of the normal random variable?}
 
+The support is all real numbers: $(-\infty, \infty)$.
 
 \easysubproblem{What is the cumulative distribution function of the normal random variable?}
-
+\\The CDF does not have a closed-form algebraic solution and is expressed as an integral:$$F(x) = \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{x} e^{-\frac{1}{2}\left(\frac{t-\mu}{\sigma}\right)^2} \,dt$$
 
 \easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{E}[X]$?}
 
+$$E[X] = \mu$$
 
 \easysubproblem{If $X \sim \mathcal{N}(\mu, \sigma^2)$ then what is $\mathbb{V}ar[X]$?}
 
+$$\text{Var}[X] = \sigma^2$$
 
 \easysubproblem{What is the standard normal random variable?}
 
+It is a special normal random variable with a mean of $0$ and a variance (and standard deviation) of $1$. It is typically denoted by the letter $Z$, where $Z \sim N(0, 1)$.
 
 \inthenotessubproblem{What is the density of the standard normal random variable? Use the appropriate letter/notation.}
 
+$$\phi(z) = \frac{1}{\sqrt{2\pi}} e^{-\frac{z^2}{2}}$$
 
 \inthenotessubproblem{What is the cumulative distribution function of the standard normal random variable? Use the appropriate letter/notation.}
 
+$$\Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{z} e^{-\frac{t^2}{2}} \,dt$$
 
 \easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z<2.41)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places. } 
 
+Answer: $\Phi(2.41)$ or $\text{normalcdf}(-\infty, 2.41, 0, 1) \approx 0.9920$
 
 \easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z> 2.41)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
 
-
+Answer: $1 - \Phi(2.41)$ or $\text{normalcdf}(2.41, \infty, 0, 1) \approx 0.0080$
 
 \easysubproblem{Suppose $Z \sim \mathcal{N}(0,1)$. Find $P(Z = 2.41)$.}
 
-
+Answer: $0$ (The probability of a continuous random variable taking any exact value is always 0).
 
 \easysubproblem{Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X > 231)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
 
-
+Answer: $\text{normalcdf}(231, \infty, 241, \sqrt{17}) \approx 0.9924$
 
 \easysubproblem{Suppose $X \sim \mathcal{N}(241,17)$. Find $P(X < 231)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.}
+
+Answer: $\text{normalcdf}(-\infty, 231, 241, \sqrt{17}) \approx 0.0076$
 \end{enumerate}
 
 
@@ -201,34 +216,35 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \easysubproblem{Define what is meant by a joint mass function (jmf). }
 
-
+A joint probability mass function $p(x, y) = P(X = x, Y = y)$ is a function that gives the probability that two discrete random variables, $X$ and $Y$, simultaneously take on specific values $x$ and $y$. It must satisfy $p(x,y) \ge 0$ and $\sum_x \sum_y p(x,y) = 1$.
 
 \intermediatesubproblem{Find $P(X \leq 2, Y \leq 2)$.}
 
-
+$$P(X \le 2, Y \le 2) = \sum_{x \le 2} \sum_{y \le 2} p(x, y)$$
 
 \intermediatesubproblem{Find $f_X(2)$.}
 
-
+This represents the marginal probability that $X = 2$. Find the row where $X=2$ and sum all the values across all columns ($Y$ values) in that row.
 
 \intermediatesubproblem{Find $f_Y(4)$.}
 
-
+This represents the marginal probability that $Y = 4$. Find the column where $Y=4$ and sum all the values down all rows ($X$ values) in that column.
 
 \intermediatesubproblem{Find $f_X(x)$.}
 
-
+$f_X(x) = \sum_{all \, y} p(x, y)$ (The row totals)
 
 \intermediatesubproblem{Find $f_Y(y)$.}
 
+$f_Y(y) = \sum_{all \, x} p(x, y)$ (The column totals)
 
 \inthenotessubproblem{What does it mean for two random variables, $X$ and $Y$, to be independent?}
 
-
+Two discrete random variables are independent if and only if their joint PMF is equal to the product of their marginal PMFs for all possible pairs of $(x, y)$:$$p(x, y) = f_X(x) \cdot f_Y(y)$$
 
 \hardsubproblem{For the joint probability mass function specified above, is $X$ and $Y$ independent? Explain why or why not.}
 
-
+To check: Pick a single cell in your matrix, say $(x=1, y=1)$. \\Multiply its row total ($f_X(1)$) by its column total ($f_Y(1)$).\\If $f_X(1) \cdot f_Y(1) = p(1,1)$, check the other cells. \\If it holds true for every single cell, they are independent.\\If even a single cell fails this multiplication equality, write: \\"No, because $p(x,y) \neq f_X(x) \cdot f_Y(y)$ for cell $(x,y)$."
 
 \end{enumerate}
 
@@ -238,26 +254,27 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \easysubproblem{Explain what is meant by a convolution of random variables.}
 
+A convolution is a mathematical operation used to find the probability distribution of the sum of two or more independent random variables ($T = X + Y$). For discrete variables, it involves summing over all possible mutually exclusive ways the individual variables can add up to a target value $t$.
 
 \intermediatesubproblem{Suppose $X_1, X_2 \iid \geometric{p}$}. Let $T = X_1 + X_2$. What is the support of $T$?
 
-
+Support: $\{2, 3, 4, 5, \dots\}$
 
 \hardsubproblem{Find $P(T = 2)$.}
 
-
+The only way to get a sum of 2 is if $X_1 = 1$ and $X_2 = 1$:$$P(T=2) = P(X_1=1) \cdot P(X_2=1) = p \cdot p = p^2$$
 
 \hardsubproblem{Find $P(T = 3)$.}
 
-
+Ways to sum to 3: $(1,2)$ or $(2,1)$.$$P(T=3) = P(X_1=1, X_2=2) + P(X_1=2, X_2=1) = p(q p) + (q p)p = 2p^2q \quad \text{(where } q = 1-p\text{)}$$
 
 \hardsubproblem{Find $P(T = 4)$.}
 
-
+Ways to sum to 4: $(1,3)$, $(2,2)$, or $(3,1)$.$$P(T=4) = p(q^2p) + (qp)(qp) + (q^2p)p = 3p^2q^2$$
 
 \hardsubproblem{Based off the last three computations, can you guess the probability mass function of $T$? You do not have to mathematically prove your answer. (If you are curious, the actual proof requires induction and the general convolution formula which you are not required to know).}
 
-
+Following the pattern ($1p^2$, $2p^2q^1$, $3p^2q^2$):$$P(T = t) = (t - 1)p^2(1-p)^{t-2} \quad \text{for } t = 2, 3, 4, \dots$$
 
 \end{enumerate}
 
@@ -267,7 +284,7 @@ What is the probability that of 6 such types of devices, at least 3 will functio
 
 \easysubproblem{Without simply quoting the formal statement of the Central Limit Theorem, can you explain what the Central Limit Theorem states?}
 
-
+The CLT states that if you take a large sample size ($n \ge 100$) of independent, identically distributed random variables from any underlying population distribution (even skewed or weird ones) with a finite mean $\mu$ and variance $\sigma^2$, the distribution of the sample sum (or sample mean) will naturally form a Normal Distribution shape.
 
 \hardsubproblem{ Suppose the random variables, $X_1, X_2, \ldots, X_{100}$ are independent and all have the following density:
 \begin{Large}
@@ -283,8 +300,8 @@ $$
 If $Y = X_1 + X_2 + \ldots + X_{100}$, then find/approximate $P(439 \leq Y \leq 461)$. You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.
  }
 
-
-
+Step 1: Find the mean $\mu$ and variance $\sigma^2$ of a single variable $X$.$$\mu = E[X] = \int_{0}^{6} x \cdot \frac{x^2}{72} \,dx = \frac{1}{72} \left[ \frac{x^4}{4} \right]_{0}^{6} = \frac{1296}{288} = 4.5$$$$E[X^2] = \int_{0}^{6} x^2 \cdot \frac{x^2}{72} \,dx = \frac{1}{72} \left[ \frac{x^5}{5} \right]_{0}^{6} = \frac{7776}{360} = 21.6$$$$\sigma^2 = E[X^2] - (E[X])^2 = 21.6 - (4.5)^2 = 21.6 - 20.25 = 1.35$$Step 2: Find the expected value and variance for the sum $Y$.$$\mu_Y = n\mu = 100(4.5) = 450$$$$\sigma^2_Y = n\sigma^2 = 100(1.35) = 135 \implies \sigma_Y = \sqrt{135}$$By CLT, $Y \approx N(450, 135)$. Standardizing gives:$$P(439 \le Y \le 461) \approx \text{normalcdf}(439, 461, 450, \sqrt{135})$$Answer: $\Phi\left(\frac{11}{\sqrt{135}}\right) - \Phi\left(\frac{-11}{\sqrt{135}}\right) \approx 0.6551$
+\newpage
 \hardsubproblem{Suppose the random variables $X_1, X_2, \ldots, X_{36}$  are independent and all  have the density specified below. 
 
 \begin{Large}
@@ -299,6 +316,8 @@ If $Y = X_1 + X_2 + \ldots + X_{100}$, then find/approximate $P(439 \leq Y \leq 
 
 Find/approximate  $P(2 \leq \overline{X}_{36} \leq 2.5)$.   You may leave your answer in terms of an integral, in terms of $\Phi$, in terms of a calculator command, or in terms of an actual number rounded to four decimal places.
 }
+
+$$P(2 \le X_{36} \le 2.5) = \int_{2}^{2.5} \frac{1}{20x^3} \,dx = \frac{1}{20} \int_{2}^{2.5} x^{-3} \,dx$$$$= \frac{1}{20} \left[ -\frac{1}{2x^2} \right]_{2}^{2.5} = -\frac{1}{40} \left[ \frac{1}{(2.5)^2} - \frac{1}{2^2} \right] = -\frac{1}{40} \left[ \frac{1}{6.25} - \frac{1}{4} \right]$$$$= -\frac{1}{40} [0.16 - 0.25] = -\frac{1}{40} [-0.09] = \frac{0.09}{40} = 0.00225$$Answer: $0.0023$
 
 \end{enumerate}
 
