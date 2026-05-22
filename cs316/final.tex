@@ -1,0 +1,259 @@
+\documentclass[8.5pt,landscape,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.25in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{times} 
+
+\definecolor{primary}{HTML}{1A365D}
+\definecolor{secondary}{HTML}{2B6CB0}
+
+\titleformat{\section}{\color{primary}\normalfont\normalsize\bfseries}{\thesection}{0.4em}{}[{\color{secondary}\titlerule}]
+\titleformat{\subsection}{\color{secondary}\normalfont\small\bfseries}{\thesubsection}{0.4em}{}
+\titlespacing*{\section}{0pt}{3pt}{2pt}
+\titlespacing*{\subsection}{0pt}{2pt}{1pt}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+
+\begin{document}
+
+\begin{center}
+    {\small \textbf{\color{primary}CS 316: Principles of Programming Languages --- Ultimate Maximum-Density Examination Cheat Sheet}} \\
+    \vskip 0.5pt
+    \rule{\textwidth}{0.4pt}
+\end{center}
+
+\begin{multicols*}{3}
+
+\section{1. LL(1) Grammars \& Table Construction}
+An \textbf{LL(1)} parser builds a top-down parse tree scanning tokens from Left-to-right with $1$ token lookahead.
+
+\subsection{Mathematical Criteria}
+For any non-terminal $A$ with multiple rules $A \rightarrow \alpha \mid \beta$:
+1. $\text{First}(\alpha) \cap \text{First}(\beta) = \emptyset$.
+2. If $\alpha \Rightarrow^* \epsilon$, then $\text{First}(\beta) \cap \text{Follow}(A) = \emptyset$.
+
+\subsection{Transformations}
+\textbf{Left Recursion Elimination:} $A \rightarrow A\alpha \mid \beta \implies A \rightarrow \beta A'$ and $A' \rightarrow \alpha A' \mid \epsilon$.\\
+\textbf{Left Factoring:} $A \rightarrow \alpha\beta_1 \mid \alpha\beta_2 \implies A \rightarrow \alpha A'$ and $A' \rightarrow \beta_1 \mid \beta_2$.
+
+\subsection{HW Problem Walkthrough: LL(1) Parse Table}
+\textbf{Problem:} Construct the LL(1) parsing table for the grammar:\\
+$S \rightarrow a A b \mid B \quad | \quad A \rightarrow c S \mid \epsilon \quad | \quad B \rightarrow d \mid \epsilon$
+
+\textbf{Step 1: Compute First Sets}\\
+$\text{First}(aAb) = \{a\}$, $\text{First}(cS) = \{c\}$, $\text{First}(\epsilon) = \{\epsilon\} \implies \text{First}(A) = \{c, \epsilon\}$\\
+$\text{First}(d) = \{d\}$, $\text{First}(\epsilon) = \{\epsilon\} \implies \text{First}(B) = \{d, \epsilon\}$\\
+$\text{First}(S) = \{a\} \cup \text{First}(B) = \{a, d, \epsilon\}$
+
+\textbf{Step 2: Compute Follow Sets}\\
+$\text{Follow}(S) = \{\$\} \cup \text{Follow}(A) = \{\$, b\}$\\
+$\text{Follow}(A) = \{b\} \text{ (from } S \rightarrow aAb)$\\
+$\text{Follow}(B) = \text{Follow}(S) = \{\$, b\}$
+
+\textbf{Step 3: Construct Parsing Table } $M[NT, Terminal]$:
+\vskip 1pt
+\begin{tabular}{lcccc}
+\toprule
+\textbf{NT} & \textbf{a} & \textbf{b} & \textbf{c} & \textbf{d} \\
+\midrule
+$S$ & $S \rightarrow aAb$ & $S \rightarrow B$ & & $S \rightarrow B$ \\
+$A$ & & $A \rightarrow \epsilon$ & $A \rightarrow cS$ & \\
+$B$ & & $B \rightarrow \epsilon$ & & $B \rightarrow d$ \\
+\bottomrule
+\end{tabular}
+\vskip 1pt
+
+\subsection{Exam Target: LL(1) Parser Execution Trace}
+\textbf{Problem:} Trace parsing string \texttt{"acdb"} using the table above.
+\vskip 1pt
+\begin{tabular}{lll}
+\toprule
+\textbf{Stack} & \textbf{Remaining Input} & \textbf{Action / Rule Applied} \\
+\midrule
+$\$\,S$ & $\texttt{acdb}\,\$$ & Expand $S \rightarrow aAb$ \\
+$\$\,b\,A\,a$ & $\texttt{acdb}\,\$$ & Match token $\texttt{a}$ \\
+$\$\,b\,A$ & $\texttt{cdb}\,\$$ & Expand $A \rightarrow cS$ \\
+$\$\,b\,S\,c$ & $\texttt{cdb}\,\$$ & Match token $\texttt{c}$ \\
+$\$\,b\,S$ & $\texttt{db}\,\$$ & Expand $S \rightarrow B$ \\
+$\dots\,b\,B$ & $\texttt{db}\,\$$ & Expand $B \rightarrow d$ \\
+$\$\,b\,d$ & $\texttt{db}\,\$$ & Match token $\texttt{d}$ \\
+$\$\,b$ & $\texttt{b}\,\$$ & Match token $\texttt{b}$ \\
+$\$$ & $\$$ & \textbf{Accept String Successfully} \\
+\bottomrule
+\end{tabular}
+
+\section{2. Data Types \& Type Validation}
+\subsection{Taxonomies}
+\textbf{Static vs Dynamic:} Static type checking occurs at compile-time (Java/TinyJ); dynamic evaluates type safety properties at runtime (Python).\\
+\textbf{Strong vs Weak:} Strong typing blocks illegal memory operations on underlying representations; weak permits implicit type coercions.
+
+\subsection{HW Problem Walkthrough: Type Equivalence}
+\begin{align*}
+&\text{\bf type } \text{Row} = \text{\bf record } \{ r: \text{int}, c: \text{int} \}\\
+&\text{\bf type } \text{Grid} = \text{\bf record } \{ r: \text{int}, c: \text{int} \}\\
+&\text{\bf type } \text{Matrix} = \text{Row} \quad | \quad \text{Row } v_1; \,\, \text{Grid } v_2; \,\, \text{Matrix } v_3;
+\end{align*}
+\textbf{Evaluation Trace:}
+\begin{itemize}
+    \item $v_1 = v_2$: \textbf{Structural} matches (identical structural shapes $\{r:\text{int}, c:\text{int}\}$). \textbf{Name} mismatch (\texttt{Row} $\neq$ \texttt{Grid}).
+    \item $v_1 = v_3$: Matches under \textbf{both} structural and name models if alias type inheritance rules are supported by the language.
+\end{itemize}
+
+\section{3. Dynamic Semantics \& State Mapping}
+\subsection{Frameworks}
+\textbf{Operational:} Step transitions $\langle \text{Stmt}, \sigma \rangle \rightarrow \sigma'$ over environment maps $\sigma$.\\
+\textbf{Denotational:} Semantic state valuation mathematical mapping functions.\\
+\textbf{Axiomatic:} Proof of assertions via Hoare Triples $\{P\}\ c\ \{Q\}$.
+
+\subsection{HW Problem Walkthrough: Loop Semantics}
+\textbf{Problem:} Trace operational semantic execution of loop:
+$$\text{\bf while } (x > 0) \text{\bf\ do } \{ y := y * 2; x := x - 1 \}$$
+Starting from state environment configuration $\sigma = \{x \mapsto 2, y \mapsto 3\}$.
+\textbf{Execution Trace Steps:}
+\begin{enumerate}
+    \item \textbf{Loop Test 1:} $\sigma(x > 0) \implies 2 > 0 \downarrow \text{true}$.
+    \begin{itemize}
+        \item $y := y * 2 \implies 3 * 2 = 6 \implies \sigma_1 = \{x \mapsto 2, y \mapsto 6\}$.
+        \item $x := x - 1 \implies 2 - 1 = 1 \implies \sigma_2 = \{x \mapsto 1, y \mapsto 6\}$.
+    \end{itemize}
+    \item \textbf{Loop Test 2:} $\sigma_2(x > 0) \implies 1 > 0 \downarrow \text{true}$.
+    \begin{itemize}
+        \item $y := y * 2 \implies 6 * 2 = 12 \implies \sigma_3 = \{x \mapsto 1, y \mapsto 12\}$.
+        \item $x := x - 1 \implies 1 - 1 = 0 \implies \sigma_4 = \{x \mapsto 0, y \mapsto 12\}$.
+    \end{itemize}
+    \item \textbf{Loop Test 3:} $\sigma_4(x > 0) \implies 0 > 0 \downarrow \text{false}$. Loop breaks.
+\end{enumerate}
+\textbf{Terminal State Output Environment:} $\sigma' = \{x \mapsto 0, y \mapsto 12\}$.
+
+\section{4. Subprogram Call Mechanics}
+\subsection{Parameter Binding Semantics}
+\begin{itemize}
+    \item \textbf{Pass-by-Value:} Arguments are safely cloned into local variable slots.
+    \item \textbf{Pass-by-Reference:} Direct reference pointers alias the caller storage.
+    \item \textbf{Pass-by-Value-Result:} In-out copy operations occur on call entry and return.
+\end{itemize}
+
+\subsection{HW Problem Walkthrough: Frame References}
+\textbf{Problem:} Consider the block structured lexical code scope:
+\begin{align*}
+&\text{\bf procedure } P() \{ \\
+&\quad \text{int } z = 5; \\
+&\quad \text{\bf procedure } Q() \{ \text{print } z; \} \\
+&\quad \text{\bf procedure } R(\text{\bf proc } F) \{ \text{int } z = 10; F(); \} \\
+&\quad R(Q); \\
+&\}
+\end{align*}
+What value is printed under static vs dynamic scoping?
+
+\textbf{Activation Stack Frame Link Breakdown:}
+\begin{itemize}
+    \item \textbf{Frame P:} Contains root master local variable $[z = 5]$.
+    \item \textbf{Frame R:} Dynamically linked down to $P$. Static Link points to enclosing parent scope $P$ (where it was compile-time declared). Contains local $[z = 10]$.
+    \item \textbf{Frame Q:} Invoked inside $R$. Dynamic Link points up to caller context $R$. Static Link points back to parent scope definition $P$.
+\end{itemize}
+\textbf{Resolution Outcome:}
+\begin{itemize}
+    \item \textbf{Static Scoping:} Follows Static Link from $Q \rightarrow P$. Looks up $z$ in lexical context $\implies$ Outputs \textbf{5}.
+    \item \textbf{Dynamic Scoping:} Follows Dynamic Link from $Q \rightarrow R$. Looks up $z$ in caller environment $\implies$ Outputs \textbf{10}.
+\end{itemize}
+
+\subsection{Exam Architecture: Anatomy of a Stack Frame}
+When a subprogram call occurs, an activation record is configured:
+\begin{verbatim}
++---------------------------------------+
+| Local Variables / Temporary Computes  |
++---------------------------------------+
+| Static Link  --> Point to Lexical Scope
++---------------------------------------+
+| Dynamic Link --> Point to Caller Frame
++---------------------------------------+
+| Return Address IP Register Target     |
++---------------------------------------+
+| Parameters Passed by Caller Context   |
++---------------------------------------+
+\end{verbatim}
+
+\section{5. TinyJ Pipeline \& Stack Architecture}
+Translates safe Java subsets into clean P-Code for execution by the TSVM.
+
+\subsection{Pipeline Stages}
+\texttt{Source Code Chars} $\rightarrow$ \textsf{Scanner.java (Tokens)} $\rightarrow$ \textsf{Parser.java (Symbol Table / Type Check)} $\rightarrow$ \texttt{TSVM P-Code Assembler}
+
+\subsection{HW Problem Walkthrough: Compiler Translation}
+\textbf{Problem:} Translate statement \texttt{if (x < y) result = 4;} to assembly using standard TinyJ instruction signatures (Assume slots: $x=1, y=2, \text{result}=3$).
+
+\textbf{Emitted Compilation Assembly Code:}
+\begin{verbatim}
+1. LOD 1    ; Load variable value 'x'
+2. LOD 2    ; Load variable value 'y'
+3. OPR 12   ; Comparison operation (<)
+4. JPC 7    ; Jump if false to pc=7
+5. LIT 4    ; Load integer literal 4
+6. STO 3    ; Store value to 'result'
+7. ...      ; Execution continues
+\end{verbatim}
+
+\textbf{Stack Workspace Trace Simulation ($\sigma = \{x \mapsto 3, y \mapsto 8\}$):}
+\begin{align*}
+\text{[Empty]} &\xrightarrow{\text{LOD 1}} [3] \xrightarrow{\text{LOD 2}} [3, 8] \xrightarrow{\text{OPR 12}} [\text{true}] \\
+&\xrightarrow{\text{JPC 7}} \text{[Empty]} \xrightarrow{\text{LIT 4}} [4] \xrightarrow{\text{STO 3}} \text{[Empty]}
+\end{align*}
+Slot 3 memory context successfully overwritten to $4$.
+
+\subsection{Exam Target: Advanced Loops in TinyJ}
+\textbf{Problem:} Show P-code pattern for compilation of a while loop: \texttt{while(x > 0) x = x - 1;} (Let slot $x = 1$).
+\begin{verbatim}
+1. LOD 1     ; Load variable value x
+2. LIT 0     ; Push threshold value 0
+3. OPR 13    ; Test execution (x > 0)
+4. JPC 9     ; Break loop to line 9 if false
+5. LOD 1     ; Load x
+6. LIT 1     ; Push step value 1
+7. OPR 3     ; Subtract operation (-)
+8. STO 1     ; Overwrite slot x
+9. JMP 1     ; Jump back to step 1
+10. ...      ; Exit boundary
+\end{verbatim}
+
+\section{6. Functional Programming Pipelines}
+\subsection{Core Foundations}
+\textbf{Referential Transparency:} Any function invocation output can be blindly substituted directly with its evaluations without mutating global application metrics.
+
+\subsection{HW Problem Walkthrough: Pipeline Multi-Reduction}
+\textbf{Problem:} Evaluate final pipeline output scalar:
+$$\text{foldl}(\lambda(\text{acc}, x).\ \text{acc} \times x, \ 1, \ \text{filter}(\lambda x.\ x > 2, \ \text{map}(\lambda x.\ x + 1, \ [1, 2, 3])))$$
+
+\textbf{Step-by-Step Derivation Trace:}
+\begin{enumerate}
+    \item \textbf{Map Phase:} Run transformation $(\lambda x.\ x + 1)$ across base array:
+    \begin{align*}
+        [1 + 1, \ 2 + 1, \ 3 + 1] \longrightarrow [2, 3, 4]
+    \end{align*}
+    \item \textbf{Filter Phase:} Evaluate predicate $(\lambda x.\ x > 2)$ over output array stream:
+    \begin{align*}
+        2 > 2 \rightarrow \text{F}, \,\, 3 > 2 \rightarrow \text{T}, \,\, 4 > 2 \rightarrow \text{T} \implies [3, 4]
+    \end{align*}
+    \item \textbf{Fold Left Phase:} Flatten data vector using multi product loop operations starting from identity seed accumulator $z = 1$:
+    \begin{align*}
+        \text{Step 1: } & \text{acc} = z \times 3 \implies 1 \times 3 = 3 \\
+        \text{Step 2: } & \text{acc} = 3 \times 4 \implies 3 \times 4 = 12
+    \end{align*}
+\end{enumerate}
+\textbf{Final Pipeline Scalar Return Outcome:} \textbf{12}.
+
+\subsection{Exam Core Concept: Evaluation Models}
+\begin{itemize}
+    \item \textbf{Strict / Eager Evaluation:} Arguments are completely evaluated into terminal values \textit{before} being bound inside subprogram function scopes. Can cause infinite loops if an argument does not terminate, even if never used.
+    \item \textbf{Lazy Evaluation (Call-by-Need):} Evaluation delays until parameter coordinates are dynamically triggered by program dependencies. Allows stable computation over infinite stream data maps.
+\end{itemize}
+
+\end{multicols*}
+\end{document}
