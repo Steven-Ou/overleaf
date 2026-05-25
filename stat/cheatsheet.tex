@@ -1,0 +1,165 @@
+\documentclass[10pt,landscape]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{cancel}
+
+% Set ultra-clean margins to maximize usable area without clipping text
+\geometry{top=0.4in,bottom=0.4in,left=0.4in,right=0.4in}
+\pagestyle{empty}
+
+% Fine-tune spacing settings to prevent narrow column overlap crashes
+\setlength{\multicolsep}{6pt}
+\setlength{\columnsep}{24pt} % Widened column gap to prevent text crashing
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Var}{\mathbb{V}ar}
+\newcommand{\E}{\mathbb{E}}
+
+\begin{document}
+\begin{multicols*}{2} % Swapped to 2 wider columns to fix text crowding crashes
+
+\begin{center}
+    \large\textbf{\color{red}MATH 241 FINAL EXAM LEGEND SHEET --- PAGE 1 OF 2}
+\end{center}
+\vskip 2pt
+\hrule
+\vskip 6pt
+
+\subsection*{1. Proof Insurance (Mandatory Class Proofs)}
+
+\textbf{Theorem 1: Alternate Variance Formula}
+\begin{proof}
+By definition of variance and utilizing the linearity properties of mathematical expectation ($\E$):
+\begin{align*}
+\Var[X] &= \E[(X - \E[X])^2] \\
+&= \E[X^2 - 2X \cdot \E[X] + (\E[X])^2] \\
+&= \E[X^2] - \E[2X \cdot \E[X]] + \E[(\E[X])^2] \\
+&= \E[X^2] - 2\E[X]\cdot \E[X] + (\E[X])^2 \quad \text{(Pull constants)} \\
+&= \E[X^2] - (\E[X])^2. \qedhere
+\end{align*}
+\end{proof}
+
+\textbf{Theorem 2: Generalized Conditioning Rule (Chain Rule)}
+\begin{proof}
+Expand the Right-Hand Side (RHS) using conditional probability definition $P(A|B) = \frac{P(A \cap B)}{P(B)}$:
+\begin{align*}
+\text{RHS} &= P(E_1) \cdot \frac{P(E_1 \cap E_2)}{P(E_1)} \cdot \frac{P(E_1 \cap E_2 \cap E_3)}{P(E_1 \cap E_2)} \cdots \\
+& \quad \cdots \frac{P(E_1 \cap E_2 \cap \dots \cap E_n)}{P(E_1 \cap E_2 \cap \dots \cap E_{n-1})}
+\end{align*}
+Observe the telescoping cancellation where intermediate joint probability denominators cancel matching prior numerators:
+\begin{align*}
+\text{RHS} &= \cancel{P(E_1)} \cdot \frac{\cancel{P(E_1 \cap E_2)}}{\cancel{P(E_1)}} \cdots \frac{P(E_1 \cap \dots \cap E_n)}{\cancel{P(E_1 \cap \dots \cap E_{n-1})}} \\
+&= P(E_1 \cap E_2 \cap \dots \cap E_n) = \text{LHS}. \qedhere
+\end{align*}
+\end{proof}
+
+\subsection*{2. Integral Calculus Moment Toolbox (Section 5.1)}
+When processing continuous random variables, polynomials scaled by exponential decay profiles require precise integration setups:
+
+\textbf{Integration by Parts (IBP):} $\int u \, dv = uv - \int v \, du$ \\
+Selection rule: Set Algebraic ($x, x^2$) to $u$, Exponential ($e^{-\lambda x}$) to $dv$.
+\begin{itemize}
+    \item \textbf{Type A ($\E[X]$ Mean Framework):} $\int x e^{-\lambda x} dx$ \\
+    Let $u = x \implies du = dx$; $dv = e^{-\lambda x}dx \implies v = -\frac{1}{\lambda}e^{-\lambda x}$.
+    $$\int x e^{-\lambda x} dx = -\frac{x}{\lambda}e^{-\lambda x} - \frac{1}{\lambda^2}e^{-\lambda x}$$
+    \item \textbf{Type B ($\E[X^2]$ Second Moment Framework):} $\int x^2 e^{-\lambda x} dx$ \\
+    Let $u = x^2 \implies du = 2x\,dx$; $dv = e^{-\lambda x}dx \implies v = -\frac{1}{\lambda}e^{-\lambda x}$.
+    $$\int x^2 e^{-\lambda x} dx = -\frac{x^2}{\lambda}e^{-\lambda x} + \frac{2}{\lambda}\int x e^{-\lambda x} dx$$
+\end{itemize}
+
+\subsection*{3. Master Scenario A: Polya Urn Sequence Transitions}
+\textbf{Problem Pattern:} Urn contains 2 Red, 3 Blue. Draw 3 times sequentially. Upon each selection, replace the drawn token \textit{plus add 4 additional tokens of the opposite color}. Evaluate $P(R_1 \mid B_3)$.
+
+\textbf{Execution Workflow:}
+Apply conditional definition: $P(R_1 \mid B_3) = \frac{P(R_1 \cap B_3)}{P(B_3)}$.
+\begin{enumerate}
+    \item Track changing urn composition along paths starting with $R_1$:
+    \begin{itemize}
+        \item Path $R_1 R_2 B_3$: $\frac{2}{5} \rightarrow$ Add 4 Blue (Urn: 2R, 7B) $\rightarrow \frac{2}{9} \rightarrow$ Add 4 Blue (Urn: 2R, 11B) $\rightarrow \frac{11}{13}$. Joint Path Value = $\frac{44}{585}$.
+        \item Path $R_1 B_2 B_3$: $\frac{2}{5} \rightarrow$ (Urn: 2R, 7B) $\rightarrow \frac{7}{9} \rightarrow$ Add 4 Red (Urn: 6R, 7B) $\rightarrow \frac{7}{13}$. Joint Path Value = $\frac{98}{585}$.
+    \end{itemize}
+    \item Track changing urn composition along paths starting with $B_1$:
+    \begin{itemize}
+        \item Path $B_1 R_2 B_3$: $\frac{3}{5} \rightarrow$ Add 4 Red (Urn: 6R, 3B) $\rightarrow \frac{6}{9} \rightarrow$ Add 4 Blue (Urn: 6R, 7B) $\rightarrow \frac{7}{13}$. Joint Path Value = $\frac{126}{585}$.
+        \item Path $B_1 B_2 B_3$: $\frac{3}{5} \rightarrow$ (Urn: 6R, 3B) $\rightarrow \frac{3}{9} \rightarrow$ Add 4 Red (Urn: 10R, 3B) $\rightarrow \frac{3}{13}$. Joint Path Value = $\frac{27}{585}$.
+    \end{itemize}
+    \item Total Law of Probability (Denominator $P(B_3)$): \\
+    $\frac{44 + 98 + 126 + 27}{585} = \frac{295}{585}$.
+    \item Target Intersection Numerator ($P(R_1 \cap B_3)$): $\frac{44 + 98}{585} = \frac{142}{585}$.
+    \item Complete Division: $P(R_1 \mid B_3) = \frac{142/585}{295/585} = \mathbf{\frac{142}{295} \approx 0.4814}$.
+\end{enumerate}
+
+\newpage
+\begin{center}
+    \large\textbf{\color{red}MATH 241 FINAL EXAM LEGEND SHEET --- PAGE 2 OF 2}
+\end{center}
+\vskip 2pt
+\hrule
+\vskip 6pt
+
+\subsection*{4. Continuous Variable Integrations (HW 10)}
+A variable is continuous if its CDF is continuous everywhere. Total area under the density curve must normalize to 1: $\int_{-\infty}^{\infty} f(x)dx = 1$.
+$$\E[X] = \int_{-\infty}^{\infty} x \cdot f(x)dx, \quad \E[X^2] = \int_{-\infty}^{\infty} x^2 \cdot f(x)dx$$
+
+\subsection*{5. Master Scenario B: Piecewise Running-Total CDFs}
+\textbf{Problem Pattern:} Solve for the normalization constant $c$ and construct the absolute piecewise CDF expression $F(y)$ across all boundaries for:
+$$f(y) = \begin{cases} c y^2 & \text{if } 0 \le y < 2 \\ c(6 - y) & \text{if } 2 \le y \le 6 \\ 0 & \text{otherwise} \end{cases}$$
+
+\textbf{Execution Workflow:}
+\begin{enumerate}
+    \item Enforce standard area integration properties to isolate $c$:
+    $$\int_{0}^{2} cy^2 \,dy + \int_{2}^{6} c(6-y) \,dy = 1 \implies c\left[\frac{y^3}{3}\right]_0^2 + c\left[-\frac{(6-y)^2}{2}\right]_2^6 = 1$$
+    $$c\left(\frac{8}{3} - 0\right) + c\left(0 - \left(-\frac{16}{2}\right)\right) = 1 \implies c\left(\frac{32}{3}\right) = 1 \implies \mathbf{c = \frac{3}{32}}$$
+    \item Construct $F(y) = P(Y \le y)$ by carrying forward accumulated area:
+    \begin{itemize}
+        \item For $y < 0$: $F(y) = \mathbf{0}$.
+        \item For $0 \le y < 2$: $F(y) = \int_0^y \frac{3}{32}t^2\,dt = \mathbf{\frac{1}{32}y^3}$.
+        \item For $2 \le y \le 6$: Add the total historical area of the first piece ($F(2) = \frac{1}{32}(8) = \frac{1}{4}$) directly to the current running integral:
+        \begin{align*}
+        F(y) &= \frac{1}{4} + \int_2^y \frac{3}{32}(6-t)\,dt = \frac{1}{4} + \frac{3}{32}\left[6t - \frac{t^2}{2}\right]_2^y \\
+        &= \frac{1}{4} + \frac{3}{32}\left(\left(6y - \frac{y^2}{2}\right) - (12 - 2)\right) \\
+        &= \mathbf{-\frac{3}{64}y^2 + \frac{9}{16}y - \frac{11}{16}}
+        \end{align*}
+        \item For $y > 6$: $F(y) = \mathbf{1}$.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{6. Master Scenario C: Multi-Tier Special Distributions}
+\textbf{Problem Pattern:} Individual frames fail independently with $p = 0.05$. A cycle flags the stream if it catches \textit{at least 2 errors across a frame block of 40 elements}. Find the probability that the 4th block is the first one flagged.
+
+\textbf{Execution Workflow:}
+\begin{enumerate}
+    \item Solve inner probability $p^*$ using Binomial distribution ($n=40, p=0.05$):
+    $$p^* = P(X \ge 2) = 1 - P(X \le 1) = 1 - \text{binomcdf}(40, 0.05, 1) \approx 0.6010$$
+    \item Solve outer probability using Geometric distribution ($k=4, p^* \approx 0.6010$):
+    $$P(Y = 4) = (1 - p^*)^3 \cdot p^* = (0.3990)^3 \cdot 0.6010 = \mathbf{0.0382}$$
+\end{enumerate}
+
+\subsection*{7. Master Scenario D: CLT Continuity Adjustments}
+\textbf{Problem Pattern:} An application has an error rate of $p = 0.20$. Across 900 independent packet items, evaluate the probability that the final error count falls \textit{between 170 and 195 inclusive}.
+
+\textbf{Execution Workflow:}
+\begin{enumerate}
+    \item Local parameters: $\mu = np = 900(0.20) = 180$. \\
+    $\sigma^2 = np(1-p) = 900(0.20)(0.80) = 144 \implies \sigma = 12$.
+    \item Shift discrete integer boundaries outwards by $\pm 0.5$ to account for histogram bar width under continuous normal models:
+    $$P(170 \le X \le 195) \approx P(169.5 \le X_{\text{normal}} \le 195.5)$$
+    \item Convert to standard $Z$-scores:
+    $$Z_{\text{low}} = \frac{169.5 - 180}{12} = -0.88; \quad Z_{\text{high}} = \frac{195.5 - 180}{12} = 1.29$$
+    \item Final area score: $\text{normalcdf}(-0.88, 1.29, 0, 1) = \mathbf{0.7121}$.
+\end{enumerate}
+
+\subsection*{8. Core Linear \& Operational Shortcuts}
+\begin{itemize}
+    \item \textbf{Set Axioms (HW 1--2):} DeMorgan's: $(A \cup B)^c = A^c \cap B^c$. \\
+    Inclusion-Exclusion: $P(A \cup B) = P(A) + P(B) - P(A \cap B)$.
+    \item \textbf{Linear Operations (Section 4.2--4.3):} Expectation is linear: $\E[aX + b] = a\E[X] + b$. Variance scales by the square and drops translation constants entirely: $\Var[aX + b] = a^2\Var[X]$.
+    \item \textbf{Staircase CDF (Section 4.1):} Discrete step height jump sizes indicate localized point probability values: $P(X=x_i) = F(x_i) - F(x_{i^-})$.
+\end{itemize}
+
+\end{multicols*}
+\end{document}
