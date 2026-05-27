@@ -125,7 +125,38 @@ Selection rule: Set Algebraic ($x, x^2$) to $u$, Exponential ($e^{-\lambda x}$) 
     Let $u = x^2 \implies du = 2x\,dx$; $dv = e^{-\lambda x}dx \implies v = -\frac{1}{\lambda}e^{-\lambda x}$.
     $$\int x^2 e^{-\lambda x} dx = -\frac{x^2}{\lambda}e^{-\lambda x} + \frac{2}{\lambda}\int x e^{-\lambda x} dx$$
 \end{itemize}
+\subsection*{3. Master Scenario: Discrete PMF to CDF Staircase Graph}
+\textbf{The Setup:} Given a discrete PMF graph with support $x \in \{0, 1, 3, 6\}$ and point mass probabilities $f(0)=\frac{1}{5}$, $f(1)=\frac{7}{20}$, $f(3)=\frac{3}{10}$, and $f(6)=\frac{3}{20}$. Construct the piecewise mathematical function and describe its graphical layout perfectly.
 
+\textbf{Execution Workflow:}
+By definition, $F(x) = P(X \le x)$, requiring a running cumulative total from left to right.
+\begin{enumerate}
+    \item \textbf{Accumulate Boundaries:} 
+    \begin{itemize}
+        \item For $x < 0$: $F(x) = \mathbf{0}$
+        \item For $0 \le x < 1$: $F(x) = f(0) = \mathbf{0.20}$
+        \item For $1 \le x < 3$: $F(x) = 0.20 + f(1) = 0.20 + 0.35 = \mathbf{0.55}$
+        \item For $3 \le x < 6$: $F(x) = 0.55 + f(3) = 0.55 + 0.30 = \mathbf{0.85}$
+        \item For $x \ge 6$: $F(x) = 0.85 + f(6) = 0.85 + 0.15 = \mathbf{1.00}$
+    \end{itemize}
+    \item \textbf{Formal Piecewise CDF Notation Framework:}
+    $$F(x) = \begin{cases} 
+      0 & \text{if } x < 0 \\ 
+      0.20 & \text{if } 0 \le x < 1 \\ 
+      0.55 & \text{if } 1 \le x < 3 \\ 
+      0.85 & \text{if } 3 \le x < 6 \\ 
+      1.00 & \text{if } x \ge 6 
+   \end{cases}$$
+    \item \textbf{Professor Gangaram's Strict Graphing Conventions:}
+    \begin{itemize}
+        \item \textbf{Solid Dots ($\bullet$):} Must be plotted at the absolute \textit{left edge} of every single flat step segment (e.g., at $(0, 0.20)$, $(1, 0.55)$, $(3, 0.85)$, and $(6, 1.00)$) to indicate inclusivity.
+        \item \textbf{Open Circles ($\circ$):} Must be plotted at the absolute \textit{right edge} of every flat step segment (e.g., at $(0,0)$, $(1, 0.20)$, $(3, 0.55)$, and $(6, 0.85)$) to denote the non-inclusive interval cutoff boundary.
+        \item \textbf{Asymptotes:} Leftmost line starts at $-\infty$ resting flat on height $0$. Rightmost line shoots out from $(6, 1.00)$ heading straight to $+\infty$ locked perfectly at height $1.00$.
+    \end{itemize}
+\end{enumerate}
+\vskip 2pt
+\hrule
+\vskip 4pt
 \subsection*{3. Master Scenario A: Polya Urn Sequence Transitions}
 \textbf{Problem Pattern:} Urn contains 2 Red, 3 Blue. Draw 3 times sequentially. Upon each selection, replace the drawn token \textit{plus add 4 additional tokens of the opposite color}. Evaluate $P(R_1 \mid B_3)$.
 
